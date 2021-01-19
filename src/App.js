@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} />
+        <img id="logo" src={logo} alt="" />
       </header>
       <Navigation />
       <nav>
