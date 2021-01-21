@@ -2,26 +2,17 @@
   background-image: url("../images/blue-abstract-nav.png");
   background-size: cover;
   background-blend-mode: lighten;
+  width: 100%;
+  padding: 0;
 }
 
-.navbar__form {
-  background-color: #fff;
-  width: 50%;
-  margin: 0 auto;
-  padding: 5px;
-  padding-left: 20px;
-  display: flex;
-  border-radius: 20px;
-  align-items: center;
-  justify-content: center;
+.navItems {
+  margin: 0;
 }
 
-.navbar__form input {
-  border: none;
-  flex: 1;
-  border-radius: 20px;
-  margin-left: 20px;
-}
-input:focus {
-  outline: none;
+.navPiece {
+  color: white;
+  margin: 0;
+  font-size: 1.5rem;
+  padding: 15px 25px;
 }
