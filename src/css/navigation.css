@@ -1,7 +1,6 @@
 .navbar {
-  background-image: url("../images/blue-abstract-nav.png");
+  background: url("../images/blue-abstract-nav.png");
   background-size: cover;
-  background-blend-mode: lighten;
   width: 100%;
   padding: 0;
 }
@@ -14,5 +13,5 @@
   color: white;
   margin: 0;
   font-size: 1.5rem;
-  padding: 15px 25px;
+  padding: 15px auto;
 }
