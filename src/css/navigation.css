@@ -5,13 +5,12 @@
   padding: 0;
 }
 
-.navItems {
-  margin: 0;
+.nav-item {
+  color: white;
 }
 
 .navPiece {
   color: white;
   margin: 0;
   font-size: 1.5rem;
-  padding: 15px auto;
 }

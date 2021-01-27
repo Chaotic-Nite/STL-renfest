@@ -1,57 +1,123 @@
 import React, { useState } from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "../../css/navigation.css";
-import { Dropdown } from "bootstrap";
 
 function Navigation() {
-  const [show, setShow] = useState(false);
-  const navStyles = {
-    color: "white",
+  const [tickets, setTickets] = useState(false);
+  const [weekends, setWeekends] = useState(false);
+  const [cast, setCast] = useState(false);
+
+  const showTickets = (e) => {
+    setTickets(!tickets);
   };
-  const showDropdown = (e) => {
-    setShow(!show);
+  const showWeekends = (e) => {
+    setWeekends(!weekends);
   };
-  const hideDropdown = (e) => {
-    setShow(false);
+  const showCast = (e) => {
+    setCast(!cast);
+  };
+
+  // Hides for Dropdown
+  const hideTickets = (e) => {
+    setTickets(false);
+  };
+  const hideWeekends = (e) => {
+    setWeekends(false);
+  };
+  const hideCast = (e) => {
+    setCast(false);
   };
 
   return (
     <>
-      <Nav
-        fill
-        variant="tabs"
+      <Navbar
+        collapseOnSelect
         expand="lg"
-        class="navbar"
-        defaultActiveKey="/home"
+        sticky="top"
+        bg="dark"
+        variant="dark"
       >
-        <Nav.Link className="navPiece" style={navStyles} href="/">
-          Tickets
-        </Nav.Link>
-        <Nav.Link className="navPiece" style={navStyles} href="/">
-          Weddings
-        </Nav.Link>
-        <Nav.Link className="navPiece" style={navStyles} href="/">
-          Entertainers &#38; Vendors
-        </Nav.Link>
-        <Nav.Link className="navPiece" style={navStyles} href="/">
-          Cast
-        </Nav.Link>
-        <Nav.Link className="navPiece" style={navStyles} href="/about-us">
-          About Us
-        </Nav.Link>
-        <Dropdown
-          as={NavItem}
-          show={show}
-          onMouseEnter={showDropdown}
-          onMouseLeave={hideDropdown}
-        >
-          <Dropdown.Toggle as={NavLink}>Click to see more…</Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item>Hello there!</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-      </Nav>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
+            <NavDropdown
+              className="navPiece"
+              title="Tickets"
+              show={tickets}
+              onMouseEnter={showTickets}
+              onMouseLeave={hideTickets}
+              id="collasible-nav-dropdown"
+            >
+              <NavDropdown.Item href="/pages/tickets#general-tickets">
+                Renaissance Tickets
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/pages/tickets#les-amis">
+                Les Amis Tickets
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/pages/tickets#kegs-n-eggs">
+                Kegs N Eggs Tickets
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/pages/tickets#bring-your-dog">
+                Bring Your Dog
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link className="navPiece" href="/pages/weddings">
+              weddings
+            </Nav.Link>
+            <NavDropdown
+              className="navPiece"
+              title="Themed Weekends"
+              show={weekends}
+              onMouseEnter={showWeekends}
+              onMouseLeave={hideWeekends}
+              onClick={() => {
+                console.log("cheetos");
+              }}
+              id="collasible-nav-dropdown"
+            >
+              <NavDropdown.Item href="/pages/weekends#highland-fling">
+                Highland Fling
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/pages/weekends#pets-n-pirates">
+                Les Amis Tickets
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/pages/weekends#shamrocks-romance">
+                Kegs N Eggs Tickets
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/pages/weekends#viking-invasion">
+                Bring Your Dog
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/pages/weekends#oktoberfest">
+                Kegs N Eggs Tickets
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/pages/weekends#ladies-shopping">
+                Bring Your Dog
+              </NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown
+              className="navPiece"
+              title="Cast"
+              show={cast}
+              onMouseEnter={showCast}
+              onMouseLeave={hideCast}
+              onClick={() => {
+                console.log("cheetos");
+              }}
+              id="collasible-nav-dropdown"
+            >
+              <NavDropdown.Item href="/pages/warriors-island">
+                Warriors Island
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link className="navPiece" href="/pages/entertainment-vendor">
+              Entertainers &#38; Vendors
+            </Nav.Link>
+            <Nav.Link className="navPiece" href="/about-us">
+              About Us
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </>
   );
 }
