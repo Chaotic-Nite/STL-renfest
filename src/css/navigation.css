@@ -3,12 +3,6 @@
   display: none;
 }
 
-.nav__menu-item:hover {
-  .nav__submenu {
-    display: block;
-  }
-}
-
 *,
 *:before,
 *:after {
@@ -27,15 +21,16 @@ nav > ul {
   background-size: cover;
   width: 100%;
   display: flex;
-  margin: 2rem auto 0;
+  margin: 0 auto 0;
   color: #fff;
   text-align: left;
 
 }
 
-.nav > a {
-  display: block;
-  padding: 0 16px;
+.nav a {
+  display: flex;
+  padding: 15px 16px;
+  color: #fff;
   line-height: inherit;
   cursor: pointer;
 }
@@ -43,6 +38,7 @@ nav > ul {
   line-height: 45px;
   font-weight: 700;
   text-transform: uppercase;
+  display: flex;
 }
 
 
