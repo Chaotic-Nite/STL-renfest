@@ -33,6 +33,7 @@ nav > ul {
   background-size: cover;
   width: 100%;
   display: flex;
+  justify-content: center;
   margin: 0 auto 0;
   color: #fff;
   text-align: left;
@@ -41,7 +42,7 @@ nav > ul {
 
 .nav a {
   display: flex;
-  padding: 15px 16px;
+  padding: 15px 1.62rem;
   color: #fff;
   line-height: inherit;
   cursor: pointer;
@@ -57,31 +58,30 @@ nav > ul {
 
 .nav__menu li:hover,
 .nav__menu li:focus-within {
-  background-color: rgba(0, 73, 184, 0.842);
+  background-color: rgba(133, 7, 165, 0.507);
   cursor: pointer;
 }
 
 .nav__submenu {
-  font-weight: 300;
-  text-transform: none;
   display: none;
+  visibility: hidden;
   position: absolute;
   width: auto;
-  list-style: none;
-  padding-left: 0;
-  background: #39029e;
-  visibility: hidden;
-  opacity: 0;
   min-width: 5rem;
-  position: absolute;
-  transition: all 0.5s ease;
   margin-top: 4.5rem;
-  display: none;
+  padding-left: 0;
+  background: url("../images/blue-abstract-nav.png");
+  background-size:auto;
+  opacity: 0;
+  font-weight: 500;
+  list-style: none;
+  text-transform: none;
+  transition: all 0.5s ease;
   border-radius: 5%;
 }
 
 .nav__submenu-item :hover {
-    background: rgba(#000, 0.1);
+    background: rgba(rgb(0, 0, 0), 0.1);
     z-index: 11;
   display: block;
   padding: 0.5rem;

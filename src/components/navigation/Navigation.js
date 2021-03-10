@@ -18,7 +18,7 @@ function Navigation() {
             <li><a className="small-tab" href="pages/weddings.html">Weddings</a></li>
             <li><a id="weekends" className="small-tab" href="pages/weekends.html">Themed Weekends</a></li>
             <li>
-              <a id="entertain" href="pages/entertainment-vendor.html">Entertainers & Vendors</a>
+              <a id="entertain" href="pages/entertainment-vendor.html">Entertainers	&#38; Vendors</a>
             </li>
             <li>
               <a className="small-tab drop" href="/pages/cast.html">Cast</a>
