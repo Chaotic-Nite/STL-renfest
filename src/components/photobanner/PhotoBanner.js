@@ -1,25 +1,30 @@
-function PhotoBanner() {
-  return (
-    <div class="picture-slide-container">
-      <div class="photo-slides w3-animate-fading" id="photo-one">
-        <div class="caption-text">Photo by Joe Henley</div>
-      </div>
-      <div class="photo-slides w3-animate-fading" id="photo-two">
-        <div class="caption-text">Photo by Joe Henley</div>
-      </div>
-      <div class="photo-slides w3-animate-fading" id="photo-three">
-        <div class="caption-text">Photo by Joe Henley</div>
-      </div>
-      <div class="photo-slides w3-animate-fading" id="photo-four">
-        <div class="caption-text">Photo by Joe Henley</div>
-      </div>
+import { Slide } from "react-slideshow-image";
 
-      <a class="prev" onclick="imageSlides(-1)">
-        &#8249;
-      </a>
-      <a class="next" onclick="imageSlides(1)">
-        &#8250;
-      </a>
+import "../../css/photobanner.css";
+
+function PhotoBanner() {
+  const slideImages = [
+    "images/banner-images/one.jpg",
+    "images/banner-images/two.jpg",
+    "images/banner-images/three.jpg",
+    "images/banner-images/four.jpg",
+  ];
+  console.log(slideImages);
+  return (
+    <div className="slide-container">
+      <Slide>
+        {slideImages.map((each, index) => (
+          <div key={index} className="each-slide">
+            <div
+              className="photo"
+              id={`photo${index}`}
+              style={{ backgroundImage: `url(${each})` }}
+            >
+              <h1 className="photo-text">Photo by Joe Henley</h1>
+            </div>
+          </div>
+        ))}
+      </Slide>
     </div>
   );
 }

@@ -1,0 +1,35 @@
+.collapsible {
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 27px;
+  padding: 20px;
+  width: 100%;
+}
+
+.content {
+  padding: 0 25px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+/* Attention Space */
+
+#attention-div {
+  margin: 2% 0;
+}
+
+.attention-bttn {
+  background-color: rgb(190, 42, 42);
+  color: white;
+}
+
+.attention-bttn:hover {
+  background-color: rgb(102, 22, 22);
+}
+
+#attention-text {
+  background-color: #ffae0073;
+  padding: 2% 5%;
+}

@@ -13,3 +13,12 @@
   width: 20vw;
   margin: 2% 0;
 }
+
+a {
+  color: #5100e6;
+}
+
+.margin-width {
+  margin-right: 5%;
+  margin-left: 5%;
+}
