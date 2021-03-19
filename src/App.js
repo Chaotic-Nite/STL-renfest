@@ -13,7 +13,7 @@ function App() {
           <img id="logo" src={logo} alt="" />
         </Link>
       </header>
-      <Navigation sticky="top" />
+      <Navigation />
       <nav>
         <Switch>
           {routes &&

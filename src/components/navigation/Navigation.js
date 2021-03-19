@@ -1,37 +1,190 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../css/navigation.css";
+import { Link } from "react-router-dom";
 
 function Navigation() {
+  const [sticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => {
+      if (sticky === false) {
+        if (window.pageYOffset > 131) {
+          setSticky(true);
+        }
+      } else {
+        if (window.pageYOffset < 131) {
+          setSticky(false);
+        }
+      }
+    });
+  }, [sticky]);
+
   return (
     <>
-       {/*Navigation Bar with Dropdown Quick Links */}
-        <nav  className="nav">
-          <ul className="nav__menu" id="nav-bar">
-            <li><a className="small-tab drop" href="pages/tickets.html">Tickets</a>
+      {/*Navigation Bar with Dropdown Quick Links */}
+      <nav className={sticky ? "nav nav-sticky" : "nav"}>
+        <ul className="nav__menu" id="nav-bar">
+          <li>
+            <Link className="small-tab drop" to="/tickets">
+              Tickets
+            </Link>
+            <TicketDropdown />
+          </li>
+          <li>
+            <Link className="small-tab" to="/weddings">
+              Weddings
+            </Link>
+          </li>
+          <li>
+            <Link id="weekends" className="small-tab" to="/weekends">
+              Themed Weekends
+            </Link>
+            <WeekendDropdown />
+          </li>
+          <li>
+            <Link id="entertain" to="/entertainment-vendor">
+              Entertainers &#38; Vendors
+            </Link>
+          </li>
+          <li>
+            <Link className="small-tab drop" to="/cast">
+              Cast
+            </Link>
             <ul className="nav__submenu">
-              <li><a className="nav__submenu-item" href="/pages/tickets.html#general-tickets">Renaissance Tickets</a></li>
-              <li><a className="nav__submenu-item" href="/pages/tickets.html#les-amis">Les Amis Tickets</a></li>
-              <li><a className="nav__submenu-item" href="/pages/tickets.html#kegs">Kegs N Eggs Tickets</a></li>
-              <li><a className="nav__submenu-item" href="/pages/bring-your-dog.html">Bring Your Dog</a></li>
+              <li>
+                <Link className="nav__submenu-item" to="/warriors-island">
+                  Warriors Island
+                </Link>
+              </li>
             </ul>
           </li>
-            <li><a className="small-tab" href="pages/weddings.html">Weddings</a></li>
-            <li><a id="weekends" className="small-tab" href="pages/weekends.html">Themed Weekends</a></li>
-            <li>
-              <a id="entertain" href="pages/entertainment-vendor.html">Entertainers	&#38; Vendors</a>
-            </li>
-            <li>
-              <a className="small-tab drop" href="/pages/cast.html">Cast</a>
-              <ul className="nav__submenu">
-                <li><a className="nav__submenu-item" href="/pages/warriors-island.html">Warriors Island</a></li>
-              </ul>
-            </li>
-            <li><a className="small-tab" href="pages/about-us.html">About us</a></li>
-          </ul>
-        </nav>
+          <li>
+            <Link className="small-tab" to="/about-us">
+              About us
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </>
   );
 }
 
+function TicketDropdown() {
+  return (
+    <ul className="nav__submenu">
+      <li>
+        <Link
+          className="nav__submenu-item"
+          to={{
+            pathname: "/tickets",
+            hash: "#general-tickets",
+          }}
+        >
+          Renaissance Tickets
+        </Link>
+      </li>
+      <li>
+        <Link
+          className="nav__submenu-item"
+          to={{
+            pathname: "/tickets",
+            hash: "#les-amis",
+          }}
+        >
+          Les Amis Tickets
+        </Link>
+      </li>
+      <li>
+        <Link
+          className="nav__submenu-item"
+          to={{
+            pathname: "/tickets",
+            hash: "#kegs",
+          }}
+        >
+          Kegs N Eggs Tickets
+        </Link>
+      </li>
+      <li>
+        <Link className="nav__submenu-item" to="/bring-your-dog">
+          Bring Your Dog
+        </Link>
+      </li>
+    </ul>
+  );
+}
+
+function WeekendDropdown() {
+  return (
+    <ul className="nav__submenu">
+      <li>
+        <Link
+          className="nav__submenu-item"
+          to={{
+            pathname: "/weekends",
+            hash: "#highland-fling",
+          }}
+        >
+          Highland Fling
+        </Link>
+      </li>
+      <li>
+        <Link
+          className="nav__submenu-item"
+          to={{
+            pathname: "/weekends",
+            hash: "#pets-pirate-ale",
+          }}
+        >
+          Pets, Pirates &#38; Ale
+        </Link>
+      </li>
+      <li>
+        <Link
+          className="nav__submenu-item"
+          to={{
+            pathname: "/weekends",
+            hash: "#shamrocks-shenanigans",
+          }}
+        >
+          Shamrocks, Shenanigans &#38; Sweet Romance
+        </Link>
+      </li>
+      <li>
+        <Link
+          className="nav__submenu-item"
+          to={{
+            pathname: "/weekends",
+            hash: "#viking-invasion",
+          }}
+        >
+          Viking Invasion and Cosplay in the Kingdom
+        </Link>
+      </li>
+      <li>
+        <Link
+          className="nav__submenu-item"
+          to={{
+            pathname: "/weekends",
+            hash: "#oktoberfest",
+          }}
+        >
+          Oktoberfest and Other Wonders of the World
+        </Link>
+      </li>
+      <li>
+        <Link
+          className="nav__submenu-item"
+          to={{
+            pathname: "/weekends",
+            hash: "#ladies-shopping-day",
+          }}
+        >
+          Ladies Shopping Day
+        </Link>
+      </li>
+    </ul>
+  );
+}
 
 export default Navigation;
