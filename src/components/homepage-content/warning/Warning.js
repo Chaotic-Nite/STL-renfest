@@ -10,12 +10,7 @@ function Warning_Sign() {
     <>
       <div id="attention-div">
         <CollapsibleComponent>
-          <CollapsibleHead
-            className="attention-bttn"
-            style={{ fontVariant: "small-caps;" }}
-          >
-            Covid-19 Warning
-          </CollapsibleHead>
+          <CollapsibleHead>Covid-19 Warning</CollapsibleHead>
           <CollapsibleContent className="margin-width" id="attention-text">
             <p>
               The Saint Louis Renaissance Festival has taken enhanced health and
