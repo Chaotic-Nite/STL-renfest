@@ -1,14 +1,16 @@
 import React from "react";
 import IntroPage from "../components/homepage-content/intro/Intro";
-import Warning_Sign from "../components/homepage-content/warning/Warning";
+import WarningSign from "../components/homepage-content/warning/Warning";
 import PhotoBanner from "../components/photobanner/PhotoBanner";
+import Sponsors from "../components/sponsors/Sponsors";
 
 function Home() {
   return (
     <>
       <PhotoBanner />
-      <Warning_Sign />
+      <WarningSign />
       <IntroPage />
+      <Sponsors />
     </>
   );
 }

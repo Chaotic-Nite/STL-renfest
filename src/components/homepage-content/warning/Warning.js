@@ -4,8 +4,9 @@ import {
   CollapsibleContent,
 } from "react-collapsible-component";
 import "../../../css/warning.css";
+import dateObject from "../../../UPTODATE.js";
 
-function Warning_Sign() {
+function WarningSign() {
   return (
     <>
       <div id="attention-div">
@@ -64,7 +65,7 @@ function Warning_Sign() {
               F. DO you have a NEW Fever that CANNOT be attributed to another
               health condition? <br />
               Thank you for all of your patience and understanding and we all
-              look forward to a FUN and SAFE 2020 season.
+              look forward to a FUN and SAFE {dateObject.year} season.
             </p>
           </CollapsibleContent>
         </CollapsibleComponent>
@@ -73,4 +74,4 @@ function Warning_Sign() {
   );
 }
 
-export default Warning_Sign;
+export default WarningSign;

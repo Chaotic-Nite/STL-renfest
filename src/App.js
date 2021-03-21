@@ -4,6 +4,7 @@ import { Switch, Route, Link } from "react-router-dom";
 import Navigation from "./components/navigation/Navigation";
 
 import { routes } from "./routes/routes";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             ))}
         </Switch>
       </nav>
+      <Footer />
     </div>
   );
 }

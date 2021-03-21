@@ -9,7 +9,6 @@ function PhotoBanner() {
     "images/banner-images/three.jpg",
     "images/banner-images/four.jpg",
   ];
-  console.log(slideImages);
   return (
     <div className="slide-container">
       <Slide>
