@@ -28,35 +28,3 @@ a {
   margin-right: 5%;
   margin-left: 5%;
 }
-
-/* Introduction Text */
-
-.intro-container {
-  margin: 0 5% 5% 5%;
-  padding: 0 7px;
-  border-top: var(--borderDesign);
-  border-bottom: var(--borderDesign);
-}
-
-.intro-container h1,
-.intro-container h3 {
-  text-align: center;
-}
-
-.intro-container h1 {
-  margin-bottom: 0.5%;
-  font-family: "Tangerine", cursive;
-  font-size: 75px;
-}
-
-.intro-container h3 {
-  font-family: "Sansita Swashed", cursive;
-  margin-top: 0.5%;
-  margin-bottom: 4%;
-}
-
-#closing-line {
-  padding-top: 10px;
-  text-align: center;
-  font-weight: 700;
-}
