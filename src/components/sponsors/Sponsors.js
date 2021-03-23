@@ -81,94 +81,15 @@ function Sponsors() {
         <img className="divider" src={DragonDivder} alt="Dragon Divider" />
         <h2>Our Sponsors</h2>
         <Carousel slidesPerPage={3} autoPlay={3000} infinite>
-          <div className="slide">
-            <a href={sponsorObjectArr[0].link} target="_blank">
-              <img
-                src={sponsorObjectArr[0].img}
-                alt={sponsorObjectArr[0].alt}
-              />
-            </a>
-          </div>
-          <div className="slide">
-            <a href={sponsorObjectArr[1].link} target="_blank">
-              <img
-                src={sponsorObjectArr[1].img}
-                alt={sponsorObjectArr[1].alt}
-              />
-            </a>
-          </div>
-          <div className="slide">
-            <a href={sponsorObjectArr[2].link} target="_blank">
-              <img
-                src={sponsorObjectArr[2].img}
-                alt={sponsorObjectArr[2].alt}
-              />
-            </a>
-          </div>
-          <div className="slide">
-            <a href={sponsorObjectArr[3].link} target="_blank">
-              <img
-                src={sponsorObjectArr[3].img}
-                alt={sponsorObjectArr[3].alt}
-              />
-            </a>
-          </div>
-          <div className="slide">
-            <a href={sponsorObjectArr[4].link} target="_blank">
-              <img
-                src={sponsorObjectArr[4].img}
-                alt={sponsorObjectArr[4].alt}
-              />
-            </a>
-          </div>
-          <div className="slide">
-            <a href={sponsorObjectArr[5].link} target="_blank">
-              <img
-                src={sponsorObjectArr[5].img}
-                alt={sponsorObjectArr[5].alt}
-              />
-            </a>
-          </div>
-          <div className="slide">
-            <a href={sponsorObjectArr[6].link} target="_blank">
-              <img
-                src={sponsorObjectArr[6].img}
-                alt={sponsorObjectArr[6].alt}
-              />
-            </a>
-          </div>
-          <div className="slide">
-            <a href={sponsorObjectArr[7].link} target="_blank">
-              <img
-                src={sponsorObjectArr[7].img}
-                alt={sponsorObjectArr[7].alt}
-              />
-            </a>
-          </div>
-          <div className="slide">
-            <a href={sponsorObjectArr[8].link} target="_blank">
-              <img
-                src={sponsorObjectArr[8].img}
-                alt={sponsorObjectArr[8].alt}
-              />
-            </a>
-          </div>
-          <div className="slide">
-            <a href={sponsorObjectArr[9].link} target="_blank">
-              <img
-                src={sponsorObjectArr[9].img}
-                alt={sponsorObjectArr[9].alt}
-              />
-            </a>
-          </div>
-          <div className="slide">
-            <a href={sponsorObjectArr[10].link} target="_blank">
-              <img
-                src={sponsorObjectArr[10].img}
-                alt={sponsorObjectArr[10].alt}
-              />
-            </a>
-          </div>
+          {sponsorObjectArr.map((sponsor) => {
+            return (
+              <div className="slide">
+                <a href={sponsor.link} target="_blank">
+                  <img src={sponsor.img} alt={sponsor.alt} />
+                </a>
+              </div>
+            );
+          })}
         </Carousel>{" "}
       </div>
     </>
