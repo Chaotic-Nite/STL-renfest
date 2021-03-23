@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "../../css/navigation.css";
 import { Link } from "react-router-dom";
+import BurgerNav from "./BurgerNav";
 
 function Navigation() {
   const [sticky, setSticky] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
@@ -19,52 +21,68 @@ function Navigation() {
     });
   }, [sticky]);
 
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  let isMobile = width <= 1024 ? true : false;
+
   return (
     <>
       {/*Navigation Bar with Dropdown Quick Links */}
-      <nav className={sticky ? "nav nav-sticky" : "nav"}>
-        <ul className="nav__menu" id="nav-bar">
-          <li>
-            <Link className="small-tab drop" to="/tickets">
-              Tickets
-            </Link>
-            <TicketDropdown />
-          </li>
-          <li>
-            <Link className="small-tab" to="/weddings">
-              Weddings
-            </Link>
-          </li>
-          <li>
-            <Link id="weekends" className="small-tab" to="/weekends">
-              Themed Weekends
-            </Link>
-            <WeekendDropdown />
-          </li>
-          <li>
-            <Link id="entertain" to="/entertainment-vendor">
-              Entertainers &#38; Vendors
-            </Link>
-          </li>
-          <li>
-            <Link className="small-tab drop" to="/cast">
-              Cast
-            </Link>
-            <ul className="nav__submenu">
-              <li>
-                <Link className="nav__submenu-item" to="/warriors-island">
-                  Warriors Island
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <Link className="small-tab" to="/about-us">
-              About us
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      {isMobile ? (
+        <BurgerNav />
+      ) : (
+        <nav className={sticky ? "nav nav-sticky" : "nav"}>
+          <ul className="nav__menu" id="nav-bar">
+            <li>
+              <Link className="small-tab drop" to="/tickets">
+                Tickets
+              </Link>
+              <TicketDropdown />
+            </li>
+            <li>
+              <Link className="small-tab" to="/weddings">
+                Weddings
+              </Link>
+            </li>
+            <li>
+              <Link id="weekends" className="small-tab" to="/weekends">
+                Themed Weekends
+              </Link>
+              <WeekendDropdown />
+            </li>
+            <li>
+              <Link id="entertain" to="/entertainment-vendor">
+                Entertainers &#38; Vendors
+              </Link>
+            </li>
+            <li>
+              <Link className="small-tab drop" to="/cast">
+                Cast
+              </Link>
+              <ul className="nav__submenu">
+                <li>
+                  <Link className="nav__submenu-item" to="/warriors-island">
+                    Warriors Island
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <Link className="small-tab" to="/about-us">
+                About us
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      )}
     </>
   );
 }

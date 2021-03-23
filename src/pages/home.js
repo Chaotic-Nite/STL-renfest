@@ -1,13 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import IntroPage from "../components/homepage-content/intro/Intro";
 import WarningSign from "../components/homepage-content/warning/Warning";
 import PhotoBanner from "../components/photobanner/PhotoBanner";
 import Sponsors from "../components/sponsors/Sponsors";
 import dateObject from "../UPTODATE";
 import { Link } from "react-router-dom";
+import { Form, Button } from "react-bootstrap";
 import "../css/home.css";
+import $ from "jquery";
 
 function Home() {
+  // Newsletter Email from original site
+  const newsletter_submit = () => {
+    let otherSiteSelected = "0";
+    if ($("#tofTears").prop("checked")) {
+      otherSiteSelected += "," + $("#tofTears").val();
+    }
+    let requestURL =
+      "http://www.tunestub.com/embed/venues/renaissancefestmn/newsletter/dosignup.cfm" +
+      "?email=" +
+      $("#email").val() +
+      "&tofTears=" +
+      otherSiteSelected;
+    $.ajax({
+      type: "GET",
+      cache: false,
+      url: requestURL,
+      dataType: "jsonp",
+      success: function (result) {
+        $("#ts-newsletter-msg-holder").html(result.html);
+      },
+    });
+    return false;
+  };
+
   return (
     <>
       <PhotoBanner />
@@ -19,14 +45,14 @@ function Home() {
           {dateObject.year}
         </h2>
         <h3>10am - 6pm Rain or Shine</h3>
-        <h3 style={{ fontVariant: "small-caps;" }}>Free Parking</h3>
+        <h3 style={{ fontVariant: "small-caps" }}>Free Parking</h3>
       </div>
 
       <div className="other-events margin-width">
         <span>
           <h2>Kegs N Eggs</h2>
         </span>
-        <p style={{ fontSize: "30px;" }}>
+        <p style={{ fontSize: "30px" }}>
           Tickets are on sale <u>NOW</u> for the {dateObject.year} Season on
           April 10th {dateObject.year}!<br />
           <Link to="/tickets">Click Here</Link> to view ticket prices and
@@ -57,18 +83,22 @@ function Home() {
         <div className="social-links">
           <a
             href="https://www.facebook.com/STLRenFest/"
+            target="_blank"
             className="fa fa-facebook"
           ></a>
           <a
             href="https://twitter.com/stlrenfest"
+            target="_blank"
             className="fa fa-twitter"
           ></a>
           <a
             href="https://www.pinterest.com/stlouisrenaissa/"
+            target="_blank"
             className="fa fa-pinterest"
           ></a>
           <a
             href="https://www.instagram.com/stlrenfest/"
+            target="_blank"
             className="fa fa-instagram"
           ></a>
         </div>
@@ -84,38 +114,38 @@ function Home() {
               <br />
             </div>
           </div>
-          <form>
-            <div>
-              <label for="email-input">Email Address* </label>
-              <input
+          <Form>
+            <Form.Group>
+              <Form.Label>Email Address</Form.Label>
+              <Form.Control
                 type="email"
                 name="email-input"
                 id="email"
-                maxlength="255"
+                maxLength="255"
                 required
               />
-            </div>
-            <div>
-              <label>
-                Are you also interested in hearing about these events?
-              </label>
-              <div>
-                <input
-                  type="checkbox"
-                  name="tofTears"
-                  id="tofTears"
-                  value="469"
-                />
-                Trail of Terror
-              </div>
-            </div>
-            <input
+            </Form.Group>
+
+            <Form.Group>
+              <Form.Check
+                type="checkbox"
+                name="tofTears"
+                id="tofTears"
+                value="469"
+                label="Trail of Terror"
+              />
+            </Form.Group>
+            <Button
+              variant="primary"
               type="submit"
               name="subscribe"
               id="subscribe"
               value="Subscribe"
-            />
-          </form>
+              onClick={newsletter_submit}
+            >
+              Subscribe
+            </Button>
+          </Form>
         </div>
       </div>
       <Sponsors />

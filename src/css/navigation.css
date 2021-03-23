@@ -33,10 +33,9 @@ nav > ul {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 0 auto 0;
   color: #fff;
   text-align: left;
-  z-index: 5;
+  z-index: 10;
 }
 
 .nav-sticky {
@@ -47,14 +46,14 @@ nav > ul {
 
 .nav a {
   display: flex;
-  padding: 15px 1.62rem;
+  padding: 1.5rem 1.62rem;
   color: #fff;
   line-height: inherit;
   cursor: pointer;
 }
 
 .nav__menu {
-  line-height: 45px;
+  line-height: 105%;
   font-weight: 700;
   text-transform: uppercase;
   display: flex;
@@ -93,4 +92,60 @@ nav > ul {
   position: relative;
   text-decoration: none;
   transition-duration: 0.5s;
+}
+
+/* BurgerNav CSS */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 4%;
+  height: 3%;
+  right: 2%;
+  top: 2.5%;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #ffffff;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #ffffff;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #ffffff;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: url("../images/blue-abstract-nav.png");
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #ffffff;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  color: #fff;
+  display: inline-block;
+  padding: 5% 5%;
+  margin: 10% 0;
 }

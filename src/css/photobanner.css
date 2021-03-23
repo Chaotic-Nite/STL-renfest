@@ -22,3 +22,7 @@
   width: 100%;
   text-align: left;
 }
+
+.react-slideshow-container .default-nav {
+  z-index: 2;
+}
