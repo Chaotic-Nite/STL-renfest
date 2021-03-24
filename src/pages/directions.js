@@ -1,5 +1,11 @@
 import React from "react";
 
-function Directions() {}
+function Directions() {
+  return (
+    <>
+      <div>Directions</div>
+    </>
+  );
+}
 
 export default Directions;

@@ -1,5 +1,11 @@
 import React from "react";
 
-function Tickets() {}
+function Tickets() {
+  return (
+    <>
+      <div>Tickets</div>
+    </>
+  );
+}
 
 export default Tickets;

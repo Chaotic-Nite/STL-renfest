@@ -1,5 +1,11 @@
 import React from "react";
 
-function BringYourDog() {}
+function BringYourDog() {
+  return (
+    <>
+      <div>Bark</div>
+    </>
+  );
+}
 
 export default BringYourDog;

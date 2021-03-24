@@ -4,10 +4,10 @@ import "../../css/photobanner.css";
 
 function PhotoBanner() {
   const slideImages = [
-    "images/banner-images/one.jpg",
-    "images/banner-images/two.jpg",
-    "images/banner-images/three.jpg",
-    "images/banner-images/four.jpg",
+    "assets/images/banner-images/one.jpg",
+    "assets/images/banner-images/two.jpg",
+    "assets/images/banner-images/three.jpg",
+    "assets/images/banner-images/four.jpg",
   ];
   return (
     <div className="slide-container">

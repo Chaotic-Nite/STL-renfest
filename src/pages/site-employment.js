@@ -1,5 +1,11 @@
 import React from "react";
 
-function Employment() {}
+function Employment() {
+  return (
+    <>
+      <div>Employment</div>
+    </>
+  );
+}
 
 export default Employment;

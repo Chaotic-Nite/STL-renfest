@@ -41,7 +41,7 @@ function App() {
         )}
       </header>
       <Navigation />
-      <nav>
+      <nav className="main-body">
         <Switch>
           {routes &&
             routes.map((route) => (
