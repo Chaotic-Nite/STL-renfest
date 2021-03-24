@@ -1,5 +1,42 @@
 import React from "react";
+import { warriors } from "../castList.js"
+import IslandSign from "../images/warrior-island-sign.jpg"
+import FlippedDivider from '../images/fancy-divider-flipped.png'
+import Divider from '../images/fancy-divider.png'
+import '../css/cast-warrior.css'
 
-function WarriorsIsland() {}
+function WarriorsIsland() {
+    return (
+        <> 
+        <div id="warrior" className="margin-width">
+      <h1 id="warrior-island" style={{fontFamily: "'Rock Salt', cursive"}}>
+        Warriors Island
+      </h1>
+      <img
+        id="warrior-sign"
+        src={IslandSign}
+        alt="STL Warrior Island Sign"
+      />
+      <div className="warriors" id="warriors" style={{backgroundImage: {FlippedDivider}}}>
+        <h2>In Memory</h2>
+        <p className="warrior-text" style={{backgroundImage: {Divider}}}>
+          Of the volunteers of the <br />
+          <b>St. Louis Renaissance Faire &#38; Festival</b> <br />
+          that poured their heart's and soul's into building this village<br />
+          in order to entertain and educate our patrons. <br />
+          And while their spirits may have moved on, <br />
+          the love and bonds that helped create this magical place <br />
+          are always in our hearts.
+        </p>
+                {warriors.map((warrior) => {
+                    return (
+                        <p className='warrior'>{ warrior }</p>
+                    )
+                })}
+                </div>
+        </div>
+        </>
+    )
+}
 
 export default WarriorsIsland;

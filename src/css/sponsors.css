@@ -1,0 +1,22 @@
+.divider {
+  height: 15vh;
+  width: 90%;
+  margin-bottom: -1%;
+}
+
+.sponsors-container {
+  text-align: center;
+}
+
+.sponsors-container h2 {
+  font-size: 3.5rem;
+  margin: 7px 0 15px 0;
+}
+
+.slide img {
+  height: 150px;
+  width: 250px;
+  margin-bottom: 15%;
+  border-radius: 25%;
+  border: 3px solid white;
+}

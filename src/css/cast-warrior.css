@@ -1,0 +1,159 @@
+.card-img {
+    width: 15%;
+}
+
+.cast-list {
+    display: flex;
+}
+
+.current {
+  font-family: "Rock Salt", cursive;
+  text-align: center;
+}
+
+.current a {
+  color: #5100bbc0;
+  text-decoration: none;
+}
+
+.guild {
+  margin: 10px 0;
+  padding: 15px;
+}
+
+.intro-p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+  text-align: left;
+}
+
+.court-guild {
+  color: white;
+  background-color: rgb(17, 0, 255);
+  border: 15px double rgb(192, 163, 0);
+}
+
+.court-guild::-webkit-details-marker {
+  color: rgb(192, 163, 0);
+}
+
+.fae-guild {
+  color: white;
+  background-color: rgb(0, 155, 21);
+  border: 7px dashed rgb(226, 155, 0);
+}
+
+.fae-guild::-webkit-details-marker {
+  color: rgb(226, 155, 0);
+}
+
+.fighter-guild {
+  color: rgb(51, 51, 51);
+  background: linear-gradient(
+    to bottom right,
+    rgb(138, 138, 138),
+    rgb(245, 245, 245),
+    rgb(121, 121, 121)
+  );
+  border: 7px inset rgb(236, 162, 0);
+}
+
+.fighter-guild::-webkit-details-marker {
+  color: rgb(236, 162, 0);
+}
+
+.traveler-guild {
+  color: white;
+  background: linear-gradient(
+    to right,
+    rgb(163, 139, 0),
+    rgb(15, 128, 0),
+    rgb(104, 53, 5)
+  );
+  border: 7px dotted rgb(248, 76, 76);
+  padding: 3px;
+}
+
+.traveler-guild::-webkit-details-marker {
+  color: rgb(248, 76, 76);
+}
+
+.village-guild {
+  color: white;
+  background: rgb(133, 64, 18);
+  border: 7px solid rgb(41, 85, 35);
+  padding: 3px;
+}
+
+.village-guild::-webkit-details-marker {
+  color: rgb(41, 85, 35);
+}
+
+.cast-picture {
+  max-height: 200px;
+  max-width: 200px;
+  margin: 0 15px 0 0;
+  border-right: 5px double black;
+}
+
+.guild-lead {
+  text-align: center;
+}
+
+.character-text {
+  padding-left: 15px;
+}
+
+.cast-list {
+  display: flex;
+  font-family: "Sansita Swashed", cursive;
+  font-size: 1.2rem;
+  text-align: left;
+  background: rgb(255, 242, 222);
+  border: 5px double black;
+  margin: 25px 0;
+  overflow: auto;
+}
+
+.warriors {
+  background-color: rgb(238, 238, 238);
+  font-family: "Berkshire Swash", cursive;
+  text-align: center;
+  border: 30px solid #ca7703;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E")
+    25;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 95px;
+  padding-right: 50px;
+  padding-left: 50px;
+  background-size: 1000px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.warrior-text {
+  margin-top: -25px;
+  padding-bottom: 95px;
+  background-size: 1000px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.warrior {
+  font-family: "Eagle Lake", cursive;
+  font-size: 24px;
+  margin: 10px 5px;
+}
+
+#warrior {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#warrior-sign {
+  max-height: 650px;
+  border-radius: 20%;
+  margin-bottom: 20px;
+}

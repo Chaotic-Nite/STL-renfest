@@ -1,0 +1,181 @@
+@media screen and (max-width: 768px) {
+  .sponsors-container h2 {
+    font-size: 2.4rem;
+  }
+  .slide img {
+    max-height: 80px;
+    width: 100%;
+    margin-bottom: 15%;
+    border-radius: 25%;
+    border: 3% solid white;
+  }
+}
+
+/* Introduction Text */
+
+.intro-container {
+  padding: 2% 7px;
+  border-top: var(--borderDesign);
+  border-bottom: var(--borderDesign);
+}
+
+.intro-container h1,
+.intro-container h3 {
+  text-align: center;
+}
+
+.intro-container h1 {
+  font-family: "Tangerine", cursive;
+  font-size: 7rem;
+}
+
+.intro-container h3 {
+  font-family: "Sansita Swashed", cursive;
+  margin-top: 0.5%;
+  margin-bottom: 2%;
+}
+
+#closing-line {
+  padding-top: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Dates */
+.dates {
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: var(--borderDesign);
+}
+
+.dates h2 {
+  font-size: 40px;
+}
+
+.dates h3 {
+  font-size: 30px;
+}
+
+.dates h2,
+.dates h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+
+/* MAF */
+.maf {
+  padding-top: 15px;
+}
+
+/* Other Events */
+.other-events {
+  padding: 2% 2%;
+  border-bottom: var(--borderDesign);
+}
+
+.other-events h2 {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 0.5%;
+}
+
+.other-events span {
+  color: #ff7300;
+  text-decoration: underline;
+}
+
+.other-events p {
+  font-size: 30px;
+}
+
+/* Social Media */
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  padding-bottom: 1%;
+  white-space: nowrap;
+  border-bottom: var(--borderDesign);
+}
+
+.social-media h1 {
+  font-size: 70px;
+  font-family: "Tangerine", cursive;
+
+  margin-bottom: -0.5%;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 45px;
+  width: 20%;
+  text-align: center;
+  text-decoration: none;
+  color: whitesmoke;
+  margin: 5px 7px;
+  margin-bottom: 25px;
+  border-radius: 15%;
+}
+
+.fa:hover {
+  opacity: 0.5;
+  color: white;
+}
+
+.social-link {
+  display: inline-block;
+}
+
+.fa-facebook {
+  background: #3b5998;
+}
+
+.fa-twitter {
+  background: #55acee;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+}
+
+.fa-instagram {
+  background: #125688;
+}
+
+/* Email Newsletter */
+
+.news-msg-holder {
+  display: none;
+}
+
+.email-list {
+  display: flex;
+  justify-content: center;
+  background-color: #ffae0073;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  margin: 2.5% 5%;
+  border-radius: 1%;
+
+  text-align: center;
+}
+
+.subscribe-email div {
+  margin-top: 5px;
+}
+
+#subscribe {
+  margin-top: 15px;
+}
+
+#email {
+  border: 1px solid whitesmoke;
+  padding: 7px;
+  border-radius: 8px;
+  font-size: 17px;
+}

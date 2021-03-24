@@ -1,0 +1,53 @@
+.foot {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-image: url("../images/blueVariant-print.png");
+  background-position: bottom;
+  background-size: cover;
+  color: whitesmoke;
+  padding-bottom: 2%;
+}
+
+.foot a {
+  color: white;
+  text-decoration: none;
+}
+
+.foot h3 {
+  font-size: 150%;
+}
+
+/* Copyright tags and Logo */
+#cr-tags img {
+  width: 60%;
+}
+
+#cr-tags {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.5% 3% 10% 0;
+  font-size: 100%;
+}
+
+#sitemap-link {
+  color: #0d9aff;
+}
+
+/* General and Realm adjustments */
+#general,
+#realm {
+  display: flex;
+  flex-direction: column;
+}
+
+#reasons p {
+  margin-top: -0.5%;
+  color: lightblue;
+}
+
+.foot-link {
+  margin-bottom: 3%;
+}

@@ -1,0 +1,28 @@
+@import "react-slideshow-image/dist/styles.css";
+
+@media screen and (max-width: 600px) {
+  .slide-container {
+    display: none;
+  }
+}
+
+.photo {
+  height: 30rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.photo-text {
+  font-family: "Asset", cursive;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 900;
+  padding: 8px 25px;
+  position: relative;
+  width: 100%;
+  text-align: left;
+}
+
+.react-slideshow-container .default-nav {
+  z-index: 2;
+}

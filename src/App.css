@@ -1,15 +1,81 @@
-.App {
-  text-align: center;
+@media screen and (max-width: 768px) {
+  #logo {
+    width: 10rem;
+  }
+
+  .foot {
+    font-size: 70%;
+  }
 }
 
-.App-header {
-  background-image: url("images/blueVariant-print.png");
-  background-size: cover;
-  background-position: top;
-  height: 5%;
+:root {
+  --borderDesign: 5px solid #5000e6b6;
+}
+
+.App {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 125%;
 }
 
 #logo {
-  width: 20vw;
-  margin: 2% 0;
+  width: 27vw;
+  margin: 3% 0 3% 35vw;
+}
+
+a {
+  color: #5900ff;
+}
+
+.margin-width {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top-line {
+  display: flex;
+  background-image: url("./images/blueVariant-print.png");
+  background-size: cover;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.head li {
+  list-style-type: none;
+  text-align: -webkit-match-parent;
+}
+
+.head a {
+  font-weight: bold;
+}
+
+.contacts {
+  border-left: 6px solid #bf00ff4b;
+  margin-top: 2%;
+  margin-right: 5%;
+  font-size: 1.5rem;
+  padding-left: 0.5%;
+  list-style: none;
+  white-space: nowrap;
+  min-width: 25px;
+}
+
+.contacts li {
+  margin: 10px 0;
+}
+
+.contacts a {
+  text-decoration: none;
+  padding: 3px 5px;
+  color: whitesmoke;
+}
+
+#logo img {
+  max-width: 500px;
 }
