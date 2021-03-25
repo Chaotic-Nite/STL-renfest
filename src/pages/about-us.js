@@ -1,11 +1,5 @@
-import react from "react";
-
 function AboutUs() {
-  return (
-    <>
-      <h1>This is About Us Page</h1>
-    </>
-  );
+  return <></>;
 }
 
 export default AboutUs;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../css/navigation.css";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import BurgerNav from "./BurgerNav";
 
 function Navigation() {
@@ -91,37 +92,23 @@ function TicketDropdown() {
   return (
     <ul className="nav__submenu">
       <li>
-        <Link
+        <HashLink
           className="nav__submenu-item"
-          to={{
-            pathname: "/tickets",
-            hash: "#general-tickets",
-          }}
+          smooth
+          to="/tickets#general-tickets"
         >
           Renaissance Tickets
-        </Link>
+        </HashLink>
       </li>
       <li>
-        <Link
-          className="nav__submenu-item"
-          to={{
-            pathname: "/tickets",
-            hash: "#les-amis",
-          }}
-        >
+        <HashLink className="nav__submenu-item" smooth to="/tickets#les-amis">
           Les Amis Tickets
-        </Link>
+        </HashLink>
       </li>
       <li>
-        <Link
-          className="nav__submenu-item"
-          to={{
-            pathname: "/tickets",
-            hash: "#kegs",
-          }}
-        >
+        <HashLink className="nav__submenu-item" smooth to="/tickets#kegs">
           Kegs N Eggs Tickets
-        </Link>
+        </HashLink>
       </li>
       <li>
         <Link className="nav__submenu-item" to="/bring-your-dog">
@@ -136,70 +123,58 @@ function WeekendDropdown() {
   return (
     <ul className="nav__submenu">
       <li>
-        <Link
+        <HashLink
           className="nav__submenu-item"
-          to={{
-            pathname: "/weekends",
-            hash: "#highland-fling",
-          }}
+          smooth
+          to="/weekends#highland-fling"
         >
           Highland Fling
-        </Link>
+        </HashLink>
       </li>
       <li>
-        <Link
+        <HashLink
           className="nav__submenu-item"
-          to={{
-            pathname: "/weekends",
-            hash: "#pets-pirate-ale",
-          }}
+          smooth
+          to="/weekends#pets-pirate-ale"
         >
           Pets, Pirates &#38; Ale
-        </Link>
+        </HashLink>
       </li>
       <li>
-        <Link
+        <HashLink
           className="nav__submenu-item"
-          to={{
-            pathname: "/weekends",
-            hash: "#shamrocks-shenanigans",
-          }}
+          smooth
+          to="/weekends#shamrocks-shenanigans"
         >
           Shamrocks, Shenanigans &#38; Sweet Romance
-        </Link>
+        </HashLink>
       </li>
       <li>
-        <Link
+        <HashLink
           className="nav__submenu-item"
-          to={{
-            pathname: "/weekends",
-            hash: "#viking-invasion",
-          }}
+          smooth
+          to="/weekends#viking-invasion"
         >
           Viking Invasion and Cosplay in the Kingdom
-        </Link>
+        </HashLink>
       </li>
       <li>
-        <Link
+        <HashLink
           className="nav__submenu-item"
-          to={{
-            pathname: "/weekends",
-            hash: "#oktoberfest",
-          }}
+          smooth
+          to="/weekends#oktoberfest"
         >
           Oktoberfest and Other Wonders of the World
-        </Link>
+        </HashLink>
       </li>
       <li>
-        <Link
+        <HashLink
           className="nav__submenu-item"
-          to={{
-            pathname: "/weekends",
-            hash: "#ladies-shopping-day",
-          }}
+          smooth
+          to="/weekends#ladies-shopping-day"
         >
           Ladies Shopping Day
-        </Link>
+        </HashLink>
       </li>
     </ul>
   );
