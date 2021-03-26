@@ -23,8 +23,8 @@ function App() {
   return (
     <div className="App">
       <header className="top-line">
-        <Link to="/">
-          <img id="logo" src={logo} alt="" />
+        <Link to="/" id="logo">
+          <img src={logo} alt="" />
         </Link>
         {isMobile ? null : (
           <ul className="contacts">

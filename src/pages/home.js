@@ -84,27 +84,26 @@ function Home() {
           <a
             href="https://www.facebook.com/STLRenFest/"
             target="_blank"
-            className="fa fa-facebook"
             rel="noreferrer"
-          ></a>
+          ><b class="fa fa-facebook"></b></a>
           <a
             href="https://twitter.com/stlrenfest"
             target="_blank"
-            className="fa fa-twitter"
+            
             rel="noreferrer"
-          ></a>
+          ><b className="fa fa-twitter"></b></a>
           <a
             href="https://www.pinterest.com/stlouisrenaissa/"
             target="_blank"
-            className="fa fa-pinterest"
+            
             rel="noreferrer"
-          ></a>
+          ><b className="fa fa-pinterest"></b></a>
           <a
             href="https://www.instagram.com/stlrenfest/"
             target="_blank"
-            className="fa fa-instagram"
+            
             rel="noreferrer"
-          ></a>
+          ><b className="fa fa-instagram"></b></a>
         </div>
       </div>
 

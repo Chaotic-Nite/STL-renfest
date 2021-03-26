@@ -1,0 +1,24 @@
+.faq-a a {
+  text-decoration: dotted underline;
+  color: #ff7300;
+}
+
+.faq details {
+    padding: .5% 2%;
+    text-align: left;
+}
+
+.faq-q {
+    font-size: 1.5rem;
+}
+
+.faq-a{
+    margin-top: 1%;
+    border-bottom: var(--borderDesign);
+}
+
+.faq {
+    background: rgba(245, 245, 245, 0.788);
+    border: var(--borderDesign);
+    margin-top: 2%;
+}

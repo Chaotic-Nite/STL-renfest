@@ -18,6 +18,9 @@ function Cast() {
 
   return (
     <>
+      <h1 className='page-header'>
+        Cast
+      </h1>
       <div className="margin-width current">
         {guildArr.map((guild, j) => {
           return (

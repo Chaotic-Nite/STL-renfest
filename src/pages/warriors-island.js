@@ -8,10 +8,10 @@ import '../css/cast-warrior.css'
 function WarriorsIsland() {
     return (
         <> 
-        <div id="warrior" className="margin-width">
-      <h1 id="warrior-island" style={{fontFamily: "'Rock Salt', cursive"}}>
+      <h1 className='page-header'>
         Warriors Island
       </h1>
+        <div id="warrior" className="margin-width">
       <img
         id="warrior-sign"
         src={IslandSign}

@@ -1,10 +1,12 @@
 import React from "react";
 import dateObject from "../UPTODATE";
+import '../css/faq.css'
 
 function Faq() {
   return (
     <>
-      <div className="margin-width ">
+        <h1 className='page-header'>FAQ</h1>
+      <div className="margin-width faq">
         <details>
           <summary className="faq-q">
             <b>Q</b>: What does the admission price include?
@@ -237,7 +239,7 @@ function Faq() {
             – Friday 9am-5pm, to collect your lost items. <br />
             <br />
             For more information please contact the Festival Office at
-            636-639-5173 or email at:
+            636-639-5173 or email at: &nbsp;
             <a href="mailto:info@renaissancefest.com">
               akuchar@renaissancefest.com.
             </a>
