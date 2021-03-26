@@ -105,22 +105,21 @@ a {
   min-width: 15%;
 }
 
+.col2 ul {
+  list-style-type: none;
+}
+
+.col2-link {
+  text-decoration: none;
+  color: #67007c;
+}
+
+.col2-link:hover {
+  color: #ff7300;
+}
+
 /* Social Media */
 
-.mini-social {
-  width: 15%;
-  text-align: center;
-  text-decoration: none;
-  color: whitesmoke;
-  margin: 5px 7px;
-  margin-bottom: 25px;
-  border-radius: 15%;
-}
-
-.mini-social:hover {
-  opacity: 0.5;
-  color: white;
-}
 
 .social-link {
   display: inline-block;

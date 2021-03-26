@@ -25,7 +25,7 @@ function AboutUs() {
       <div className='col2'>
         <h3 className="col2-header">Plan Your Visit</h3>
         <ul>
-          <li><Link to="/tickets">Get Ticekts</Link></li>
+          <li><Link className="col2-link" to="/tickets">Get Ticekts</Link></li>
         </ul>
         <SocialMedia />
       </div>
