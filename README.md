@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Overhaul of entire site
+## Overhaul of entire site
 
 Reconstructing a new site with a modern update and cleaner navigation based off the [original website](http://www.stlrenfest.com/).
 
