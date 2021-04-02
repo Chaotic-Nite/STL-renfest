@@ -101,6 +101,10 @@ a {
 }
 
 /* Second Column */
+.two-col h2{
+  font-size: 3.5rem;
+}
+
 .col2 {
   min-width: 25%;
 }

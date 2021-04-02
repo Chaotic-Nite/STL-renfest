@@ -4,7 +4,7 @@ import "../../css/navigation.css";
 
 function BurgerNav() {
   return (
-    <Menu right>
+    <Menu right style={{height:'100vh'}}>
       <Link className="small-tab" to="/directions">
         Directions
       </Link>
