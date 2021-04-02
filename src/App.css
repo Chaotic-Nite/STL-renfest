@@ -43,7 +43,7 @@ a {
 .page-header {
   margin: 1.5% 5%;
   font-family: "Sansita Swashed", cursive;
-  padding-bottom: .5%;
+  padding-bottom: 0.5%;
   border-bottom: 5px solid #ff7300;
 }
 
@@ -119,8 +119,6 @@ a {
 }
 
 /* Social Media */
-
-
 .social-link {
   display: inline-block;
 }
