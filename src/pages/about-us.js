@@ -8,10 +8,11 @@ function AboutUs() {
       <h1 className="page-header">About Us</h1>
       <div className="margin-width two-col">
         <div>
+
           <h2>
             Welcome to the {dateObject.year} St Louis Renaissance Festival!{" "}
           </h2>
-
+          <div>
           <p>
             Mid-America Festivals is the nation’s largest producer of outdoor
             themed events. In 2019, we entertained nearly one million people in
@@ -43,6 +44,7 @@ function AboutUs() {
             For more information about Mid-America Festivals{" "}
             <a href="http://www.mafestivals.com/">visit our Website</a>!
           </p>
+          </div>
         </div>
         <div className="col2">
           <h3 className="col2-header">Plan Your Visit</h3>

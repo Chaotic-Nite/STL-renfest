@@ -1,26 +1,12 @@
+import { SocialIcon } from 'react-social-icons';
+
 const SocialMedia = () => {
     return (
-        <div className="mini-social">
-          <a
-            href="https://www.facebook.com/STLRenFest/"
-            target="_blank"
-                rel="noreferrer"
-          ><b class="fa fa-facebook"></b></a>
-          <a
-            href="https://twitter.com/stlrenfest"
-            target="_blank"
-            rel="noreferrer"
-          ><b className="fa fa-twitter"></b></a>
-          <a
-            href="https://www.pinterest.com/stlouisrenaissa/"
-            target="_blank"
-            rel="noreferrer"
-          ><b className="fa fa-pinterest"></b></a>
-          <a
-            href="https://www.instagram.com/stlrenfest/"
-            target="_blank"
-            rel="noreferrer"
-          ><b className="fa fa-instagram"></b></a>
+        <div>
+          <SocialIcon url="https://www.facebook.com/STLRenFest/" network="facebook" />
+          <SocialIcon url="https://twitter.com/stlrenfest" network="twitter" />
+          <SocialIcon url="https://www.pinterest.com/stlouisrenaissa/" network="pinterest" />
+          <SocialIcon url="https://www.instagram.com/stlrenfest/" network="instagram" />
         </div>
     )
 }
