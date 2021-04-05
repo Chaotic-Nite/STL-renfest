@@ -2,6 +2,14 @@ import React from "react";
 import SocialMedia from "../components/social-media/SocialMedia";
 
 function BringYourDog() {
+  const DOG_RULES = [
+    "All Dogs must be on a leash at all times",
+    "Owners must clean up after their dogs",
+    "Only one dog per owner will be allowed",
+    "Dog Owners must report any accidents to first aid immediately",
+    "All dogs must have their festival tag visible at all times",
+    "Dogs are not allowed at the Feast of Fantasy",
+  ];
   return (
     <>
       <h1 className="page-header">Bring Your Dog!</h1>
@@ -40,10 +48,11 @@ function BringYourDog() {
           </p>
           <ol>
             <li>
-              Fill out the
+              Fill out the{" "}
               <a
                 href="../pdf-files/2020-Dog-Registration-Form.pdf"
                 target="_blank"
+                rel="noreferrer"
               >
                 Dog Registration Form
               </a>
@@ -74,14 +83,9 @@ function BringYourDog() {
                 </li>
               </ul>
             </li>
-            <li>All Dogs must be on a leash at all times</li>
-            <li>Owners must clean up after their dogs</li>
-            <li>Only one dog per owner will be allowed</li>
-            <li>
-              Dog Owners must report any accidents to first aid immediately
-            </li>
-            <li>All dogs must have their festival tag visible at all times</li>
-            <li>Dogs are not allowed at te Feast of Fantasy</li>
+            {DOG_RULES.map((i) => (
+              <li>{i}</li>
+            ))}
           </ul>
         </div>
         <div className="col2">

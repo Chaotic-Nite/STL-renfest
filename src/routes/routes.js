@@ -12,6 +12,7 @@ import WarriorsIsland from "../pages/warriors-island";
 import Weddings from "../pages/weddings";
 import Weekends from "../pages/weekends";
 import ContactUs from "../pages/contact-us";
+import FindHotel from "../pages/find-hotel";
 
 export const routes = [
   {
@@ -54,6 +55,12 @@ export const routes = [
     name: "FAQ",
     path: "/faq",
     Component: Faq,
+  },
+
+  {
+    name: "FindHotel",
+    path: "/find-hotels",
+    Component: FindHotel,
   },
 
   {

@@ -1,0 +1,145 @@
+/* Ticketing */
+
+.ticket-setup {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 70%;
+}
+
+.ticket-setup h2 {
+  margin-bottom: -5px;
+}
+
+table,
+th {
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 0 10px;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th {
+  width: 25%;
+  padding: 5px;
+  text-align: center;
+}
+
+.ticket-boxes {
+  box-sizing: border-box;
+}
+
+.ren-faire {
+  width: 33.3%;
+}
+
+.les-amis {
+  margin-left: auto;
+  width: 49.5%;
+}
+
+.ren-faire,
+.les-amis {
+  float: left;
+  padding: 8px;
+}
+
+.les-ul,
+.ticket-ul {
+  list-style-type: none;
+  border: 7px ridge #fcce17;
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.les-ul:hover,
+.ticket-ul:hover {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.les-ul .les-header,
+.ticket-ul .ren-gen {
+  background-color: #1502be;
+  color: whitesmoke;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.les-ul li,
+.ticket-ul li {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgb(206, 206, 206);
+  font-size: 18px;
+  padding: 20px;
+  text-align: center;
+}
+
+.ticket-contact {
+  margin-top: -20px;
+}
+
+.t-price {
+  margin-left: auto;
+}
+
+.rf-la-bttn {
+  background-color: #ff7300;
+  border: none;
+  color: whitesmoke;
+  padding: 18px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.kne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kne h2 {
+  margin-bottom: 3px;
+}
+
+#le-amis-title {
+  margin: 3px 0 -17px 0;
+}
+
+.dog-box {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/* Google Map */
+
+#map {
+  margin: 15px 0;
+  border: 8.5px double gold;
+  height: 45rem;
+  width: 35rem;
+}
+
+/* Hotels */
+
+#hotel {
+  margin: 15px 0;
+  border: 8.5px double gold;
+  padding: 0.5%;
+  height: 55rem;
+  width: 50rem;
+}

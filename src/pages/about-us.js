@@ -63,8 +63,8 @@ function AboutUs() {
               </Link>
             </li>
             <li>
-              <Link className="col2-link" to="/tickets">
-                Get Tickets
+              <Link className="col2-link" to="/find-hotels">
+                Find a hotel
               </Link>
             </li>
             <li>

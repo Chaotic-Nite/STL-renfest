@@ -5,6 +5,7 @@ import { routes } from "./routes/routes";
 import Footer from "./components/footer/Footer";
 import logo from "./images/StLouisLogo-white.png";
 import "./App.css";
+import "./css/additional-styles.css";
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
