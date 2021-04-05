@@ -11,6 +11,7 @@ import Tickets from "../pages/tickets";
 import WarriorsIsland from "../pages/warriors-island";
 import Weddings from "../pages/weddings";
 import Weekends from "../pages/weekends";
+import ContactUs from "../pages/contact-us";
 
 export const routes = [
   {
@@ -29,6 +30,12 @@ export const routes = [
     name: "Cast",
     path: "/cast",
     Component: Cast,
+  },
+
+  {
+    name: "ContactUs",
+    path: "/contact-us",
+    Component: ContactUs,
   },
 
   {
