@@ -15,12 +15,12 @@
 .App {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
-  font-size: 125%;
+  font-size: 1vw;
 }
 
 #logo {
   width: 27vw;
-  margin: 3% 0 3% 35vw;
+  margin: 3% 0 3% 5vw;
 }
 
 a {

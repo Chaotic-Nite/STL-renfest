@@ -1,12 +1,15 @@
 import React from "react";
 import dateObject from "../UPTODATE";
+import { Link } from "react-router-dom"
 import '../css/faq.css'
+import SocialMedia from "../components/social-media/SocialMedia";
 
 function Faq() {
   return (
     <>
         <h1 className='page-header'>FAQ</h1>
-      <div className="margin-width faq">
+      <div className="margin-width two-col">
+        <div className='faq'>
         <details>
           <summary className="faq-q">
             <b>Q</b>: What does the admission price include?
@@ -245,6 +248,42 @@ function Faq() {
             </a>
           </p>
         </details>
+        </div>
+        <div className='col2'>
+          <ul>
+            <li>
+            <Link className="col2-link" to="/about-us">
+              About Us
+            </Link>
+            </li>
+            <li>
+            <Link className="col2-link" to="/tickets">
+              Get Tickets
+            </Link>
+            </li>
+            <li>
+            <Link className="col2-link" to="/contests-promotions">
+              Contest &#38; Promotions
+            </Link>
+            </li>
+            <li>
+            <Link className="col2-link" to="/bring-your-dog">
+              Bring Your Dog
+            </Link>
+            </li>
+            <li>
+            <Link className="col2-link" to="/find-hotels">
+              Find a hotel
+            </Link>
+            </li>
+            <li>
+            <Link className="col2-link" to="/directions">
+              Directions
+            </Link>
+            </li>
+          </ul>
+          <SocialMedia />
+        </div>
       </div>
     </>
   );

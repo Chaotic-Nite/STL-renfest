@@ -13,6 +13,8 @@ import Weddings from "../pages/weddings";
 import Weekends from "../pages/weekends";
 import ContactUs from "../pages/contact-us";
 import FindHotel from "../pages/find-hotel";
+import KeyPolicies from "../pages/key-policies";
+import ContestPromos from "../pages/contest-promos";
 
 export const routes = [
   {
@@ -40,9 +42,21 @@ export const routes = [
   },
 
   {
+    name: "ContestPromos",
+    path: "/contests-promotions",
+    Component: ContestPromos,
+  },
+
+  {
     name: "Direction",
     path: "/directions",
     Component: Directions,
+  },
+
+  {
+    name: "Employment",
+    path: "/employment",
+    Component: Employment,
   },
 
   {
@@ -71,16 +85,17 @@ export const routes = [
   },
 
   {
+    name: "KeyPolicies",
+    path: '/key-policies',
+    Component: KeyPolicies,
+  },
+
+  {
     name: "Sitemap",
     path: "/sitemap",
     Component: Sitemap,
   },
 
-  {
-    name: "Employment",
-    path: "/employment",
-    Component: Employment,
-  },
 
   {
     name: "Tickets",

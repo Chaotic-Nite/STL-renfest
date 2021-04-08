@@ -44,7 +44,7 @@ function Cast() {
                       <MDBCol md="8">
                         <MDBCardBody>
                           {item.leadership ? (
-                            <MDBCardTitle>{item.leadership}</MDBCardTitle>
+                            <MDBCardTitle className="guild-lead">**{item.leadership}**</MDBCardTitle>
                           ) : null}
                           <MDBCardTitle className="cast-name">
                             {item.realName}

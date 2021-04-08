@@ -112,6 +112,7 @@ export const castList = {
       role: "Reynold",
       position: "Hired Mercenary",
       image: "/assets/images/cast/dan-blinn-placeholder.jpg",
+      leadership: 'Fight Director'
     },
     {
       realName: "Noel Kling",
@@ -151,7 +152,7 @@ export const castList = {
       role: "Zelma",
       position: "Matriarch",
       image: "/assets/images/cast/krista-strahm.jpg",
-      leadership: "*Traveler Guild Lead*",
+      leadership: "Traveler Guild Lead",
     },
   ],
   Village: [
