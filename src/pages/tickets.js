@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import SocialMedia from "../components/social-media/SocialMedia";
 
 function Tickets() {
@@ -156,7 +156,7 @@ function Tickets() {
           <p>
             <a href="https://red.vendini.com/ticket-software.html?t=tix&e=e0ed81fb98a9796c57dded8c785150d5">
               Click here
-            </a>
+            </a>{" "}
             and have your code ready to purchase tickets!
           </p>
           <div id="kegs" className="kne">

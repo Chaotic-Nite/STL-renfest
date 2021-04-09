@@ -137,9 +137,13 @@ th {
 /* Hotels */
 
 #hotel {
-  margin: 15px 0;
+  margin: 15px 50%;
   border: 8.5px double gold;
   padding: 0.5%;
   height: 55rem;
   width: 50rem;
+}
+
+#hotelText {
+  float: right;
 }

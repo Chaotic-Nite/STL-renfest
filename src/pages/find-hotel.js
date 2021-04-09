@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import SocialMedia from "../components/social-media/SocialMedia";
 
 function FindHotel() {
@@ -6,7 +6,7 @@ function FindHotel() {
     <>
       <h1 className="page-header">Find Hotels</h1>
       <div className="margin-width two-col">
-        <div>
+        <div className="col1">
           <iframe
             title="hotels"
             id="hotel"
@@ -14,6 +14,12 @@ function FindHotel() {
             frameborder="0"
             allowfullscreen="allowfullscreen"
           ></iframe>
+          <p id="hotelText">
+            If the site hasn't loaded,{" "}
+            <a href="https://www.tripadvisor.com/Hotels-g45032-Wentzville_Missouri-Hotels.html">
+              Click Here
+            </a>
+          </p>
         </div>
         <div className="col2">
           <h3 className="col2-header">Plan Your Visit</h3>
