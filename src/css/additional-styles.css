@@ -35,6 +35,10 @@ th {
   box-sizing: border-box;
 }
 
+#les-amis, #general-tickets, #kegs {
+  padding-top: 5%;
+}
+
 .ren-faire {
   width: 33.3%;
 }
