@@ -7,7 +7,7 @@ function Directions() {
     <>
       <h1 className="page-header">Directions</h1>
       <div className="margin-width two-col">
-        <div>
+        <div style={{display: 'flex'}}>
           <iframe
             title="map"
             id="map"
@@ -15,6 +15,31 @@ function Directions() {
             frameborder="0"
             allowfullscreen="allowfullscreen"
           ></iframe>
+          <div style={{marginLeft: '10vw', marginTop: '2%'}}>
+            <h3>
+              <b>Rotary Park<br />2577 West Meyer Road<br />Wentzville, MO  63386</b>
+            </h3>
+            <br />
+            <h4> <b>Westbound:</b> <br /> </h4>
+            <ol className='direct-list'>
+              <li>Take I-70 West from STL (or Hwy 4 to I-70W) toward Wentzville to 61 North.</li>
+              <li>Take the Wentzville Parkway exit.</li>
+              <li>Turn Left onto Wentzville Parkway.</li>
+              <li>At West Meyer Road turn right.</li>
+              <li>Continue to Rotary Park on the Right.</li>
+            </ol>
+            <br />
+
+            <h4><b>Eastbound:</b><br /></h4>
+            <ol className='direct-list'>
+              <li>Take I-70 East from Kansas City toward Wentzville to 61 North.</li>
+              <li>Take the Wentzville Parkway exit.</li>
+              <li>Turn left onto Wentzville Parkway.</li>
+              <li>At West Meyer Road turn right.</li>
+              <li>Continue to Rotary Park on the right.</li>
+            </ol>
+    
+          </div>
         </div>
         <div className="col2">
           <h3 className="col2-header">Plan Your Visit</h3>
@@ -47,6 +72,11 @@ function Directions() {
             <li>
               <Link className="col2-link" to="/find-hotels">
                 Find a hotel
+              </Link>
+            </li>
+            <li>
+              <Link className="col2-link" to="/faq">
+                FAQ
               </Link>
             </li>
           </ul>

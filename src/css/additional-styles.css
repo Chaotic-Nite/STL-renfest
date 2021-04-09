@@ -138,6 +138,10 @@ th {
   width: 35rem;
 }
 
+.direct-list {
+  list-style-type: upper-roman;
+}
+
 /* Hotels */
 
 #hotel {

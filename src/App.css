@@ -106,11 +106,6 @@ a {
   font-size: 3.5rem;
 }
 
-.col2 {
-  min-width: 25%;
-  max-width: 25%;
-}
-
 .col2 ul {
   list-style-type: none;
 }
