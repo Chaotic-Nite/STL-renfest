@@ -15,8 +15,10 @@ import ContactUs from "../pages/contact-us";
 import FindHotel from "../pages/find-hotel";
 import KeyPolicies from "../pages/key-policies";
 import ContestPromos from "../pages/contest-promos";
+import ErrorPage from "../pages/error-page";
 
 export const routes = [
+  
   {
     name: "AboutUs",
     path: "/about-us",
@@ -40,19 +42,19 @@ export const routes = [
     path: "/contact-us",
     Component: ContactUs,
   },
-
+  
   {
     name: "ContestPromos",
     path: "/contests-promotions",
     Component: ContestPromos,
   },
-
+  
   {
     name: "Direction",
     path: "/directions",
     Component: Directions,
   },
-
+  
   {
     name: "Employment",
     path: "/employment",
@@ -65,6 +67,7 @@ export const routes = [
     Component: EntertainmentVendor,
   },
 
+  
   {
     name: "FAQ",
     path: "/faq",
@@ -96,7 +99,6 @@ export const routes = [
     Component: Sitemap,
   },
 
-
   {
     name: "Tickets",
     path: "/tickets",
@@ -114,10 +116,16 @@ export const routes = [
     path: "/weddings",
     Component: Weddings,
   },
-
+  
   {
     name: "Weekends",
     path: "/weekends",
     Component: Weekends,
+  },
+
+  {
+    name: '404',
+    path: '*',
+    Component: ErrorPage
   },
 ];
