@@ -1,11 +1,12 @@
 import SocialMedia from "../components/social-media/SocialMedia";
+import { Link } from "react-router-dom";
 
 function ContactUs() {
   return (
     <>
       <h1 className="page-header">Contact Us</h1>
       <div className="margin-width two-col">
-        <div>
+        <div className="col1-width">
           <p>
             <b>Festival Site Address:</b>
           </p>
@@ -28,6 +29,14 @@ function ContactUs() {
           </p>
         </div>
         <div className="col2">
+          <h3 className="col2-header">Get Involved</h3>
+          <Link to="/employment">Employment Opportunities</Link>
+          <br />
+          <Link to="/vendor-application">Vendor Application</Link>
+          <br />
+          <Link to="/community-relations-fundraising">
+            Community Relations &#38; Fundraising
+          </Link>
           <SocialMedia />
         </div>
       </div>

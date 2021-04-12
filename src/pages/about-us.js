@@ -7,7 +7,7 @@ function AboutUs() {
     <>
       <h1 className="page-header">About Us</h1>
       <div className="margin-width two-col">
-        <div>
+        <div className="col1-width">
           <h2>
             Welcome to the {dateObject.year} St Louis Renaissance Festival!{" "}
           </h2>
@@ -18,7 +18,7 @@ function AboutUs() {
               alt="Mug"
               style={{
                 float: "left",
-                width: "30rem",
+                width: "30vw",
                 marginRight: "1.5%",
                 marginBottom: "1.5%",
               }}
@@ -56,43 +56,33 @@ function AboutUs() {
         </div>
         <div className="col2">
           <h3 className="col2-header">Plan Your Visit</h3>
-          <ul>
-            <li>
-              <Link className="col2-link" to="/key-policies">
-                Key Policies
-              </Link>
-            </li>
-            <li>
-              <Link className="col2-link" to="/tickets">
-                Get Tickets
-              </Link>
-            </li>
-            <li>
-              <Link className="col2-link" to="/contests-promotions">
-                Contest &#38; Promotions
-              </Link>
-            </li>
-            <li>
-              <Link className="col2-link" to="/bring-your-dog">
-                Bring Your Dog
-              </Link>
-            </li>
-            <li>
-              <Link className="col2-link" to="/find-hotels">
-                Find a hotel
-              </Link>
-            </li>
-            <li>
-              <Link className="col2-link" to="/directions">
-                Directions
-              </Link>
-            </li>
-            <li>
-              <Link className="col2-link" to="/faq">
-                FAQ
-              </Link>
-            </li>
-          </ul>
+          <Link className="col2-link" to="/key-policies">
+            Key Policies
+          </Link>
+          <br />
+          <Link className="col2-link" to="/tickets">
+            Get Tickets
+          </Link>
+          <br />
+          <Link className="col2-link" to="/contests-promotions">
+            Contest &#38; Promotions
+          </Link>
+          <br />
+          <Link className="col2-link" to="/bring-your-dog">
+            Bring Your Dog
+          </Link>
+          <br />
+          <Link className="col2-link" to="/find-hotels">
+            Find a hotel
+          </Link>
+          <br />
+          <Link className="col2-link" to="/directions">
+            Directions
+          </Link>
+          <br />
+          <Link className="col2-link" to="/faq">
+            FAQ
+          </Link>
           <SocialMedia />
         </div>
       </div>

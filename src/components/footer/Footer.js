@@ -48,7 +48,7 @@ function Footer() {
           <Link className="foot-link" to="/faq">
             FAQ
           </Link>
-          <Link className="foot-link" to="/site-employment">
+          <Link className="foot-link" to="/employment">
             Employment
           </Link>
           <Link className="foot-link" to="/contact-us">

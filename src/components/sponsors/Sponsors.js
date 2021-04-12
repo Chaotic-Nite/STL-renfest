@@ -83,7 +83,7 @@ function Sponsors() {
         <Carousel slidesPerPage={3} autoPlay={3000} infinite>
           {sponsorObjectArr.map((sponsor) => {
             return (
-              <div className="slide">
+              <div key={sponsor.alt} className="slide">
                 <a href={sponsor.link} target="_blank" rel="noreferrer">
                   <img src={sponsor.img} alt={sponsor.alt} />
                 </a>

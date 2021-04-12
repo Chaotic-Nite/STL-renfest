@@ -101,13 +101,18 @@ a {
   max-width: 500px;
 }
 
+.col1-width {
+  width: 175vw;
+  margin-left: 5%;
+}
+
 /* Second Column */
 .two-col h2 {
   font-size: 3.5rem;
 }
 
-.col2 ul {
-  list-style-type: none;
+.col2 {
+  width: 65vw;
 }
 
 .col2-link {

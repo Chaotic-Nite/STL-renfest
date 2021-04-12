@@ -14,11 +14,11 @@ function App() {
   }
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
+    window.scrollTo(0, 0);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
   }, []);
-
   let isMobile = width <= 1024 ? true : false;
 
   return (

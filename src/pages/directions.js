@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import SocialMedia from "../components/social-media/SocialMedia";
 
 function Directions() {
@@ -7,7 +7,7 @@ function Directions() {
     <>
       <h1 className="page-header">Directions</h1>
       <div className="margin-width two-col">
-        <div style={{display: 'flex'}}>
+        <div style={{ display: "flex" }} className="col1-width">
           <iframe
             title="map"
             id="map"
@@ -15,14 +15,26 @@ function Directions() {
             frameborder="0"
             allowfullscreen="allowfullscreen"
           ></iframe>
-          <div style={{marginLeft: '10vw', marginTop: '2%'}}>
+          <div style={{ marginLeft: "10vw", marginTop: "2%" }}>
             <h3>
-              <b>Rotary Park<br />2577 West Meyer Road<br />Wentzville, MO  63386</b>
+              <b>
+                Rotary Park
+                <br />
+                2577 West Meyer Road
+                <br />
+                Wentzville, MO 63386
+              </b>
             </h3>
             <br />
-            <h4> <b>Westbound:</b> <br /> </h4>
-            <ol className='direct-list'>
-              <li>Take I-70 West from STL (or Hwy 4 to I-70W) toward Wentzville to 61 North.</li>
+            <h4>
+              {" "}
+              <b>Westbound:</b> <br />{" "}
+            </h4>
+            <ol className="direct-list">
+              <li>
+                Take I-70 West from STL (or Hwy 4 to I-70W) toward Wentzville to
+                61 North.
+              </li>
               <li>Take the Wentzville Parkway exit.</li>
               <li>Turn Left onto Wentzville Parkway.</li>
               <li>At West Meyer Road turn right.</li>
@@ -30,56 +42,51 @@ function Directions() {
             </ol>
             <br />
 
-            <h4><b>Eastbound:</b><br /></h4>
-            <ol className='direct-list'>
-              <li>Take I-70 East from Kansas City toward Wentzville to 61 North.</li>
+            <h4>
+              <b>Eastbound:</b>
+              <br />
+            </h4>
+            <ol className="direct-list">
+              <li>
+                Take I-70 East from Kansas City toward Wentzville to 61 North.
+              </li>
               <li>Take the Wentzville Parkway exit.</li>
               <li>Turn left onto Wentzville Parkway.</li>
               <li>At West Meyer Road turn right.</li>
               <li>Continue to Rotary Park on the right.</li>
             </ol>
-    
           </div>
         </div>
         <div className="col2">
           <h3 className="col2-header">Plan Your Visit</h3>
-          <ul>
-            <li>
-              <Link className="col2-link" to="/about-us">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link className="col2-link" to="/key-policies">
-                Key Policies
-              </Link>
-            </li>
-            <li>
-              <Link className="col2-link" to="/tickets">
-                Get Tickets
-              </Link>
-            </li>
-            <li>
-              <Link className="col2-link" to="/contests-promotions">
-                Contest &#38; Promotions
-              </Link>
-            </li>
-            <li>
-              <Link className="col2-link" to="/bring-your-dog">
-                Bring Your Dog
-              </Link>
-            </li>
-            <li>
-              <Link className="col2-link" to="/find-hotels">
-                Find a hotel
-              </Link>
-            </li>
-            <li>
-              <Link className="col2-link" to="/faq">
-                FAQ
-              </Link>
-            </li>
-          </ul>
+          <Link className="col2-link" to="/about-us">
+            About Us
+          </Link>
+          <br />
+          <Link className="col2-link" to="/key-policies">
+            Key Policies
+          </Link>
+          <br />
+          <Link className="col2-link" to="/tickets">
+            Get Tickets
+          </Link>
+          <br />
+          <Link className="col2-link" to="/contests-promotions">
+            Contest &#38; Promotions
+          </Link>
+          <br />
+          <Link className="col2-link" to="/bring-your-dog">
+            Bring Your Dog
+          </Link>
+          <br />
+          <Link className="col2-link" to="/find-hotels">
+            Find a hotel
+          </Link>
+          <br />
+          <Link className="col2-link" to="/faq">
+            FAQ
+          </Link>
+
           <SocialMedia />
         </div>
       </div>

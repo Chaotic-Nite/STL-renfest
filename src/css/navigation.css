@@ -40,7 +40,7 @@ nav > ul {
 
 .nav a {
   display: flex;
-  padding: 1.5rem 1.62rem;
+  padding: 1.6rem 1.62rem;
   color: #fff;
   line-height: inherit;
   cursor: pointer;
@@ -75,7 +75,6 @@ nav > ul {
   list-style: none;
   text-transform: none;
   transition: all 0.5s ease;
-  border-radius: 5%;
 }
 
 .nav__submenu-item :hover {
