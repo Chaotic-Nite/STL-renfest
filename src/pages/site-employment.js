@@ -1,6 +1,6 @@
 import React from "react";
 import SocialMedia from "../components/social-media/SocialMedia";
-import { employmentList } from "../employment-list";
+import { employmentList } from "../lists/employment-list";
 import { Link } from "react-router-dom";
 
 function Employment() {
@@ -63,6 +63,11 @@ function Employment() {
           <SocialMedia />
         </div>
       </div>
+      <h1 className="page-header">Sponsorship</h1>
+      <h2>Interested in becoming a Sponsor?</h2>
+      <br />
+      <p>Contact us at (636) 639-5173</p>
+      <p>Or email akuchar@renaissancefest.com</p>
     </>
   );
 }

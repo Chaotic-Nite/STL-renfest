@@ -1,5 +1,5 @@
 import React from "react";
-import { castList } from "../castList.js";
+import { castList } from "../lists/castList.js";
 import {
   MDBCard,
   MDBCardTitle,
@@ -18,9 +18,7 @@ function Cast() {
 
   return (
     <>
-      <h1 className='page-header'>
-        Cast
-      </h1>
+      <h1 className="page-header">Cast</h1>
       <div className="margin-width current">
         {guildArr.map((guild, j) => {
           return (
@@ -44,7 +42,9 @@ function Cast() {
                       <MDBCol md="8">
                         <MDBCardBody>
                           {item.leadership ? (
-                            <MDBCardTitle className="guild-lead">**{item.leadership}**</MDBCardTitle>
+                            <MDBCardTitle className="guild-lead">
+                              **{item.leadership}**
+                            </MDBCardTitle>
                           ) : null}
                           <MDBCardTitle className="cast-name">
                             {item.realName}

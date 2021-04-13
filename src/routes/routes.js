@@ -17,6 +17,7 @@ import KeyPolicies from "../pages/key-policies";
 import ContestPromos from "../pages/contest-promos";
 import ErrorPage from "../pages/error-page";
 import VendorApplications from "../pages/vendor-applications";
+import Fundraising from "../pages/fundraising";
 
 export const routes = [
   {
@@ -77,6 +78,12 @@ export const routes = [
     name: "FindHotel",
     path: "/find-hotels",
     Component: FindHotel,
+  },
+
+  {
+    name: "Fundraising",
+    path: "/community-relations-fundraising",
+    Component: Fundraising,
   },
 
   {

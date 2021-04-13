@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import SocialMedia from "../components/social-media/SocialMedia";
-import dateObject from "../UPTODATE";
+import dateObject from "../lists/UPTODATE";
 
 function AboutUs() {
   return (
