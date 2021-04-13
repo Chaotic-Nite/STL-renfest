@@ -6,7 +6,7 @@ function KeyPolicies() {
         <>
             <h1 className='page-header'>Key Policies</h1>
             <div className='margin-width two-col'>
-                <div>rawr</div>
+                <div>Under Construction</div>
                 <div className='col2'>
                     <h3 className="col2-header">Plan Your Visit</h3>
                     <ul>

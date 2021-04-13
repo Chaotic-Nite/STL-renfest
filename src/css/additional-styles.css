@@ -161,3 +161,14 @@ th {
   height: 10vw;
   margin: 1vw 0;
 }
+
+#employ-involve{
+  background-color: rgb(62, 44, 85);
+  color: white
+}
+
+#employ-involve:hover{
+  background-image: url('../images/crown-overlay.jpg');
+  background-size: cover;
+  background-position: center;
+}
