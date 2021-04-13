@@ -58,6 +58,7 @@ function VendorApplications() {
           <SocialMedia />
         </div>
       </div>
+      <h1 className="page-header">Sponsorship</h1>
     </>
   );
 }

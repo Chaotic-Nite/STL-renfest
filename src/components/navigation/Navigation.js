@@ -196,7 +196,7 @@ function InvolvmentDropdown() {
       </li>
       <li>
         <Link className="nav__submenu-item" smooth to="/vendor-application">
-          Vendor Application
+          Vendor Application &#38; Sponsorship
         </Link>
       </li>
       <li>
@@ -205,7 +205,7 @@ function InvolvmentDropdown() {
           smooth
           to="/community-relations-fundraising"
         >
-          Community Relations, Fundraising &#38; Sponsorship
+          Community Relations &#38; Fundraising
         </Link>
       </li>
     </ul>

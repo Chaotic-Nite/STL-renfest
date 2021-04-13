@@ -55,7 +55,9 @@ function Employment() {
           <h3 className="col2-header">Get Involved</h3>
           <Link to="/employment">Employment Opportunities</Link>
           <br />
-          <Link to="/vendor-application">Vendor Application</Link>
+          <Link to="/vendor-application">
+            Vendor Application &#38; Sponsorship
+          </Link>
           <br />
           <Link to="/community-relations-fundraising">
             Community Relations &#38; Fundraising

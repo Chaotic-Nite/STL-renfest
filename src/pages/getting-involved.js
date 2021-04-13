@@ -15,9 +15,25 @@ function GettingInvolved() {
             Wish to sponsor this dream? <br /> Want to become someone of the
             past or a creature from the depths of lore?
           </div>
-          <div style={{ display: "inline-block" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              alignItems: "center",
+            }}
+          >
             <Link to="/employment">
-              <button></button>
+              <button className="involve-bttn">Empolyment Opportunities</button>
+            </Link>
+            <Link to="vendor-application">
+              <button className="involve-bttn">
+                Vendor Application &#38; Sponsorship
+              </button>
+            </Link>
+            <Link to="/community-relations-fundraising">
+              <button className="involve-bttn">
+                Community Relations &#38; Fundraising
+              </button>
             </Link>
           </div>
         </div>
