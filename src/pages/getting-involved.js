@@ -13,7 +13,12 @@ function GettingInvolved() {
             Have amazing craftsmenship? <br /> Maybe a unique and trilling show?
             <br /> Wish to help out the St Louis Renaissance Festival? <br />
             Wish to sponsor this dream? <br /> Want to become someone of the
-            past or a creature for the depths of lore?
+            past or a creature from the depths of lore?
+          </div>
+          <div style={{ display: "inline-block" }}>
+            <Link to="/employment">
+              <button></button>
+            </Link>
           </div>
         </div>
         <SocialMedia />
