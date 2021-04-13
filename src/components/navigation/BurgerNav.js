@@ -4,7 +4,7 @@ import "../../css/navigation.css";
 
 function BurgerNav() {
   return (
-    <Menu right style={{height:'100vh'}}>
+    <Menu right style={{ height: "100vh" }}>
       <Link className="small-tab" to="/directions">
         Directions
       </Link>
@@ -25,6 +25,9 @@ function BurgerNav() {
       </Link>
       <Link className="nav__submenu-item" to="/warriors-island">
         Warriors Island
+      </Link>
+      <Link className="nav__submenu-item" to="/getting-involved">
+        Getting Involved
       </Link>
       <Link className="small-tab" to="/about-us">
         About us

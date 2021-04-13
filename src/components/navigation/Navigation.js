@@ -77,6 +77,12 @@ function Navigation() {
               </ul>
             </li>
             <li>
+              <Link className="small-tab drop" to="/getting-involved">
+                Getting Involved
+              </Link>
+              <InvolvmentDropdown />
+            </li>
+            <li>
               <Link className="small-tab" to="/about-us">
                 About us
               </Link>
@@ -175,6 +181,32 @@ function WeekendDropdown() {
         >
           Ladies Shopping Day
         </HashLink>
+      </li>
+    </ul>
+  );
+}
+
+function InvolvmentDropdown() {
+  return (
+    <ul className="nav__submenu">
+      <li>
+        <Link className="nav__submenu-item" smooth to="/employment">
+          Employment Opportunities
+        </Link>
+      </li>
+      <li>
+        <Link className="nav__submenu-item" smooth to="/vendor-application">
+          Vendor Application
+        </Link>
+      </li>
+      <li>
+        <Link
+          className="nav__submenu-item"
+          smooth
+          to="/community-relations-fundraising"
+        >
+          Community Relations, Fundraising &#38; Sponsorship
+        </Link>
       </li>
     </ul>
   );

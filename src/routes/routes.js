@@ -18,6 +18,7 @@ import ContestPromos from "../pages/contest-promos";
 import ErrorPage from "../pages/error-page";
 import VendorApplications from "../pages/vendor-applications";
 import Fundraising from "../pages/fundraising";
+import GettingInvolved from "../pages/getting-involved";
 
 export const routes = [
   {
@@ -84,6 +85,12 @@ export const routes = [
     name: "Fundraising",
     path: "/community-relations-fundraising",
     Component: Fundraising,
+  },
+
+  {
+    name: "GettingInvolved",
+    path: "/getting-involved",
+    Component: GettingInvolved,
   },
 
   {

@@ -6,24 +6,17 @@ function GettingInvolved() {
   return (
     <>
       <h1 className="page-header">Getting Involved</h1>
-      <div className="margin-width two-col">
-        <div className="col1-width">
-          <h2>
-            Dare to be involved to a trip to past? There's numerous was to do
-            so.
-          </h2>
+      <div className="margin-width">
+        <div>
+          <h2>Becoming Part of Experience</h2>
+          <div>
+            Have amazing craftsmenship? <br /> Maybe a unique and trilling show?
+            <br /> Wish to help out the St Louis Renaissance Festival? <br />
+            Wish to sponsor this dream? <br /> Want to become someone of the
+            past or a creature for the depths of lore?
+          </div>
         </div>
-        <div className="col2">
-          <h3 className="col2-header">Get Involved</h3>
-          <Link to="/employment">Employment Opportunities</Link>
-          <br />
-          <Link to="/vendor-application">Vendor Application</Link>
-          <br />
-          <Link to="/community-relations-fundraising">
-            Community Relations, Fundraising &#38; Sponsorship
-          </Link>
-          <SocialMedia />
-        </div>
+        <SocialMedia />
       </div>
     </>
   );
