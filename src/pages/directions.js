@@ -13,15 +13,24 @@ function Directions() {
     <>
       <h1 className="page-header">Directions</h1>
       <div className="margin-width two-col">
-        <ButtonGroup aria-label="Basic example">
-          <Button variant="secondary" onClick={() => setGoogleMap(true)}>
-            To Faire
-          </Button>
-          <Button variant="secondary" onClick={() => setGoogleMap(false)}>
-            Faire Site Map
-          </Button>
-        </ButtonGroup>
-        {googleMap ? <DirectionToFaire /> : <FaireMap />}
+        <div
+          style={{ display: "flex", flexDirection: "column", width: "150vw" }}
+          className="col1-width"
+        >
+          <ButtonGroup aria-label="Basic example" size="lg">
+            <Button
+              variant="secondary"
+              onClick={() => setGoogleMap(true)}
+              style={{ borderRight: "5px solid #ff7300" }}
+            >
+              To the Faire
+            </Button>
+            <Button variant="secondary" onClick={() => setGoogleMap(false)}>
+              Faire Site Map
+            </Button>
+          </ButtonGroup>
+          {googleMap ? <DirectionToFaire /> : <FaireMap />}
+        </div>
         <div className="col2">
           <h3 className="col2-header">Plan Your Visit</h3>
           <Link className="col2-link" to="/about-us">
@@ -82,18 +91,20 @@ function FaireMap() {
 
   return (
     <>
-      <h2 className="page-header">Faire Site Map</h2>
-      <div style={{ display: "flex" }} className="col1-width">
+      <h2 className="second-header" style={{ fontSize: "2.3rem" }}>
+        Faire Site Map
+      </h2>
+      <div style={{ display: "flex", margin: "0 5%" }}>
         <img
           id="map"
           title="map"
           src="/assets/images/STLFaireMap.jpg"
           alt="Faire Site Map"
         />
-        <div style={{ marginLeft: "10vw", marginTop: "2%" }}>
-          <h3>
-            If image isn't loading or prefer an offline copy. <br /> Download
-            the current map{" "}
+        <div style={{ marginLeft: "5vw", marginTop: "2%", fontSize: "1.3vw" }}>
+          <p>
+            If image isn't loading or <br /> you'd prefer an offline copy.{" "}
+            <br /> <br /> Download the current map{" "}
             <Base64Downloader
               base64={base64}
               downloadName="STLFaireMap"
@@ -105,7 +116,7 @@ function FaireMap() {
             >
               here
             </Base64Downloader>
-          </h3>
+          </p>
         </div>
       </div>
     </>
@@ -115,8 +126,10 @@ function FaireMap() {
 function DirectionToFaire() {
   return (
     <>
-      <h2 className="page-header">To Faire</h2>
-      <div style={{ display: "flex" }} className="col1-width">
+      <h2 className="second-header" style={{ fontSize: "2.3rem" }}>
+        To The Faire
+      </h2>
+      <div style={{ display: "flex", margin: "0 5%" }}>
         <iframe
           title="map"
           id="map"
@@ -124,7 +137,7 @@ function DirectionToFaire() {
           frameborder="0"
           allowfullscreen="allowfullscreen"
         ></iframe>
-        <div style={{ marginLeft: "10vw", marginTop: "2%" }}>
+        <div style={{ marginLeft: "5vw", marginTop: "2%" }}>
           <h3>
             <b>
               Rotary Park

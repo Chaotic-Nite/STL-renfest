@@ -47,6 +47,13 @@ a {
   border-bottom: 5px solid #ff7300;
 }
 
+.second-header {
+  margin: 1% 0;
+  font-family: "Sansita Swashed", cursive;
+  padding-bottom: 1%;
+  border-bottom: 5px solid #cc00ff;
+}
+
 .two-col {
   display: flex;
   justify-content: space-between;

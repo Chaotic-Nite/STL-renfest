@@ -136,8 +136,8 @@ th {
 #map {
   margin: 15px 0;
   border: 8.5px double gold;
-  height: 45rem;
-  width: 35rem;
+  height: 45vw;
+  width: 35vw;
 }
 
 .direct-list {
