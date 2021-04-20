@@ -13,6 +13,7 @@
     "mdb-react-ui-kit": "^1.0.0-beta1",
     "popper.js": "^1.16.1",
     "react": "^17.0.1",
+    "react-base64-downloader": "^2.1.6",
     "react-bootstrap": "^1.4.3",
     "react-burger-menu": "^3.0.6",
     "react-collapsible": "^2.8.3",
