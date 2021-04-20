@@ -23,16 +23,18 @@ function GettingInvolved() {
             }}
           >
             <Link to="/employment">
-              <button className="involve-bttn" id='employ-involve'>Empolyment Opportunities</button>
+              <button className="involve-bttn" id="employ-involve">
+                <p>Empolyment Opportunities</p>
+              </button>
             </Link>
             <Link to="vendor-application">
-              <button className="involve-bttn" id='vendor-involve'>
-                Vendor Application &#38; Sponsorship
+              <button className="involve-bttn" id="vendor-involve">
+                <p>Vendor Application &#38; Sponsorship</p>
               </button>
             </Link>
             <Link to="/community-relations-fundraising">
-              <button className="involve-bttn" id='community-involve'>
-                Community Relations &#38; Fundraising
+              <button className="involve-bttn" id="community-involve">
+                <p>Community Relations &#38; Fundraising</p>
               </button>
             </Link>
           </div>

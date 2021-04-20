@@ -42,6 +42,7 @@ nav > ul {
   display: flex;
   padding: 1.6rem 1.62rem;
   color: #fff;
+  font-weight: bold;
   line-height: inherit;
   cursor: pointer;
 }
@@ -99,16 +100,8 @@ nav > ul {
 }
 
 /* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #ffffff;
-}
-
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: #ffffff;
-}
-
-/* Color/shape of close button cross */
+.bm-burger-bars,
+.bm-burger-bars-hover,
 .bm-cross {
   background: #ffffff;
 }

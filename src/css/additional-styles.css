@@ -160,15 +160,63 @@ th {
   width: 10vw;
   height: 10vw;
   margin: 1vw 0;
+  font-size: 1.2vw;
+  font-weight: bold;
 }
 
-#employ-involve{
-  background-color: rgb(62, 44, 85);
-  color: white
+#employ-involve {
+  background-color: rgb(90, 142, 189);
+  color: white;
 }
 
-#employ-involve:hover{
-  background-image: url('../images/crown-overlay.jpg');
+#employ-involve:hover {
+  background-image: url("../images/unicorn-overlay.jpg");
   background-size: cover;
   background-position: center;
+}
+
+#employ-involve:hover p {
+  -webkit-animation: moving 1s forwards;
+  animation: moving 1s forwards;
+}
+
+#vendor-involve {
+  background-color: rgb(58, 43, 84);
+  color: white;
+}
+
+#vendor-involve:hover {
+  background-image: url("../images/crown-overlay.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#vendor-involve:hover p {
+  -webkit-animation: moving 1s forwards;
+  animation: moving 1s forwards;
+}
+
+#community-involve {
+  background-color: rgb(52, 123, 185);
+  color: white;
+}
+
+#community-involve:hover {
+  background-image: url("../images/fairy-overlay.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#community-involve:hover p {
+  -webkit-animation: moving 1s forwards;
+  animation: moving 1s forwards;
+}
+
+@keyframes moving {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(4.5vh);
+  }
 }
