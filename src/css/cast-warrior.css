@@ -6,6 +6,27 @@
   -moz-outline-style: hidden;
 }
 
+.cast-name,
+.cast-position {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.cast-name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4vw;
+  border-bottom: 2px solid black;
+}
+
+.cast-position {
+  font-size: 1vw;
+}
+
+.cast-role {
+  font-family: "Rock Salt", cursive;
+  font-size: 1.2vw;
+}
+
 .img-fluid {
   width: 15vw;
   height: 15vw;
@@ -55,7 +76,6 @@
   border: 15px double rgb(204, 159, 62);
 }
 
-
 #Traveler {
   color: white;
   background-color: rgb(44, 155, 0);
@@ -79,8 +99,7 @@
 }
 
 .guild-lead {
-  text-align: center;
-  color: rgb(69, 27, 82)
+  color: rgb(69, 27, 82);
 }
 
 .cast-list {

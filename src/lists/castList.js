@@ -5,7 +5,7 @@ export const castList = {
       realName: "Joseph Fieger Sr",
       role: "Thomas Wolsey",
       position: "Cardinal of England",
-      image:'/assets/images/cast/joseph-fieger-sr.jpg',
+      image: "/assets/images/cast/joseph-fieger-sr.jpg",
     },
     {
       realName: "David Edwards",
@@ -29,7 +29,8 @@ export const castList = {
     {
       realName: "Lanya da Silva",
       role: "Queen Claude",
-      position: "Queen de France, Duchess of Britanny",
+      position:
+        "Queen de France, Duchess of Britanny,  Holy Roman Empress, Empress of the Universe, Queen of England, Spain and EVERYTHING, Duchess of Milan",
       image: "/assets/images/cast/lanya-da-silva.jpg",
     }, //Continued positions: Holy Roman Empress, Empress of the Universe, Queen of England, Spain and EVERYTHING, Duchess of Milan
     {
@@ -68,7 +69,7 @@ export const castList = {
       realName: "Amber Fern",
       role: "Jane Seymour",
       position: "Lady in Waiting",
-      image: '/assets/images/cast/amber-fern.jpg',
+      image: "/assets/images/cast/amber-fern.jpg",
     },
     {
       realName: "Zak Gilliland",
@@ -112,7 +113,7 @@ export const castList = {
       role: "Reynold",
       position: "Hired Mercenary",
       image: "/assets/images/cast/dan-blinn-placeholder.jpg",
-      leadership: 'Fight Director'
+      leadership: "Fight Director",
     },
     {
       realName: "Noel Kling",

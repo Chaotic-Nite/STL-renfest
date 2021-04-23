@@ -6,20 +6,22 @@ const SocialMedia = () => {
       <SocialIcon
         url="https://www.facebook.com/STLRenFest/"
         network="facebook"
+        style={{ width: "3vw", height: "3vw" }}
       />
       <SocialIcon
         url="https://twitter.com/stlrenfest"
         network="twitter"
-        style={{ margin: "0 2%" }}
+        style={{ margin: "0 2%", width: "3vw", height: "3vw" }}
       />
       <SocialIcon
         url="https://www.pinterest.com/stlouisrenaissa/"
         network="pinterest"
-        style={{ marginRight: "2%" }}
+        style={{ marginRight: "2%", width: "3vw", height: "3vw" }}
       />
       <SocialIcon
         url="https://www.instagram.com/stlrenfest/"
         network="instagram"
+        style={{ width: "3vw", height: "3vw" }}
       />
     </div>
   );
