@@ -1,10 +1,26 @@
 @media screen and (max-width: 768px) {
-  #logo {
-    width: 10rem;
+  #logo img {
+    width: 25rem;
+  }
+
+  .App {
+    font-size: 16px;
   }
 
   .foot {
-    font-size: 70%;
+    font-size: 0.5rem;
+  }
+
+  .two-col {
+    flex-direction: column;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .direction-set {
+    flex-direction: column;
   }
 }
 
@@ -15,12 +31,15 @@
 .App {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
-  font-size: 1vw;
+  font-size: 20px;
 }
 
 #logo {
-  width: 27vw;
   margin: 3% 0 3% 5vw;
+}
+
+#logo img {
+  width: 25vw;
 }
 
 a {
@@ -104,12 +123,13 @@ a {
   margin-bottom: 2%;
 }
 
-#logo img {
-  max-width: 500px;
+#frst-bttn {
+  border-right: 5px solid #ff7300;
 }
 
 .col1-width {
-  width: 175vw;
+  display: flex;
+  flex-direction: column;
   margin-left: 5%;
 }
 

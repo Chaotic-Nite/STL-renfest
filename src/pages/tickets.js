@@ -7,12 +7,9 @@ function Tickets() {
     <>
       <h1 className="page-header">Tickets</h1>
       <div className="margin-width two-col">
-        <div className="col1-width" style={{ marginLeft: "15vw" }}>
-          <div
-            id="general-tickets"
-            className="ticket-setup"
-            style={{ paddingTop: "10%", marginTop: "-5%" }}
-          >
+        <div className="col1-width">
+          <div id="general-tickets"></div>
+          <div className="ticket-setup">
             <h2>Ticket Options</h2>
             <div className="ticket-boxes">
               <div className="ren-faire">
@@ -94,10 +91,8 @@ function Tickets() {
                 <b>636.639.5173</b>
               </i>
             </p>
-
-            <h2 id="les-amis" style={{ paddingTop: "10%" }}>
-              Les Amis Packages
-            </h2>
+            <div id="les-amis"></div>
+            <h2>Les Amis Packages</h2>
             <h3 id="le-amis-title">
               <i>"Friends of the Festival"</i>
             </h3>
@@ -169,7 +164,7 @@ function Tickets() {
               </a>{" "}
               and have your code ready to purchase tickets!
             </p>
-            <div id="kegs" className="kne" style={{ paddingTop: "10%" }}>
+            <div id="kegs" className="kne">
               <h2>Kegs 'N' Eggs Tickets</h2>
               <div className="ren-faire">
                 <ul className="ticket-ul">

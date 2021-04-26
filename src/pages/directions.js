@@ -13,15 +13,12 @@ function Directions() {
     <>
       <h1 className="page-header">Directions</h1>
       <div className="margin-width two-col">
-        <div
-          style={{ display: "flex", flexDirection: "column", width: "150vw" }}
-          className="col1-width"
-        >
+        <div className="col1-width">
           <ButtonGroup aria-label="Basic example" size="lg">
             <Button
               variant="secondary"
               onClick={() => setGoogleMap(true)}
-              style={{ borderRight: "5px solid #ff7300" }}
+              id="frst-bttn"
             >
               To the Faire
             </Button>
@@ -94,7 +91,7 @@ function FaireMap() {
       <h2 className="second-header" style={{ fontSize: "2.3rem" }}>
         Faire Site Map
       </h2>
-      <div style={{ display: "flex", margin: "0 5%" }}>
+      <div className="direction-set">
         <img
           id="map"
           title="map"
@@ -129,7 +126,7 @@ function DirectionToFaire() {
       <h2 className="second-header" style={{ fontSize: "2.3rem" }}>
         To The Faire
       </h2>
-      <div style={{ display: "flex", margin: "0 5%" }}>
+      <div className="direction-set">
         <iframe
           title="map"
           id="map"

@@ -41,8 +41,16 @@ th {
   padding-top: 5%;
 }
 
+#general-tickets,
+#les-amis {
+  display: block;
+  height: 5rem;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .ren-faire {
-  width: 33.3%;
+  width: 20rem;
 }
 
 .les-amis {
@@ -88,10 +96,6 @@ th {
   font-size: 18px;
   padding: 20px;
   text-align: center;
-}
-
-.ticket-contact {
-  margin-top: -20px;
 }
 
 .t-price {
@@ -142,6 +146,11 @@ th {
 
 .direct-list {
   list-style-type: upper-roman;
+}
+
+.direction-set {
+  display: flex;
+  margin: 0px 5%;
 }
 
 /* Hotels */
