@@ -12,6 +12,7 @@
   }
 
   .two-col {
+    display: flex;
     flex-direction: column;
   }
 
@@ -21,6 +22,21 @@
 
   .direction-set {
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .two-col {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    gap: 10px;
+  }
+
+  .involve-bttn {
+    width: 15rem;
+    height: 15rem;
+    margin: 1rem 0;
+    font-weight: bold;
   }
 }
 
@@ -71,11 +87,6 @@ a {
   font-family: "Sansita Swashed", cursive;
   padding-bottom: 1%;
   border-bottom: 5px solid #cc00ff;
-}
-
-.two-col {
-  display: flex;
-  justify-content: space-between;
 }
 
 .top-line {
@@ -136,10 +147,6 @@ a {
 /* Second Column */
 .two-col h2 {
   font-size: 3.5rem;
-}
-
-.col2 {
-  width: 65vw;
 }
 
 .col2-link {

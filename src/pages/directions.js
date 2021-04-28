@@ -12,53 +12,55 @@ function Directions() {
   return (
     <>
       <h1 className="page-header">Directions</h1>
-      <div className="margin-width two-col">
-        <div className="col1-width">
-          <ButtonGroup aria-label="Basic example" size="lg">
-            <Button
-              variant="secondary"
-              onClick={() => setGoogleMap(true)}
-              id="frst-bttn"
-            >
-              To the Faire
-            </Button>
-            <Button variant="secondary" onClick={() => setGoogleMap(false)}>
-              Faire Site Map
-            </Button>
-          </ButtonGroup>
-          {googleMap ? <DirectionToFaire /> : <FaireMap />}
-        </div>
-        <div className="col2">
-          <h3 className="col2-header">Plan Your Visit</h3>
-          <Link className="col2-link" to="/about-us">
-            About Us
-          </Link>
-          <br />
-          <Link className="col2-link" to="/key-policies">
-            Key Policies
-          </Link>
-          <br />
-          <Link className="col2-link" to="/tickets">
-            Get Tickets
-          </Link>
-          <br />
-          <Link className="col2-link" to="/contests-promotions">
-            Contest &#38; Promotions
-          </Link>
-          <br />
-          <Link className="col2-link" to="/bring-your-dog">
-            Bring Your Dog
-          </Link>
-          <br />
-          <Link className="col2-link" to="/find-hotels">
-            Find a hotel
-          </Link>
-          <br />
-          <Link className="col2-link" to="/faq">
-            FAQ
-          </Link>
+      <div className="margin-width">
+        <div className="two-col">
+          <div className="col1-width">
+            <ButtonGroup aria-label="Basic example" size="lg">
+              <Button
+                variant="secondary"
+                onClick={() => setGoogleMap(true)}
+                id="frst-bttn"
+              >
+                To the Faire
+              </Button>
+              <Button variant="secondary" onClick={() => setGoogleMap(false)}>
+                Faire Site Map
+              </Button>
+            </ButtonGroup>
+            {googleMap ? <DirectionToFaire /> : <FaireMap />}
+          </div>
+          <div className="col2">
+            <h3 className="col2-header">Plan Your Visit</h3>
+            <Link className="col2-link" to="/about-us">
+              About Us
+            </Link>
+            <br />
+            <Link className="col2-link" to="/key-policies">
+              Key Policies
+            </Link>
+            <br />
+            <Link className="col2-link" to="/tickets">
+              Get Tickets
+            </Link>
+            <br />
+            <Link className="col2-link" to="/contests-promotions">
+              Contest &#38; Promotions
+            </Link>
+            <br />
+            <Link className="col2-link" to="/bring-your-dog">
+              Bring Your Dog
+            </Link>
+            <br />
+            <Link className="col2-link" to="/find-hotels">
+              Find a hotel
+            </Link>
+            <br />
+            <Link className="col2-link" to="/faq">
+              FAQ
+            </Link>
 
-          <SocialMedia />
+            <SocialMedia />
+          </div>
         </div>
       </div>
     </>
