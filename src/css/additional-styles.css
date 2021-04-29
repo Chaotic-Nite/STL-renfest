@@ -14,7 +14,8 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 70%;
+  align-items: center;
+  width: 100%;
 }
 
 .ticket-setup h2 {
@@ -41,20 +42,15 @@ th {
   text-align: center;
 }
 
-.ticket-boxes {
-  box-sizing: border-box;
-}
-
 #les-amis,
-#general-tickets,
 #kegs {
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 #general-tickets,
 #les-amis {
   display: block;
-  height: 5rem;
+  height: 2.5rem;
   visibility: hidden;
   pointer-events: none;
 }
@@ -64,8 +60,8 @@ th {
 }
 
 .les-amis {
-  margin-left: auto;
-  width: 49.5%;
+  display: flex;
+  justify-content: center;
 }
 
 .ren-faire,

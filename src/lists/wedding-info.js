@@ -85,13 +85,16 @@ export const weddingInfo = {
     },
     appetizersHot: [
       "Hot Appetizers (prices per 50 pieces",
-      {food: 'None', price: ''}
+      { food: "None", price: "" },
       { food: "Grilled Asparagus", price: "$30" },
       { food: "Grilled Zucchini", price: "$30" },
       { food: "Golden Toasted Ravioli (meat or cheese)", price: "$50" },
       { food: "Mozzarella Cheese Sticks", price: "$50" },
       { food: "Mini Meatballs in Marinara Sauce", price: "$60" },
-      { food: "Chicken Wings (Garlic Parmesan, Buffalo, or Trashed)", price: "$70" },
+      {
+        food: "Chicken Wings (Garlic Parmesan, Buffalo, or Trashed)",
+        price: "$70",
+      },
       { food: "Chesse or Chicken Quesadilla", price: "$85" },
     ],
     appetizersCold: [
@@ -100,12 +103,41 @@ export const weddingInfo = {
       { food: "Seasonal Fruit Tray", price: "$3.50/person" },
       { food: "Seasonal Veggie Tray", price: "$3.50/person" },
       { food: "Italian Anitpasto Tray", price: "$4.50/person" },
-      ['Volpi Salami', 'Prosciutto', 'Marinated Olives', 'Roast Beef', 'Artichoke Hearts', 'Assorted Cheese']
+      [
+        "Volpi Salami",
+        "Prosciutto",
+        "Marinated Olives",
+        "Roast Beef",
+        "Artichoke Hearts",
+        "Assorted Cheese",
+      ],
     ],
 
     partyPackage: {
-      knights: {title: 'Knights', type: 'hot dog', mainFood: 'all beef hot dogs with a variety of toppings (chili, nacho cheese, sauerkraut and diced onions)', additional: ['individual bag of potato chips', 'cole slaw', 'a cookie tray'], visitFrom: 'Royal Court'},
-      fairy: {title: 'Fairy', type: 'taco', mainFood: 'soft flour tortillas, ground beef taco meat, shredded lettuce, pico de gallo, shredded cheddar, and sour cream', additional: ['tortilla chips with salsa','cookie tray', 'brownie tray'], visitFrom: 'enchanting fairies'}
-    }
+      knights: {
+        title: "Knights",
+        type: "hot dog",
+        mainFood:
+          "all beef hot dogs with a variety of toppings (chili, nacho cheese, sauerkraut and diced onions)",
+        additional: [
+          "individual bag of potato chips",
+          "cole slaw",
+          "a cookie tray",
+        ],
+        visitFrom: "Royal Court",
+      },
+      fairy: {
+        title: "Fairy",
+        type: "taco",
+        mainFood:
+          "soft flour tortillas, ground beef taco meat, shredded lettuce, pico de gallo, shredded cheddar, and sour cream",
+        additional: [
+          "tortilla chips with salsa",
+          "cookie tray",
+          "brownie tray",
+        ],
+        visitFrom: "enchanting fairies",
+      },
+    },
   },
 };
