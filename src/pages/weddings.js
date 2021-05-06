@@ -1,4 +1,6 @@
 import React from "react";
+import ListGroup from "react-bootstrap/ListGroup";
+import { weddingInfo, weddingFinePrint } from "../lists/wedding-info";
 
 function Weddings() {
   return (
@@ -20,6 +22,28 @@ function Weddings() {
                 information or with questions!
               </b>
             </p>
+            <div style={{ display: "flex" }}>
+              <div className="wedding" id="wedLocation">
+                <ListGroup>
+                  {weddingInfo.location.map((location) => {
+                    return (
+                      <ListGroup.Item
+                        className="weddingPlace"
+                        style={{ width: "120%" }}
+                      >
+                        <span style={{ float: "left", paddingRight: "1%" }}>
+                          {location.place}
+                        </span>
+                        <span style={{ float: "right" }}>
+                          ${location.chargePerHour} per 1 hour of service |
+                          seats up to {location.capacity}
+                        </span>
+                      </ListGroup.Item>
+                    );
+                  })}
+                </ListGroup>
+              </div>
+            </div>
           </div>
         </div>
       </div>
