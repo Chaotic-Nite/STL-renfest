@@ -67,7 +67,7 @@ export const weddingInfo = {
     main: {
       price: "$19.95 per person",
       salad: "Host choice between House Salad or Classic Caesar Salad",
-      Entree:
+      entree:
         "Slow Roasted Turkey Drumstrick\nGriled Chicken Breast in Host Choice of Sauce(+$1.00 per person)\nChoice of Sauce - Lemon Butter or Marsala Sauce",
       vegetable: "Sweet Buttery Corn on the Cob",
       starch: "Garlic Roasted Mashed Potatoes\nDinner Rolls served with butter",
@@ -84,8 +84,7 @@ export const weddingInfo = {
       ],
     },
     appetizersHot: [
-      "Hot Appetizers (prices per 50 pieces",
-      { food: "None", price: "" },
+      "Hot Appetizers (prices per 50 pieces)",
       { food: "Grilled Asparagus", price: "$30" },
       { food: "Grilled Zucchini", price: "$30" },
       { food: "Golden Toasted Ravioli (meat or cheese)", price: "$50" },

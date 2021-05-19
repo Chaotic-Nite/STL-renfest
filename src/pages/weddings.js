@@ -1,8 +1,16 @@
+import { nodeName } from "jquery";
 import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
 import { weddingInfo, weddingFinePrint } from "../lists/wedding-info";
 
 function Weddings() {
+  const mainFood = weddingInfo.weddingMenu.main
+  const appHot = weddingInfo.weddingMenu.appetizersHot
+  const appCold = weddingInfo.weddingMenu.appetizersCold
+  const partyPk = weddingInfo.weddingMenu.partyPackage
+  const sndwchTray = weddingInfo.weddingMenu.sandwichTray
+  const drinks = weddingInfo.weddingMenu.drinks
+
   return (
     <>
       <h1 className="page-header">Weddings</h1>
@@ -22,15 +30,13 @@ function Weddings() {
                 information or with questions!
               </b>
             </p>
-            <div style={{ display: "flex" }}>
+            <div style={{ display: "flex" , flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
               <div className="wedding" id="wedLocation">
+                <h2>Selection of Locations</h2>
                 <ListGroup>
                   {weddingInfo.location.map((location) => {
                     return (
-                      <ListGroup.Item
-                        className="weddingPlace"
-                        style={{ width: "120%" }}
-                      >
+                      <ListGroup.Item className="wedding-piece">
                         <span style={{ float: "left", paddingRight: "1%" }}>
                           {location.place}
                         </span>
@@ -41,7 +47,140 @@ function Weddings() {
                       </ListGroup.Item>
                     );
                   })}
+                  <ListGroup.Item className="wedding-piece">
+                    *Other areas available upon request.
+                  </ListGroup.Item>
+                  <ListGroup.Item className="wedding-piece">
+                    *Ceremony times subject to change based on stage schedules.{" "}
+                  </ListGroup.Item>
                 </ListGroup>
+              </div>
+              <div className="wedding" id="wedReception">
+                <h2>Reception &#38; Private Party</h2>
+                <ListGroup>
+                  {weddingInfo.reception.map((reception) => {
+                    return (
+                      <ListGroup.Item className="wedding-piece">
+                        <span style={{ float: "left", paddingRight: "1%" }}>
+                          {reception.place}
+                        </span>
+                        <span style={{ float: "right" }}>
+                          ${reception.charge} per {reception.per} |{" "}
+                          {reception.inclusive
+                            ? `All-inclusive for ${reception.capacity}`
+                            : `Seats up to ${reception.capacity}`}{" "}
+                        </span>
+                      </ListGroup.Item>
+                    );
+                  })}
+                </ListGroup>
+              </div>
+              <div className='wedding' id='wedSpecial'>
+                <h2>Special Event &#38; Wedding Package</h2>
+                <h3>À La Carte</h3>
+                <ListGroup>
+                  {weddingInfo.special.map((item) => {
+                      return (
+                        <ListGroup.Item className="wedding-piece">
+                          <span style={{ float: "left", paddingRight: "1%" }}>
+                            {item.item}
+                          </span>
+                          <span style={{ float: "right" }}>
+                            {item.price} | {item.additional}
+                          </span>
+                        </ListGroup.Item>
+                      );
+                    })}
+                </ListGroup>
+              </div>
+              <div className='wedding' id='wedMenu'>
+                <details>
+                    <summary>
+                      <h2>Wedding Menu (Food)</h2>
+                    </summary>
+                    <h3><b>King's Feast</b></h3>
+                    <p><b>{mainFood.price}</b></p>
+                    <ListGroup>
+                      <ListGroup.Item className='wedding-food'>
+                        <span >
+                          <b>Salad</b>
+                          <br />
+                          {mainFood.salad}
+                        </span>
+                        </ListGroup.Item>
+                        <ListGroup.Item className='wedding-food'>
+                        <span >
+                          <b>Entree</b>
+                          <br />
+                          {mainFood.entree}
+                        </span>
+                        </ListGroup.Item>
+                        <ListGroup.Item className='wedding-food'>
+                        <span >
+                          <b>Vegetable</b>
+                          <br />
+                          {mainFood.vegetable}
+                        </span>
+                        </ListGroup.Item>
+                        <ListGroup.Item className='wedding-food'>
+                        <span >
+                          <b>Starch</b>
+                          <br />
+                          {mainFood.starch}
+                        </span>
+                        </ListGroup.Item>
+                        <ListGroup.Item className='wedding-food'>
+                        <span >
+                          <b>Dessert Tray</b>
+                          <br />
+                          {mainFood.dessertTray}
+                        </span>
+                        </ListGroup.Item>
+                        <ListGroup.Item className='wedding-food'>
+                        <span >
+                          <b>Beverage Station</b>
+                          <br />
+                          <ul style={{listStyle: 'none'}}>
+                          {mainFood.beverageStation.map((item) => {
+                            return (
+                                <li>{item}</li>
+                              )
+                            })}
+                            </ul>
+                        </span>
+                        </ListGroup.Item>
+                        <ListGroup.Item className='wedding-food'>
+
+                    <i>*An 18% gratuity and an 8.65% Missouri Sales Tax is applicable to all food and beverage charges. All caterings are priced for parties 10 or more. Please contact us for smaller parties. </i>
+                        </ListGroup.Item>
+                    </ListGroup>
+                    <h3><b>Hot Appetizers</b></h3>
+                    <p><b>{appHot[0]}</b></p>
+                    <ListGroup>
+                      {appHot.map(item => {
+                          {if (typeof item != 'string') {
+                            return (
+                              <ListGroup.Item className='wedding-food'>
+                                <span style={{ float: "left", paddingRight: "1%" }}>{item.food}</span><span style={{ float: "right" }}>{item.price}</span>
+                              </ListGroup.Item>
+                            )
+                          }}
+                      })}
+                    </ListGroup>
+                    <h3><b>Cold Appetizers</b></h3>
+                    <p><b>{appCold[0]}</b></p>
+                    <ListGroup>
+                      {appCold.map(item => {
+                          {if (typeof item != 'string' && typeof item != 'array') {
+                            return (
+                              <ListGroup.Item className='wedding-food'>
+                                <span style={{ float: "left", paddingRight: "1%" }}>{item.food}</span><span style={{ float: "right" }}>{item.price}</span>
+                              </ListGroup.Item>
+                            )
+                          }}
+                      })}
+                    </ListGroup>
+                </details>
               </div>
             </div>
           </div>

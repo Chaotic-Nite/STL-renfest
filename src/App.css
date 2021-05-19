@@ -39,9 +39,25 @@
     font-weight: bold;
   }
 
-  .weddingPlace {
+  .wedding-piece {
     width: 120%;
   }
+
+  .wedding-food {
+    margin: 0 auto 0 auto;
+    width: 50%;
+    text-align: center;
+  }
+
+  #wedMenu h3{
+    margin-top: 5%;
+  }
+
+  #wedMenu details{
+    padding: 15px 30px;
+    border: 5px solid rgba(0, 0, 0, 0.267);
+  }
+
 }
 
 :root {

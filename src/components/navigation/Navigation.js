@@ -100,19 +100,19 @@ function TicketDropdown() {
       <li>
         <HashLink
           className="nav__submenu-item"
-          smooth
+          smooth='true'
           to="/tickets#general-tickets"
         >
           Renaissance Tickets
         </HashLink>
       </li>
       <li>
-        <HashLink className="nav__submenu-item" smooth to="/tickets#les-amis">
+        <HashLink className="nav__submenu-item" smooth='true' to="/tickets#les-amis">
           Les Amis Tickets
         </HashLink>
       </li>
       <li>
-        <HashLink className="nav__submenu-item" smooth to="/tickets#kegs">
+        <HashLink className="nav__submenu-item" smooth='true' to="/tickets#kegs">
           Kegs N Eggs Tickets
         </HashLink>
       </li>
@@ -131,7 +131,7 @@ function WeekendDropdown() {
       <li>
         <HashLink
           className="nav__submenu-item"
-          smooth
+          smooth='true'
           to="/weekends#highland-fling"
         >
           Highland Fling
@@ -140,7 +140,7 @@ function WeekendDropdown() {
       <li>
         <HashLink
           className="nav__submenu-item"
-          smooth
+          smooth='true'
           to="/weekends#pets-pirate-ale"
         >
           Pets, Pirates &#38; Ale
@@ -149,7 +149,7 @@ function WeekendDropdown() {
       <li>
         <HashLink
           className="nav__submenu-item"
-          smooth
+          smooth='true'
           to="/weekends#shamrocks-shenanigans"
         >
           Shamrocks, Shenanigans &#38; Sweet Romance
@@ -158,7 +158,7 @@ function WeekendDropdown() {
       <li>
         <HashLink
           className="nav__submenu-item"
-          smooth
+          smooth='true'
           to="/weekends#viking-invasion"
         >
           Viking Invasion and Cosplay in the Kingdom
@@ -167,7 +167,7 @@ function WeekendDropdown() {
       <li>
         <HashLink
           className="nav__submenu-item"
-          smooth
+          smooth='true'
           to="/weekends#oktoberfest"
         >
           Oktoberfest and Other Wonders of the World
@@ -176,7 +176,7 @@ function WeekendDropdown() {
       <li>
         <HashLink
           className="nav__submenu-item"
-          smooth
+          smooth='true'
           to="/weekends#ladies-shopping-day"
         >
           Ladies Shopping Day
@@ -190,19 +190,19 @@ function InvolvmentDropdown() {
   return (
     <ul className="nav__submenu">
       <li>
-        <Link className="nav__submenu-item" smooth to="/employment">
+        <Link className="nav__submenu-item" smooth='true' to="/employment">
           Employment Opportunities
         </Link>
       </li>
       <li>
-        <Link className="nav__submenu-item" smooth to="/vendor-application">
+        <Link className="nav__submenu-item" smooth='true' to="/vendor-application">
           Vendor Application &#38; Sponsorship
         </Link>
       </li>
       <li>
         <Link
           className="nav__submenu-item"
-          smooth
+          smooth='true'
           to="/community-relations-fundraising"
         >
           Community Relations &#38; Fundraising

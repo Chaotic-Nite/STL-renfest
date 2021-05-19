@@ -141,6 +141,19 @@ th {
   text-align: center;
 }
 
+.wedding h2 {
+  font-family: "Sansita Swashed", cursive;
+
+}
+
+.wedding {
+  margin-top: 5%;
+}
+
+.list-group-item{
+  border: 2.5px solid rgba(0, 0, 0, 0.253);
+}
+
 /* Google Map */
 
 #map {
