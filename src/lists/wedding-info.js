@@ -112,8 +112,8 @@ export const weddingInfo = {
       ],
     ],
 
-    partyPackage: {
-      knights: {
+    partyPackage: [
+      {
         title: "Knights",
         type: "hot dog",
         mainFood:
@@ -125,7 +125,7 @@ export const weddingInfo = {
         ],
         visitFrom: "Royal Court",
       },
-      fairy: {
+      {
         title: "Fairy",
         type: "taco",
         mainFood:
@@ -137,13 +137,13 @@ export const weddingInfo = {
         ],
         visitFrom: "enchanting fairies",
       },
-    },
+    ],
 
-    sandwichTray: {
-      traditional: {
+    sandwichTray: [
+      {
         name: "Traditional Sandwich Tray",
         additional: ["green leaf lettuce", "sliced tomatoes"],
-        bread: ["wheat and rye"],
+        bread: ["wheat","rye"],
         cut: "quaters",
         size: [
           { group: "small", price: "80" },
@@ -151,9 +151,9 @@ export const weddingInfo = {
           { group: "large", price: "145" },
         ],
       },
-      deluxe: {
+      {
         name: "Deluxe Sandwich Tray",
-        additional: ["green leaf lettuce", "sliced tomatoes"],
+        additional: ["premium sliced cheese", "green leaf lettuce", "sliced tomatoes"],
         bread: ["kaiser rolls", "hoagie buns", "croissants", "wraps"],
         cut: "halves",
         size: [
@@ -162,7 +162,7 @@ export const weddingInfo = {
           { group: "large", price: "160" },
         ],
       },
-    },
+    ],
   },
 
   drinks: {

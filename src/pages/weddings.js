@@ -4,12 +4,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import { weddingInfo, weddingFinePrint } from "../lists/wedding-info";
 
 function Weddings() {
-  const mainFood = weddingInfo.weddingMenu.main
-  const appHot = weddingInfo.weddingMenu.appetizersHot
-  const appCold = weddingInfo.weddingMenu.appetizersCold
-  const partyPk = weddingInfo.weddingMenu.partyPackage
-  const sndwchTray = weddingInfo.weddingMenu.sandwichTray
-  const drinks = weddingInfo.weddingMenu.drinks
+
 
   return (
     <>
@@ -94,6 +89,25 @@ function Weddings() {
                 </ListGroup>
               </div>
               <div className='wedding' id='wedMenu'>
+                <WeddingFood />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+const WeddingFood = () => {
+  const mainFood = weddingInfo.weddingMenu.main
+  const appHot = weddingInfo.weddingMenu.appetizersHot
+  const appCold = weddingInfo.weddingMenu.appetizersCold
+  const partyPk = weddingInfo.weddingMenu.partyPackage
+  const sndwchTray = weddingInfo.weddingMenu.sandwichTray
+  const drinks = weddingInfo.weddingMenu.drinks
+  return (
+
                 <details>
                     <summary>
                       <h2>Wedding Menu (Food)</h2>
@@ -171,7 +185,7 @@ function Weddings() {
                     <p><b>{appCold[0]}</b></p>
                     <ListGroup>
                       {appCold.map(item => {
-                          {if (typeof item != 'string' && typeof item != 'array') {
+                          {if (typeof item != 'string' && item.food) {
                             return (
                               <ListGroup.Item className='wedding-food'>
                                 <span style={{ float: "left", paddingRight: "1%" }}>{item.food}</span><span style={{ float: "right" }}>{item.price}</span>
@@ -179,15 +193,58 @@ function Weddings() {
                             )
                           }}
                       })}
+                      <ListGroup.Item className='wedding-food'>
+                        {appCold[appCold.length-1].join(', ')}
+                      </ListGroup.Item>
+                    </ListGroup>
+                    <h3><b>Party Package</b></h3>
+                    <p style={{marginBottom: '2px'}}><b>$200 for (1-10 adults/children)</b></p>
+                    <p><i>Additional guests: $16 per adult or $12 per child</i></p>
+                    <ListGroup>
+                      {partyPk.map((item) => {
+                        return (
+                          <ListGroup.Item className='wedding-food' style={{textAlign: 'left'}}>
+                            <span>
+                              <b>{item.title} Lunchoen</b>
+                            </span>
+                            <br />
+                            <span>
+                              <b>Main Course:</b> {item.mainFood}
+                            </span>
+                            <br />
+                            <span>
+                              <b>Additional:</b> {item.additional.join(', ')}
+                            </span>
+                            <br />
+                            <span>
+                              Will also recieve a visit from one or more of our <b>{item.visitFrom}</b>
+                            </span>
+                          </ListGroup.Item>
+                        )
+                      })}
+                    </ListGroup>
+                    <h3><b>Sandwich Trays</b></h3>
+                    <p><i>Small feeds up to 10 people</i></p>
+                    <p><i>Medium feeds up to 15 people</i></p>
+                    <p><i>Large feeds up to 20 people</i></p>
+                    <ListGroup>
+                      {sndwchTray.map((item) => {
+                        return (
+                          <ListGroup.Item className='wedding-food'>
+                            <span>
+                              <b>{ item.name }</b>
+                            </span>
+                              <br />
+                            <span>
+                              Includes sandwiches filled with a variety of sliced meats such as turkey breast, premium ham, roast beef,
+                              fresh-made chicken salad or tuna salad with { item.additional.join(', ') } on { item.bread.slice(0, -1).join(',')+' and '+item.bread.slice(-1) }.
+                            </span>
+                          </ListGroup.Item>
+                        )
+                      })}
                     </ListGroup>
                 </details>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+  )
 }
 
 export default Weddings;

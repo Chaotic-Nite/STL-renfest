@@ -91,43 +91,33 @@ function BringYourDog() {
         </div>
         <div className="col2">
           <h3 className="col2-header">Plan Your Visit</h3>
-          <ul>
-            <li>
               <Link className="col2-link" to="/about-us">
                 About Us
               </Link>
-            </li>
-            <li>
+              <br />
               <Link className="col2-link" to="/key-policies">
                 Key Policies
               </Link>
-            </li>
-            <li>
+              <br />
               <Link className="col2-link" to="/tickets">
                 Get Tickets
               </Link>
-            </li>
-            <li>
+              <br />
               <Link className="col2-link" to="/contests-promotions">
                 Contest &#38; Promotions
               </Link>
-            </li>
-            <li>
+              <br />
               <Link className="col2-link" to="/find-hotels">
                 Find a hotel
               </Link>
-            </li>
-            <li>
+              <br />
               <Link className="col2-link" to="/directions">
                 Directions
               </Link>
-            </li>
-            <li>
+              <br />
               <Link className="col2-link" to="/faq">
                 FAQ
               </Link>
-            </li>
-          </ul>
           <SocialMedia />
         </div>
       </div>
