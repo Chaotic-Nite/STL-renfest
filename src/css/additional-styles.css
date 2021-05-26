@@ -146,19 +146,6 @@ th {
   text-align: center;
 }
 
-#wedMenu {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-}
-
-#wedFood, #wedFood[open], #wedDrinks, #wedDrinks[open]{
-  width: 30vw;
-}
-
-#weddingFinePrint, #weddingFinePrint[open]  {
-  width: 50vw;
-}
 
 
 #weddingFinePrint {
@@ -170,9 +157,6 @@ th {
   margin-right: 5px;
 }
 
-#wedLocation h2, #wedReception h2, #wedSpecial h2, #wedSpecial h3 {
-  padding-left: 7vw;
-}
 
 .wedding {
   margin-top: 5%;
