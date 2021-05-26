@@ -146,9 +146,9 @@ export const weddingInfo = {
         bread: ["wheat","rye"],
         cut: "quaters",
         size: [
-          { group: "small", price: "80" },
-          { group: "medium", price: "110" },
-          { group: "large", price: "145" },
+          { group: "Small", price: "80" },
+          { group: "Medium", price: "110" },
+          { group: "Large", price: "145" },
         ],
       },
       {
@@ -157,55 +157,57 @@ export const weddingInfo = {
         bread: ["kaiser rolls", "hoagie buns", "croissants", "wraps"],
         cut: "halves",
         size: [
-          { group: "small", price: "95" },
-          { group: "medium", price: "125" },
-          { group: "large", price: "160" },
+          { group: "Small", price: "95" },
+          { group: "Medium", price: "125" },
+          { group: "Large", price: "160" },
         ],
       },
     ],
   },
 
   drinks: {
-    nonAlcoholic: {
+    nonAlcoholic:  [{
+      name: "By the Gallon",
       price: "$20 per gallon",
       drinks: [
         "Fresh Coffee",
-        "Iced Tea",
         "Hot Tea",
+        "Iced Tea",
         "Lemonade",
         "Strawberry Punch",
       ],
-    },
-    perBottle: {
+    },{
+      name: "By the Bottle",
       price: "$2 per bottle",
-      drinks: ["Bottled Water", "Assorted Pepsi products", "Gatorade"],
+      drinks: ["Assorted Pepsi products", "Bottled Water",  "Gatorade"],
     },
-    alcoholics: {
-      byHour: {
+    ],
+    alcoholics: [
+      {
         name: "By the Hour",
         byline: "Beer & Wine",
-        drinks: [
+        drink: [
           { name: "1 Hour per Person", price: "12" },
           { name: "2 Hours per Person", price: "17" },
           { name: "3 Hours per Person", price: "21" },
         ],
       },
-      byDrink: {
+      {
         name: "By the Drink",
         byline: "Beer (12-14 oz) and Wine/Mead (6oz)",
         drink: [
           { name: "Beer & Wine Domestic", price: "4" },
-          { name: "Import Beer", price: "5" },
           { name: "Craft Beer", price: "5" },
-          { name: "Wine", price: "5" },
+          { name: "Import Beer", price: "5" },
           {
             name: "Mead",
             price: "5",
             notice: "*Must be Requested in Advanced*",
           },
+          { name: "Wine", price: "5" },
         ],
       },
-      byKeg: {
+      {
         name: "By the Keg",
         byline:
           "All drinks are 14oz pours\n1/6 Barrels serve 40-50\n1/2 Barrels serve 140-150",
@@ -216,30 +218,27 @@ export const weddingInfo = {
           { name: "Imported Craft or Cider 1/2 Barrel", price: "400" },
         ],
       },
-      byBottle: {
-        sutterHome: {
+       {
           name: "Sutter Home",
           byline: "(1.5 Liter Bottle; Yields 8-6oz pours)",
           drink: [
-            { name: "White Zinfandel", price: "25" },
             { name: "Chardonnay", price: "25" },
             { name: "Merlot", price: "25" },
             { name: "Moscato", price: "25" },
+            { name: "White Zinfandel", price: "25" },
           ],
-        },
-        folieMenage: {
+        }, {
           name: "Folie Meage A Trois",
           byline: "(750 ML; Yields 4-6oz pours)",
           drink: [
-            { name: "Midnight Red", price: "25" },
-            { name: "Merlot", price: "25" },
-            { name: "Chardonnay", price: "25" },
             { name: "Champagne (4-6oz)", price: "25" },
+            { name: "Chardonnay", price: "25" },
             { name: "Mead(4-6oz)", price: "25" },
+            { name: "Merlot", price: "25" },
+            { name: "Midnight Red", price: "25" },
           ],
         },
-      },
-      cashBar: {
+      {
         name: "Cash Bar",
         byline: "",
         drink: [
@@ -250,9 +249,9 @@ export const weddingInfo = {
           { name: "Mead", price: "6" },
         ],
       },
-      byline:
-        "*The St. Louis Renaissance Festival reserves the right to refuse service to any guest and to stop serving any guest that appears intoxicated. We also card all patrons that appear under the age of 40, this is a state mandated law. Without proper valid identification you will not be served. Sorry for any inconveniences this may cause.",
-    },
+      
+    ],
+    byline: "*The St. Louis Renaissance Festival reserves the right to refuse service to any guest and to stop serving any guest that appears intoxicated. We also card all patrons that appear under the age of 40, this is a state mandated law. Without proper valid identification you will not be served. Sorry for any inconveniences this may cause.",
   },
 };
 
