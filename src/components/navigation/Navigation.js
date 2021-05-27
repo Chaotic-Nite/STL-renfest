@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import "../../css/navigation.css";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import BurgerNav from "./BurgerNav";
 
+// Open state and autoclose Dropdown ndeufemia
 function Navigation() {
   const [sticky, setSticky] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);

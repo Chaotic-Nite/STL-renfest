@@ -5,6 +5,33 @@
   }
 }
 
+
+@media screen and (min-width: 767px) {
+  
+  .nav {
+    text-align: center;
+  }
+  
+  .nav__menu {
+    line-height: 105%;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    z-index: 4;
+  }
+  
+  .nav__menu li:hover,
+  .nav__menu li:focus-within {
+    background-color: rgba(133, 7, 165, 0.507);
+    cursor: pointer;
+  }
+
+  .nav__menu:hover .drop:active,
+  .nav__menu:hover .drop:active + .nav__submenu{
+    display: none;
+  }
+}
+
 ul li:hover > ul,
 ul li:focus-within > ul,
 ul li ul:hover,
@@ -28,7 +55,6 @@ nav > ul {
   display: flex;
   justify-content: center;
   color: #fff;
-  text-align: left;
   z-index: 10;
 }
 
@@ -44,20 +70,6 @@ nav > ul {
   color: #fff;
   font-weight: bold;
   line-height: inherit;
-  cursor: pointer;
-}
-
-.nav__menu {
-  line-height: 105%;
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  z-index: 4;
-}
-
-.nav__menu li:hover,
-.nav__menu li:focus-within {
-  background-color: rgba(133, 7, 165, 0.507);
   cursor: pointer;
 }
 
