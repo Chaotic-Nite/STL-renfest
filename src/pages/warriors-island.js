@@ -4,10 +4,12 @@ import IslandSign from "../images/warrior-island-sign.jpg";
 import FlippedDivider from "../images/fancy-divider-flipped.png";
 import Divider from "../images/fancy-divider.png";
 import "../css/cast-warrior.css";
+import Navigation from "../components/navigation/Navigation.js";
 
 function WarriorsIsland() {
   return (
     <>
+    <Navigation />
       <h1 className="page-header">Warriors Island</h1>
       <div id="warrior" className="margin-width">
         <img id="warrior-sign" src={IslandSign} alt="STL Warrior Island Sign" />

@@ -1,10 +1,12 @@
 import SocialMedia from "../components/social-media/SocialMedia";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import Navigation from "../components/navigation/Navigation";
 
 function VendorApplications() {
   return (
     <>
+    <Navigation />
       <h1 className="page-header">Vendor Applications</h1>
       <div className="margin-width">
         <div className="two-col">

@@ -3,6 +3,7 @@ import IntroPage from "../components/homepage-content/intro/Intro";
 import WarningSign from "../components/homepage-content/warning/Warning";
 import PhotoBanner from "../components/photobanner/PhotoBanner";
 import Sponsors from "../components/sponsors/Sponsors";
+import Navigation from "../components/navigation/Navigation";
 import dateObject from "../lists/UPTODATE";
 import { Link } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
@@ -36,6 +37,7 @@ function Home() {
 
   return (
     <>
+      <Navigation />
       <PhotoBanner />
       <WarningSign />
       <IntroPage />

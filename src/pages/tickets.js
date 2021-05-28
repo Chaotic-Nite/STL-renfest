@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SocialMedia from "../components/social-media/SocialMedia";
+import Navigation from "../components/navigation/Navigation";
+
 
 function Tickets() {
   return (
     <>
+      <Navigation />
       <h1 className="page-header">Tickets</h1>
       <div className="margin-width">
         <div className=" two-col">

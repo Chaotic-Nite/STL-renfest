@@ -1,9 +1,11 @@
 import SocialMedia from "../components/social-media/SocialMedia";
 import { Link } from "react-router-dom";
+import Navigation from "../components/navigation/Navigation.js";
 
 function ContestPromos() {
   return (
     <>
+      <Navigation />
       <h1 className="page-header">Contests &#38; Promotions</h1>
       <div className="margin-width">
         <div className="two-col">

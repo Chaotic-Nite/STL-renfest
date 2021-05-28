@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import SocialMedia from "../components/social-media/SocialMedia";
+import Navigation from "../components/navigation/Navigation.js";
 
 function FindHotel() {
   return (
     <>
+     <Navigation />
       <h1 className="page-header">Find Hotels</h1>
       <div className="margin-width">
         <div className="two-col">

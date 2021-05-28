@@ -1,10 +1,11 @@
 import SocialMedia from "../components/social-media/SocialMedia";
-
+import Navigation from "../components/navigation/Navigation.js";
 import { Link } from "react-router-dom";
 
 function Fundraising() {
   return (
     <>
+     <Navigation />
       <h1 className="page-header">Community Relations &#38; Fundraising</h1>
       <div className="margin-width">
         <div className="two-col">

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route, Link } from "react-router-dom";
-import Navigation from "./components/navigation/Navigation";
 import { routes } from "./routes/routes";
 import Footer from "./components/footer/Footer";
 import logo from "./images/StLouisLogo-white.png";
@@ -41,7 +40,6 @@ function App() {
           </ul>
         )}
       </header>
-      <Navigation />
       <nav className="main-body">
         <Switch>
           {routes &&

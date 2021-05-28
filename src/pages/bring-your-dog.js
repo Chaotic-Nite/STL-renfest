@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 import SocialMedia from "../components/social-media/SocialMedia";
+import Navigation from "../components/navigation/Navigation.js";
 
 function BringYourDog() {
   const DOG_RULES = [
@@ -13,6 +14,7 @@ function BringYourDog() {
   ];
   return (
     <>
+      <Navigation />
       <h1 className="page-header">Bring Your Dog!</h1>
       <div className="margin-width two-col">
         <div>

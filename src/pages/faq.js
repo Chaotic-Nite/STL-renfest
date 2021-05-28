@@ -3,10 +3,12 @@ import dateObject from "../lists/UPTODATE";
 import { Link } from "react-router-dom";
 import "../css/faq.css";
 import SocialMedia from "../components/social-media/SocialMedia";
+import Navigation from "../components/navigation/Navigation.js";
 
 function Faq() {
   return (
     <>
+     <Navigation />
       <h1 className="page-header">FAQ</h1>
       <div className="margin-width">
         <div className="two-col">

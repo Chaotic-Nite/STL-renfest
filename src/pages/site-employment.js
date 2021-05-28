@@ -1,10 +1,13 @@
 import React from "react";
 import SocialMedia from "../components/social-media/SocialMedia";
 import { employmentList } from "../lists/employment-list";
+import Navigation from "../components/navigation/Navigation.js";
 import { Link } from "react-router-dom";
 
 function Employment() {
   return (
+    <>
+    <Navigation />
     <p>
       <h1 className="page-header">Employment Opportunities</h1>
       <div className="margin-width">
@@ -23,7 +26,7 @@ function Employment() {
                 borderTop: "2px solid #5000e6b6",
                 padding: "2% 0",
               }}
-            >
+              >
               {employmentList &&
                 employmentList.map((element) => {
                   return (
@@ -45,7 +48,7 @@ function Employment() {
                   href="/pdf-files/Employee-Application.pdf"
                   target="_blank"
                   rel="noreferrer"
-                >
+                  >
                   Application
                 </a>{" "}
                 and do one of the following:
@@ -73,6 +76,7 @@ function Employment() {
       <p>Contact us at (636) 639-5173</p>
       <p>Or email akuchar@renaissancefest.com</p>
     </p>
+    </>
   );
 }
 

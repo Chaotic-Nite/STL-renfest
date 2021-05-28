@@ -3,7 +3,7 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import Base64Downloader from "react-base64-downloader";
-
+import Navigation from "../components/navigation/Navigation.js";
 import SocialMedia from "../components/social-media/SocialMedia";
 
 function Directions() {
@@ -11,6 +11,7 @@ function Directions() {
 
   return (
     <>
+     <Navigation />
       <h1 className="page-header">Directions</h1>
       <div className="margin-width">
         <div className="two-col">

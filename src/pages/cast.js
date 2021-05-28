@@ -9,6 +9,7 @@ import {
   MDBRow,
   MDBCol,
 } from "mdb-react-ui-kit";
+import Navigation from "../components/navigation/Navigation.js";
 
 import { Link } from "react-router-dom";
 import "../css/cast-warrior.css";
@@ -18,6 +19,7 @@ function Cast() {
 
   return (
     <>
+      <Navigation />
       <h1 className="page-header">Cast</h1>
       <div className="margin-width current">
         {guildArr.map((guild, j) => {

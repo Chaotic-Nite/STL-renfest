@@ -3,12 +3,14 @@ import ListGroup from "react-bootstrap/ListGroup";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Button from "react-bootstrap/Button";
 import { weddingInfo, weddingFinePrint } from "../lists/wedding-info";
+import Navigation from "../components/navigation/Navigation";
 
 function Weddings() {
   const [weddingState, setWeddingState] = useState(true)
 
   return (
     <>
+      <Navigation />
       <h1 className="page-header">Weddings</h1>
       <div className="margin-width">
         <div className="two-col">

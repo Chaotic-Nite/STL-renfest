@@ -1,10 +1,11 @@
 import SocialMedia from "../components/social-media/SocialMedia";
-
+import Navigation from "../components/navigation/Navigation.js";
 import { Link } from "react-router-dom";
 
 function GettingInvolved() {
   return (
     <>
+      <Navigation />
       <h1 className="page-header">Getting Involved</h1>
       <div className="margin-width">
         <div>
