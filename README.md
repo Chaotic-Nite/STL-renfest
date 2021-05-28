@@ -8,6 +8,7 @@ Reconstructing a new site with a modern update and cleaner navigation based off 
 
 ### Finished Parts:
 - React Navigation that implements sticky and adjusts based on desktop or mobile
+- Reconfigured Navigation to force rerender to make dropbox close
 - Home Page (Includes carousel photo, carousel of sponsors (with clickable links), flavor text)
 
 ### Currently in Progress
