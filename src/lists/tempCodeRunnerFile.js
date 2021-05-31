@@ -51,22 +51,6 @@ for (let i = 0; i < 10; i+=2){
 wknd[wknd.length] = new Date()
 wknd[wknd.length-1].setFullYear(year, 9, 11)
 
-shopDay = `${wknd[wknd.length-1].toLocaleDateString('default', { month: 'long'})} ${wknd[wknd.length-1].getDate()}${nth(wknd[wknd.length-1].getDate())}`
+wkndList.push(`${wknd[wknd.length-1].toLocaleDateString('default', { month: 'long'})} ${wknd[wknd.length-1].getDate()}${nth(wknd[wknd.length-1].getDate())}`)
 
 console.log(wkndList)
-
-//wkndStr = `${wknd[j].toLocaleDateString('default', { month: 'long'})} ${wknd[j].getDate()}${nth(wknd[j].getDate())} & ${wknd[j+1].toLocaleDateString('default', { month: 'long'})} ${wknd[j+1].getDate()}${nth(wknd[j+1].getDate())}`;
-
-
-
-const dateObject = {
-  year: 2021,
-  startDay: startDay,
-  endDay: endDay,
-  yearOfFaire: yearOfFaire,
-  wkndRaw: wknd,
-  wkndList: wkndList,
-  shopDay = shopDay,
-};
-
-export default dateObject;
