@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import { castList } from "../lists/castList.js";
 import {
   MDBCard,
@@ -16,6 +16,20 @@ import "../css/cast-warrior.css";
 
 function Cast() {
   const guildArr = ["Court", "Fae", "Fighter", "Traveler", "Village"];
+  const [width, setWidth] = useState(window.innerWidth);
+
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  let isMobile = width <= 1024 ? true : false;
 
   return (
     <>
@@ -30,27 +44,23 @@ function Cast() {
               </summary>
               {castList[guild].slice(1).map((item) => {
                 return (
-                  <MDBCard key={item.realName} className="cast-list">
+                  isMobile ? (
+                    <MDBCard key={item.realName} className="cast-list">
                     {" "}
                     {console.log(item)}
-                    <MDBRow className="cast-card">
-                      <MDBCol md="4">
-                        <MDBCardImage
+                      <MDBCardImage
                           src={item.image}
                           alt={item.realName}
                           fluid
+                          position='top'
                         />
-                      </MDBCol>
-                      <MDBCol md="8">
-                        <MDBCardBody>
-                          <MDBCardTitle className="cast-name">
-                            {item.realName}{" "}
+                         <MDBCardBody className='mbl-cast'>
+                          <MDBCardTitle>{item.realName}{" "}
                             {item.leadership ? (
                               <p className="guild-lead">
                                 **{item.leadership}**
                               </p>
-                            ) : null}
-                          </MDBCardTitle>
+                            ) : null}</MDBCardTitle>
                           <MDBCardText className="cast-role">
                             {item.role}
                           </MDBCardText>
@@ -58,10 +68,39 @@ function Cast() {
                             {item.position}
                           </MDBCardText>
                         </MDBCardBody>
-                      </MDBCol>
-                    </MDBRow>
                   </MDBCard>
-                );
+                  ) :( 
+                  <MDBCard key={item.realName} className="cast-list">
+                  {" "}
+                    {console.log(item)}
+                    <MDBRow className="cast-card">
+                      <MDBCol md="4">
+                      <MDBCardImage
+                      src={item.image}
+                      alt={item.realName}
+                      fluid
+                      />
+                      </MDBCol>
+                      <MDBCol md="8">
+                        <MDBCardBody>
+                        <MDBCardTitle className="cast-name">
+                        {item.realName}{" "}
+                        {item.leadership ? (
+                          <p className="guild-lead">
+                                **{item.leadership}**
+                                </p>
+                                ) : null}
+                                </MDBCardTitle>
+                                <MDBCardText className="cast-role">
+                                {item.role}
+                          </MDBCardText>
+                          <MDBCardText className="cast-position">
+                            {item.position}
+                            </MDBCardText>
+                            </MDBCardBody>
+                      </MDBCol>
+                      </MDBRow>
+                      </MDBCard>));
               })}
             </details>
           );
