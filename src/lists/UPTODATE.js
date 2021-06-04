@@ -27,10 +27,10 @@ const yearOfFaire = year - 1998 + "rd";
 
 // Weekends
 
-wknd = []
-wkndList = []
+let wknd = []
+let wkndList = []
 for (let i = 0; i < 10; i+=2){
-  if (wknd.length == 0) {
+  if (wknd.length === 0) {
     wknd[i] = new Date()
     wknd[i].setFullYear(year, d.getMonth(), d.getDate())
     
@@ -51,7 +51,7 @@ for (let i = 0; i < 10; i+=2){
 wknd[wknd.length] = new Date()
 wknd[wknd.length-1].setFullYear(year, 9, 11)
 
-shopDay = `${wknd[wknd.length-1].toLocaleDateString('default', { month: 'long'})} ${wknd[wknd.length-1].getDate()}${nth(wknd[wknd.length-1].getDate())}`
+let shopDay = `${wknd[wknd.length-1].toLocaleDateString('default', { month: 'long'})} ${wknd[wknd.length-1].getDate()}${nth(wknd[wknd.length-1].getDate())}`
 
 console.log(wkndList)
 
@@ -66,7 +66,7 @@ const dateObject = {
   yearOfFaire: yearOfFaire,
   wkndRaw: wknd,
   wkndList: wkndList,
-  shopDay = shopDay,
+  shopDay: shopDay,
 };
 
 export default dateObject;

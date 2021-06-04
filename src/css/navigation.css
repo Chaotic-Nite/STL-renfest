@@ -25,11 +25,17 @@
     background-color: rgba(133, 7, 165, 0.507);
     cursor: pointer;
   }
+  
+}
 
-  .nav__menu:hover .drop:active,
-  .nav__menu:hover .drop:active + .nav__submenu{
-    display: none;
-  }
+.nav a {
+display: flex;
+padding:  calc(2em * .5)  calc(2em * 1.5);
+margin-right: 0 !important;
+color: #fff;
+font-weight: bold;
+line-height: inherit;
+cursor: pointer;
 }
 
 ul li:hover > ul,
@@ -43,9 +49,9 @@ ul li ul:focus {
 
 nav > ul {
   list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  padding-left: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .nav {
@@ -64,23 +70,14 @@ nav > ul {
   left: 0;
 }
 
-.nav a {
-  display: flex;
-  padding: 1.6rem 1.62rem;
-  color: #fff;
-  font-weight: bold;
-  line-height: inherit;
-  cursor: pointer;
-}
-
 .nav__submenu {
   display: none;
   visibility: hidden;
   position: absolute;
-  width: auto;
+  width: auto !important;
   min-width: 5rem;
-  margin-top: 4.5rem;
-  padding-left: 0;
+  margin-top: calc(2em * 1.5) !important;
+  padding-left: auto !important;
   background: url("../images/blue-abstract-nav.png");
   background-size: auto;
   opacity: 0;
@@ -94,7 +91,7 @@ nav > ul {
   background: rgba(rgb(0, 0, 0), 0.1);
   z-index: 11;
   display: block;
-  padding: 0.5rem;
+  padding:  calc(2em * .5) !important;
   position: relative;
   text-decoration: none;
   transition-duration: 0.5s;

@@ -6,6 +6,7 @@ import logo from "./images/StLouisLogo-white.png";
 import "./App.css";
 import "./css/additional-styles.css";
 
+
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
   function handleWindowSizeChange() {
