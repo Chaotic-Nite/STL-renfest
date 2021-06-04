@@ -14,22 +14,27 @@
 .cast-name {
   display: flex;
   justify-content: space-between;
-  font-size: 1.4vw;
   border-bottom: 2px solid black;
 }
 
+.cast-name, .guild-lead {
+  font-size: calc(2rem * .8);
+}
+
 .cast-position {
-  font-size: 1vh;
+  font-size: calc(2rem * .5);
 }
 
 .cast-role {
   font-family: "Rock Salt", cursive;
-  font-size: 1.2vh;
+  font-size: calc(2rem * .7);
 }
 
 .img-fluid {
   width: calc(100% - 60px);
   height: auto;
+  margin: auto;
+  display: block;
 }
 
 .card {
@@ -91,6 +96,11 @@
 .col-md-4 {
   padding: 1% 0 1% 2%;
   max-width: 16vw;
+  display: flex;
+}
+
+.card-img-top{
+  padding-top: 5%;
 }
 
 .col-md-8 {

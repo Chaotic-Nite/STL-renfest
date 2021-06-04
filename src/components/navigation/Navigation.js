@@ -122,6 +122,11 @@ function TicketDropdown() {
           Bring Your Dog
         </Link>
       </li>
+      <li>
+        <Link className="nav__submenu-item" to="/daily-events">
+          Daily Events
+        </Link>
+      </li>
     </ul>
   );
 }

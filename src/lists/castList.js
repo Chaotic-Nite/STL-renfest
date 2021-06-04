@@ -81,12 +81,12 @@ export const castList = {
     {
       realName: "Chris Siebert",
       role: "Harold",
-      position: "Harold",
+      position: "Herald",
       image: "/assets/images/cast/chris-siebert.jpg",
     },
     {
       realName: "Jason Smallen",
-      role: "",
+      role: "Sir William Carey",
       position: "",
       image: "/assets/images/cast/jason-smallen.jpg",
     },
