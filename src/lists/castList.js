@@ -167,6 +167,7 @@ export const warriors = [
   "Ashley Lieble",
   "Bill Cook",
   "Bob Swank",
+  'Captain Carl Davis',
   "Connie Jacobi",
   "Cyd Donaldson-Sprowel",
   "Donna Morris",

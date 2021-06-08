@@ -41,7 +41,7 @@ function Navigation() {
       {isMobile ? (
         <BurgerNav />
       ) : (
-        <nav className={sticky ? "nav nav-sticky" : "nav"}>
+        <nav className={sticky ? "main-nav nav-sticky" : "main-nav"}>
           <ul className="nav__menu" id="nav-bar">
             <li>
               <Link className="small-tab drop" to="/tickets">
@@ -61,7 +61,7 @@ function Navigation() {
               <WeekendDropdown />
             </li>
             <li>
-              <Link id="entertain" to="/entertainment-vendor">
+              <Link className="small-tab" id="entertain" to="/entertainment-vendor">
                 Entertainers &#38; Vendors
               </Link>
             </li>
@@ -123,8 +123,8 @@ function TicketDropdown() {
         </Link>
       </li>
       <li>
-        <Link className="nav__submenu-item" to="/daily-events">
-          Daily Events
+        <Link className="nav__submenu-item" to="/events-contests-promotions">
+          Events, Contests &#38; Promotions
         </Link>
       </li>
     </ul>

@@ -1,5 +1,5 @@
 import React from "react";
-import dateObject from "../lists/UPTODATE";
+import {dateObject} from "../lists/UPTODATE";
 import { Link } from "react-router-dom";
 import "../css/faq.css";
 import SocialMedia from "../components/social-media/SocialMedia";

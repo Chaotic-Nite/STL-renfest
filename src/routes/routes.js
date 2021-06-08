@@ -14,12 +14,11 @@ import Weekends from "../pages/weekends";
 import ContactUs from "../pages/contact-us";
 import FindHotel from "../pages/find-hotel";
 import KeyPolicies from "../pages/key-policies";
-import ContestPromos from "../pages/contest-promos";
 import ErrorPage from "../pages/error-page";
 import VendorApplications from "../pages/vendor-applications";
 import Fundraising from "../pages/fundraising";
 import GettingInvolved from "../pages/getting-involved";
-import DailyEvents from "../pages/daily-events";
+import EventsContestsPromos from "../pages/events-contests-promos";
 
 export const routes = [
   {
@@ -47,15 +46,9 @@ export const routes = [
   },
 
   {
-    name: "ContestPromos",
-    path: "/contests-promotions",
-    Component: ContestPromos,
-  },
-
-  {
-    name: 'DailyEvents',
-    path: '/daily-events',
-    Component: DailyEvents
+    name: "EventsContestsPromos",
+    path: "/events-contests-promotions",
+    Component: EventsContestsPromos,
   },
 
   {

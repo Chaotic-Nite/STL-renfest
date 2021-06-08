@@ -8,7 +8,7 @@
 
 @media screen and (min-width: 767px) {
   
-  .nav {
+  .main-nav {
     text-align: center;
   }
   
@@ -28,9 +28,9 @@
   
 }
 
-.nav a {
+.main-nav a {
 display: flex;
-padding:  calc(2em * .5)  calc(2em * 1.5);
+padding:  calc(2em * .5)  calc(2em * 1);
 margin-right: 0 !important;
 color: #fff;
 font-weight: bold;
@@ -54,7 +54,7 @@ nav > ul {
   margin-bottom: 0 !important;
 }
 
-.nav {
+.main-nav {
   background: url("../images/blue-abstract-nav.png");
   background-size: cover;
   width: 100%;

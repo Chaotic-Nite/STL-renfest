@@ -177,6 +177,11 @@ th {
   border-bottom: hidden;
 }
 
+.nav-pills .nav-link {
+  font-size: calc(1rem * 1.4);
+  font-weight: bolder;
+}
+
 /* Google Map */
 
 #map {

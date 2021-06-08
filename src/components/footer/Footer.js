@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import dateObject from "../../lists/UPTODATE";
+import {dateObject} from "../../lists/UPTODATE";
 import RenLogo from "../../images/renaissance-festival-logo.png";
 import "../../css/footer.css";
 

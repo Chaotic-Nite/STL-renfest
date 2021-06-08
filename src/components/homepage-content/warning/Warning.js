@@ -4,7 +4,7 @@ import {
   CollapsibleContent,
 } from "react-collapsible-component";
 import "../../../css/warning.css";
-import dateObject from "../../../lists/UPTODATE.js";
+import {dateObject} from "../../../lists/UPTODATE.js";
 
 function WarningSign() {
   return (

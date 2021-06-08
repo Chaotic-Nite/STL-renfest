@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Navigation from "../components/navigation/Navigation";
 import SocialMedia from "../components/social-media/SocialMedia";
-import dateObject from "../lists/UPTODATE";
+import {dateObject} from "../lists/UPTODATE";
 
 function AboutUs() {
   return (
