@@ -1,13 +1,27 @@
 import React, { useEffect, useState } from "react";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import {
+  MDBTabs,
+  MDBTabsItem,
+  MDBTabsLink,
+  MDBTabsContent,
+  MDBTabsPane,
+} from 'mdb-react-ui-kit';
 import Base64Downloader from "react-base64-downloader";
 import Navigation from "../components/navigation/Navigation.js";
 import SocialMedia from "../components/social-media/SocialMedia";
 
 function Directions() {
-  const [googleMap, setGoogleMap] = useState(true);
+  const [justifyActive, setJustifyActive] = useState('to_faire');
+
+  const handleJustifyClick = (value) => {
+    if (value === justifyActive) {
+      return;
+    }
+
+    setJustifyActive(value);
+  };
+
 
   return (
     <>
@@ -16,19 +30,22 @@ function Directions() {
       <div className="margin-width">
         <div className="two-col">
           <div className="col1-width">
-            <ButtonGroup aria-label="Basic example" size="lg">
-              <Button
-                variant="secondary"
-                onClick={() => setGoogleMap(true)}
-                id="frst-bttn"
-              >
-                To the Faire
-              </Button>
-              <Button variant="secondary" onClick={() => setGoogleMap(false)}>
-                Faire Site Map
-              </Button>
-            </ButtonGroup>
-            {googleMap ? <DirectionToFaire /> : <FaireMap />}
+          <MDBTabs pills justify className='mb-3'>
+              <MDBTabsItem>
+              <MDBTabsLink onClick={() => handleJustifyClick('to_faire')} active={justifyActive === 'to_faire'}>
+                  To the Faire
+              </MDBTabsLink>
+              </MDBTabsItem>
+              <MDBTabsItem>
+              <MDBTabsLink  onClick={() => handleJustifyClick('faire_map')} active={justifyActive === 'faire_map'}>
+                  Faire Map
+              </MDBTabsLink>
+              </MDBTabsItem>
+          </MDBTabs>
+          <MDBTabsContent>
+              <MDBTabsPane show={justifyActive === 'to_faire'}><DirectionToFaire/></MDBTabsPane>
+              <MDBTabsPane show={justifyActive === 'faire_map'}><FaireMap /></MDBTabsPane>
+          </MDBTabsContent>
           </div>
           <div className="col2">
             <h3 className="col2-header">Plan Your Visit</h3>
@@ -44,7 +61,7 @@ function Directions() {
               Get Tickets
             </Link>
             <br />
-            <Link className="col2-link" to="/contests-promotions">
+            <Link className="col2-link" to="/events-contests-promotions">
               Contest &#38; Promotions
             </Link>
             <br />
@@ -101,7 +118,7 @@ function FaireMap() {
           src="/assets/images/STLFaireMap.jpg"
           alt="Faire Site Map"
         />
-        <div style={{ marginLeft: "5vw", marginTop: "2%", fontSize: "1.3vw" }}>
+        <div style={{ marginLeft: "5vw", marginTop: "2%"}}>
           <p>
             If image isn't loading or <br /> you'd prefer an offline copy.{" "}
             <br /> <br /> Download the current map{" "}

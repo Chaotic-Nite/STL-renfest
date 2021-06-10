@@ -10,7 +10,6 @@ import {
     MDBTabsPane,
     MDBCard,
     MDBCardTitle,
-    MDBListGroupItem,
     MDBCardText,
     MDBCardFooter
   } from 'mdb-react-ui-kit';
@@ -60,38 +59,31 @@ function EventsContestsPromos() {
             
             <div className="col2">
                 <h3 className="col2-header">Plan Your Visit</h3>
-                <ul>
-                <li>
-                    <Link className="col2-link" to="/about-us">
-                    About Us
-                    </Link>
-                </li>
-                <li>
-                    <Link className="col2-link" to="/key-policies">
-                    Key Policies
-                    </Link>
-                </li>
-                <li>
-                    <Link className="col2-link" to="/tickets">
-                    Get Tickets
-                    </Link>
-                </li>
-                <li>
-                    <Link className="col2-link" to="/bring-you-dog">
-                    Bring Your Dog
-                    </Link>
-                </li>
-                <li>
-                    <Link className="col2-link" to="/find-hotels">
-                    Find a hotel
-                    </Link>
-                </li>
-                <li>
-                    <Link className="col2-link" to="/directions">
-                    Directions
-                    </Link>
-                </li>
-                </ul>
+
+                <Link className="col2-link" to="/about-us">
+                About Us
+                </Link>
+                <br />
+                <Link className="col2-link" to="/key-policies">
+                Key Policies
+                </Link>
+                <br />
+                <Link className="col2-link" to="/tickets">
+                Get Tickets
+                </Link>
+                <br />
+                <Link className="col2-link" to="/bring-you-dog">
+                Bring Your Dog
+                </Link>
+                <br />
+                <Link className="col2-link" to="/find-hotels">
+                Find a hotel
+                </Link>
+                <br />
+                <Link className="col2-link" to="/directions">
+                Directions
+                </Link>
+                <br />
                 <SocialMedia />
             </div>
             </div>
@@ -106,7 +98,6 @@ function Events() {
                 <MDBCard>
                         {dailyEvents.map((item) => {
                             return (
-                        <MDBListGroupItem>
                             <MDBCard border='dark'>
                                 <MDBCardTitle className='ecp-title'>
                                     {item.title}
@@ -124,8 +115,6 @@ function Events() {
                                     {item.time.length === 2? (<p>{item.time[0]}<br/>{item.time[1]}</p>) : (item.time)}
                                 </MDBCardFooter>
                             </MDBCard>
-
-                        </MDBListGroupItem>
                         ) 
                     })}
                 </MDBCard>
@@ -141,7 +130,6 @@ function Promotions() {
                 <MDBCard>
                         {setPromotions.map((item) => {
                             return (
-                        <MDBListGroupItem>
                             <MDBCard border='dark'>
                                 <MDBCardTitle className='ecp-title'>
                                     {item.title}
@@ -157,7 +145,6 @@ function Promotions() {
                                 </MDBCardText>
                             </MDBCard>
 
-                        </MDBListGroupItem>
                         ) 
                     })}
                 </MDBCard>
@@ -172,7 +159,6 @@ function Contests() {
                 <MDBCard>
                         {contestsList.map((item) => {
                             return (
-                        <MDBListGroupItem>
                             <MDBCard border='dark'>
                                 <MDBCardTitle className='ecp-title'>
                                     {item.name}
@@ -188,7 +174,6 @@ function Contests() {
                                 </MDBCardText>
                             </MDBCard>
 
-                        </MDBListGroupItem>
                         ) 
                     })}
                 </MDBCard>

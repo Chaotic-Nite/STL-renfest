@@ -14,7 +14,7 @@ export const contestsList = [
         `,`Those participating will take their Fairy House to the box office to receive the free tickets and then drop it off in Fairy Wing Forest.`,`
         Fairy houses are accepted our first three weekends 
         (September ${dateObject.wkndRaw[0].getDate()}, ${dateObject.wkndRaw[1].getDate()}, ${dateObject.wkndRaw[2].getDate()}, ${dateObject.wkndRaw[3].getDate()}, October ${dateObject.wkndRaw[4].getDate()}, and ${dateObject.wkndRaw[5].getDate()}).`],
-        downloadLink: '/assests/pdf-files/Fairy-House-Form.pdf',
+        downloadLink: '/pdf-files/Fairy-House-Form.pdf',
     },
     {
         name: 'Mural Competition',
@@ -23,7 +23,7 @@ export const contestsList = [
         Mural judging will begin September ${dateObject.wkndRaw[0].getDate()}th and top three murals will WIN great prizes!
         `,`Mural can be dropped off at our Festival site M-F 9am to 5pm.
         `, `Submission Date is Friday ${deadline}. Guidelines listed on Mural form.`],
-        downloadLink: '/assests/pdf-files/Mural-Registration-Form.pdf',
+        downloadLink: '/pdf-files/Mural-Registration-Form.pdf',
     },
     {
         name: 'Banner Competition',
@@ -32,7 +32,7 @@ export const contestsList = [
         `,`FREE to participate and each banner submitted will receive 2 FREE admission tickets to the festival. Banner judging will begin September ${dateObject.wkndRaw[0].getDate()}th and top three murals will WIN great prizes!
 `,`Banners can be dropped off at our Festival site M-F 9am to 5pm.`,`Submission Date is Friday ${deadline}. Guidelines listed on Banner form.
         `],
-        downloadLink: '/assests/pdf-files/STL-BANNER-Form.pdf',
+        downloadLink: '/pdf-files/STL-BANNER-Form.pdf',
     },
     {
         name: 'Fantasy Mask',
@@ -42,7 +42,7 @@ export const contestsList = [
             `,
         ],
         italics: `(Fantasy Mask is only valid the “Viking Invasion and Cosplay in the Kingdom, ${dateObject.wkndList[3]}.” weekend of the Festival).`,
-        downloadLink: '/assests/pdf-files/Fantasy-Mask-Registration-Form.pdf',
+        downloadLink: '/pdf-files/Fantasy-Mask-Registration-Form.pdf',
     }
 ]
 
