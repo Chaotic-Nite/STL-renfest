@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import SocialMedia from "../components/social-media/SocialMedia";
 import Navigation from "../components/navigation/Navigation.js";
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBListGroupItem, MDBListGroup, MDBCardSubTitle } from 'mdb-react-ui-kit';
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardSubTitle } from 'mdb-react-ui-kit';
 
 
 function KeyPolicies() {
