@@ -42,18 +42,6 @@ th {
   text-align: center;
 }
 
-#les-amis,
-#kegs {
-  padding-top: 3%;
-}
-
-#general-tickets,
-#les-amis {
-  display: block;
-  height: 2.5rem;
-  visibility: hidden;
-  pointer-events: none;
-}
 
 .ren-faire {
   width: 20rem;
@@ -68,6 +56,12 @@ th {
 .les-amis {
   float: left;
   padding: 8px;
+}
+
+.ticket-setup span {
+    margin-top: -90px;        /* Size of fixed header */
+    padding-bottom: 90px; 
+    display: block;
 }
 
 .les-ul,
@@ -149,13 +143,18 @@ th {
 }
 
 .wedSetup .tab-content>.active:first-child {
-  margin-left: calc(1rem * -7);
+  margin-left: calc(1rem * -8);
 }
 
 
 .wedSetup .btn{
   font-size: calc(2rem * .7);
   font-weight: bold;
+}
+
+.wedSetup .nav-link {
+  width: calc(2rem * 10);
+  height: calc(2rem * 2);
 }
 
 .wedding h2 {
@@ -206,6 +205,17 @@ th {
   margin: 5px;
 }
 
+.policy-set {
+  text-align: left;
+}
+
+.policy-set .card-title, .policy-set .card-subtitle{
+  text-decoration: underline;
+}
+
+.policy-set ol {
+  list-style: decimal;
+}
 
 /* Google Map */
 
