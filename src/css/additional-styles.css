@@ -80,6 +80,7 @@ th {
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
 }
 
+
 .les-ul.les-header,
 .ticket-ul.ren-gen {
   background-color: #1502be;
@@ -104,11 +105,18 @@ th {
 
 .rf-la-bttn {
   background-color: #ff7300;
-  border: none;
   color: whitesmoke;
+  border: none;
+  border-radius: 3.5%;
   padding: 18px 25px;
   text-align: center;
   text-decoration: none;
+}
+
+.rf-la-bttn:hover {
+  background-color: #c55c05;
+  color: whitesmoke;
+
 }
 
 .kne {

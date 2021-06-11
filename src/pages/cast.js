@@ -47,7 +47,6 @@ function Cast() {
                   isMobile ? (
                     <MDBCard key={item.realName} className="cast-list">
                     {" "}
-                    {console.log(item)}
                       <MDBCardImage
                           src={item.image}
                           alt={item.realName}

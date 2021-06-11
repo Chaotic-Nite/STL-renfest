@@ -41,6 +41,7 @@ function Navigation() {
       {isMobile ? (
         <BurgerNav />
       ) : (
+        <div>
         <nav className={sticky ? "main-nav nav-sticky" : "main-nav"}>
           <ul className="nav__menu" id="nav-bar">
             <li>
@@ -90,6 +91,7 @@ function Navigation() {
             </li>
           </ul>
         </nav>
+        </div>
       )}
     </>
   );
