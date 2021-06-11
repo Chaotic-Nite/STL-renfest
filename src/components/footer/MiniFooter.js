@@ -1,29 +1,41 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
 import { Link } from "react-router-dom";
 import {dateObject} from "../../lists/UPTODATE";
 import RenLogo from "../../images/renaissance-festival-logo.png";
-import "../../css/footer.css";
-import MiniFooter from './MiniFooter';
 
-function Footer() {
-  const [width, setWidth] = useState(window.innerWidth);
+function MiniFooter() {
+    const [key, setKey] = useState('home');
+  
+    return (
+        <div className='minifoot'>
 
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
+      <Tabs
+        id="controlled-tab-example"
+        activeKey={key}
+        onSelect={(k) => setKey(k)}
+        >
+        <Tab eventKey="home" title="Rights Reserved">
+          <RightsFoot />
+        </Tab>
+        <Tab eventKey="reasons" title="Reasons to Attend">
+          <ReasonsFoot />
+        </Tab>
+        <Tab eventKey="general" title="General Information" >
+          <GeneralFoot />
+        </Tab>
+        <Tab eventKey="explore" title="Explore the Realm" >
+          <Explore />
+        </Tab>
+      </Tabs>
+    </div>
+    );
   }
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
 
-  let isMobile = width <= 1024 ? true : false;
 
-  return (
-    <>
-      {isMobile? <MiniFooter /> : 
-      <div className="foot">
+function RightsFoot() {
+    return (
         <div id="cr-tags">
           <img src={RenLogo} alt="StL Renaissance Festival Logo" />
           <p>
@@ -35,7 +47,11 @@ function Footer() {
             </Link>
           </p>
         </div>
+    )
+}
 
+function ReasonsFoot() {
+    return (
         <div id="reasons">
           <h3>Reasons to Attend:</h3>
           <p>Free Parking</p>
@@ -51,7 +67,11 @@ function Footer() {
           <p>Mermaid Cove</p>
           <p>And More!</p>
         </div>
+    )
+}
 
+function GeneralFoot() {
+    return (
         <div id="general">
           <h3>General Information</h3>
           <Link className="foot-link" to="/tickets">
@@ -73,14 +93,15 @@ function Footer() {
             Contact Us
           </Link>
         </div>
+    )
+}
 
+function Explore() {
+    return (
         <div id="realm">
           <h3>Explore the Realm</h3>
         </div>
-      </div>
-    }
-    </>
-  );
+    )
 }
 
-export default Footer;
+export default MiniFooter;

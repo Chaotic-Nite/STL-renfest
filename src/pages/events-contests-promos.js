@@ -59,7 +59,6 @@ function EventsContestsPromos() {
             
             <div className="col2">
                 <h3 className="col2-header">Plan Your Visit</h3>
-
                 <Link className="col2-link" to="/about-us">
                 About Us
                 </Link>
@@ -95,29 +94,34 @@ function Events() {
     return (
         <>
             <h1 className='center-text' style={{fontVariant: 'small-caps'}}>Daily Events</h1>
-                <MDBCard>
-                        {dailyEvents.map((item) => {
-                            return (
-                            <MDBCard border='dark'>
-                                <MDBCardTitle className='ecp-title'>
-                                    {item.title}
-                                </MDBCardTitle>
-                                <MDBCardText className='ecp-subheader'>
-                                    <i>{item.price}</i>
-                                </MDBCardText>
-                                <MDBCardText>
-                                    {item.description}
-                                </MDBCardText>
-                                <MDBCardText className='italic-card'>
-                                    {item.ageSuggetion? (<i>**{item.age}</i>): (<i></i>)}
-                                </MDBCardText>
-                                <MDBCardFooter border='dark'>
-                                    {item.time.length === 2? (<p>{item.time[0]}<br/>{item.time[1]}</p>) : (item.time)}
-                                </MDBCardFooter>
-                            </MDBCard>
-                        ) 
-                    })}
-                </MDBCard>
+ 
+                {dailyEvents.map((item) => {
+                    return (
+                    <MDBCard border='dark'>
+                        <MDBCardTitle className='ecp-title'>
+                            {item.title}
+                        </MDBCardTitle>
+                        <MDBCardText className='ecp-subheader'>
+                            <i>{item.price}</i>
+                            {item.ticketUrl.length ? (
+                                <>
+                                <br/>
+                                <span>Get your {item.title}  ticket <a rel="noreferrer" href={item.ticketUrl} target='_blank'>Here</a></span>
+                                </>
+                            ) : null}
+                        </MDBCardText>
+                        <MDBCardText>
+                            {item.description}
+                        </MDBCardText>
+                        <MDBCardText className='italic-card'>
+                            {item.ageSuggetion? (<i>**{item.age}</i>): (<i></i>)}
+                        </MDBCardText>
+                        <MDBCardFooter border='dark'>
+                            {item.time.length === 2? (<p>{item.time[0]}<br/>{item.time[1]}</p>) : (item.time)}
+                        </MDBCardFooter>
+                    </MDBCard>
+                ) 
+            })}
         </>
     )
 }
@@ -127,27 +131,26 @@ function Promotions() {
     return (
         <>
             <h1 className='center-text' style={{fontVariant: 'small-caps'}}>Promotions</h1>
-                <MDBCard>
-                        {setPromotions.map((item) => {
-                            return (
-                            <MDBCard border='dark'>
-                                <MDBCardTitle className='ecp-title'>
-                                    {item.title}
-                                </MDBCardTitle>
-                                <MDBCardText className='ecp-subheader'>
-                                    <i>{item.dates}</i>
-                                </MDBCardText>
-                                <MDBCardText>
-                                    {item.info}
-                                </MDBCardText>
-                                <MDBCardText className='italic-card'>
-                                    <i>{item.italics? item.italics : null}</i>
-                                </MDBCardText>
-                            </MDBCard>
 
-                        ) 
-                    })}
-                </MDBCard>
+                {setPromotions.map((item) => {
+                    return (
+                    <MDBCard border='dark'>
+                        <MDBCardTitle className='ecp-title'>
+                            {item.title}
+                        </MDBCardTitle>
+                        <MDBCardText className='ecp-subheader'>
+                            <i>{item.dates}</i>
+                        </MDBCardText>
+                        <MDBCardText>
+                            {item.info}
+                        </MDBCardText>
+                        <MDBCardFooter className='italic-card'>
+                            <i>{item.italics? item.italics : null}</i>
+                        </MDBCardFooter>
+                    </MDBCard>
+
+                ) 
+            })}
         </>
     )
 }
@@ -156,27 +159,26 @@ function Contests() {
     return (
         <>
             <h1 className='center-text' style={{fontVariant: 'small-caps'}}>Contests</h1>
-                <MDBCard>
-                        {contestsList.map((item) => {
-                            return (
-                            <MDBCard border='dark'>
-                                <MDBCardTitle className='ecp-title'>
-                                    {item.name}
-                                </MDBCardTitle>
-                                <MDBCardText>
-                                    {item.description.map((item) => (<p>{item}</p>))}
-                                </MDBCardText>
-                                <MDBCardText className='italic-card'>
-                                    <i>{item.italics? item.italics : null}</i>
-                                </MDBCardText>
-                                <MDBCardText>
-                                    {item.downloadLink}
-                                </MDBCardText>
-                            </MDBCard>
 
-                        ) 
-                    })}
-                </MDBCard>
+                {contestsList.map((item) => {
+                    return (
+                    <MDBCard border='dark'>
+                        <MDBCardTitle className='ecp-title'>
+                            {item.name}
+                        </MDBCardTitle>
+                        <MDBCardText>
+                            {item.description.map((item) => (<p>{item}</p>))}
+                        </MDBCardText>
+                        <MDBCardText className='italic-card'>
+                            <i>{item.italics? item.italics : null}</i>
+                        </MDBCardText>
+                        <MDBCardFooter>
+                            <a href={item.downloadLink} download>Download Form Here</a>
+                        </MDBCardFooter>
+                    </MDBCard>
+
+                ) 
+            })}
         </>
     )
 }

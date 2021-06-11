@@ -62,7 +62,7 @@ function Directions() {
             </Link>
             <br />
             <Link className="col2-link" to="/events-contests-promotions">
-              Contest &#38; Promotions
+              Daily Events, Contests &#38; Promotions
             </Link>
             <br />
             <Link className="col2-link" to="/bring-your-dog">

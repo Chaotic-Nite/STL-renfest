@@ -141,6 +141,23 @@ th {
   text-align: center;
 }
 
+.wedSetup {
+  display: flex ; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+}
+
+.wedSetup .tab-content>.active:first-child {
+  margin-left: calc(1rem * -7);
+}
+
+
+.wedSetup .btn{
+  font-size: calc(2rem * .7);
+  font-weight: bold;
+}
+
 .wedding h2 {
   font-family: "Sansita Swashed", cursive;
   text-align: center;
@@ -154,7 +171,7 @@ th {
   border: 2.5px solid rgba(0, 0, 0, 0.253);
 }
 
-#wedMenu .list-group, #weddingFinePrint .list-group-item{
+#wedMenu .list-group, #weddingFinePrint .list-group{
   padding-bottom: 5%;
   border-bottom: 2.5px solid #1502be;
 }
@@ -165,7 +182,7 @@ th {
   text-align: center;
 }
 
-#wedMenu .list-group:last-child,  #weddingFinePrint .list-group-item:last-child {
+#wedMenu .list-group:last-child,  #weddingFinePrint .list-group:last-child {
   border-bottom: hidden;
 }
 
@@ -173,6 +190,22 @@ th {
   font-size: calc(1rem * 1.4);
   font-weight: bolder;
 }
+
+.ecp-title {
+  font-size: calc(2rem * .8);
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.ecp-subheader {
+  font-size: calc(2rem * .7);
+  margin-top: 15px;
+}
+
+.card {
+  margin: 5px;
+}
+
 
 /* Google Map */
 

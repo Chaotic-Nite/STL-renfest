@@ -16,12 +16,12 @@ export const sitemapList = [
         link: '/contact-us'
     },
     {
-        name: 'Contests and Promotions',
-        link: '/about-us'
+        name: 'Daily Events, Contests and Promotions',
+        link: '/events-contests-promotions'
     },
     {
         name: 'Directions',
-        link: '/about-us'
+        link: '/directions'
     },
     {
         name: 'Employment',

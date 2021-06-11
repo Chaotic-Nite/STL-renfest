@@ -27,8 +27,7 @@ function Weddings() {
       <Navigation />
       <h1 className="page-header">Weddings</h1>
       <div className="margin-width">
-        <div className="two-col">
-          <div className="col1-width">
+        
             <p>
               Ever thought about getting married at the Renaissance Festival? We
               can help! With a full-time staff member to help with catering,
@@ -42,7 +41,7 @@ function Weddings() {
                 information or with questions!
               </b>
             </p>
-            <div style={{ display: "flex" , flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+            <div className='wedSetup'>
             <MDBTabs pills justify className='mb-3'>
                 <MDBTabsItem>
                 <MDBTabsLink onClick={() => handleJustifyClick('general-wedding')} active={justifyActive === 'general-wedding'}>
@@ -62,8 +61,6 @@ function Weddings() {
              <hr />
             <WeddingPolicy />
             </div>
-          </div>
-        </div>
       </div>
     </>
   );
@@ -357,15 +354,17 @@ const WeddingPolicy = () => {
       <MDBBtn onClick={toggleFinePrint}>The Fine Print</MDBBtn>
         <MDBRow id='weddingFinePrint'>
           <MDBCollapse show={showFinePrint} className='mt-3'>
-          <ListGroup>
           {weddingFinePrint.map(item => {
             return (
-                  <ListGroup.Item className='wedding-food' style={{textAlign: 'left'}}>
+              <>
                     <h3 className='finePrint'><b>{item.name}</b></h3>
+                  <ListGroup>
+                  <ListGroup.Item className='wedding-food' style={{textAlign: 'left'}}>
                     {item.description}</ListGroup.Item>
+                  </ListGroup>
+              </>
             )
           })}
-          </ListGroup>
           </MDBCollapse>
         </MDBRow>
       </div>

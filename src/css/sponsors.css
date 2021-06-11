@@ -1,5 +1,5 @@
 .divider {
-  height: 15vh;
+  height: calc(3rem * 2.5);
   width: 90%;
   margin-bottom: -1%;
 }

@@ -271,8 +271,8 @@ function Faq() {
                 </Link>
               </li>
               <li>
-                <Link className="col2-link" to="/contests-promotions">
-                  Contest &#38; Promotions
+                <Link className="col2-link" to="/events-contests-promotions">
+                  Daily Events, Contests &#38; Promotions
                 </Link>
               </li>
               <li>
