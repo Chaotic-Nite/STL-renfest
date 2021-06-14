@@ -63,6 +63,9 @@ function VendorApplications() {
         </div>
       </div>
       <h1 className="page-header">Sponsorship</h1>
+      <h2>Interested in becoming a Sponsor?</h2>
+      <p>Contact us at (636) 639-5173</p>
+      <p>Or email akuchar@renaissancefest.com</p>
     </>
   );
 }

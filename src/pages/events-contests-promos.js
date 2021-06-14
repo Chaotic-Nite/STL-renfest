@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import Navigation from '../components/navigation/Navigation';
-import SocialMedia from "../components/social-media/SocialMedia";
-import { Link } from 'react-router-dom'
 import {
     MDBTabs,
     MDBTabsItem,
@@ -14,6 +12,7 @@ import {
     MDBCardFooter
   } from 'mdb-react-ui-kit';
 import {contestsList, setPromotions, dailyEvents} from '../lists/contests.js'
+import QuickLinksSetOne from '../components/quicklinks/QuickLinksSetOne';
 
 
 function EventsContestsPromos() {
@@ -58,32 +57,7 @@ function EventsContestsPromos() {
             </div>
             
             <div className="col2">
-                <h3 className="col2-header">Plan Your Visit</h3>
-                <Link className="col2-link" to="/about-us">
-                About Us
-                </Link>
-                <br />
-                <Link className="col2-link" to="/key-policies">
-                Key Policies
-                </Link>
-                <br />
-                <Link className="col2-link" to="/tickets">
-                Get Tickets
-                </Link>
-                <br />
-                <Link className="col2-link" to="/bring-you-dog">
-                Bring Your Dog
-                </Link>
-                <br />
-                <Link className="col2-link" to="/find-hotels">
-                Find a hotel
-                </Link>
-                <br />
-                <Link className="col2-link" to="/directions">
-                Directions
-                </Link>
-                <br />
-                <SocialMedia />
+             <QuickLinksSetOne id={4} />
             </div>
             </div>
         </>

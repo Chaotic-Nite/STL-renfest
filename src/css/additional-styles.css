@@ -255,6 +255,10 @@ th {
 
 /* Getting Involved */
 
+.involve-bttn {
+  border-radius: 5%;
+}
+
 #employ-involve {
   background-color: rgb(90, 142, 189);
   color: white;
@@ -311,3 +315,5 @@ th {
     transform: translateY(4.5vh);
   }
 }
+
+

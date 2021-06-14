@@ -185,9 +185,9 @@ function WeekendDropdown() {
         <HashLink
           className="nav__submenu-item"
           smooth='true'
-          to="/weekends#ladies-shopping-day"
+          to="/weekends#festive-shopping-day"
         >
-          Ladies Shopping Day
+          Festive Shopping Day
         </HashLink>
       </li>
     </ul>

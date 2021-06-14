@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import {
   MDBTabs,
   MDBTabsItem,
@@ -9,7 +8,7 @@ import {
 } from 'mdb-react-ui-kit';
 import Base64Downloader from "react-base64-downloader";
 import Navigation from "../components/navigation/Navigation.js";
-import SocialMedia from "../components/social-media/SocialMedia";
+import QuickLinksSetOne from "../components/quicklinks/QuickLinksSetOne.js";
 
 function Directions() {
   const [justifyActive, setJustifyActive] = useState('to_faire');
@@ -48,36 +47,7 @@ function Directions() {
           </MDBTabsContent>
           </div>
           <div className="col2">
-            <h3 className="col2-header">Plan Your Visit</h3>
-            <Link className="col2-link" to="/about-us">
-              About Us
-            </Link>
-            <br />
-            <Link className="col2-link" to="/key-policies">
-              Key Policies
-            </Link>
-            <br />
-            <Link className="col2-link" to="/tickets">
-              Get Tickets
-            </Link>
-            <br />
-            <Link className="col2-link" to="/events-contests-promotions">
-              Daily Events, Contests &#38; Promotions
-            </Link>
-            <br />
-            <Link className="col2-link" to="/bring-your-dog">
-              Bring Your Dog
-            </Link>
-            <br />
-            <Link className="col2-link" to="/find-hotels">
-              Find a hotel
-            </Link>
-            <br />
-            <Link className="col2-link" to="/faq">
-              FAQ
-            </Link>
-
-            <SocialMedia />
+            <QuickLinksSetOne id={7} />
           </div>
         </div>
       </div>
