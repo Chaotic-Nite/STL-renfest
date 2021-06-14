@@ -1,7 +1,4 @@
 @media screen and (max-width: 768px) {
-  .sponsors-container h2 {
-    font-size: 2.4rem;
-  }
   .slide img {
     max-height: 80px;
     width: 100%;
@@ -49,24 +46,12 @@
   border-bottom: var(--borderDesign);
 }
 
-.dates h2 {
-  font-size: 40px;
-}
-
-.dates h3 {
-  font-size: 30px;
-}
-
 .dates h2,
 .dates h3 {
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
 }
 
-/* MAF */
-.maf {
-  padding-top: 15px;
-}
 
 /* Other Events */
 .other-events {

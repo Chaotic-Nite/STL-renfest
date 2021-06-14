@@ -1,6 +1,13 @@
 import React from "react";
 import Navigation from "../components/navigation/Navigation";
 import QuickLinksSetOne from "../components/quicklinks/QuickLinksSetOne";
+import {externalLinks} from '../lists/outsideLinks'
+import { MDBCard, 
+  MDBCardHeader, 
+  MDBTable,
+  MDBTableBody,
+  MDBBtn } from 'mdb-react-ui-kit';
+
 
 
 function Tickets() {
@@ -13,12 +20,12 @@ function Tickets() {
           <div className="col1-width">
             <div className="ticket-setup">
             <span id="general-tickets"> &nbsp;</span>
-              <div ><GeneralTicket /></div>
+              <div class='flex-down'><GeneralTicket /></div>
             <span id="les-amis"> &nbsp; </span>
               <div ><LesAmisTicket /></div>
               <h2>Corporate Partners</h2>
               <p>
-                <a href="https://red.vendini.com/ticket-software.html?t=tix&e=e0ed81fb98a9796c57dded8c785150d5">
+                <a href={externalLinks.advancedTickets} target='_blank' rel="noreferrer">
                   Click here
                 </a>{" "}
                 and have your code ready to purchase tickets!
@@ -43,71 +50,75 @@ function GeneralTicket() {
     <>
       <h2>Ticket Options</h2>
       <div className="ticket-boxes">
-        <div className="ren-faire">
-          <ul className="ticket-ul">
-            <li className="ren-gen">Gate Admissions</li>
-            <li>
-              <p className="t-title">Adults:</p>
-              <p className="t-price">$19.95</p>
-            </li>
-            <li>
-              <p className="t-title">Children (5-12 yrs):</p>
-              <p className="t-price">$12.95</p>
-            </li>
-            <li>
-              <p className="t-title">Senior/Student:</p>
-              <p className="t-price">$16.95</p>
-            </li>
-          </ul>
-        </div>
-
-        <div className="ren-faire">
-          <ul className="ticket-ul">
-            <li className="ren-gen">Advanced Tickets Online</li>
-            <li>
-              <p className="t-title">Adults:</p>
-              <p className="t-price">$16.95</p>
-            </li>
-            <li>
-              <p className="t-title">Children (5-12 yrs):</p>
-              <p className="t-price">$10.95</p>
-            </li>
-            <li className="purchase-bttn">
-              <a
-                className="rf-la-bttn"
-                href="https://red.vendini.com/ticket-software.html?t=tix&e=e0ed81fb98a9796c57dded8c785150d5"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Order Here
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="ren-faire">
-          <ul className="ticket-ul">
-            <li className="ren-gen">Season Pass</li>
-            <li>
-              <p className="t-title">Adults:</p>
-              <p className="t-price">$84.95</p>
-            </li>
-            <li>
-              <p className="t-title">Children (5-12 yrs):</p>
-              <p className="t-price">$49.95</p>
-            </li>
-            <li className="purchase-bttn">
-              <a
-                className="rf-la-bttn"
-                href="https://red.vendini.com/ticket-software.html?t=tix&e=725c321030840c23d87d540b4b7d87c6"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Order Here
-              </a>
-            </li>
-          </ul>
-        </div>
+        <MDBCard className='ren-faire ticket-ul'>
+          <MDBCardHeader className='ren-gen'><b>Gate Admissions</b></MDBCardHeader>
+          <MDBTable striped hover>
+            <MDBTableBody>
+              <tr>
+                <th scope='row'>Adults:</th>
+                <td>$19.95</td>
+              </tr>
+              <tr>
+                <th scope='row'>Children (5-12 yrs):</th>
+                <td>$12.95</td>
+              </tr>
+              <tr>
+                <th scope='row'>Senior/Student:</th>
+                <td>$16.95</td>
+              </tr>
+            </MDBTableBody>
+          </MDBTable>
+        </MDBCard>
+        <MDBCard className='ren-faire ticket-ul'>
+          <MDBCardHeader className='ren-gen'><b>Advanced Tickets Online</b></MDBCardHeader>
+          <MDBTable striped hover>
+            <MDBTableBody >
+              <tr>
+                <th >Adults:</th>
+                <td>$16.95</td>
+              </tr>
+              <tr>
+                <th >Children (5-12 yrs):</th>
+                <td>$10.95</td>
+              </tr>
+            </MDBTableBody>
+          </MDBTable>
+          <a
+            className="purchase-bttn"
+            href={externalLinks.advancedTickets}
+            target="_blank"
+            rel="noreferrer"
+          ><MDBBtn color='warning'>
+            Order Here
+          </MDBBtn>
+          </a>
+        </MDBCard>
+        <MDBCard className='ren-faire ticket-ul'>
+          <MDBCardHeader className='ren-gen'><b>Season Pass</b></MDBCardHeader>
+          <MDBTable striped hover>
+            <MDBTableBody >
+              <tr>
+                <th scope='row'>Adults:</th>
+                <td>$84.95</td>
+              </tr>
+              <tr>
+                <th scope='row'>Children (5-12 yrs):</th>
+                <td>$49.95</td>
+              </tr>
+              <tr >
+              </tr>
+            </MDBTableBody>
+          </MDBTable>
+          <a
+            href={externalLinks.seasonPass}
+            target="_blank"
+            rel="noreferrer"
+          ><MDBBtn color='warning' className="purchase-bttn">
+            Order Here
+          </MDBBtn>
+          </a>
+        </MDBCard>
+        
       </div>
       <h4 style={{ color: "rgb(76, 0, 255)", marginTop: "0" }}>
         <i>Children 4 and under get in for free!</i>
@@ -142,57 +153,43 @@ function LesAmisTicket() {
       privies and more!
     </p>
     <div className="ticket-boxes">
-      <div className="les-amis">
-        <ul className="les-ul">
-          <li
-            className="les-header"
-            style={{
-              backgroundColor: "rgb(235, 204, 30)",
-              color: "rgb(15, 15, 15)",
-            }}
-          >
-            Gold
-          </li>
-          <li className="les-price">$120</li>
-          <li>1 Season Pass</li>
-          <li>4 Complimentary Tickets</li>
-          <li>1 Les Amis Shirt</li>
-          <li>1 Les Amis Membership Medallion</li>
-          <li>
-            VIP Gold Parking <br />
-            <i>*Please Note: VIP Parking is first come first serve</i>
-          </li>
-          <li className="purchase-bttn">
-            <a
-              className="rf-la-bttn"
-              href="https://red.vendini.com/ticket-software.html?e=51229aba0cf522dd834c02295d2a94d9&t=tix"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Purchase Here
-            </a>
-          </li>
-        </ul>
-      </div>
+        <MDBCard className='les-amis les-ul'>
+          <MDBCardHeader background='warning' className='les-header'><b>Gold</b></MDBCardHeader>
+          <MDBTable striped hover>
+            <MDBTableBody >
+              <tr>
+                <td>$120</td>
+              </tr>
+              <tr>
+                <td>1 Season Pass</td>
+              </tr>
+              <tr>
+                <td>4 Complimentary Tickets</td>
+              </tr>
+              <tr>
+                <td>1 Les Amis Shirt</td>
+              </tr>
+              <tr>
+                <td>1 Les Amis Membership Medallion</td>
+              </tr>
+              <tr>
+                <td>VIP Gold Parking <br />
+            <i>*Please Note: VIP Parking is first come first serve</i></td>
+              </tr>
+            </MDBTableBody>
+          </MDBTable>
+          <a
+            className="purchase-bttn"
+            href={externalLinks.lesAmis}
+            target="_blank"
+            rel="noreferrer"
+          ><MDBBtn color='warning'>
+            Order Here
+          </MDBBtn>
+          </a>
+        </MDBCard>
 
-      <div className="les-amis">
-        <ul className="les-ul">
-          <li className="les-header">Friends</li>
-          <li className="les-price">$54.95</li>
-          <li>2 Complimentary Tickets</li>
-          <li>1 Les Amis Shirt</li>
-          <li className="purchase-bttn">
-            <a
-              className="rf-la-bttn"
-              href="https://red.vendini.com/ticket-software.html?t=tix&e=60fba7232c2125909c5e77cdb1e002c0"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Purchase Here
-            </a>
-          </li>
-        </ul>
-      </div>
+      
     </div>
 
     </>
@@ -204,31 +201,37 @@ function KegsTicket() {
     <>
       <h2>Kegs 'N' Eggs Tickets</h2>
         <div className="ren-faire">
-          <ul className="ticket-ul">
-            <li className="ren-gen">Kegs 'N' Eggs Prices</li>
-            <li>
-              <p className="t-title">Adults:</p>
-              <p className="t-price">$30.00</p>
-            </li>
-            <li>
-              <p className="t-title">Designated Driver:</p>
-              <p className="t-price">$15.00</p>
-            </li>
-            <li>
-              <p className="t-title">Dog:</p>
-              <p className="t-price">$10.00</p>
-            </li>
-            <li>
-              <a
-                className="rf-la-bttn"
-                href="https://red.vendini.com/ticket-software.html?t=tix&w=0cca8bf7e55835461a115685ac926ea3"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Purchase Here
-              </a>
-            </li>
-          </ul>
+        <MDBCard className='kne ticket-ul'>
+          <MDBCardHeader className='ren-gen'><b>Kegs 'N' Eggs Prices</b></MDBCardHeader>
+          <MDBTable striped hover>
+            <MDBTableBody >
+              <tr>
+                <th>Adults:</th>
+                <td>$30.00</td>
+              </tr>
+              
+              <tr>
+                <th>Designated Driver:</th>
+                <td>$15.00</td>
+              </tr>
+              
+              <tr>
+                <th>Dog:</th>
+                <td>$10.00</td>
+              </tr>
+              
+            </MDBTableBody>
+          </MDBTable>
+          <a
+            className="purchase-bttn"
+            href={externalLinks.kegTickets}
+            target="_blank"
+            rel="noreferrer"
+          ><MDBBtn color='warning'>
+            Order Here
+          </MDBBtn>
+          </a>
+        </MDBCard>
         </div>
     </>
   )

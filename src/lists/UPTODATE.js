@@ -15,6 +15,7 @@ const year = 2021;
 var d = new Date()
 var endDate = new Date()
 
+// Setting the days in which it starts and ends
 d.setFullYear(year, 8, 18)
 endDate.setFullYear(year, 9, 17)
 
@@ -25,8 +26,10 @@ const endDay = `${endDate.toLocaleDateString('default', { month: 'long'})} ${end
 // How long the Faire has been happening
 const yearOfFaire = year - 1998 + "rd";
 
-// Weekends
+// Shopping Day
+let shopDay = `Monday, October 12th`
 
+// Weekends
 let wknd = []
 let wkndList = []
 for (let i = 0; i < 10; i+=2){
@@ -51,11 +54,10 @@ for (let i = 0; i < 10; i+=2){
 wknd[wknd.length] = new Date()
 wknd[wknd.length-1].setFullYear(year, 9, 11)
 
-let shopDay = `Monday, October 12th`
 
-
-//wkndStr = `${wknd[j].toLocaleDateString('default', { month: 'long'})} ${wknd[j].getDate()}${nth(wknd[j].getDate())} & ${wknd[j+1].toLocaleDateString('default', { month: 'long'})} ${wknd[j+1].getDate()}${nth(wknd[j+1].getDate())}`;
-
+// Kegs 'N' Eggs
+const earlyBird = 'April 3rd'
+const kneDay = 'April 10th'
 
 
 export const dateObject = {
@@ -66,5 +68,7 @@ export const dateObject = {
   wkndRaw: wknd,
   wkndList: wkndList,
   shopDay: shopDay,
+  earlyBird: earlyBird,
+  kneSaleDay: kneDay
 };
 

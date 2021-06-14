@@ -54,12 +54,12 @@ function Home() {
         <span>
           <h2>Kegs N Eggs</h2>
         </span>
-        <p style={{ fontSize: "30px" }}>
-          Tickets are on sale <u>NOW</u> for the {dateObject.year} Season on
-          April 10th {dateObject.year}!<br />
+        <p >
+          Tickets are on sale <u>NOW</u> for the {dateObject.year} Season on {' '}
+          {dateObject.kneSaleDay} {dateObject.year}!<br />
           <HashLink to="/tickets#kegs" smooth='true'>Click Here</HashLink> to view ticket prices and
           options! <br />
-          Early bird pricing ends April 3rd.
+          Early bird pricing ends {dateObject.earlyBird}.
         </p>
       </div>
 
