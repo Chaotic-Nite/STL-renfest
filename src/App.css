@@ -4,11 +4,11 @@
   }
 
   .App {
-    font-size: 16px;
+    font-size: calc(1rem*1);
   }
 
   .foot {
-    font-size: 0.5rem;
+    font-size: calc(1rem* .5);
   }
 
   .two-col {

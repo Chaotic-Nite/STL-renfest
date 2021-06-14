@@ -5,7 +5,7 @@ import PhotoBanner from "../components/photobanner/PhotoBanner";
 import Sponsors from "../components/sponsors/Sponsors";
 import Navigation from "../components/navigation/Navigation";
 import {dateObject} from "../lists/UPTODATE";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Form, Button } from "react-bootstrap";
 import "../css/home.css";
 import $ from "jquery";
@@ -57,13 +57,14 @@ function Home() {
         <p style={{ fontSize: "30px" }}>
           Tickets are on sale <u>NOW</u> for the {dateObject.year} Season on
           April 10th {dateObject.year}!<br />
-          <Link to="/tickets">Click Here</Link> to view ticket prices and
+          <HashLink to="/tickets#kegs" smooth='true'>Click Here</HashLink> to view ticket prices and
           options! <br />
           Early bird pricing ends April 3rd.
         </p>
       </div>
 
-      {/* <!-- MAF Tags --> */}
+      {// <!-- MAF Tags -->
+      }
       <div className="maf dates margin-width">
         <h2>Can't Wait to Celebrate!</h2>
         <div>
@@ -79,7 +80,8 @@ function Home() {
         </div>
       </div>
 
-      {/* <!-- Social Media Section --> */}
+      {//<!-- Social Media Section --> 
+      }
       <div className="social-media margin-width">
         <h1>Follow us on:</h1>
         <div className="social-links">
@@ -114,7 +116,8 @@ function Home() {
         </div>
       </div>
 
-      {/* <!-- Newsletter Sign-up --> */}
+      {// <!-- Newsletter Sign-up --> */
+      }
       <div className="email-list margin-width">
         <div className="subscribe-email">
           <h2>Sign up for our email list!</h2>

@@ -49,9 +49,21 @@ export const castList = {
       realName: "Kat Whalen",
       role: "Princess Catherine",
       position:
-        "Princess of Portugal and Spain, ArchDuchess of Austria, Duchess of Braganza",
+      "Princess of Portugal and Spain, ArchDuchess of Austria, Duchess of Braganza",
       image: "/assets/images/cast/kathleen-whalen.jpg",
       leadership: "Court Guild Lead",
+    },
+    {
+      realName: 'Brendan Noe',
+      role: "Anne de Montomrency",
+      position: '',
+      image: '/assets/images/cast/brendan-noe.jpg'
+    },
+    {
+      realName: "Jason Smallen",
+      role: "Sir William Carey",
+      position: "",
+      image: "/assets/images/cast/jason-smallen.jpg",
     },
     {
       realName: "Sheana Godwin",
@@ -83,12 +95,6 @@ export const castList = {
       role: "Harold",
       position: "Herald",
       image: "/assets/images/cast/chris-siebert.jpg",
-    },
-    {
-      realName: "Jason Smallen",
-      role: "Sir William Carey",
-      position: "",
-      image: "/assets/images/cast/jason-smallen.jpg",
     },
     {
       realName: "Kathryn Smallen",
