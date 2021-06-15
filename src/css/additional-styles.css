@@ -288,3 +288,25 @@
 }
 
 
+
+/* Weekends */
+
+.weekends .nav{
+  position: relative;
+}
+
+.weekends table {
+  background-color: whitesmoke;
+  font-size: calc(1rem* 1);
+}
+
+.weekends thead {
+  border-bottom: 1px solid #5000e6b6;;
+}
+
+.joust {
+  width: calc(2vw* 13);
+  border:1px solid rgb(58, 43, 84);
+  padding: 0;
+  margin: 0;
+}

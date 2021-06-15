@@ -141,7 +141,8 @@ function ShopDay() {
 function JoustSchedule() {
   return (
     <>
-      <MDBTable hover>
+    <div className='joust tablediv'>
+      <MDBTable striped hover className='joust'>
       <MDBTableHead>
         <tr>
           <th colSpan={2}><b>Joust Field</b></th>
@@ -162,6 +163,7 @@ function JoustSchedule() {
         </tr>
       </MDBTableBody>
     </MDBTable>
+    </div>
     </>
   )
 }
