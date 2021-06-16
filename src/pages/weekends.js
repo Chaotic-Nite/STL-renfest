@@ -98,10 +98,7 @@ function Weekends() {
             <MDBTabsPane show={wknd === 'oktoberfest'}><FfthWknd/></MDBTabsPane>
             <MDBTabsPane show={wknd === 'festive-shopping-day'}><ShopDay/></MDBTabsPane>
           </MDBTabsContent>
-          <h3>Contests Coming Soon</h3>
-          </div>
-          <div className="col2">
-            <h3 className="col2-header">Weekend Information</h3>
+          
           </div>
         </div>
       </div>
@@ -112,11 +109,17 @@ function Weekends() {
 function FrstWknd() {
   return (
     <>
-      <div className='weekends'>
+      <div className="two-col weekends" >
+      <div className='wknds'>
       <h1><b>Highland Fling</b></h1>
       <h3>{dateObject.wkndList[0]}</h3>
-
-      <div className='stages'> 
+      
+        <JoustSchedule />
+      <h3>Contests Coming Soon</h3>
+      </div>
+      <div className="col2">
+            <h3 className="col2-header">Weekend Information</h3>
+        <div className='stages'> 
         <ScheduleTable schedule={pavilion.schedule} class_name={pavilion.class_name} title={pavilion.title} />
         <ScheduleTable schedule={stLouis.schedule} class_name={stLouis.class_name} title={stLouis.title} />
         <ScheduleTable schedule={owain.schedule} class_name={owain.class_name} title={owain.title} />
@@ -127,7 +130,7 @@ function FrstWknd() {
         <ScheduleTable schedule={knights.schedule} class_name={knights.class_name} title={knights.title} />
         <ScheduleTable schedule={pirates.schedule} class_name={pirates.class_name} title={pirates.title} />
       </div>
-        <JoustSchedule />
+      </div>
       </div>
     </>
   )
@@ -135,11 +138,17 @@ function FrstWknd() {
 function ScndWknd() {
  return (
     <>
-    <div className='weekends'>
+      <div className="two-col weekends" >
+      <div className='wknds'>
       <h1><b>Pets, Pirates &#38; Ale</b></h1>
       <h3>{dateObject.wkndList[1]}</h3>
-
-      <div className='stages'> 
+      
+        <JoustSchedule />
+      <h3>Contests Coming Soon</h3>
+      </div>
+      <div className="col2">
+            <h3 className="col2-header">Weekend Information</h3>
+        <div className='stages'> 
         <ScheduleTable schedule={pavilion.schedule} class_name={pavilion.class_name} title={pavilion.title} />
         <ScheduleTable schedule={stLouis.schedule} class_name={stLouis.class_name} title={stLouis.title} />
         <ScheduleTable schedule={owain.schedule} class_name={owain.class_name} title={owain.title} />
@@ -150,8 +159,8 @@ function ScndWknd() {
         <ScheduleTable schedule={knights.schedule} class_name={knights.class_name} title={knights.title} />
         <ScheduleTable schedule={pirates.schedule} class_name={pirates.class_name} title={pirates.title} />
       </div>
-        <JoustSchedule />
-        </div>
+      </div>
+      </div>
     </>
   )
 }
@@ -159,11 +168,18 @@ function ThrdWknd() {
 
   return (
     <>
-    <div className='weekends'>
+    <div className="two-col weekends" >
+      <div className='wknds'>
       <h1><b>Shamrocks, Shenanigans &#38; Sweet Romance</b></h1>
-      <h3>{dateObject.wkndList[0]}</h3>
+      <h3>{dateObject.wkndList[0]}</h3> 
 
-      <div className='stages'> 
+      
+        <JoustSchedule />
+      <h3>Contests Coming Soon</h3>
+      </div>
+      <div className="col2">
+            <h3 className="col2-header">Weekend Information</h3>
+        <div className='stages'> 
         <ScheduleTable schedule={pavilion.schedule} class_name={pavilion.class_name} title={pavilion.title} />
         <ScheduleTable schedule={stLouis.schedule} class_name={stLouis.class_name} title={stLouis.title} />
         <ScheduleTable schedule={owain.schedule} class_name={owain.class_name} title={owain.title} />
@@ -174,8 +190,8 @@ function ThrdWknd() {
         <ScheduleTable schedule={knights.schedule} class_name={knights.class_name} title={knights.title} />
         <ScheduleTable schedule={pirates.schedule} class_name={pirates.class_name} title={pirates.title} />
       </div>
-        <JoustSchedule />
-        </div>
+      </div>
+      </div>
     </>
   )
 }
@@ -183,11 +199,18 @@ function FrthWknd() {
 
   return (
     <>
-    <div className='weekends'>
+      <div className="two-col weekends" >
+      <div className='wknds'>
       <h1><b>Viking Invasion and Cosplay in the Kingdom</b></h1>
       <h3>{dateObject.wkndList[3]}</h3>
 
-      <div className='stages'> 
+      
+        <JoustSchedule />
+      <h3>Contests Coming Soon</h3>
+      </div>
+      <div className="col2">
+            <h3 className="col2-header">Weekend Information</h3>
+        <div className='stages'> 
         <ScheduleTable schedule={pavilion.schedule} class_name={pavilion.class_name} title={pavilion.title} />
         <ScheduleTable schedule={stLouis.schedule} class_name={stLouis.class_name} title={stLouis.title} />
         <ScheduleTable schedule={owain.schedule} class_name={owain.class_name} title={owain.title} />
@@ -198,7 +221,7 @@ function FrthWknd() {
         <ScheduleTable schedule={knights.schedule} class_name={knights.class_name} title={knights.title} />
         <ScheduleTable schedule={pirates.schedule} class_name={pirates.class_name} title={pirates.title} />
       </div>
-        <JoustSchedule />
+      </div>
       </div>
     </>
   )
@@ -207,11 +230,17 @@ function FfthWknd() {
 
   return (
     <>
-    <div className='weekends'>
+      <div className="two-col weekends" >
+      <div className='wknds'>
       <h1><b>Oktoberfest and Other Wonders of the World</b></h1>
       <h3>{dateObject.wkndList[4]}</h3>
-
-      <div className='stages'> 
+      
+        <JoustSchedule />
+      <h3>Contests Coming Soon</h3>
+      </div>
+      <div className="col2">
+            <h3 className="col2-header">Weekend Information</h3>
+        <div className='stages'> 
         <ScheduleTable schedule={pavilion.schedule} class_name={pavilion.class_name} title={pavilion.title} />
         <ScheduleTable schedule={stLouis.schedule} class_name={stLouis.class_name} title={stLouis.title} />
         <ScheduleTable schedule={owain.schedule} class_name={owain.class_name} title={owain.title} />
@@ -222,30 +251,36 @@ function FfthWknd() {
         <ScheduleTable schedule={knights.schedule} class_name={knights.class_name} title={knights.title} />
         <ScheduleTable schedule={pirates.schedule} class_name={pirates.class_name} title={pirates.title} />
       </div>
-        <JoustSchedule />
-        </div>
+      </div>
+      </div>
     </>
   )
 }
 function ShopDay() {
   return (
     <>
+      <div className="two-col weekends" >
       <div className='wknds'>
         <h1><b>Festive Shopping Day</b></h1>
         <h3>{dateObject.shopDay}</h3>
-
+      
+        <JoustSchedule />
+      <h3>Contests Coming Soon</h3>
+      </div>
+      <div className="col2">
+            <h3 className="col2-header">Weekend Information</h3>
         <div className='stages'> 
-          <ScheduleTable schedule={pavilion.schedule} class_name={pavilion.class_name} title={pavilion.title} />
-          <ScheduleTable schedule={stLouis.schedule} class_name={stLouis.class_name} title={stLouis.title} />
-          <ScheduleTable schedule={owain.schedule} class_name={owain.class_name} title={owain.title} />
-          <ScheduleTable schedule={friendship.schedule} class_name={friendship.class_name} title={friendship.title} />
-          <ScheduleTable schedule={joanOfArc.schedule} class_name={joanOfArc.class_name} title={joanOfArc.title} />
-          <ScheduleTable schedule={marcoPolo.schedule} class_name={marcoPolo.class_name} title={marcoPolo.title} />
-          <ScheduleTable schedule={storytelling.schedule} class_name={storytelling.class_name} title={storytelling.title} />
-          <ScheduleTable schedule={knights.schedule} class_name={knights.class_name} title={knights.title} />
-          <ScheduleTable schedule={pirates.schedule} class_name={pirates.class_name} title={pirates.title} />
-        </div>
-      <JoustSchedule />
+        <ScheduleTable schedule={pavilion.schedule} class_name={pavilion.class_name} title={pavilion.title} />
+        <ScheduleTable schedule={stLouis.schedule} class_name={stLouis.class_name} title={stLouis.title} />
+        <ScheduleTable schedule={owain.schedule} class_name={owain.class_name} title={owain.title} />
+        <ScheduleTable schedule={friendship.schedule} class_name={friendship.class_name} title={friendship.title} />
+        <ScheduleTable schedule={joanOfArc.schedule} class_name={joanOfArc.class_name} title={joanOfArc.title} />
+        <ScheduleTable schedule={marcoPolo.schedule} class_name={marcoPolo.class_name} title={marcoPolo.title} />
+        <ScheduleTable schedule={storytelling.schedule} class_name={storytelling.class_name} title={storytelling.title} />
+        <ScheduleTable schedule={knights.schedule} class_name={knights.class_name} title={knights.title} />
+        <ScheduleTable schedule={pirates.schedule} class_name={pirates.class_name} title={pirates.title} />
+      </div>
+      </div>
       </div>
     </>
   )
