@@ -73,7 +73,7 @@ const castList = {
       position:
         "Queen de France, Duchess of Britanny,  Holy Roman Empress, Empress of the Universe, Queen of England, Spain and EVERYTHING, Duchess of Milan",
       image: lanya_da_silva,
-    }, //Continued positions: Holy Roman Empress, Empress of the Universe, Queen of England, Spain and EVERYTHING, Duchess of Milan
+    }, //Con. positions: Holy Roman Empress, Empress of the Universe, Queen of England, Spain and EVERYTHING, Duchess of Milan
     {
       realName: "Trenton Brookesher",
       role: "Prince Henri",
