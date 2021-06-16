@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/STL-renfest/static/css/main.6553dcc8.chunk.css",
+    "main.js": "/STL-renfest/static/js/main.14c3041b.chunk.js",
+    "main.js.map": "/STL-renfest/static/js/main.14c3041b.chunk.js.map",
+    "runtime-main.js": "/STL-renfest/static/js/runtime-main.b4c6b46b.js",
+    "runtime-main.js.map": "/STL-renfest/static/js/runtime-main.b4c6b46b.js.map",
+    "static/css/2.b00a292f.chunk.css": "/STL-renfest/static/css/2.b00a292f.chunk.css",
+    "static/js/2.c23fb906.chunk.js": "/STL-renfest/static/js/2.c23fb906.chunk.js",
+    "static/js/2.c23fb906.chunk.js.map": "/STL-renfest/static/js/2.c23fb906.chunk.js.map",
+    "static/js/3.38f10cf5.chunk.js": "/STL-renfest/static/js/3.38f10cf5.chunk.js",
+    "static/js/3.38f10cf5.chunk.js.map": "/STL-renfest/static/js/3.38f10cf5.chunk.js.map",
+    "index.html": "/STL-renfest/index.html",
+    "static/css/2.b00a292f.chunk.css.map": "/STL-renfest/static/css/2.b00a292f.chunk.css.map",
+    "static/css/main.6553dcc8.chunk.css.map": "/STL-renfest/static/css/main.6553dcc8.chunk.css.map",
+    "static/js/2.c23fb906.chunk.js.LICENSE.txt": "/STL-renfest/static/js/2.c23fb906.chunk.js.LICENSE.txt",
+    "static/media/STLFaireMap.6114235a.jpg": "/STL-renfest/static/media/STLFaireMap.6114235a.jpg",
+    "static/media/StLouisLogo-white.195b9bf7.png": "/STL-renfest/static/media/StLouisLogo-white.195b9bf7.png",
+    "static/media/beardly-man.7ea2b423.png": "/STL-renfest/static/media/beardly-man.7ea2b423.png",
+    "static/media/navigation.css": "/STL-renfest/static/media/blue-abstract-nav.6991023d.png",
+    "static/media/App.css": "/STL-renfest/static/media/blueVariant-print.7c56edd3.png",
+    "static/media/bud-light.77b176b2.jpg": "/STL-renfest/static/media/bud-light.77b176b2.jpg",
+    "static/media/additional-styles.css": "/STL-renfest/static/media/unicorn-overlay.9419044c.jpg",
+    "static/media/fancy-divider-flipped.9e8d17e5.png": "/STL-renfest/static/media/fancy-divider-flipped.9e8d17e5.png",
+    "static/media/fancy-divider.10daaabc.png": "/STL-renfest/static/media/fancy-divider.10daaabc.png",
+    "static/media/fantasy-shop.17ac9b24.png": "/STL-renfest/static/media/fantasy-shop.17ac9b24.png",
+    "static/media/guinness.df679127.png": "/STL-renfest/static/media/guinness.df679127.png",
+    "static/media/menards.67afc2fa.jpg": "/STL-renfest/static/media/menards.67afc2fa.jpg",
+    "static/media/midtown-home-improvements.eeb88983.jpg": "/STL-renfest/static/media/midtown-home-improvements.eeb88983.jpg",
+    "static/media/mrvbc.fc196934.png": "/STL-renfest/static/media/mrvbc.fc196934.png",
+    "static/media/pepsi.85439f22.png": "/STL-renfest/static/media/pepsi.85439f22.png",
+    "static/media/stl-axe-throwing.a9f0e0c9.png": "/STL-renfest/static/media/stl-axe-throwing.a9f0e0c9.png",
+    "static/media/subway.aa92a542.jpg": "/STL-renfest/static/media/subway.aa92a542.jpg",
+    "static/media/warrior-island-sign.2f5a67ee.jpg": "/STL-renfest/static/media/warrior-island-sign.2f5a67ee.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b4c6b46b.js",
+    "static/css/2.b00a292f.chunk.css",
+    "static/js/2.c23fb906.chunk.js",
+    "static/css/main.6553dcc8.chunk.css",
+    "static/js/main.14c3041b.chunk.js"
+  ]
+}
