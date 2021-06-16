@@ -12,7 +12,6 @@ function WarriorsIsland() {
     <Navigation />
       <h1 className="page-header">Warriors Island</h1>
       <div id="warrior" className="margin-width">
-        <img id="warrior-sign" src={IslandSign} alt="STL Warrior Island Sign" />
         <div
           className="warriors"
           id="warriors"
@@ -33,6 +32,7 @@ function WarriorsIsland() {
             return <p className="warrior">{warrior}</p>;
           })}
         </div>
+        <img id="warrior-sign" src={IslandSign} alt="STL Warrior Island Sign" />
       </div>
     </>
   );

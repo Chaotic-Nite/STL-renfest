@@ -169,7 +169,8 @@
 }
 
 #warrior-sign {
-  max-height: 650px;
+  margin-top: 2%;
+  max-height: calc(2rem * 18);
   border-radius: 20%;
   margin-bottom: 20px;
 }
