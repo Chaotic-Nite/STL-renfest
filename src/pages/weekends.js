@@ -55,7 +55,6 @@ function Weekends() {
       <Navigation />
       <h1 className="page-header">Themed Weekends</h1>
       <div className="margin-width">
-        <div className="two-col weekends" >
           <div id='weekend'>
             <MDBTabs pills justify className='mb-3'>
               <MDBTabsItem>
@@ -101,7 +100,6 @@ function Weekends() {
           
           </div>
         </div>
-      </div>
     </>
   );
 }
