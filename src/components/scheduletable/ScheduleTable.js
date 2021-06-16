@@ -9,24 +9,27 @@ import {
 function ScheduleTable(props){
     const data = props.schedule
     return (
-      <div className={props.class_name + ' tablediv'}>
-        <MDBTable striped hover>
+      <div className={props.class_name}>
+        <MDBTable striped hover className='tablediv'>
         <MDBTableHead>
           <tr>
             <th colSpan={2}><b>{props.title}</b></th>
           </tr>
         </MDBTableHead>
         <MDBTableBody>
-          {data.map((item) => {
-            return (
-              <>
+          {data ?
+            data.map((item) => {
+              return (
+                <>
                 <tr>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
+                <th scope='row'>{item.time}</th>
+                <td>{item.name}</td>
                 </tr>
-              </>
-            )
-          })}
+                </>
+                )
+              }): 
+                null
+            }
         </MDBTableBody>
       </MDBTable>
       </div>

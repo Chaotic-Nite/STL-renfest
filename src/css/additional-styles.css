@@ -6,7 +6,36 @@
     font-size: 12px;
     font-weight: bold;
   }
+
+  #weekend .nav-link {
+    width: calc(2rem * 9);
+    height: calc(2rem * 1.7);
+    font-size: calc(1rem * 1);
+  }
+
+  .weekends .tablediv {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
+
+
+@media screen and (min-width: 767px) {
+
+  #weekend .nav-link {
+    width: calc(2rem * 10);
+    height: calc(2rem * 2.5)
+  }
+
+  .weekends .tablediv {
+    width: calc(2vw* 13);
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
 
 /* Ticketing */
 
@@ -291,6 +320,14 @@
 
 /* Weekends */
 
+.stages {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .weekends .nav{
   position: relative;
 }
@@ -301,12 +338,24 @@
 }
 
 .weekends thead {
-  border-bottom: 1px solid #5000e6b6;;
+  border-bottom: 2px solid #5000e6b6;;
 }
 
-.joust {
-  width: calc(2vw* 13);
-  border:1px solid rgb(58, 43, 84);
-  padding: 0;
-  margin: 0;
+#weekend, .wknds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.joust, .stl-stage, .f-stage, .mp-stage, .kp-stage {
+  border: 2px solid rgb(75, 28, 155);
+}
+
+.rp-stage, .o-stage, .joa-stage, .st-stage, .p-stage {
+  border: 2px solid rgb(74, 4, 92);
+}
+
+
+.rp-stage, .stl-stage, .o-stage, .f-stage, .joa-stage, .mp-stage, .st-stage, .kp-stage, .p-stage, .joust {
+  margin: 2%;
 }

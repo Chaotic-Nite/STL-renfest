@@ -5,7 +5,8 @@ function EntertainmentVendor() {
   return (
     <>
      <Navigation />
-      <div>Entertains and other information Here</div>
+     <h1 className='page-header'>Entertainers &#38; Vendors</h1>
+     <h4>Coming Soon</h4>
     </>
   );
 }
