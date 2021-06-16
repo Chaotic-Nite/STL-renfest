@@ -23,6 +23,10 @@
 
 @media screen and (min-width: 767px) {
   
+  .warrior-text {
+    margin-top: -25px;
+  }
+
   .cast-name, .guild-lead {
     font-size: calc(2rem * .8);
   }
@@ -193,7 +197,6 @@
 }
 
 .warrior-text {
-  margin-top: -25px;
   padding-bottom: 95px;
   background-size: 1000px;
   background-repeat: no-repeat;

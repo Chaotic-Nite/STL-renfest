@@ -40,10 +40,25 @@
   .nav-pills {
     margin-left: 0;
   }
+
+  .kne {
+    margin-bottom: calc(2rem*2.5);
+  }
+
+  .col2 {
+    margin-bottom: 7px;
+  }
 }
 
 
 @media screen and (min-width: 767px) {
+  .card {
+    margin: 5px;
+  }
+  
+  .kne {
+    margin-bottom: 5%;
+  }
 
   #weekend .nav-link {
     width: calc(2rem * 10);
@@ -188,7 +203,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5%;
 }
 
 .kne h2 {
@@ -270,10 +284,6 @@
 .ecp-subheader {
   font-size: calc(2rem * .7);
   margin-top: 15px;
-}
-
-.card {
-  margin: 5px;
 }
 
 .policy-set {

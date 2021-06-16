@@ -1,7 +1,9 @@
 @media screen and (max-width: 768px) {
   #logo img {
     width: 17rem;
+    margin: 0;
   }
+
 
   .App {
     font-size: 16px;
@@ -29,12 +31,12 @@
     height: 3rem;
     font-size: 2rem;
     padding: 9px;
-
   }
+  
 
   #wedFood, #wedFood[open], #wedDrinks, #wedDrinks[open], #weddingFinePrint, #weddingFinePrint[open]{
     width: 100%;
-    margin:0 1%;
+    margin:0;
   }
 
   #wedMenu {
@@ -61,7 +63,6 @@
 
   #wedLocation, #wedReception, #wedSpecial {
     width: 95%;
-    margin-left: 2%;
     margin-right: 0;
   }
 
