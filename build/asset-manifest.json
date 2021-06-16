@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3f52121a.chunk.css",
+    "main.js": "/static/js/main.2d812ba3.chunk.js",
+    "main.js.map": "/static/js/main.2d812ba3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9dd7d78a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9dd7d78a.js.map",
+    "static/css/2.b00a292f.chunk.css": "/static/css/2.b00a292f.chunk.css",
+    "static/js/2.c23fb906.chunk.js": "/static/js/2.c23fb906.chunk.js",
+    "static/js/2.c23fb906.chunk.js.map": "/static/js/2.c23fb906.chunk.js.map",
+    "static/js/3.38f10cf5.chunk.js": "/static/js/3.38f10cf5.chunk.js",
+    "static/js/3.38f10cf5.chunk.js.map": "/static/js/3.38f10cf5.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.b00a292f.chunk.css.map": "/static/css/2.b00a292f.chunk.css.map",
+    "static/css/main.3f52121a.chunk.css.map": "/static/css/main.3f52121a.chunk.css.map",
+    "static/js/2.c23fb906.chunk.js.LICENSE.txt": "/static/js/2.c23fb906.chunk.js.LICENSE.txt",
+    "static/media/StLouisLogo-white.195b9bf7.png": "/static/media/StLouisLogo-white.195b9bf7.png",
+    "static/media/beardly-man.7ea2b423.png": "/static/media/beardly-man.7ea2b423.png",
+    "static/media/navigation.css": "/static/media/blue-abstract-nav.6991023d.png",
+    "static/media/App.css": "/static/media/blueVariant-print.7c56edd3.png",
+    "static/media/bud-light.77b176b2.jpg": "/static/media/bud-light.77b176b2.jpg",
+    "static/media/additional-styles.css": "/static/media/unicorn-overlay.9419044c.jpg",
+    "static/media/fancy-divider-flipped.9e8d17e5.png": "/static/media/fancy-divider-flipped.9e8d17e5.png",
+    "static/media/fancy-divider.10daaabc.png": "/static/media/fancy-divider.10daaabc.png",
+    "static/media/fantasy-shop.17ac9b24.png": "/static/media/fantasy-shop.17ac9b24.png",
+    "static/media/guinness.df679127.png": "/static/media/guinness.df679127.png",
+    "static/media/menards.67afc2fa.jpg": "/static/media/menards.67afc2fa.jpg",
+    "static/media/midtown-home-improvements.eeb88983.jpg": "/static/media/midtown-home-improvements.eeb88983.jpg",
+    "static/media/mrvbc.fc196934.png": "/static/media/mrvbc.fc196934.png",
+    "static/media/pepsi.85439f22.png": "/static/media/pepsi.85439f22.png",
+    "static/media/stl-axe-throwing.a9f0e0c9.png": "/static/media/stl-axe-throwing.a9f0e0c9.png",
+    "static/media/subway.aa92a542.jpg": "/static/media/subway.aa92a542.jpg",
+    "static/media/warrior-island-sign.2f5a67ee.jpg": "/static/media/warrior-island-sign.2f5a67ee.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9dd7d78a.js",
+    "static/css/2.b00a292f.chunk.css",
+    "static/js/2.c23fb906.chunk.js",
+    "static/css/main.3f52121a.chunk.css",
+    "static/js/main.2d812ba3.chunk.js"
+  ]
+}
