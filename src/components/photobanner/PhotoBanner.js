@@ -1,14 +1,13 @@
 import { Slide } from "react-slideshow-image";
-
+import photoOne from '../../images/banner-images/one.jpg'
+import photoTwo from '../../images/banner-images/two.jpg'
+import photoThree from '../../images/banner-images/three.jpg'
+import photoFour from '../../images/banner-images/four.jpg'
 import "../../css/photobanner.css";
 
 function PhotoBanner() {
-  const slideImages = [
-    "assets/images/banner-images/one.jpg",
-    "assets/images/banner-images/two.jpg",
-    "assets/images/banner-images/three.jpg",
-    "assets/images/banner-images/four.jpg",
-  ];
+  const slideImages = [photoOne, photoTwo, photoThree, photoFour];
+
   return (
     <div className="slide-container">
       <Slide>

@@ -1,6 +1,8 @@
 import Navigation from "../components/navigation/Navigation";
 import QuickLinksSetOne from "../components/quicklinks/QuickLinksSetOne";
 import {dateObject} from "../lists/UPTODATE";
+import mug from "../images/mug.jpg"
+
 
 function AboutUs() {
   return (
@@ -16,7 +18,7 @@ function AboutUs() {
 
             <p style={{ textAlign: "left" }}>
               <img
-                src="src/assets/images/mug.jpg"
+                src={mug}
                 alt="Mug"
                 style={{
                   float: "left",
