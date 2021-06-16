@@ -16,7 +16,7 @@ function AboutUs() {
 
             <p style={{ textAlign: "left" }}>
               <img
-                src="/assets/images/mug.jpg"
+                src="src/assets/images/mug.jpg"
                 alt="Mug"
                 style={{
                   float: "left",

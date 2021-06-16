@@ -9,6 +9,7 @@ import {
 import Base64Downloader from "react-base64-downloader";
 import Navigation from "../components/navigation/Navigation.js";
 import QuickLinksSetOne from "../components/quicklinks/QuickLinksSetOne.js";
+import fairemap from '../images/STLFaireMap.jpg'
 
 function Directions() {
   const [justifyActive, setJustifyActive] = useState('to_faire');
@@ -71,7 +72,7 @@ function FaireMap() {
       );
 
   useEffect(() => {
-    toDataURL("/assets/images/STLFaireMap.jpg").then((dataUrl) => {
+    toDataURL(fairemap).then((dataUrl) => {
       setBase64(dataUrl);
     });
   }, []);
@@ -85,7 +86,7 @@ function FaireMap() {
         <img
           id="map"
           title="map"
-          src="/assets/images/STLFaireMap.jpg"
+          src={fairemap}
           alt="Faire Site Map"
         />
         <div style={{ marginLeft: "5vw", marginTop: "2%"}}>
