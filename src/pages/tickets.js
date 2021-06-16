@@ -200,7 +200,7 @@ function KegsTicket() {
   return (
     <>
       <h2>Kegs 'N' Eggs Tickets</h2>
-        <div className="ren-faire">
+        <div className="ren-faire ">
         <MDBCard className='kne ticket-ul'>
           <MDBCardHeader className='ren-gen'><b>Kegs 'N' Eggs Prices</b></MDBCardHeader>
           <MDBTable striped hover>

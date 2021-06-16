@@ -19,7 +19,13 @@
     margin: 0;
   }
 
-  
+  .ticket-boxes {
+    flex-direction: column;
+  }
+
+  .ticket-boxes .card {
+    margin-bottom: 15px;
+  }
   /* Google Map */
 
   #map {
@@ -127,6 +133,8 @@
 
 .ticket-boxes{
   margin: 1.5% 0;
+  display: flex;
+  justify-content: center;
 }
 
 .ticket-setup {
