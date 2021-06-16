@@ -125,7 +125,7 @@ function DirectionToFaire() {
           frameborder="0"
           allowfullscreen="allowfullscreen"
         ></iframe>
-        <div style={{ marginLeft: "5vw", marginTop: "2%" }}>
+        <div className='written-direction'>
           <h3>
             <b>
               Rotary Park

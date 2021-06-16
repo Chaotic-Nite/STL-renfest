@@ -18,6 +18,28 @@
     padding: 0;
     margin: 0;
   }
+
+  
+  /* Google Map */
+
+  #map {
+    height: calc(2rem* 15);
+    width: calc(2rem*9);
+    border: 3px double gold;
+
+  }
+
+  /* Hotels */
+
+  #hotel {
+    padding: 0.5%;
+    height: calc(2rem* 15);
+    width: calc(2rem*9);
+  }
+
+  .nav-pills {
+    margin-left: 0;
+  }
 }
 
 
@@ -33,6 +55,49 @@
     padding: 0;
     margin: 0;
   }
+
+  /* Google Map */
+
+  #map {
+    height: 45vw;
+    width: 35vw;
+    border: 8.5px double gold;
+
+  }
+  
+  /* Hotels */
+  
+  #hotel {
+    padding: 0.5%;
+    height: 55vh;
+    width: 50vw;
+  }
+
+  
+  .direction-set {
+    display: flex;
+    margin: 0px 5%;
+  }
+
+  .wedSetup .tab-content>.active:first-child {
+    margin-left: calc(1rem * -8);
+  }
+  
+  
+}
+
+#hotel {
+  border: 8.5px double gold;
+}
+
+#hotel, #map {
+  margin: 15px 0;
+  padding: 0.5%;
+}
+
+
+.direct-list {
+  list-style-type: upper-roman;
 }
 
 
@@ -123,6 +188,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5%;
 }
 
 .kne h2 {
@@ -150,9 +216,6 @@
   align-items: center;
 }
 
-.wedSetup .tab-content>.active:first-child {
-  margin-left: calc(1rem * -8);
-}
 
 
 .wedSetup .btn{
@@ -225,33 +288,7 @@
   list-style: decimal;
 }
 
-/* Google Map */
 
-#map {
-  margin: 15px 0;
-  border: 8.5px double gold;
-  height: 45vw;
-  width: 35vw;
-}
-
-.direct-list {
-  list-style-type: upper-roman;
-}
-
-.direction-set {
-  display: flex;
-  margin: 0px 5%;
-}
-
-/* Hotels */
-
-#hotel {
-  margin: 15px 10vw;
-  border: 8.5px double gold;
-  padding: 0.5%;
-  height: 55vh;
-  width: 50vw;
-}
 
 /* Getting Involved */
 

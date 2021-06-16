@@ -4,11 +4,11 @@
   }
 
   .App {
-    font-size: calc(1rem*1);
+    font-size: 16px;
   }
 
   .foot {
-    font-size: calc(1rem* .5);
+    font-size: 16px;
   }
 
   .two-col {
@@ -32,12 +32,9 @@
 
   }
 
-  #wedFood, #wedFood[open], #wedDrinks, #wedDrinks[open]{
+  #wedFood, #wedFood[open], #wedDrinks, #wedDrinks[open], #weddingFinePrint, #weddingFinePrint[open]{
     width: 100%;
-  }
-  
-  #weddingFinePrint, #weddingFinePrint[open]  {
-    width: 50vw;
+    margin:0 1%;
   }
 
   #wedMenu {
@@ -51,7 +48,7 @@
   }
 
   #wedFood, #wedDrinks,#weddingFinePrint {
-    padding: 15px 30px;
+    padding: 15px 0;
   }
 
   #wedFood {
@@ -62,11 +59,24 @@
     padding-left: 2vw;
   }
 
+  #wedLocation, #wedReception, #wedSpecial {
+    width: 95%;
+    margin-left: 2%;
+    margin-right: 0;
+  }
 
   #wedFood h2, #wedDrinks h2, #weddingFinePrint> summary>h2 {
     font-size: 35px;
   }
 
+  .margin-width {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .written-direction {
+    margin-top: 5%;
+  }
 }
 
 @media screen and (min-width: 767px) {
@@ -114,24 +124,41 @@
     width: 50vw;
   }  
 
+    
+  #wedMenu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+
+  #wedLocation h2, #wedReception h2, #wedSpecial h2, #wedSpecial h3 {
+    padding-left: 7vw;
+  }
+
+
+  #wedFood {
+    margin-right: 5px;
+  }
+
+  .margin-width {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .col1-width {
+    margin-left: 5%;
+  }
+
+  .App {
+    font-size: 20px;
+  }
+
+  .written-direction {
+    margin-left: 5vw;
+    margin-top: 2%;
+  }
   
-#wedMenu {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-}
-
-
-#wedLocation h2, #wedReception h2, #wedSpecial h2, #wedSpecial h3 {
-  padding-left: 7vw;
-}
-
-
-#wedFood {
-  margin-right: 5px;
-}
-
-
 }
 
 :root {
@@ -141,7 +168,6 @@
 .App {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
 }
 
 details summary::-webkit-details-marker {
@@ -161,10 +187,7 @@ a {
   color: #5900ff;
 }
 
-.margin-width {
-  margin-right: 5%;
-  margin-left: 5%;
-}
+
 
 .main-body {
   margin-bottom: 5%;
@@ -243,7 +266,6 @@ a {
 .col1-width {
   display: flex;
   flex-direction: column;
-  margin-left: 5%;
 }
 
 /* Second Column */

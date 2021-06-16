@@ -1,3 +1,52 @@
+@media screen and (max-width: 768px) {
+  .cast-name {
+    flex-direction: column;
+  }
+
+  .guild-lead {
+    font-size: calc(2rem * .6);
+
+  }
+  .cast-role {
+    font-size: calc(2rem * .5);
+  }
+
+  #warrior-sign {
+    max-height: calc(2rem * 10);
+  }
+  
+  .warrior {
+    font-size: calc(2rem* .56);
+  }
+}
+
+
+@media screen and (min-width: 767px) {
+  
+  .cast-name, .guild-lead {
+    font-size: calc(2rem * .8);
+  }
+
+  .cast-role {
+    font-size: calc(2rem * .7);
+  }
+
+  #warrior-sign {
+    max-height: calc(2rem * 18);
+  }
+  
+  .warrior {
+    font-size: calc(2rem* 1.3);
+  }
+  
+}
+
+#warrior-sign {
+  margin-top: 2%;
+  border-radius: 20%;
+  margin-bottom: 2%;
+}
+
 .guild:active,
 .guild:focus {
   outline: 0;
@@ -17,17 +66,12 @@
   border-bottom: 2px solid black;
 }
 
-.cast-name, .guild-lead {
-  font-size: calc(2rem * .8);
-}
-
 .cast-position {
   font-size: calc(2rem * .5);
 }
 
 .cast-role {
   font-family: "Rock Salt", cursive;
-  font-size: calc(2rem * .7);
 }
 
 .img-fluid {
@@ -158,7 +202,6 @@
 
 .warrior {
   font-family: "Eagle Lake", cursive;
-  font-size: 24px;
   margin: 10px 5px;
 }
 
@@ -166,11 +209,4 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#warrior-sign {
-  margin-top: 2%;
-  max-height: calc(2rem * 18);
-  border-radius: 20%;
-  margin-bottom: 20px;
 }

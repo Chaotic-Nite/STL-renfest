@@ -248,7 +248,8 @@ function Cast() {
                           position='top'
                         />
                          <MDBCardBody className='mbl-cast'>
-                          <MDBCardTitle className="cast-name">{item.realName}{" "}
+                          <MDBCardTitle className="cast-name">
+                            <p>{item.realName}</p>{" "}
                             {item.leadership ? (
                               <p className="guild-lead">
                                 **{item.leadership}**
