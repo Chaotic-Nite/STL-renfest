@@ -11,13 +11,13 @@ import {
     MDBCardText,
     MDBCardFooter
   } from 'mdb-react-ui-kit';
-import {contestsList, setPromotions, dailyEvents} from '../lists/contests.js'
+import { setPromotions, dailyEvents} from '../lists/contests.js'
 import QuickLinksSetOne from '../components/quicklinks/QuickLinksSetOne';
 import { dateObject } from '../lists/UPTODATE';
 
 import fairy_house from '../pdf-files/Fairy-House-Form.pdf'
 import mural from '../pdf-files/Mural-Registration-Form.pdf'
-import banner from '../pdf-files/STL-BANNER-Form.pdf'
+import banner from '../pdf-files/STL-BANNER-FORM.pdf'
 import fantasy_mask from '../pdf-files/Fantasy-Mask-Registration-Form.pdf'
 
 const deadline = 'September 4th'

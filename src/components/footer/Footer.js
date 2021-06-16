@@ -76,6 +76,18 @@ function Footer() {
 
         <div id="realm">
           <h3>Explore the Realm</h3>
+          <Link className="foot-link" to="/cast">
+            Cast
+          </Link>
+          <Link className="foot-link" to="/warriors-island">
+            Fallen Warriors
+          </Link>
+          <Link className='foot-link' to='/entertainment-vendor'>
+            Entertainers &#38; Vendors
+          </Link>
+          <Link className="foot-link" to="/weekends">
+            Themed Weekends
+          </Link>
         </div>
       </div>
     }
