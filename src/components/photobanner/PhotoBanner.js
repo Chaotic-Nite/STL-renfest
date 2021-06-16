@@ -7,6 +7,7 @@ import "../../css/photobanner.css";
 
 function PhotoBanner() {
   const slideImages = [photoOne, photoTwo, photoThree, photoFour];
+
   return (
     <div className="slide-container">
       <Slide>
