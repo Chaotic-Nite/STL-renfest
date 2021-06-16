@@ -2,7 +2,7 @@
   "name": "stl-renfest",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://noelkling.github.io/STL-renfest",
+  "homepage": "http://noelkling.github.io/stl-renfest",
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.26",
     "@react-navigation/native": "^5.8.10",
