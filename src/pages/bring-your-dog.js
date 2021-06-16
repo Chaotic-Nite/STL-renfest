@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../components/navigation/Navigation.js";
 import QuickLinksSetOne from "../components/quicklinks/QuickLinksSetOne";
+import dog_form from '../pdf-files/Dog-Registration-Form.pdf'
 
 function BringYourDog() {
   const DOG_RULES = [
@@ -52,7 +53,7 @@ function BringYourDog() {
             <li>
               Fill out the{" "}
               <a
-                href="../pdf-files/2020-Dog-Registration-Form.pdf"
+                href={dog_form}
                 target="_blank"
                 rel="noreferrer"
               >

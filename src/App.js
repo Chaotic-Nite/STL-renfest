@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import logo from "./images/StLouisLogo-white.png";
 import "./App.css";
 import "./css/additional-styles.css";
+import backprint from './images/steelgray-print.jpg'
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
   let isMobile = width <= 1024 ? true : false;
 
   return (
-    <div className="App">
+    <div className="App" style={{backgroundImage: `url(${backprint})`}}>
       <header className="top-line">
         <Link to="/" id="logo">
           <img src={logo} alt="" />

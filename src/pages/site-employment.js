@@ -3,6 +3,7 @@ import SocialMedia from "../components/social-media/SocialMedia";
 import { employmentList } from "../lists/employment-list";
 import Navigation from "../components/navigation/Navigation.js";
 import { Link } from "react-router-dom";
+import application from '../pdf-files/Employee-Application.pdf'
 
 function Employment() {
   return (
@@ -45,7 +46,7 @@ function Employment() {
               <p>
                 To apply, download and fill out an{" "}
                 <a
-                  href="/pdf-files/Employee-Application.pdf"
+                  href={application}
                   target="_blank"
                   rel="noreferrer"
                   >
