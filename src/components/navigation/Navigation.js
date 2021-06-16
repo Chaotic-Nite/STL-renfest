@@ -3,6 +3,7 @@ import "../../css/navigation.css";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import BurgerNav from "./BurgerNav";
+import abstractNav from '../../images/blue-abstract-nav.png'
 
 // Open state and autoclose Dropdown ndeufemia
 function Navigation() {
@@ -99,7 +100,7 @@ function Navigation() {
 
 function TicketDropdown() {
   return (
-    <ul className="nav__submenu">
+    <ul className="nav__submenu" style={{backgroundImage: `url(${abstractNav})`}}> 
       <li>
         <HashLink
           className="nav__submenu-item"
@@ -135,7 +136,7 @@ function TicketDropdown() {
 
 function WeekendDropdown() {
   return (
-    <ul className="nav__submenu">
+    <ul className="nav__submenu" style={{backgroundImage: `url(${abstractNav})`}}>
       <li>
         <HashLink
           className="nav__submenu-item"
@@ -196,7 +197,7 @@ function WeekendDropdown() {
 
 function InvolvmentDropdown() {
   return (
-    <ul className="nav__submenu">
+    <ul className="nav__submenu" style={{backgroundImage: `url(${abstractNav})`}}>
       <li>
         <Link className="nav__submenu-item" smooth='true' to="/employment">
           Employment Opportunities
