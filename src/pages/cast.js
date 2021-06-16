@@ -13,7 +13,6 @@ import Navigation from "../components/navigation/Navigation.js";
 import { Link } from "react-router-dom";
 import "../css/cast-warrior.css";
 
-
 import amber_fern from '../images/cast/amber-fern.jpg'
 import brendan_noe from '../images/cast/brendan-noe.jpg'
 import catherine_kuehner from '../images/cast/catherine-kuehner.jpg'
@@ -208,7 +207,6 @@ const castList = {
     "Those who enjoy their day to day live in Petit Lyon with crafts and simple peace of the festivals.",
   ],
 };
-
 
 function Cast() {
   const guildArr = ["Court", "Fae", "Fighter", "Traveler", "Village"];
