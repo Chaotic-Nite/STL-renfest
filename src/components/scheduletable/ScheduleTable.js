@@ -9,8 +9,8 @@ import {
 function ScheduleTable(props){
     const data = props.schedule
     return (
-      <div className={props.class_name}>
-        <MDBTable striped hover className='tablediv'>
+      <div >
+        <MDBTable striped hover className={props.class_name}>
         <MDBTableHead>
           <tr>
             <th colSpan={2}><b>{props.title}</b></th>

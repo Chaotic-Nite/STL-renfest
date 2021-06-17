@@ -13,8 +13,8 @@ function FindHotel() {
               title="hotels"
               id="hotel"
               src="https://www.tripadvisor.com/Hotels-g45032-Wentzville_Missouri-Hotels.html"
-              frameborder="0"
-              allowfullscreen="allowfullscreen"
+              frameBorder="0"
+              allowFullScreen="allowfullscreen"
             ></iframe>
             <p id="hotelText">
               If the site hasn't loaded,{" "}

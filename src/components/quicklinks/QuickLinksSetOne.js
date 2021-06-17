@@ -50,7 +50,7 @@ function QuickLinksSetOne(props) {
             {linkObject.map((item) => {
                 return (
                     <>
-                    <Link className='col2-link' to={item.url}>
+                    <Link className='col2-link' key={item.url} to={item.url}>
                         {item.text}
                     </Link>
                     <br/>

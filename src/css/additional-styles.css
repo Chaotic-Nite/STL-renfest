@@ -13,7 +13,19 @@
     font-size: calc(1rem * 1);
   }
 
-  .weekends .tablediv {
+  .contests{
+    flex-direction: column;
+  }
+
+  .contests .table {
+    margin-bottom: 2%;
+  }
+
+  .two-col {
+    display: flex;
+  }
+
+  .weekends .joust {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -32,7 +44,8 @@
     height: calc(2rem* 15);
     width: calc(2rem*9);
     border: 3px double gold;
-
+    margin-right: auto;
+    margin-left: auto;
   }
 
   /* Hotels */
@@ -54,12 +67,24 @@
   .col2 {
     margin-bottom: 7px;
   }
+
+  .weekends-col2 {
+    flex-direction: column-reverse;
+  }
 }
 
 
 @media screen and (min-width: 767px) {
+  .weekends-col2 {
+    flex-direction: row-reverse;
+  }
+
   .card {
     margin: 5px;
+  }
+
+  .ticket-boxes .card {
+    margin: 0 2%;
   }
   
   .kne {
@@ -67,12 +92,13 @@
   }
 
   #weekend .nav-link {
-    width: calc(2rem * 10);
-    height: calc(2rem * 2.5)
+    width: calc(2rem * 8);
+    height: calc(2rem * 2);
+    font-size: calc(1rem * 1.2);
   }
 
-  .weekends .tablediv {
-    width: calc(2vw* 13);
+  .weekends {
+    width: 100%;
     padding: 0;
     margin: 0;
   }
@@ -97,22 +123,31 @@
   
   .direction-set {
     display: flex;
-    margin: 0px 5%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .wedSetup .tab-content>.active:first-child {
     margin-left: calc(1rem * -8);
   }
   
+  #hotel, #map {
+    padding: 0.5%;
+  }
+
+  .contests {
+    width: 100%;
+  }
+  
   
 }
+
 
 #hotel {
   border: 8.5px double gold;
 }
 
 #hotel, #map {
-  margin: 15px 0;
   padding: 0.5%;
 }
 
@@ -237,8 +272,6 @@
   justify-content: center;
   align-items: center;
 }
-
-
 
 .wedSetup .btn{
   font-size: calc(2rem * .7);
@@ -396,13 +429,26 @@
   border-bottom: 2px solid #5000e6b6;;
 }
 
-#weekend, .wknds {
+#weekend .nav, .wknds, .weekends-colend  {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.joust, .stl-stage, .f-stage, .mp-stage, .kp-stage {
+.weekends-col2, .contests {
+  display: flex;
+}
+
+.contests {
+  justify-content: space-evenly;
+  margin-bottom: 2%;
+}
+
+.contest {
+  margin: 0 2%;
+}
+
+.joust, .stl-stage, .f-stage, .mp-stage, .kp-stage, .contest {
   border: 2px solid rgb(75, 28, 155);
 }
 

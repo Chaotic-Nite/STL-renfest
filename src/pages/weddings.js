@@ -328,7 +328,7 @@ const WeddingFood = () => {
               <ListGroup>
                 {item.drink.map(i => {
                 return (
-                  <ListGroup.Item class='wedding-food'><span style={{ float: "left", paddingLeft: "1%" }}>{i.name}</span><span style={{ float: "right", paddingRight: "1%" }}>${i.price}</span></ListGroup.Item>
+                  <ListGroup.Item className='wedding-food'><span style={{ float: "left", paddingLeft: "1%" }}>{i.name}</span><span style={{ float: "right", paddingRight: "1%" }}>${i.price}</span></ListGroup.Item>
                 )
               })}
               </ListGroup>

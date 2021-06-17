@@ -9,7 +9,9 @@
   }
 
   .bm-burger-button {
-    width: 25px;
+    width: 24px;
+    margin-right: 2%;
+    margin-top: calc(1rem*1);
   }
 }
 

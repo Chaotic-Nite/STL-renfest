@@ -63,7 +63,8 @@
 
   #wedLocation, #wedReception, #wedSpecial {
     width: 95%;
-    margin-right: 0;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   #wedFood h2, #wedDrinks h2, #weddingFinePrint> summary>h2 {
@@ -71,8 +72,8 @@
   }
 
   .margin-width {
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: 2%;
+    margin-left: 2%;
   }
 
   .written-direction {
@@ -89,6 +90,11 @@
     display: grid;
     grid-template-columns: 75% 25%;
     gap: 10px;
+  }
+
+  .weekends {
+    display: flex;
+    flex-direction: column;
   }
 
   .involve-bttn {
@@ -155,9 +161,14 @@
     font-size: 20px;
   }
 
-  .written-direction {
-    margin-left: 5vw;
+  #map {
     margin-top: 2%;
+    margin-right: 2%;
+  }
+
+  .written-direction {
+    margin-top: 2%;
+    margin-left: 2%;
   }
   
 }
