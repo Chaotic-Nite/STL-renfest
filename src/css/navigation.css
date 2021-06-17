@@ -13,6 +13,7 @@
     margin-right: 2%;
     margin-top: calc(1rem*1);
   }
+  
 }
 
 
@@ -122,6 +123,8 @@ nav > ul {
 .bm-burger-bars-hover,
 .bm-cross {
   background: #ffffff;
+  border: 1px solid #5000e6b6;
+  opacity: 80%;
 }
 
 /*

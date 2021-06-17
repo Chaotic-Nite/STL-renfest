@@ -234,7 +234,7 @@ function Cast() {
           return (
             <details key={guild} id={guild} className="guild">
               <summary>
-                {guild} <br /> {castList[guild][0]}
+                <span className='guild-title'>{guild}</span> <br /> {castList[guild][0]}
               </summary>
               {castList[guild].slice(1).map((item) => {
                 return (

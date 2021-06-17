@@ -180,6 +180,7 @@
 .App {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
+  color: #4f4f4f;
 }
 
 details summary::-webkit-details-marker {
