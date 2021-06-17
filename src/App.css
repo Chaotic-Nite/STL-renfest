@@ -180,6 +180,7 @@
 .App {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
+  color: #4f4f4f;
 }
 
 details summary::-webkit-details-marker {
@@ -224,6 +225,7 @@ a {
   margin: 1% 0;
   padding-bottom: 1%;
   border-bottom: 5px solid #cc00ff;
+  font-size: calc(2rem * 1.2);
 }
 
 .top-line {
@@ -281,7 +283,7 @@ a {
 }
 
 /* Second Column */
-.two-col h2 {
+.col2 h2 {
   font-size: 3.5rem;
 }
 

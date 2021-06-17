@@ -91,7 +91,6 @@
 }
 
 .current {
-  font-family: "Rock Salt", cursive;
   text-align: center;
   margin: 2% 0;
 }
@@ -102,6 +101,7 @@
 }
 
 .guild {
+  font-family: "Sansita Swashed", cursive;
   padding: 2%;
   margin: 1.5% 5vw;
 }
@@ -111,6 +111,11 @@
   font-size: 28px;
   text-align: left;
 }
+
+.guild-title{
+  font-family: "Rock Salt", cursive;
+}
+
 
 #Court {
   color: white;

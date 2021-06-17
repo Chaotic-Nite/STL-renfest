@@ -35,7 +35,7 @@ function VendorApplications() {
               </HashLink>
               ). <br />
               If you are interested in being a vendor, contact us at{" "}
-              <b>(636) 639-5173</b> or email: <b>renfestcrafts@gmail.com</b>
+              <b>(636) 639-5173</b> or email: <u>akuchar@renaissancefest.com</u>
             </p>
             <br />
             <p>
@@ -65,7 +65,7 @@ function VendorApplications() {
       <h1 className="page-header">Sponsorship</h1>
       <h2>Interested in becoming a Sponsor?</h2>
       <p>Contact us at (636) 639-5173</p>
-      <p>Or email akuchar@renaissancefest.com</p>
+      <p>Or email <u>akuchar@renaissancefest.com</u></p>
     </>
   );
 }

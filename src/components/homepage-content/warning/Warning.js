@@ -5,6 +5,7 @@ import {
 } from "react-collapsible-component";
 import "../../../css/warning.css";
 import {dateObject} from "../../../lists/UPTODATE.js";
+import additionalInformation from '../../../pdf-files/2020-STL-Covid-plan.pdf'
 
 function WarningSign() {
   return (
@@ -40,7 +41,8 @@ function WarningSign() {
               For more COVID-19 protocols,{" "}
               <a
                 className="external-links"
-                href="/pdf-files/2020-STL-Draft-preparedness-plan-2.pdf"
+                href={additionalInformation}
+                rel="noreferrer"
               >
                 click here
               </a>
