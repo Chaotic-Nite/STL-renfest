@@ -69,7 +69,7 @@ function Home() {
         <h2>Can't Wait to Celebrate!</h2>
         <div>
           Come join us as we celebrate our {dateObject.yearOfFaire} year! Enjoy
-          entertainment ranging from pirates to jousting to juggling to turkey
+          entertainment ranging from pirates to poi dancing to jousting to turkey
           legs, and more! There’s something for everyone to enjoy. <br />
           <br />
           Produced by Mid-America Festivals, the St. Louis Renaissance Festival

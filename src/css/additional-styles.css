@@ -404,7 +404,13 @@
   }
 }
 
+.fundraiser p, .fundraiser ol{
+  text-align: left;
+}
 
+.fundraiser ol {
+  list-style:disc; 
+}
 
 /* Weekends */
 

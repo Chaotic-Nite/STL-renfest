@@ -129,7 +129,7 @@ function GeneralTicket() {
       </h4>
       <p className="ticket-contact">
         <i>
-          Please Contact <b>akuchar@renaissancefest.com</b> or call{" "}
+          Please Contact <u>akuchar@renaissancefest.com</u> or call{" "}
           <b>636.639.5173</b>
         </i>
       </p>
