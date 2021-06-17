@@ -10,7 +10,9 @@ function Fundraising() {
       <div className="margin-width">
         <div className="two-col">
           <div className="col1-width">
-            <h3>Fundraising</h3>
+            <FoodFundraiser />
+            <TicketFundraiser />
+            <CarsFundraiser />
           </div>
           <div className="col2">
             <h3 className="col2-header">Get Involved</h3>
@@ -27,6 +29,37 @@ function Fundraising() {
       </div>
     </>
   );
+}
+
+
+function FoodFundraiser() {
+  return (
+    <>
+      <h2 className="second-header">
+        To The Faire
+      </h2>
+    </>
+  )
+}
+
+function CarsFundraiser() {
+  return (
+    <>
+      <h2 className="second-header">
+        To The Faire
+      </h2>
+    </>
+  )
+}
+
+function TicketFundraiser() {
+  return (
+    <>
+      <h2 className="second-header">
+        To The Faire
+      </h2>
+    </>
+  )
 }
 
 export default Fundraising;

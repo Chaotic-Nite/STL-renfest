@@ -114,7 +114,7 @@ function FaireMap() {
 function DirectionToFaire() {
   return (
     <>
-      <h2 className="second-header" style={{ fontSize: "2.3rem" }}>
+      <h2 className="second-header" >
         To The Faire
       </h2>
       <div className="direction-set">
