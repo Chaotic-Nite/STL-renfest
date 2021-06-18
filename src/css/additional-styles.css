@@ -139,6 +139,9 @@
     width: 100%;
   }
   
+  .contests .table {
+    width: 50%;
+  }
   
 }
 
@@ -418,8 +421,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
 }
 
 .weekends .nav{
@@ -433,6 +435,10 @@
 
 .weekends thead {
   border-bottom: 2px solid #5000e6b6;;
+}
+
+.weekends h3 {
+  text-decoration: 3px underline #cc00ff;
 }
 
 #weekend .nav, .wknds, .weekends-colend  {
