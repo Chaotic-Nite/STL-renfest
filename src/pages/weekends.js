@@ -10,7 +10,12 @@ import {
   MDBTabsPane,
   MDBTable,
   MDBTableHead,
-  MDBTableBody
+  MDBTableBody,
+  MDBDropdown,
+  MDBDropdownMenu,
+  MDBDropdownToggle, 
+  MDBDropdownItem,
+  MDBDropdownLink
 } from 'mdb-react-ui-kit';
 import { useLocation } from 'react-router-dom'
 import { dateObject } from "../lists/UPTODATE";
@@ -19,6 +24,7 @@ import dogForm from '../pdf-files/Dog-Registration-Form.pdf'
 
 
 function Weekends() {
+  const [width, setWidth] = useState(window.innerWidth);
   const location = useLocation();
   let initialState = 'highland-fling';
   if (location.hash.length > 0) {
@@ -51,7 +57,14 @@ function Weekends() {
     setKnights(state => ({...state, schedule: knightsSch[value]}))
     setPirates(state => ({...state, schedule: piratesSch[value]}))
   };
-
+  const tabObject = [
+    {id:'highland-fling', title:'Highland Fling'},
+    {id:'pets-pirate-ale', title:'Pets & Pirates'},
+    {id:'shamrocks-shenanigans', title:'Shamrocks & Shenanigans'},
+    {id:'viking-invasion', title:'Viking & Cosplay'},
+    {id:'oktoberfest', title:'Oktoberfest'},
+    {id:'festive-shopping-day', title:'Festive Shopping Day'},
+  ]
   useEffect(() => {
     if (wknd !== location.hash.substring(1) && location.hash.includes('#')){
       const value = location.hash.substring(1)
@@ -81,6 +94,19 @@ function Weekends() {
 
     // eslint-disable-next-line
   }, [location]);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  let isMobile = width <= 1024 ? true : false;
+
 
   return (
     <>
@@ -119,38 +145,40 @@ function Weekends() {
         <div className='col2 weekends-colend'>
           <h3 className="col2-header"><b>Themed Weekends</b></h3>
           <div id='weekend'>
+            {isMobile ?
+              <>
+              <MDBDropdown>
+                <MDBDropdownToggle>{wknd}</MDBDropdownToggle>
+                <MDBDropdownMenu>
+                  {tabObject.map((item) => {
+                    if (item.id === wknd){
+                      return null
+                    }
+                    else {
+
+                      return (
+                        <MDBDropdownItem>
+                        <MDBDropdownLink onClick={() => handleTabClick(item.id)} active={wknd === item.id}>
+                          {item.title}
+                        </MDBDropdownLink>
+                      </MDBDropdownItem>
+                  )}})}
+                  </MDBDropdownMenu>
+                  </MDBDropdown>
+                  </>
+              :
+              <>
               <MDBTabs pills justify className='mb-3'>
-                <MDBTabsItem>
-                  <MDBTabsLink onClick={() => handleTabClick('highland-fling')} active={wknd === 'highland-fling'}>
-                    Highland Fling
-                  </MDBTabsLink>
-                </MDBTabsItem>
-                <MDBTabsItem>
-                  <MDBTabsLink onClick={() => handleTabClick('pets-pirate-ale')} active={wknd === 'pets-pirate-ale'}>
-                    Pets &#38; Pirates
-                  </MDBTabsLink>
-                </MDBTabsItem>
-                <MDBTabsItem>
-                  <MDBTabsLink onClick={() => handleTabClick('shamrocks-shenanigans')} active={wknd === 'shamrocks-shenanigans'}>
-                    Shenanigans &#38; Sweet Romance 
-                  </MDBTabsLink>
-                </MDBTabsItem>
-                <MDBTabsItem>
-                  <MDBTabsLink onClick={() => handleTabClick('viking-invasion')} active={wknd === 'viking-invasion'}>
-                    Viking &#38; Cosplay 
-                  </MDBTabsLink>
-                </MDBTabsItem>
-                <MDBTabsItem>
-                  <MDBTabsLink onClick={() => handleTabClick('oktoberfest')} active={wknd === 'oktoberfest'}>
-                    Oktoberfest
-                  </MDBTabsLink>
-                </MDBTabsItem>
-                <MDBTabsItem>
-                  <MDBTabsLink onClick={() => handleTabClick('festive-shopping-day')} active={wknd === 'festive-shopping-day'}>
-                    Festive Shopping Day
-                  </MDBTabsLink>
-                </MDBTabsItem>
+                {tabObject.map((item) => {
+                  return (
+                    <MDBTabsItem>
+                      <MDBTabsLink onClick={() => handleTabClick(item.id)} active={wknd === item.id}>
+                        {item.title}
+                      </MDBTabsLink>
+                    </MDBTabsItem>
+              )})}
               </MDBTabs>
+              </>}
           </div>
         </div>
           

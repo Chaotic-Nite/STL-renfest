@@ -75,6 +75,11 @@
 
 
 @media screen and (min-width: 767px) {
+  
+  .contest {
+    margin: 0 2%;
+  }
+  
   .weekends-col2 {
     flex-direction: row-reverse;
   }
@@ -456,9 +461,6 @@
   margin-bottom: 2%;
 }
 
-.contest {
-  margin: 0 2%;
-}
 
 .joust, .stl-stage, .f-stage, .mp-stage, .kp-stage, .contest {
   border: 2px solid rgb(75, 28, 155);
