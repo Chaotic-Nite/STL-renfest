@@ -71,10 +71,20 @@
   .weekends-col2 {
     flex-direction: column-reverse;
   }
+
+  .stages{
+    justify-content: center;
+    align-items: center;
+
+  }
 }
 
 
 @media screen and (min-width: 767px) {
+  .stages {
+    justify-content: space-between;
+    align-items: stretch;
+  }
   
   .contest {
     margin: 0 2%;
@@ -424,9 +434,7 @@
 
 .stages {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  align-items: stretch;
 }
 
 .weekends .nav{

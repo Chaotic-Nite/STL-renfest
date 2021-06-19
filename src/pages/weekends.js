@@ -143,10 +143,9 @@ function Weekends() {
           </MDBTabsContent>
         </div>
         <div className='col2 weekends-colend'>
-          <h3 className="col2-header"><b>Themed Weekends</b></h3>
-          <div id='weekend'>
             {isMobile ?
               <>
+          <div id='weekend'>
               <MDBDropdown>
                 <MDBDropdownToggle>{wknd}</MDBDropdownToggle>
                 <MDBDropdownMenu>
@@ -165,9 +164,13 @@ function Weekends() {
                   )}})}
                   </MDBDropdownMenu>
                   </MDBDropdown>
+                </div>
                   </>
               :
               <>
+              
+          <h3 className="col2-header"><b>Themed Weekends</b></h3>
+          <div id='weekend'>
               <MDBTabs pills justify className='mb-3'>
                 {tabObject.map((item) => {
                   return (
@@ -178,8 +181,8 @@ function Weekends() {
                     </MDBTabsItem>
               )})}
               </MDBTabs>
+              </div>
               </>}
-          </div>
         </div>
           
         </div>
