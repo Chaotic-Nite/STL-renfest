@@ -8,7 +8,7 @@ function KeyPolicies() {
     <>
     <Navigation />
       <h1 className="page-header">Key Policies</h1>
-      <div className="margin-width">
+      <div className="margin-width" id='key-policies'>
         <div className="two-col">
           <div className='col1'>
             <FrstPolicy />
@@ -36,7 +36,7 @@ function FrstPolicy() {
     <>
       <MDBCard>
         <MDBCardBody className='policy-set'>
-          <MDBCardTitle ><h2>Alcohol</h2></MDBCardTitle>
+          <MDBCardTitle >Alcohol</MDBCardTitle>
           <MDBCardText>
           Alcohol service will only be provided to guests 21 or older who show a valid, government-issued photo ID. 
           The St. Louis Renaissance Festival reserves the right to refuse service to any individual who appears to be impaired or intoxicated. No outside alcoholic beverages are allowed.
@@ -52,7 +52,7 @@ function ScndPolicy() {
     <>
       <MDBCard>
         <MDBCardBody className='policy-set'>
-          <MDBCardTitle><h2>Weapons</h2></MDBCardTitle>
+          <MDBCardTitle>Weapons</MDBCardTitle>
           <MDBCardText>
             <p>
               <u>Mid-America Festivals bans firearms on the premises.</u>
@@ -105,7 +105,7 @@ function ThrdPolicy() {
     <>
       <MDBCard>
         <MDBCardBody className='policy-set'>
-          <MDBCardTitle ><h2>Policy Against Harassment and Discrimination</h2></MDBCardTitle>
+          <MDBCardTitle >Policy Against Harassment and Discrimination</MDBCardTitle>
           <MDBCardSubTitle><b>Purpose:</b></MDBCardSubTitle>
           <MDBCardText>
           Mid-America Festivals, Corp. (“Festival”) desires to provide a positive and productive business and entertainment environment. 

@@ -160,6 +160,17 @@
   
 }
 
+#key-policies .card-body h5{
+  font-size: calc(1rem*2.5);
+}
+
+#key-policies .card {
+  margin-bottom: 2%;
+}
+
+#key-policies .card:last-child {
+  margin-bottom: 0;
+}
 
 #hotel {
   border: 8.5px double gold;

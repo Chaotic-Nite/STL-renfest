@@ -19,77 +19,86 @@ import {
 } from 'mdb-react-ui-kit';
 import { useLocation } from 'react-router-dom'
 import { dateObject } from "../lists/UPTODATE";
-import { pavilionSch, stlouisSch, owainSch, friendshipSch, joanOfArcSch, marcoPoloSch, storytellingSch, knightsSch, piratesSch } from '../lists/themed-schedules'
+import { STAGESCHEDULE, weekends } from '../lists/themed-schedules'
 import dogForm from '../pdf-files/Dog-Registration-Form.pdf'
+
+const pavSch = STAGESCHEDULE.pavilion 
+const stlSch = STAGESCHEDULE.pavilion
+const owaSch = STAGESCHEDULE.pavilion
+const friSch = STAGESCHEDULE.pavilion
+const joaSch = STAGESCHEDULE.pavilion
+const mpSch = STAGESCHEDULE.pavilion
+const stoSch = STAGESCHEDULE.pavilion
+const kniSch = STAGESCHEDULE.pavilion
+const pirSch = STAGESCHEDULE.pavilion
 
 
 function Weekends() {
   const [width, setWidth] = useState(window.innerWidth);
   const location = useLocation();
-  let initialState = 'highland-fling';
+  let initialState =  weekends.weekendOne.id;
   if (location.hash.length > 0) {
     initialState = location.hash.substring(1);
   }
-  console.log(pavilionSch["highland-fling"])
-  const [pavilion, setPav] = useState({class_name: 'rp-stage', title: 'Royal Pavilion', schedule: pavilionSch[initialState]})
-  const [stLouis, setLouis] = useState({class_name: 'stl-stage', title: 'St Louis Stage', schedule: stlouisSch[initialState]})
-  const [owain, setOwain] = useState({class_name: 'o-stage', title: 'Owain Stage', schedule: owainSch[initialState]})
-  const [friendship, setFriend] = useState({class_name: 'f-stage', title: 'Friendship Stage', schedule: friendshipSch[initialState]})
-  const [joanOfArc, setJoan] = useState({class_name: 'joa-stage', title: 'Joan of Arc', schedule: joanOfArcSch[initialState]})
-  const [marcoPolo, setMarco] = useState({class_name: 'mp-stage', title: 'Marco Polo Stage', schedule: marcoPoloSch[initialState]})
-  const [storytelling, setStory] = useState({class_name: 'st-stage', title: 'Storytelling Stage', schedule: storytellingSch[initialState]})
-  const [knights, setKnights] = useState({class_name: 'kp-stage', title: 'Knights Pub Stage', schedule: knightsSch[initialState]})
-  const [pirates, setPirates] = useState({class_name: 'p-stage', title: 'Pirate Ship', schedule: piratesSch[initialState]})
-  //const {pirates, setPirates} = useState({class_name: 'p-stage', title: 'Pirate Ship', schedule: piratesSch[initialState]})
+  const [pavilion, setPav] = useState({class_name: 'rp-stage', title: 'Royal Pavilion', schedule: pavSch[initialState]})
+  const [stLouis, setLouis] = useState({class_name: 'stl-stage', title: 'St Louis Stage', schedule: stlSch[initialState]})
+  const [owain, setOwain] = useState({class_name: 'o-stage', title: 'Owain Stage', schedule: owaSch[initialState]})
+  const [friendship, setFriend] = useState({class_name: 'f-stage', title: 'Friendship Stage', schedule: friSch[initialState]})
+  const [joanOfArc, setJoan] = useState({class_name: 'joa-stage', title: 'Joan of Arc', schedule: joaSch[initialState]})
+  const [marcoPolo, setMarco] = useState({class_name: 'mp-stage', title: 'Marco Polo Stage', schedule: mpSch[initialState]})
+  const [storytelling, setStory] = useState({class_name: 'st-stage', title: 'Storytelling Stage', schedule: stoSch[initialState]})
+  const [knights, setKnights] = useState({class_name: 'kp-stage', title: 'Knights Pub Stage', schedule: kniSch[initialState]})
+  const [pirates, setPirates] = useState({class_name: 'p-stage', title: 'Pirate Ship', schedule: pirSch[initialState]})
+  
   const [wknd, setWknd] = useState(initialState)
   const handleTabClick = (value) => {
     if (value === wknd) {
       return;
     }
     setWknd(value);
-    setPav(state => ({...state, schedule: pavilionSch[value]}))
-    setLouis(state => ({...state, schedule: stlouisSch[value]}))
-    setOwain(state => ({...state, schedule: owainSch[value]}))
-    setFriend(state => ({...state, schedule: friendshipSch[value]}))
-    setJoan(state => ({...state, schedule: joanOfArcSch[value]}))
-    setMarco(state => ({...state, schedule: marcoPoloSch[value]}))
-    setStory(state => ({...state, schedule: storytellingSch[value]}))
-    setKnights(state => ({...state, schedule: knightsSch[value]}))
-    setPirates(state => ({...state, schedule: piratesSch[value]}))
+    setPav(state => ({...state, schedule: pavSch[value]}))
+    setLouis(state => ({...state, schedule: stlSch[value]}))
+    setOwain(state => ({...state, schedule: owaSch[value]}))
+    setFriend(state => ({...state, schedule: friSch[value]}))
+    setJoan(state => ({...state, schedule: joaSch[value]}))
+    setMarco(state => ({...state, schedule: mpSch[value]}))
+    setStory(state => ({...state, schedule: stoSch[value]}))
+    setKnights(state => ({...state, schedule: kniSch[value]}))
+    setPirates(state => ({...state, schedule: pirSch[value]}))
   };
   const tabObject = [
-    {id:'highland-fling', title:'Highland Fling'},
-    {id:'pets-pirate-ale', title:'Pets & Pirates'},
-    {id:'shamrocks-shenanigans', title:'Shamrocks & Shenanigans'},
-    {id:'viking-invasion', title:'Viking & Cosplay'},
-    {id:'oktoberfest', title:'Oktoberfest'},
-    {id:'festive-shopping-day', title:'Festive Shopping Day'},
+    {id: weekends.weekendOne.id, title: weekends.weekendOne.short},
+    {id: weekends.weekendTwo.id, title: weekends.weekendTwo.short},
+    {id: weekends.weekendThree.id, title: weekends.weekendThree.short},
+    {id: weekends.weekendFour.id, title: weekends.weekendFour.short},
+    {id: weekends.weekendFive.id, title: weekends.weekendFive.short},
+    {id: weekends.shoppingDay.id, title: weekends.shoppingDay.short},
   ]
   useEffect(() => {
     if (wknd !== location.hash.substring(1) && location.hash.includes('#')){
       const value = location.hash.substring(1)
       setWknd(value)
-      setPav(state => ({...state, schedule: pavilionSch[value]}))
-      setLouis(state => ({...state, schedule: stlouisSch[value]}))
-      setOwain(state => ({...state, schedule: owainSch[value]}))
-      setFriend(state => ({...state, schedule: friendshipSch[value]}))
-      setJoan(state => ({...state, schedule: joanOfArcSch[value]}))
-      setMarco(state => ({...state, schedule: marcoPoloSch[value]}))
-      setStory(state => ({...state, schedule: storytellingSch[value]}))
-      setKnights(state => ({...state, schedule: knightsSch[value]}))
-      setPirates(state => ({...state, schedule: piratesSch[value]}))
+      setPav(state => ({...state, schedule: pavSch[value]}))
+      setLouis(state => ({...state, schedule: stlSch[value]}))
+      setOwain(state => ({...state, schedule: owaSch[value]}))
+      setFriend(state => ({...state, schedule: friSch[value]}))
+      setJoan(state => ({...state, schedule: joaSch[value]}))
+      setMarco(state => ({...state, schedule: mpSch[value]}))
+      setStory(state => ({...state, schedule: stoSch[value]}))
+      setKnights(state => ({...state, schedule: kniSch[value]}))
+      setPirates(state => ({...state, schedule: pirSch[value]}))
     } else if (!location.hash.includes('#')) {
-      const value = 'highland-fling'
+      const value =  weekends.weekendOne.id
       setWknd(value)
-      setPav(state => ({...state, schedule: pavilionSch[value]}))
-      setLouis(state => ({...state, schedule: stlouisSch[value]}))
-      setOwain(state => ({...state, schedule: owainSch[value]}))
-      setFriend(state => ({...state, schedule: friendshipSch[value]}))
-      setJoan(state => ({...state, schedule: joanOfArcSch[value]}))
-      setMarco(state => ({...state, schedule: marcoPoloSch[value]}))
-      setStory(state => ({...state, schedule: storytellingSch[value]}))
-      setKnights(state => ({...state, schedule: knightsSch[value]}))
-      setPirates(state => ({...state, schedule: piratesSch[value]}))
+      setPav(state => ({...state, schedule: pavSch[value]}))
+      setLouis(state => ({...state, schedule: stlSch[value]}))
+      setOwain(state => ({...state, schedule: owaSch[value]}))
+      setFriend(state => ({...state, schedule: friSch[value]}))
+      setJoan(state => ({...state, schedule: joaSch[value]}))
+      setMarco(state => ({...state, schedule: mpSch[value]}))
+      setStory(state => ({...state, schedule: stoSch[value]}))
+      setKnights(state => ({...state, schedule: kniSch[value]}))
+      setPirates(state => ({...state, schedule: pirSch[value]}))
     }
 
     // eslint-disable-next-line
@@ -116,27 +125,27 @@ function Weekends() {
         <div className='col1'>
 
           <MDBTabsContent>
-            <MDBTabsPane show={wknd === 'highland-fling'}>
+            <MDBTabsPane show={wknd ===  weekends.weekendOne.id}>
               <FrstWknd 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
               /></MDBTabsPane>
-            <MDBTabsPane show={wknd === 'pets-pirate-ale'}>
+            <MDBTabsPane show={wknd === weekends.weekendTwo.id}>
               <ScndWknd 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
                 /></MDBTabsPane>
-            <MDBTabsPane show={wknd === 'shamrocks-shenanigans'}>
+            <MDBTabsPane show={wknd === weekends.weekendThree.id}>
               <ThrdWknd 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
                 /></MDBTabsPane>
-            <MDBTabsPane show={wknd === 'viking-invasion'}>
+            <MDBTabsPane show={wknd === weekends.weekendFour.id}>
               <FrthWknd 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
                 /></MDBTabsPane>
-            <MDBTabsPane show={wknd === 'oktoberfest'}>
+            <MDBTabsPane show={wknd === weekends.weekendFive.id}>
               <FfthWknd 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
                 /></MDBTabsPane>
-            <MDBTabsPane show={wknd === 'festive-shopping-day'}>
+            <MDBTabsPane show={wknd === weekends.shoppingDay.id}>
               <ShopDay 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
                 /></MDBTabsPane>
@@ -224,7 +233,7 @@ function FrstWknd(props) {
     <>
       <div className="weekends" >
       <div className='wknds'>
-      <h1><b>Highland Fling</b></h1>
+      <h1><b>{weekends.weekendOne.name}</b></h1>
       <h3>{dateObject.wkndList[0]}</h3>
         <span>The Highland Fling weekend will have you cheering for your favorite athlete in our Celtic Games. 
           Come join on the fun as you experience our Scottish weekend, full of contests, vendors, and the annual Highland Games. Be sure to check out our <Link to='events-contests-promotions'>Daily Royal Events</Link>, there's something fun for everyone.</span>
@@ -321,7 +330,7 @@ function ScndWknd(props) {
     <>
       <div className="weekends" >
       <div className='wknds'>
-      <h1><b>Pets, Pirates &#38; Ale</b></h1>
+      <h1><b>{weekends.weekendTwo.name}</b></h1>
       <h3>{dateObject.wkndList[1]}</h3>
       <p>
         Bring your dog and pirate pals for our Pets, Pirates &#38; Ale weekend! This weekend will showcase 
@@ -431,7 +440,7 @@ function ThrdWknd(props) {
     <>
     <div className="weekends" >
       <div className='wknds'>
-      <h1><b>Shamrocks, Shenanigans &#38; Sweet Romance</b></h1>
+      <h1><b>{weekends.weekendThree.name}</b></h1>
       <h3>{dateObject.wkndList[0]}</h3> 
 
       <p>Transport to Ireland by visiting us this weekend! You will find local Irish vendors and fun for all ages. 
@@ -535,8 +544,6 @@ function FrthWknd(props) {
     {name: 'Wife Carry', time: '3:30'},
   ]
 
-
-
   if (normandyContests[0].name === '' && joustContests[0].name === '') {
     setState(false)
   }
@@ -544,7 +551,7 @@ function FrthWknd(props) {
     <>
       <div className="weekends" >
       <div className='wknds'>
-      <h1><b>Viking Invasion and Cosplay in the Kingdom</b></h1>
+      <h1><b>{weekends.weekendFour.name}</b></h1>
       <h3>{dateObject.wkndList[3]}</h3>
       <p>Dress up as your favorite Wizard, Witch, Game of Thrones Character, Doctor Who Character, Video Game Character, or any other costume you'd like!
         Participate in our Costume Contests, happening throughout the day and try your hand in our duel of fates Light Saber Contest!
@@ -618,7 +625,6 @@ function FfthWknd(props) {
   const stageSchedules = props.schedules
   const [state, setState] = useState(true)
 
-
   const normandyContests = [
     {name: 'Beard Contest', time: '10:30'},
     {name: 'Stein Holding ', time: '10:45'},
@@ -634,18 +640,15 @@ function FfthWknd(props) {
     {name: 'Tug of War', time: '1:00'},
   ]
 
-
-
   if (normandyContests[0].name === '' && joustContests[0].name === '') {
     setState(false)
   }
   
-
   return (
     <>
       <div className="weekends" >
       <div className='wknds'>
-      <h1><b>Oktoberfest and Other Wonders of the World</b></h1>
+      <h1><b>{weekends.weekendFive.name}</b></h1>
       <h3>{dateObject.wkndList[4]}</h3>
       <p>Join us for one of our most popular themed weekends: <b>Oktoberfest</b>!
       Participate in our Belching contest, Beer Pong contest, Cornhole tournament, Rootbeer Chugging contest, 
@@ -740,7 +743,7 @@ function ShopDay(props) {
     <>
       <div className="weekends" >
       <div className='wknds'>
-        <h1><b>Festive Shopping Day</b></h1>
+        <h1><b>{weekends.shoppingDay.name}</b></h1>
         <h3>{dateObject.shopDay}</h3>
       <p>Festive shopping day at a discounted price of $15, your ticket will grant you admission to the festival,
          a drink &#38; a swag bag full of great discounts from Festival Artisans!
