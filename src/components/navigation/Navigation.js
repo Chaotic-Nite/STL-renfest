@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import BurgerNav from "./BurgerNav";
 import abstractNav from '../../images/blue-abstract-nav.png'
-import {weekends} from '../../lists/themed-schedules'
+import {vendTabs, weekends} from '../../lists/themed-schedules'
 
 // Open state and autoclose Dropdown ndeufemia
 function Navigation() {
@@ -67,6 +67,7 @@ function Navigation() {
               <Link className="small-tab" id="entertain" to="/entertainment-vendor">
                 Entertainers &#38; Vendors
               </Link>
+              <EntertainerVendorsDropdown />
             </li>
             <li>
               <Link className="small-tab drop" to="/cast">
@@ -197,6 +198,26 @@ function WeekendDropdown() {
   );
 }
 
+function EntertainerVendorsDropdown() {
+  return (
+    <ul className="nav__submenu" style={{backgroundImage: `url(${abstractNav})`}}>
+      {vendTabs.map((item) => {
+        return (
+          <li>
+            <HashLink
+             className="nav__submenu-item"
+             smooth='true' 
+             to={"/entertainment-vendor#" + item.id}
+             >
+              {item.name}
+            </HashLink>
+          </li>
+        )})}
+  </ul>
+  )
+}
+
+
 function InvolvmentDropdown() {
   return (
     <ul className="nav__submenu" style={{backgroundImage: `url(${abstractNav})`}}>
@@ -222,6 +243,8 @@ function InvolvmentDropdown() {
     </ul>
   );
 }
+
+
 
 function AboutUsDropdown() {
   return (

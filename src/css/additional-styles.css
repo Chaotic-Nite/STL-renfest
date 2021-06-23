@@ -86,6 +86,12 @@
     align-items: stretch;
   }
   
+  .vend {
+    display: flex;
+    
+    width: 25%;
+  }
+
   .contest {
     margin: 0 2%;
   }

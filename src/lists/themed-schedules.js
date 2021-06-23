@@ -7,6 +7,15 @@ export const weekends = {
     'shoppingDay': {id: 'festive-shopping-day', name: 'Festive Shopping Day', short: 'Festive Shopping Day'}
 }
 
+export const vendTabs = [
+    {id:'artisans-marketplace', name:'Artisan Marketplace'}, 
+    {id:'faire-food', name:'Faire Food'},
+    {id:'faire-games', name:'Faire Games'},
+    {id:'musical-acts', name:'Musical Acts'}, 
+    {id:'specialty-groups', name:'Specialty Groups/Guilds'},
+    {id:'street-acts', name:'Street Acts'},
+  ]
+
 var pavilionSch = {} 
 var stlouisSch = {} 
 var owainSch = {} 

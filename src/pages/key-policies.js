@@ -36,7 +36,7 @@ function FrstPolicy() {
     <>
       <MDBCard>
         <MDBCardBody className='policy-set'>
-          <MDBCardTitle >Alcohol</MDBCardTitle>
+          <MDBCardTitle>Alcohol</MDBCardTitle>
           <MDBCardText>
           Alcohol service will only be provided to guests 21 or older who show a valid, government-issued photo ID. 
           The St. Louis Renaissance Festival reserves the right to refuse service to any individual who appears to be impaired or intoxicated. No outside alcoholic beverages are allowed.
