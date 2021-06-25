@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import BurgerNav from "./BurgerNav";
 import abstractNav from '../../images/blue-abstract-nav.png'
+import {vendTabs, weekends} from '../../lists/themed-schedules'
 
 // Open state and autoclose Dropdown ndeufemia
 function Navigation() {
@@ -66,6 +67,7 @@ function Navigation() {
               <Link className="small-tab" id="entertain" to="/entertainment-vendor">
                 Entertainers &#38; Vendors
               </Link>
+              <EntertainerVendorsDropdown />
             </li>
             <li>
               <Link className="small-tab drop" to="/cast">
@@ -89,6 +91,7 @@ function Navigation() {
               <Link className="small-tab" to="/about-us">
                 About us
               </Link>
+              <AboutUsDropdown />
             </li>
           </ul>
         </nav>
@@ -141,59 +144,79 @@ function WeekendDropdown() {
         <HashLink
           className="nav__submenu-item"
           smooth='true'
-          to="/weekends#highland-fling"
+          to={"/weekends#" + weekends.weekendOne.id}
         >
-          Highland Fling
+          {weekends.weekendOne.name}
         </HashLink>
       </li>
       <li>
         <HashLink
           className="nav__submenu-item"
           smooth='true'
-          to="/weekends#pets-pirate-ale"
+          to={"/weekends#" + weekends.weekendTwo.id}
         >
-          Pets, Pirates &#38; Ale
+          {weekends.weekendTwo.name}
         </HashLink>
       </li>
       <li>
         <HashLink
           className="nav__submenu-item"
           smooth='true'
-          to="/weekends#shamrocks-shenanigans"
+          to={"/weekends#" + weekends.weekendThree.id}
         >
-          Shamrocks, Shenanigans &#38; Sweet Romance
+          {weekends.weekendThree.name}
         </HashLink>
       </li>
       <li>
         <HashLink
           className="nav__submenu-item"
           smooth='true'
-          to="/weekends#viking-invasion"
+          to={"/weekends#" + weekends.weekendFour.id}
         >
-          Viking Invasion and Cosplay in the Kingdom
+          {weekends.weekendFour.name}
         </HashLink>
       </li>
       <li>
         <HashLink
           className="nav__submenu-item"
           smooth='true'
-          to="/weekends#oktoberfest"
+          to={"/weekends#" + weekends.weekendFive.id}
         >
-          Oktoberfest and Other Wonders of the World
+          {weekends.weekendFive.name}
         </HashLink>
       </li>
       <li>
         <HashLink
           className="nav__submenu-item"
           smooth='true'
-          to="/weekends#festive-shopping-day"
+          to={"/weekends#" + weekends.shoppingDay.id}
         >
-          Festive Shopping Day
+          {weekends.shoppingDay.name}
         </HashLink>
       </li>
     </ul>
   );
 }
+
+function EntertainerVendorsDropdown() {
+  return (
+    <ul className="nav__submenu" style={{backgroundImage: `url(${abstractNav})`}}>
+      {vendTabs.map((item) => {
+        return (
+          <li>
+            <HashLink
+             className="nav__submenu-item"
+             smooth='true' 
+             to={"/entertainment-vendor#" + item.id}
+             >
+              {item.name}
+            </HashLink>
+          </li>
+        )})}
+  </ul>
+  )
+}
+
 
 function InvolvmentDropdown() {
   return (
@@ -219,6 +242,20 @@ function InvolvmentDropdown() {
       </li>
     </ul>
   );
+}
+
+
+
+function AboutUsDropdown() {
+  return (
+    <ul className="nav__submenu" style={{backgroundImage: `url(${abstractNav})`}}>
+      <li>
+        <Link className="nav__submenu-item" smooth='true' to="/key-policies">
+          Key Policies
+        </Link>
+      </li>
+    </ul>
+  )
 }
 
 export default Navigation;

@@ -32,7 +32,6 @@ import krista_strahm from '../images/cast/krista-strahm.jpg'
 import kristen_haynes from '../images/cast/kristen-haynes.jpg'
 import lanya_da_silva from '../images/cast/lanya-da-silva.jpg'
 import noel_kling from '../images/cast/noel-kling.jpg'
-import sheana_godwin from '../images/cast/sheana-godwin.jpg'
 import susanna_ennenbach from '../images/cast/susanna-ennenbach.jpg'
 import ted_jander from '../images/cast/ted-jander.jpg'
 import trenton_brookesher from '../images/cast/trenton-brookesher.jpg'
@@ -107,12 +106,6 @@ const castList = {
       image: jason_smallen,
     },
     {
-      realName: "Sheana Godwin",
-      role: "",
-      position: "Duchess",
-      image: sheana_godwin,
-    },
-    {
       realName: "Kristen Haynes",
       role: "Anne Boleyn",
       position: "Lady in Waiting",
@@ -157,15 +150,15 @@ const castList = {
     "The fighters are the ones who intent to put on a show in the lanes with some form of weaponry.",
     {
       realName: "Dan Blinn",
-      role: "Reynold",
-      position: "Hired Mercenary",
+      role: "???",
+      position: "???",
       image: dann_blinn,
       leadership: "Fight Director",
     },
     {
       realName: "Noel Kling",
-      role: "Griffin Morecotte",
-      position: "Kingsman",
+      role: "???",
+      position: "???",
       image: noel_kling,
     },
   ],
@@ -301,7 +294,7 @@ function Cast() {
         })}
       </div>
       <Link className="warriorLink" to="/warriors-island">
-        Our Brave Warriors
+        Our Fallen Warriors
       </Link>
     </>
   );

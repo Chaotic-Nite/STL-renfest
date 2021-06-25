@@ -6,8 +6,17 @@
     border-radius: 25%;
     border: 3% solid white;
   }
+  
+  .intro-container h1 {
+    font-size: calc(1rem*4.8);
+  }
 }
 
+@media screen and (min-width: 767px) {
+  .intro-container h1 {
+    font-size: calc(1rem*6.5);
+  }
+}
 /* Introduction Text */
 
 .intro-container {
@@ -23,7 +32,6 @@
 
 .intro-container h1 {
   font-family: "Tangerine", cursive;
-  font-size: 7rem;
 }
 
 .intro-container h3 {

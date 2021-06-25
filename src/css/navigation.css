@@ -86,8 +86,7 @@ nav > ul {
   visibility: hidden;
   position: absolute;
   width: auto !important;
-  min-width: 5rem;
-  margin-top: calc(2em * 1.5) !important;
+  margin-top: calc(2em * 1.7) !important;
   padding-left: 0 !important;
   background: url("../images/blue-abstract-nav.png");
   background-size: auto;
@@ -96,6 +95,9 @@ nav > ul {
   list-style: none;
   text-transform: none;
   transition: all 0.5s ease;
+  text-align: left;
+  font-size: 18px;
+  border-radius: 0 0 3.5% 3.5%;
 }
 
 .nav__submenu-item :hover {

@@ -8,8 +8,17 @@ function BurgerNav() {
       <Link className="small-tab" to="/directions">
         Directions
       </Link>
+      <Link className="small-tab" to="/find-hotels">
+        Finding a Hotel
+      </Link>
       <Link className="menu-item" to="/tickets">
         Tickets
+      </Link>
+      <Link className="small-tab" to="/bring-your-dog">
+        Bring Your Dog
+      </Link>
+      <Link className="small-tab" to="/events-contests-promotions">
+        Daily Events, Contests & Promotions
       </Link>
       <Link className="small-tab" to="/weddings">
         Weddings
@@ -34,6 +43,9 @@ function BurgerNav() {
       </Link>
       <Link className="small-tab" to="/contact-us">
         Contact us
+      </Link>
+      <Link className="small-tab" to="/key-policies">
+        Key Policies
       </Link>
       <Link className="small-tab" to="/faq">
         FAQ

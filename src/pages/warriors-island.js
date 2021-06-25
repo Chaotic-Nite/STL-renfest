@@ -1,5 +1,5 @@
 import React from "react";
-import { warriors } from "../lists/castList.js";
+import { warriors } from "../lists/warriorList.js";
 import IslandSign from "../images/warrior-island-sign.jpg";
 import FlippedDivider from "../images/fancy-divider-flipped.png";
 import Divider from "../images/fancy-divider.png";

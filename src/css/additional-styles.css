@@ -7,6 +7,10 @@
     font-weight: bold;
   }
 
+  .vend .table {
+    margin: 6px;
+  }
+
   #weekend .nav-link {
     width: calc(2rem * 9);
     height: calc(2rem * 1.7);
@@ -86,6 +90,15 @@
     align-items: stretch;
   }
   
+  .vend {
+    width: 100%;
+  }
+
+  .vend .table {
+    margin: 2%;
+    width: calc(2rem * 8);
+  }
+
   .contest {
     margin: 0 2%;
   }
@@ -160,6 +173,51 @@
   
 }
 
+.vend {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  border: 2px solid #7f46ea;
+}
+
+.vend thead,.vend tbody, .vend tr, .vend th, .vend td { display: block; }
+
+.vend thead tr {
+  width: 97%;
+  width: -webkit-calc(100% - 16px);
+  width:    -moz-calc(100% - 16px);
+  width:         calc(100% - 16px);
+}
+
+.vend tr:after { 
+  content: ' ';
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+.vend tbody {
+  height: calc(2rem * 8);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+#key-policies .card-body h5{
+  font-size: calc(1rem*2.5);
+}
+
+#key-policies .card {
+  margin-bottom: 2%;
+}
+
+#key-policies .card:last-child {
+  margin-bottom: 0;
+}
 
 #hotel {
   border: 8.5px double gold;
@@ -481,4 +539,10 @@
 
 .rp-stage, .stl-stage, .o-stage, .f-stage, .joa-stage, .mp-stage, .st-stage, .kp-stage, .p-stage, .joust {
   margin: 2%;
+}
+
+.vendors {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
