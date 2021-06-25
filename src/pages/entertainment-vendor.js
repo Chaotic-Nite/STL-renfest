@@ -72,11 +72,11 @@ function EntertainmentVendor() {
 
           <MDBTabsContent>
             <MDBTabsPane show={vend ===  vendTabs[0].id}><Artisan /></MDBTabsPane>
-            <MDBTabsPane show={vend === vendTabs[1].id}></MDBTabsPane>
-            <MDBTabsPane show={vend === vendTabs[2].id}></MDBTabsPane>
-            <MDBTabsPane show={vend === vendTabs[3].id}></MDBTabsPane>
-            <MDBTabsPane show={vend === vendTabs[4].id}></MDBTabsPane>
-            <MDBTabsPane show={vend === vendTabs[5].id}></MDBTabsPane>
+            <MDBTabsPane show={vend === vendTabs[1].id}><Food /></MDBTabsPane>
+            <MDBTabsPane show={vend === vendTabs[2].id}><Games /></MDBTabsPane>
+            <MDBTabsPane show={vend === vendTabs[3].id}><Musical /></MDBTabsPane>
+            <MDBTabsPane show={vend === vendTabs[4].id}><Specialty /></MDBTabsPane>
+            <MDBTabsPane show={vend === vendTabs[5].id}><Streets /></MDBTabsPane>
           </MDBTabsContent>
         </div>
         <div className='col2 weekends-colend'>
@@ -196,7 +196,14 @@ function Artisan() {
 function Food() {
   return (
     <>
-      <h2>Hi</h2>
+      <div className='weekends'>
+          <div className='vendors'>
+            <h1><b>{vendTabs[1].name}</b></h1>
+            <p><i>Be sure to check out our vendors as you walk through the realm!</i></p>
+            <div className='vend'>
+            </div>
+          </div>
+      </div>
     </>
   )
 }
@@ -204,7 +211,14 @@ function Food() {
 function Games() {
   return (
     <>
-      <h2>Hi</h2>
+      <div className='weekends'>
+          <div className='vendors'>
+            <h1><b>{vendTabs[2].name}</b></h1>
+            <p><i>Be sure to check out our vendors as you walk through the realm!</i></p>
+            <div className='vend'>
+            </div>
+          </div>
+      </div>
     </>
   )
 }
@@ -212,7 +226,14 @@ function Games() {
 function Musical() {
   return (
     <>
-      <h2>Hi</h2>
+      <div className='weekends'>
+          <div className='vendors'>
+            <h1><b>{vendTabs[3].name}</b></h1>
+            <p><i>Be sure to check out our vendors as you walk through the realm!</i></p>
+            <div className='vend'>
+            </div>
+          </div>
+      </div>
     </>
   )
 }
@@ -220,7 +241,14 @@ function Musical() {
 function Specialty() {
   return (
     <>
-      <h2>Hi</h2>
+      <div className='weekends'>
+          <div className='vendors'>
+            <h1><b>{vendTabs[4].name}</b></h1>
+            <p><i>Be sure to check out our vendors as you walk through the realm!</i></p>
+            <div className='vend'>
+            </div>
+          </div>
+      </div>
     </>
   )
 }
@@ -228,7 +256,14 @@ function Specialty() {
 function Streets() {
   return (
     <>
-      <h2>Hi</h2>
+      <div className='weekends'>
+          <div className='vendors'>
+            <h1><b>{vendTabs[5].name}</b></h1>
+            <p><i>Be sure to check out our vendors as you walk through the realm!</i></p>
+            <div className='vend'>
+            </div>
+          </div>
+      </div>
     </>
   )
 }
