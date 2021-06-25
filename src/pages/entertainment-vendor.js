@@ -145,34 +145,34 @@ function Artisan() {
   ]
 
   const artisanArray = [
-    {name: 'Weapons', list: weaponArray},
-    {name: 'Apparel', list: apparelArray},
-    {name: 'Henna', list: hennaArray},
-    {name: 'Leather', list: leatherArray},
-    {name: 'Jewelry', list: jewelryArray},
-    {name: 'Food', list: foodArray},
-    {name: 'Readers', list: readerArray},
-    {name: 'Drykware', list: drynkwareArray},
-    {name: 'Miscellaneous', list: miscArray}
+    {name: 'Weapons', list: weaponArray, key:'vendor-item'},
+    {name: 'Apparel', list: apparelArray, key:'vendor-item'},
+    {name: 'Henna', list: hennaArray, key:'vendor-item'},
+    {name: 'Leather', list: leatherArray, key:'vendor-item'},
+    {name: 'Jewelry', list: jewelryArray, key:'vendor-item'},
+    {name: 'Food', list: foodArray, key:'vendor-item'},
+    {name: 'Readers', list: readerArray, key:'vendor-item'},
+    {name: 'Drykware', list: drynkwareArray, key:'vendor-item'},
+    {name: 'Miscellaneous', list: miscArray, key:'vendor-item'}
   ]
 
   return (
     <>
       <div className='weekends'>
-        <div className='wknds'>
+        <div className='vendors'>
           <h1><b>{vendTabs[0].name}</b></h1>
           <p><i>Be sure to check out our vendors as you walk through the realm!</i></p>
           <div className='vend'>
 
           {artisanArray.map((vendor) => {
             return (
-              <MDBTable striped hover >
+              <MDBTable striped hover className={vendor.key}>
                 <MDBTableHead>
                   <tr>
                     <th ><b>{vendor.name}</b></th>
                   </tr>
                 </MDBTableHead>
-                <MDBTableBody>
+                <MDBTableBody >
                 {vendor.list.map((item) => {
                   return (
                     <>
