@@ -51,6 +51,8 @@ function Weekends() {
   const [pirates, setPirates] = useState({class_name: 'p-stage', title: 'Pirate Ship', schedule: pirSch[initialState]})
   
   const [wknd, setWknd] = useState(initialState)
+
+
   const handleTabClick = (value) => {
     if (value === wknd) {
       return;
@@ -66,6 +68,13 @@ function Weekends() {
     setKnights(state => ({...state, schedule: kniSch[value]}))
     setPirates(state => ({...state, schedule: pirSch[value]}))
   };
+
+  const filterName = (value) => {
+    if (wknd === value.id) {
+      return value.title
+    }
+  }
+
   const tabObject = [
     {id: weekends.weekendOne.id, title: weekends.weekendOne.short},
     {id: weekends.weekendTwo.id, title: weekends.weekendTwo.short},
@@ -156,7 +165,7 @@ function Weekends() {
               <>
           <div id='weekend'>
               <MDBDropdown>
-                <MDBDropdownToggle>{wknd}</MDBDropdownToggle>
+                <MDBDropdownToggle>{tabObject.map(filterName)}</MDBDropdownToggle>
                 <MDBDropdownMenu>
                   {tabObject.map((item) => {
                     if (item.id === wknd){
