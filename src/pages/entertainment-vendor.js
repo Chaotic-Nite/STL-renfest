@@ -194,6 +194,120 @@ function Artisan() {
 }
 
 function Food() {
+  const neptuneList = [
+    'Fish N Chips', 
+    'Just Chips', 
+    'Loaded Chips', 
+    'Chicken Strips',
+    'Loaded Tater Tots',
+    'Onion Rings',
+    'Foot Long',
+    'Corn Dog'
+]
+
+  const dragonsBreathList = [
+    'Italian Sausage',
+    'Bratwurst',
+    'Hotdog',
+    'Ruben Dog',
+    'Sausage on a Stick',
+    'Hamburger',
+    'Cheeseburger',
+    'Bacon Cheeseburger',
+    'Bean Dog',
+    'Veggie Burger',
+    'Mac & Cheese Dog',
+    'Potato Salad',
+    'Coleslaw',
+    'Bacon Wrapped Dog',
+  ]
+
+  const knightsWrapList = [
+    'Chicken Caesar Wrap',
+    'Southwest Chicken Wrap',
+    'Buffalo Chicken Wrap',
+    'BLT Wrap'
+  ]
+
+  const knightStickList = [
+    'Chicken on a Stick',
+    'Steak on a Stick',
+    'Chicken Sandwich',
+    'Chicken Teriyaki on a Stick',
+    'Pig on a Stick (Pork Steaks & Bacon)'
+  ]
+
+  const badgerList = [
+    'Pulled Pork',
+    'Pork Steak & Bacon Stick',
+    'Hamburger',
+    'Cheeseburger',
+    'Bacon Cheeseburger',
+    'Pork Steak Sandwich',
+    'Veggie Burger',
+    'Potato Salad',
+    'Coleslaw'
+  ]
+
+  const queensList = [
+    'Chicken Quesadilla',
+    'Cheese Quesadilla',
+    'Broccoli Cheddar Bread Bowl',
+    'Mac & Cheese Bread Bowl',
+    'Loaded Potato Bread Bowl',
+    'Chicken Pot Pie Bread Bowl'
+  ]
+
+  const kingsFeast = [
+    'Turkey Leg',
+    'Roasted Corn'
+  ]
+
+  const captainsList = [
+    'Funnel Cake',
+    'Fried Oreos',
+    'Fried Strawberry',
+    'Fried Poptarts',
+    'Fried Pickles',
+    'Fried Twinkies',
+    'Jalapeno Poppers',
+    'Fried Mac & Cheese'
+  ]
+
+  const princessList = [
+    'Apple Cider Float',
+    'Root Beer Float',
+    'Chocolate Ice Cream',
+    'Vanilla Ice Cream',
+    'Strawberry Ice Cream',
+    'Cookie Dough',
+    'Caramel Blast',
+    'Cookie Unicorn Droppings',
+    'Unicorn Cake',
+    'Unicorn Feed',
+  ]
+
+  const foodArray = [
+    {name: 'Neptune\'s', list: neptuneList, key:'vendor-item'},
+    {name: 'Dragon\'s Breath', list: dragonsBreathList, key:'vendor-item'},
+    {name: 'Knights Wraps', list: knightsWrapList, key:'vendor-item'},
+    {name: 'Knights on a Stick', list: knightStickList, key:'vendor-item'},
+    {name: 'Badger BBQ', list: badgerList, key:'vendor-item'},
+    {name: 'Queen\'s Delight', list: queensList, key:'vendor-item'},
+    {name: 'King\'s Feast', list: kingsFeast, key:'vendor-item'},
+    {name: 'Captain\'s Cakes & Cannonballs', list: captainsList, key:'vendor-item'},
+    {name: 'Princess Sweets', list: princessList, key:'vendor-item'},
+    {name: 'Neptune\'s', list: null, key:'vendor-item'},
+    {name: 'Neptune\'s', list: null, key:'vendor-item'},
+    {name: 'Neptune\'s', list: null, key:'vendor-item'},
+    {name: 'Neptune\'s', list: null, key:'vendor-item'},
+    {name: 'Neptune\'s', list: null, key:'vendor-item'},
+    {name: 'Neptune\'s', list: null, key:'vendor-item'},
+    {name: 'Neptune\'s', list: null, key:'vendor-item'},
+    {name: 'Neptune\'s', list: null, key:'vendor-item'},
+    {name: 'Neptune\'s', list: null, key:'vendor-item'},
+    {name: 'Neptune\'s', list: null, key:'vendor-item'},
+  ]
   return (
     <>
       <div className='weekends'>
