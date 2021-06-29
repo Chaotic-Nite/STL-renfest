@@ -207,6 +207,7 @@ function EntertainerVendorsDropdown() {
              className="nav__submenu-item"
              smooth='true' 
              to={"/entertainment-vendor#" + item.id}
+             key={item.id}
              >
               {item.name}
             </HashLink>
