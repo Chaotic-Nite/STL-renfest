@@ -98,7 +98,7 @@ function EntertainmentVendor() {
                     else {
 
                       return (
-                        <MDBDropdownItem>
+                        <MDBDropdownItem key={item.name}>
                           <MDBDropdownLink onClick={() => handleTabClick(item.id, item.name)} active={vend === item.id}>
                             {item.name}
                           </MDBDropdownLink>
@@ -116,7 +116,7 @@ function EntertainmentVendor() {
               <MDBTabs pills justify className='mb-3'>
                 {vendTabs.map((item) => {
                   return (
-                    <MDBTabsItem>
+                    <MDBTabsItem key={item.name}>
                       <MDBTabsLink onClick={() => handleTabClick(item.id, item.name)} active={vend === item.id}>
                         {item.name}
                       </MDBTabsLink>
