@@ -39,7 +39,6 @@ function Navigation() {
 
   return (
     <>
-      {/*Navigation Bar with Dropdown Quick Links */}
       {isMobile ? (
         <BurgerNav />
       ) : (
@@ -58,13 +57,13 @@ function Navigation() {
               </Link>
             </li>
             <li>
-              <Link id="weekends" className="small-tab" to="/weekends">
+              <Link id="weekends" className="small-tab drop" to="/weekends">
                 Themed Weekends
               </Link>
               <WeekendDropdown />
             </li>
             <li>
-              <Link className="small-tab" id="entertain" to="/entertainment-vendor">
+              <Link className="small-tab drop" id="entertain" to="/entertainment-vendor">
                 Entertainers &#38; Vendors
               </Link>
               <EntertainerVendorsDropdown />
@@ -88,7 +87,7 @@ function Navigation() {
               <InvolvmentDropdown />
             </li>
             <li>
-              <Link className="small-tab" to="/about-us">
+              <Link className="small-tab drop" to="/about-us">
                 About us
               </Link>
               <AboutUsDropdown />

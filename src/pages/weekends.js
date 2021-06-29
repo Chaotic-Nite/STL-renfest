@@ -174,7 +174,7 @@ function Weekends() {
                     else {
 
                       return (
-                        <MDBDropdownItem>
+                        <MDBDropdownItem key={item.id}>
                         <MDBDropdownLink onClick={() => handleTabClick(item.id)} active={wknd === item.id}>
                           {item.title}
                         </MDBDropdownLink>
@@ -192,7 +192,7 @@ function Weekends() {
               <MDBTabs pills justify className='mb-3'>
                 {tabObject.map((item) => {
                   return (
-                    <MDBTabsItem>
+                    <MDBTabsItem key={item.id}>
                       <MDBTabsLink onClick={() => handleTabClick(item.id)} active={wknd === item.id}>
                         {item.title}
                       </MDBTabsLink>
@@ -263,7 +263,7 @@ function FrstWknd(props) {
         {normandyContests.map((item) => {
           return (
               <>
-                <tr>
+                <tr key={item.name}>
                   <th scope='row'>{item.time}</th>
                   <td>{item.name}</td>
                 </tr>
@@ -283,7 +283,7 @@ function FrstWknd(props) {
         {joustContests.map((item) => {
           return (
               <>
-                <tr>
+                <tr key={item.name}>
                   <th scope='row'>{item.time}</th>
                   <td>{item.name}</td>
                 </tr>
@@ -302,7 +302,7 @@ function FrstWknd(props) {
         <JoustSchedule />
         {stageSchedules.map((item) => {
           return (
-          <ScheduleTable schedule={item.schedule} class_name={item.class_name} title={item.title} />
+          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
         )})}
       </div>
       </div>
@@ -359,7 +359,7 @@ function ScndWknd(props) {
       <h3>Contests</h3>
       <div className='contests'>
       {normandyContests[0].name !== ''?
-      <MDBTable striped hover className='contest'>
+      <MDBTable striped hover className='contest' >
         <MDBTableHead>
           <tr>
             <th colSpan={2}><b>Normandy Stage</b></th>
@@ -369,7 +369,7 @@ function ScndWknd(props) {
         {normandyContests.map((item) => {
           return (
               <>
-                <tr>
+                <tr key={item.name}>
                   <th scope='row'>{item.time}</th>
                   <td>{item.name}</td>
                 </tr>
@@ -389,7 +389,7 @@ function ScndWknd(props) {
         {joustContests.map((item) => {
           return (
               <>
-                <tr>
+                <tr key={item.name}>
                   <th scope='row'>{item.time}</th>
                   <td>{item.name}</td>
                 </tr>
@@ -408,7 +408,7 @@ function ScndWknd(props) {
         <JoustSchedule />
         {stageSchedules.map((item) => {
           return (
-          <ScheduleTable schedule={item.schedule} class_name={item.class_name} title={item.title} />
+          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
         )})}
       </div>
 
@@ -489,7 +489,7 @@ function ThrdWknd(props) {
         {normandyContests.map((item) => {
           return (
               <>
-                <tr>
+                <tr key={item.name}>
                   <th scope='row'>{item.time}</th>
                   <td>{item.name}</td>
                 </tr>
@@ -509,7 +509,7 @@ function ThrdWknd(props) {
         {joustContests.map((item) => {
           return (
               <>
-                <tr>
+                <tr key={item.name}>
                   <th scope='row'>{item.time}</th>
                   <td>{item.name}</td>
                 </tr>
@@ -528,7 +528,7 @@ function ThrdWknd(props) {
         <JoustSchedule />
         {stageSchedules.map((item) => {
           return (
-          <ScheduleTable schedule={item.schedule} class_name={item.class_name} title={item.title} />
+          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
         )})}
         </div>
       </div>
@@ -584,7 +584,7 @@ function FrthWknd(props) {
         {normandyContests.map((item) => {
           return (
               <>
-                <tr>
+                <tr key={item.name}>
                   <th scope='row'>{item.time}</th>
                   <td>{item.name}</td>
                 </tr>
@@ -604,7 +604,7 @@ function FrthWknd(props) {
         {joustContests.map((item) => {
           return (
               <>
-                <tr>
+                <tr key={item.name}>
                   <th scope='row'>{item.time}</th>
                   <td>{item.name}</td>
                 </tr>
@@ -623,7 +623,7 @@ function FrthWknd(props) {
         <JoustSchedule />
         {stageSchedules.map((item) => {
           return (
-          <ScheduleTable schedule={item.schedule} class_name={item.class_name} title={item.title} />
+          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
         )})}
         </div>
       </div>
@@ -681,7 +681,7 @@ function FfthWknd(props) {
         {normandyContests.map((item) => {
           return (
               <>
-                <tr>
+                <tr key={item.name}>
                   <th scope='row'>{item.time}</th>
                   <td>{item.name}</td>
                 </tr>
@@ -701,7 +701,7 @@ function FfthWknd(props) {
         {joustContests.map((item) => {
           return (
               <>
-                <tr>
+                <tr key={item.name}>
                   <th scope='row'>{item.time}</th>
                   <td>{item.name}</td>
                 </tr>
@@ -720,7 +720,7 @@ function FfthWknd(props) {
         <JoustSchedule />
         {stageSchedules.map((item) => {
           return (
-          <ScheduleTable schedule={item.schedule} class_name={item.class_name} title={item.title} />
+          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
         )})}
       </div>
       </div>
@@ -779,7 +779,7 @@ function ShopDay(props) {
         {normandyContests.map((item) => {
           return (
               <>
-                <tr>
+                <tr key={item.name}>
                   <th scope='row'>{item.time}</th>
                   <td>{item.name}</td>
                 </tr>
@@ -799,7 +799,7 @@ function ShopDay(props) {
         {joustContests.map((item) => {
           return (
               <>
-                <tr>
+                <tr key={item.name}>
                   <th scope='row'>{item.time}</th>
                   <td>{item.name}</td>
                 </tr>
@@ -813,12 +813,12 @@ function ShopDay(props) {
       :null}
       </div>
       <br />
-            <h3 className="col2-header">Stage Schedules</h3>
+        <h3 className="col2-header">Stage Schedules</h3>
         <div className='stages'> 
         <JoustSchedule />
         {stageSchedules.map((item) => {
           return (
-          <ScheduleTable schedule={item.schedule} class_name={item.class_name} title={item.title} />
+          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
         )})}
       </div>
       </div>
