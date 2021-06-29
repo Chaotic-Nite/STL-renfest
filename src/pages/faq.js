@@ -1,5 +1,6 @@
 import React from "react";
 import {dateObject} from "../lists/UPTODATE";
+import { Link } from "react-router-dom";
 import "../css/faq.css";
 import Navigation from "../components/navigation/Navigation.js";
 import QuickLinksSetOne from "../components/quicklinks/QuickLinksSetOne";
@@ -41,7 +42,7 @@ function Faq() {
               </summary>
               <p className="faq-a">
                 <b>A</b>: We are open Saturdays and Sundays,{" "}
-                {dateObject.startDay} - {dateObject.endDay}
+                {dateObject.startDay} - {dateObject.endDay}{" "}
                 Festival hours are rain or shine from 10am – 6pm.
               </p>
             </details>
@@ -77,8 +78,8 @@ function Faq() {
                 <b>Q</b>: Can I bring my dog?
               </summary>
               <p className="faq-a">
-                <b>A</b>: Yes, the Festival is Dog Friendly! See our dog rules
-                and registration page for more info!
+                <b>A</b>: Yes, the Festival is Dog Friendly!{' '} <Link to='bring-your-dog'>See our dog rules
+                and registration page for more info!</Link>
               </p>
             </details>
             <details>
@@ -92,7 +93,7 @@ function Faq() {
                 peace-tied.
                 <br />
                 <br />
-                Longbows are allowed as long as they are not strung.
+                Longbows are allowed as long as they are not strung.{" "}
                 <u>BUT</u> arrows with tips are not allowed unless you are
                 competing in the longbow competition that day. <br />
                 <br />
@@ -198,8 +199,8 @@ function Faq() {
                 <b>Q</b>: Are two-day Festival Admission passes available?
               </summary>
               <p className="faq-a">
-                <b>A</b>: Yes, the pass must be used during the same weekend.
-                <a href="tickets.html">Follow this link to purchase.</a>
+                <b>A</b>: Yes, the pass must be used during the same weekend. 
+                {" "}<Link to="/tickets"> Follow this link to purchase.</Link>
               </p>
             </details>
             <details>
@@ -250,7 +251,7 @@ function Faq() {
                 <br />
                 <br />
                 For more information please contact the Festival Office at
-                636-639-5173 or email at: &nbsp;
+                636-639-5173 or email at:{" "}
                 <a href="mailto:info@renaissancefest.com">
                   akuchar@renaissancefest.com.
                 </a>
