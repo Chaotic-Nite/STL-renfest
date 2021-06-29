@@ -176,6 +176,7 @@
 .vend {
   display: inline-flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .table {
@@ -522,6 +523,10 @@
   display: flex;
 }
 
+.col1 {
+  width: 100%;
+}
+
 .contests {
   justify-content: space-evenly;
   margin-bottom: 2%;
@@ -545,4 +550,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.vendors .guilds .card {
+  margin: 2% ;
 }
