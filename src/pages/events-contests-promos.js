@@ -61,7 +61,7 @@ const contestsList = [
         ],
         italics: `(Fantasy Mask is only valid the “Viking Invasion and Cosplay in the Kingdom, ${dateObject.wkndList[3]}.” weekend of the Festival).`,
         downloadLink: fantasy_mask,
-    }
+    },
 ]
 
 function EventsContestsPromos() {

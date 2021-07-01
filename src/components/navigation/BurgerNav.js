@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import "../../css/navigation.css";
 
 function BurgerNav() {
+
+
   return (
-    <Menu right style={{ height: "100vh" }}>
+    <Menu right id='slider' style={{ height: "100vh" }} >
       <Link className="small-tab" to="/directions">
         Directions
       </Link>

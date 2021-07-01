@@ -129,6 +129,14 @@ nav > ul {
   opacity: 80%;
 }
 
+.bm-burger-bars:hover,
+.bm-burger-bars-hover:hover,
+.bm-cross:hover {
+  background: #928f8f;
+  border: 1px solid #32008fb6;
+  opacity: 80%;
+}
+
 /*
 Sidebar wrapper styles
 Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
