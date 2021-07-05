@@ -92,18 +92,21 @@ const castList = {
       "Princess of Portugal and Spain, ArchDuchess of Austria, Duchess of Braganza",
       image: kathleen_whalen,
       leadership: "Court Guild Lead",
+      fighter: true,
     },
     {
       realName: 'Brendan Noe',
       role: "Anne de Montomrency",
       position: '',
       image: brendan_noe,
+      fighter: true,
     },
     {
       realName: "Jason Smallen",
       role: "Sir William Carey",
       position: "",
       image: jason_smallen,
+      fighter: true,
     },
     {
       realName: "Kristen Haynes",
@@ -122,13 +125,15 @@ const castList = {
       role: "Richard",
       position: "Noble Assistant",
       image: zak_gilliland,
+      fighter: true,
     },
-
+    
     {
       realName: "Chris Siebert",
       role: "Harold",
       position: "Herald",
       image: chris_siebert,
+      fighter: true,
     },
     {
       realName: "Kathryn Smallen",
@@ -141,6 +146,7 @@ const castList = {
       role: "",
       position: "French Royal Guard",
       image: james_boswell,
+      fighter: true,
     },
   ],
   Fae: [
@@ -154,12 +160,14 @@ const castList = {
       position: "???",
       image: dann_blinn,
       leadership: "Fight Director",
+      fighter: true,
     },
     {
       realName: "Noel Kling",
       role: "???",
       position: "???",
       image: noel_kling,
+      fighter: true,
     },
   ],
   Traveler: [
@@ -181,6 +189,7 @@ const castList = {
       role: "Volyana",
       position: "Entertainer",
       image: catherine_kuehner,
+      fighter: true,
     },
     {
       realName: "Grace Mays",

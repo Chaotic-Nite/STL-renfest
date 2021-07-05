@@ -21,7 +21,7 @@
 
 .intro-container {
   padding: 2% 7px;
-  border-top: var(--borderDesign);
+  padding-top: 0;
   border-bottom: var(--borderDesign);
 }
 

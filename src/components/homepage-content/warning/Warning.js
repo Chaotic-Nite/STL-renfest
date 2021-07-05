@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   CollapsibleComponent,
   CollapsibleHead,
@@ -8,8 +9,11 @@ import {dateObject} from "../../../lists/UPTODATE.js";
 import additionalInformation from '../../../pdf-files/2020-STL-Covid-plan.pdf'
 
 function WarningSign() {
+  const [state, ] = useState(true)
+
   return (
     <>
+      {state ?
       <div id="attention-div">
         <CollapsibleComponent>
           <CollapsibleHead>Covid-19 Warning</CollapsibleHead>
@@ -71,7 +75,7 @@ function WarningSign() {
             </p>
           </CollapsibleContent>
         </CollapsibleComponent>
-      </div>
+      </div> : null}
     </>
   );
 }
