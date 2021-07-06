@@ -7,6 +7,7 @@ import {
   MDBCardImage,
   MDBRow,
   MDBCol,
+  MDBCardFooter
 } from "mdb-react-ui-kit";
 import Navigation from "../components/navigation/Navigation.js";
 
@@ -279,24 +280,29 @@ function Cast() {
                       </MDBCol>
                       <MDBCol md="8">
                         <MDBCardBody>
-                        <MDBCardTitle className="cast-name">
-                        {item.realName}{" "}
-                        {item.leadership ? (
-                          <p className="guild-lead">
+                          <MDBCardTitle className="cast-name">
+                            {item.realName}{" "}
+                            {item.leadership ? (
+                              <p className="guild-lead">
                                 **{item.leadership}**
                                 </p>
                                 ) : null}
-                                </MDBCardTitle>
-                                <MDBCardText className="cast-role">
+                          </MDBCardTitle>
+                          <MDBCardText className="cast-role">
                                 {item.role}
                           </MDBCardText>
                           <MDBCardText className="cast-position">
                             {item.position}
-                            </MDBCardText>
-                            </MDBCardBody>
+                          </MDBCardText>
+                        </MDBCardBody>
+                        {item.fighter ? (
+                          <MDBCardFooter className='text-muted'>
+                            <p><i>Fighter</i></p>
+                          </MDBCardFooter>
+                        ) : null}
                       </MDBCol>
-                      </MDBRow>
-                      </MDBCard>));
+                    </MDBRow>
+                  </MDBCard>));
               })}
             </details>
           );
