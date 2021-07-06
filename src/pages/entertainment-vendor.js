@@ -435,9 +435,21 @@ function Games() {
     'Royal Maze'
   ]
 
+  const scavengerList = [
+    '1. Selfie with a Bartender',
+    '2. Selfie with a Washing Well Wench',
+    '3. Selfie of you attending the joust',
+    '4. Any participants of a contest',
+    '5. Iron Throne at the Tavern',
+    '6. Selfie with the Giant Rocking Horse',
+    '7. Fairy Mural by the Front Gate'
+  ]
+
   const gamesArray = [
     {name: 'Get Active', list: activeList, descriptor: 'Stop by and participate in our thriving games. Prices and locations vary.', key: 'vendor-item'},
-    {name: 'Get Active', list: activitiesList, descriptor: 'Seek out these features that make our festival magical.', key: 'vendor-item'}
+    {name: 'Fun Activities', list: activitiesList, descriptor: 'Seek out these features that make our festival magical.', key: 'vendor-item'},
+    {name: 'Scavenger Hunt', list: scavengerList, descriptor: 'Find the 8 photo ops around the festival grounds (listed below). Post the photos on social media and use #stlrenfest. Visit the info booth to receive a FREE 2021 Festival ticket!', key: 'vendor-item'}
+
   ]
   return (
     <>
@@ -546,7 +558,10 @@ function Specialty() {
   `
 
   const ROYAL_COURT_SCRIPT = `
-  Royal Court Script To Be Determined
+  You are requested to join King Francois of France, King Henry VIII of England, and their Royal Families, as a member of one of their Noble Courts or Households, while together they visit the Grand Festival in Petite Lyon. 
+  The Court Guild plays host to the glitterati, the most highborn and well-dressed characters to be found in all the land, and the critical people required to keep them gleaming! 
+  As a Guild, they are focused on performance, as their presence is always in the public eye, be it during the opening ceremony, live jousts throughout the day, at the grand spectacle of our midday banquet, or sending our visitors off after a day well spent. 
+  Come join us in Court, where you will make unforgettable memories and everlasting friendships!
   `
 
   const guildArray = [

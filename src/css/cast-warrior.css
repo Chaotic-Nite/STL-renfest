@@ -42,6 +42,10 @@
   
 }
 
+.card-footer {
+  padding: 0
+}
+
 .warrior-text {
   margin-top: 0;
 }

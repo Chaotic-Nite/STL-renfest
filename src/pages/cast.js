@@ -7,6 +7,7 @@ import {
   MDBCardImage,
   MDBRow,
   MDBCol,
+  MDBCardFooter
 } from "mdb-react-ui-kit";
 import Navigation from "../components/navigation/Navigation.js";
 
@@ -92,18 +93,21 @@ const castList = {
       "Princess of Portugal and Spain, ArchDuchess of Austria, Duchess of Braganza",
       image: kathleen_whalen,
       leadership: "Court Guild Lead",
+      fighter: true,
     },
     {
       realName: 'Brendan Noe',
       role: "Anne de Montomrency",
       position: '',
       image: brendan_noe,
+      fighter: true,
     },
     {
       realName: "Jason Smallen",
       role: "Sir William Carey",
       position: "",
       image: jason_smallen,
+      fighter: true,
     },
     {
       realName: "Kristen Haynes",
@@ -122,13 +126,15 @@ const castList = {
       role: "Richard",
       position: "Noble Assistant",
       image: zak_gilliland,
+      fighter: true,
     },
-
+    
     {
       realName: "Chris Siebert",
       role: "Harold",
       position: "Herald",
       image: chris_siebert,
+      fighter: true,
     },
     {
       realName: "Kathryn Smallen",
@@ -141,6 +147,7 @@ const castList = {
       role: "",
       position: "French Royal Guard",
       image: james_boswell,
+      fighter: true,
     },
   ],
   Fae: [
@@ -154,12 +161,14 @@ const castList = {
       position: "???",
       image: dann_blinn,
       leadership: "Fight Director",
+      fighter: true,
     },
     {
       realName: "Noel Kling",
       role: "???",
       position: "???",
       image: noel_kling,
+      fighter: true,
     },
   ],
   Traveler: [
@@ -181,6 +190,7 @@ const castList = {
       role: "Volyana",
       position: "Entertainer",
       image: catherine_kuehner,
+      fighter: true,
     },
     {
       realName: "Grace Mays",
@@ -270,24 +280,29 @@ function Cast() {
                       </MDBCol>
                       <MDBCol md="8">
                         <MDBCardBody>
-                        <MDBCardTitle className="cast-name">
-                        {item.realName}{" "}
-                        {item.leadership ? (
-                          <p className="guild-lead">
+                          <MDBCardTitle className="cast-name">
+                            {item.realName}{" "}
+                            {item.leadership ? (
+                              <p className="guild-lead">
                                 **{item.leadership}**
                                 </p>
                                 ) : null}
-                                </MDBCardTitle>
-                                <MDBCardText className="cast-role">
+                          </MDBCardTitle>
+                          <MDBCardText className="cast-role">
                                 {item.role}
                           </MDBCardText>
                           <MDBCardText className="cast-position">
                             {item.position}
-                            </MDBCardText>
-                            </MDBCardBody>
+                          </MDBCardText>
+                        </MDBCardBody>
+                        {item.fighter ? (
+                          <MDBCardFooter className='text-muted'>
+                            <p><i>Fighter</i></p>
+                          </MDBCardFooter>
+                        ) : null}
                       </MDBCol>
-                      </MDBRow>
-                      </MDBCard>));
+                    </MDBRow>
+                  </MDBCard>));
               })}
             </details>
           );
