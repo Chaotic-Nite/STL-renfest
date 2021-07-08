@@ -1,8 +1,10 @@
 import { SocialIcon } from "react-social-icons";
+import SmallWarningSign from "../homepage-content/warning/SmallWarning";
 
 
 const SocialMedia = () => {
   return (
+    <>
     <div style={{ marginTop: "2%" }}>
       <SocialIcon
         url="https://www.facebook.com/STLRenFest/"
@@ -25,8 +27,10 @@ const SocialMedia = () => {
         url="https://www.instagram.com/stlrenfest/"
         network="instagram"
         className='socialLink'
-      />
+        />
     </div>
+    <SmallWarningSign />
+    </>
   );
 };
 

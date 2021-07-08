@@ -21,6 +21,8 @@ import { useLocation } from 'react-router-dom'
 import { dateObject } from "../lists/UPTODATE";
 import { STAGESCHEDULE, weekends } from '../lists/themed-schedules'
 import dogForm from '../pdf-files/Dog-Registration-Form.pdf'
+import SocialMedia from "../components/social-media/SocialMedia.js";
+import SmallWarningSign from "../components/homepage-content/warning/SmallWarning.js";
 
 const pavSch = STAGESCHEDULE.pavilion 
 const stlSch = STAGESCHEDULE.pavilion
@@ -182,6 +184,8 @@ function Weekends() {
                   )}})}
                   </MDBDropdownMenu>
                   </MDBDropdown>
+                  <SmallWarningSign />
+
                 </div>
                   </>
               :
@@ -199,6 +203,7 @@ function Weekends() {
                     </MDBTabsItem>
               )})}
               </MDBTabs>
+              <SocialMedia />
               </div>
               </>}
         </div>

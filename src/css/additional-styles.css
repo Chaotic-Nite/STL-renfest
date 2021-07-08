@@ -81,6 +81,11 @@
     align-items: center;
 
   }
+
+  #weekend .dropdown button {
+    font-weight: bold;
+    padding: 15px 25px;
+  }
 }
 
 

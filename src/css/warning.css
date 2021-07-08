@@ -4,12 +4,26 @@
   margin: 2% 0;
 }
 
-.accordion-head {
+#attention-div .accordion-head, #warning-head, #warning-modal .modal-header {
   background-color: rgb(190, 42, 42);
   color: white;
-  font-size: 35px;
   text-align: center;
   font-variant: small-caps;
+}
+
+#warning-head {
+  margin: 1.5rem 0;
+  font-weight: bold;
+  padding: 15px 25px;
+}
+
+#warning-modal .modal-dialog{
+  background-color: #d1d6d9;
+  border-radius: .5rem;
+}
+
+#attention-div .accordion-head {
+  font-size: 35px;
 }
 
 .active-accordion,
