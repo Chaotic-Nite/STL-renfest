@@ -23,6 +23,8 @@ import {
 } from 'mdb-react-ui-kit';
 import { useLocation } from 'react-router-dom'
 import {vendTabs} from '../lists/themed-schedules'
+import SocialMedia from "../components/social-media/SocialMedia.js";
+import SmallWarningSign from "../components/homepage-content/warning/SmallWarning.js";
 
 function EntertainmentVendor() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -106,6 +108,7 @@ function EntertainmentVendor() {
                   )}})}
                   </MDBDropdownMenu>
                   </MDBDropdown>
+                  <SmallWarningSign />
                 </div>
                   </>
               :
@@ -123,6 +126,7 @@ function EntertainmentVendor() {
                     </MDBTabsItem>
               )})}
               </MDBTabs>
+              <SocialMedia />
               </div>
               </>}
         </div>

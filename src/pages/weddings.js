@@ -10,6 +10,7 @@ import {
   MDBTabsPane,
   MDBCollapse, MDBBtn, MDBRow
 } from 'mdb-react-ui-kit';
+import SocialMedia from "../components/social-media/SocialMedia";
 
 function Weddings() {
   const [justifyActive, setJustifyActive] = useState('general-wedding');
@@ -61,6 +62,7 @@ function Weddings() {
              <hr />
             <WeddingPolicy />
             </div>
+            <SocialMedia />
       </div>
     </>
   );
