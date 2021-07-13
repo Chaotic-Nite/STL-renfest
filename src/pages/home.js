@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import IntroPage from "../components/homepage-content/intro/Intro";
 import WarningSign from "../components/homepage-content/warning/Warning";
 import PhotoBanner from "../components/photobanner/PhotoBanner";
@@ -11,6 +11,8 @@ import "../css/home.css";
 import $ from "jquery";
 
 function Home() {
+  const [today,] = useState(new Date())
+
   // Newsletter Email from original site
   const newsletter_submit = () => {
     let otherSiteSelected = "0";
@@ -54,13 +56,7 @@ function Home() {
         <span>
           <h2>Kegs N Eggs</h2>
         </span>
-        <p >
-          Tickets are on sale <u>NOW</u> for the {dateObject.year} Season on {' '}
-          {dateObject.kneSaleDay} {dateObject.year}!<br />
-          <HashLink to="/tickets#kegs" smooth='true'>Click Here</HashLink> to view ticket prices and
-          options! <br />
-          Early bird pricing ends {dateObject.earlyBird}.
-        </p>
+        {dateObject.eggDay < today ? <KegAfter /> : <KegBefore />}
       </div>
 
       {// <!-- MAF Tags -->
@@ -165,5 +161,33 @@ function Home() {
     </>
   );
 }
+
+
+function KegBefore() {
+  return (
+    <>
+      <p>
+          Tickets are on sale <u>NOW</u> for the {dateObject.year} Season on {' '}
+          {dateObject.kneSaleDay} {dateObject.year}!<br />
+          <HashLink to="/tickets#kegs" smooth='true'>Click Here</HashLink> to view ticket prices and
+          options! <br />
+          Early bird pricing ends {dateObject.earlyBird}.
+        </p>
+    </>
+  )
+}
+
+function KegAfter() {
+  return (
+    <>
+      <p>
+          Tickets are on sale <u>NOW</u> for the {dateObject.year + 1} Season!<br />
+          <HashLink to="/tickets#kegs" smooth='true'>Click Here</HashLink> to view ticket prices and
+          options! <br />
+      </p>
+    </>
+  )
+}
+
 
 export default Home;

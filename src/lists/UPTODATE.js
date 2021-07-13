@@ -48,7 +48,6 @@ for (let i = 0; i < 10; i+=2){
   }
   wkndList.push(`${wknd[i].toLocaleDateString('default', { month: 'long'})} ${wknd[i].getDate()}${nth(wknd[i].getDate())} & ${wknd[i+1].toLocaleDateString('default', { month: 'long'})} ${wknd[i+1].getDate()}${nth(wknd[i+1].getDate())}`)
   
-  
 }
 
 wknd[wknd.length] = new Date()
@@ -56,6 +55,9 @@ wknd[wknd.length-1].setFullYear(year, 9, 11)
 
 
 // Kegs 'N' Eggs
+const eggDay = new Date()
+eggDay.setFullYear(year, 2, 10)
+
 const earlyBird = 'April 3rd'
 const kneDay = 'April 10th'
 
@@ -69,6 +71,7 @@ export const dateObject = {
   wkndList: wkndList,
   shopDay: shopDay,
   earlyBird: earlyBird,
-  kneSaleDay: kneDay
+  kneSaleDay: kneDay,
+  eggDay: eggDay
 };
 

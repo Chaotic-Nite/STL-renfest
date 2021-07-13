@@ -1,10 +1,10 @@
 export const weekends = {
     'weekendOne': {id: 'highland-fling', name:'Highland Fling', short: 'Highland Fling' },
-    'weekendTwo': {id: 'pets-pirate-ale', name:'Pets, Pirates & Ale', short: 'Pets & Pirates'},
-    'weekendThree': {id: 'shamrocks-shenanigans', name:'Shamrocks, Shenanigans & Sweet Romance', short: 'Shamrocks & Shenanigans'},
-    'weekendFour': {id: 'viking-invasion', name:'Viking Invasion and Cosplay in the Kingdom', short: 'Viking & Cosplay'},
-    'weekendFive': {id: 'oktoberfest', name:'Oktoberfest and Other Wonders of the World', short: 'Oktoberfest'},
-    'shoppingDay': {id: 'festive-shopping-day', name: 'Festive Shopping Day', short: 'Festive Shopping Day'}
+    'weekendTwo': {id: 'pups-pints-pirates', name:'Pups, Pints & Pirates', short: 'Pups & Pirates'},
+    'weekendThree': {id: 'shamrocks-shenanigans', name:'Shamrocks and Shenanigans ', short: 'Shamrocks & Shenanigans'},
+    'weekendFour': {id: 'heroes-vs-villains', name:'Heroes Vs Villains', short: 'Heroes Vs Villains'},
+    'weekendFive': {id: 'oktoberfest', name:'Oktoberfest', short: 'Oktoberfest'},
+    'shoppingDay': {id: 'festive-shopping-day', name: 'School and Festive Shopping Day', short: 'School & Shopping'}
 }
 
 export const vendTabs = [
