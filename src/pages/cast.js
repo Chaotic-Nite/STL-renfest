@@ -57,7 +57,7 @@ const castList = {
     },
     {
       realName: "Ted Jander",
-      role: "King Francois",
+      role: "King François",
       position: "King of France, Duke of Brittany",
       image: ted_jander,
     },
