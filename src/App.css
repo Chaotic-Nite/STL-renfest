@@ -177,6 +177,16 @@
   --borderDesign: 5px solid #5000e6b6;
 }
 
+body, body.dark-theme {
+  color: #4f4f4f;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #4f4f4f;
+  }
+}
+
 .App {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
