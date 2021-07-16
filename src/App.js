@@ -5,11 +5,12 @@ import Footer from "./components/footer/Footer";
 import logo from "./images/StLouisLogo-white.png";
 import "./App.css";
 import "./css/additional-styles.css";
-import backprint from './images/steelgray-print.jpg'
 
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
+  const [samsung,] = useState(navigator.userAgent.match(/samsung/i))
+  
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
   }
@@ -23,7 +24,7 @@ function App() {
   let isMobile = width <= 1024 ? true : false;
 
   return (
-    <div className="App" >
+    <div className="App" style={samsung?{backgroundImage: 'none', backgroundColor:'whitesmoke'}:null}>
       <header className="top-line">
         <Link to="/" id="logo">
           <img src={logo} alt="" />
