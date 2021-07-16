@@ -134,6 +134,7 @@ const castList = {
       role: "Harold",
       position: "Herald",
       image: chris_siebert,
+      leadership: "Guard Guild Lead",
       fighter: true,
     },
     {

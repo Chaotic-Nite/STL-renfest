@@ -126,7 +126,7 @@ const WeddingGeneral = () => {
                             {item.item}
                           </span>
                           <span style={{ float: "right" }}>
-                            {item.price} | {item.additional}
+                            {item.price} {item.additional ? '| ' + item.additional: null}
                           </span>
                         </ListGroup.Item>
                       );

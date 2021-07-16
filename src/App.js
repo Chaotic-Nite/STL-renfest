@@ -23,7 +23,7 @@ function App() {
   let isMobile = width <= 1024 ? true : false;
 
   return (
-    <div className="App" style={{backgroundImage: `url(${backprint})`}}>
+    <div className="App" >
       <header className="top-line">
         <Link to="/" id="logo">
           <img src={logo} alt="" />

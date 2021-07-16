@@ -120,7 +120,7 @@ function GeneralTicket() {
         </MDBCard>
         
       </div>
-      <h4 style={{ color: "rgb(76, 0, 255)", marginTop: "0" }}>
+      <h4 id='kids'>
         <i>Children 4 and under get in for free!</i>
       </h4>
 

@@ -173,24 +173,100 @@
   
 }
 
-:root {
-  --borderDesign: 5px solid #5000e6b6;
-}
-
-body, body.dark-theme {
-  color: #4f4f4f;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #4f4f4f;
-  }
-}
-
 .App {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
-  color: #4f4f4f;
+  background-size: contain;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --borderDesign: 5px solid rgb(186, 69, 240);
+    --borderDivide: 2.5px solid rgb(111, 42, 221);
+  }  
+
+  body {
+    color: #DfDfDf;
+  }
+  
+  .other-events h2{
+    color: whitesmoke;
+  }
+
+  .email-list {
+    background-color: rgba(64, 224, 208, 0.24);
+  }
+
+  .App {
+    background-image: url('./images/darkgray-print.jpg');
+  }
+
+  .nav-pills .nav-link {
+    background-color: rgb(206, 206, 206);
+    color: rgb(63, 63, 63);
+  }
+  
+  .list-group-item, .card {
+    background-color: rgb(236, 236, 236);
+  }
+
+  .col2-link, a, #kids {
+    color: rgb(186, 69, 240);
+  }
+
+  .card-title, .card-text, .card-footer, .card-header, .ticket-boxes, #warning-modal .modal-dialog {
+    color: #313131
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --borderDesign: 5px solid #5000e6b6;
+    --borderDivide: 2px solid #7f46ea;
+  }  
+
+  .App {
+    background-image: url('./images/steelgray-print.jpg');
+  }
+  
+  body {
+    color: #4f4f4f;
+  }
+
+  .other-events h2{
+    color: black;
+  }
+
+  .col2-link {
+    color: #67007c;
+  }
+
+
+  a, #kids {
+    color: #5900ff;
+  }
+  
+
+}
+
+#wedMenu .list-group, #weddingFinePrint .list-group, .weekends .table {
+  border-bottom: var(--borderDivide);
+}
+
+.nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {
+  width: 98%;
+}
+
+.nav-fill .nav-item, .nav-justified .nav-item {
+  padding: 1% 0;
+}
+
+.card-text{
+  padding: .5%;
+}
+
+#kids {
+  margin-top: 0;
 }
 
 details summary::-webkit-details-marker {
@@ -199,21 +275,17 @@ details summary::-webkit-details-marker {
 
 ul, ol {
   list-style: none;
+  margin: 0 15px;
+  padding-left: 0;
 }
 
 #logo {
   margin: 3% 0 3% 5vw;
 }
-
-
-a {
-  color: #5900ff;
-}
-
-
-
+  
+  
 .main-body {
-  margin-bottom: 5%;
+    margin-bottom: 5%;
 }
 
 a {
@@ -295,10 +367,6 @@ a {
 /* Second Column */
 .col2 h2 {
   font-size: 3.5rem;
-}
-
-.col2-link {
-  color: #67007c;
 }
 
 .col2-link:hover {
