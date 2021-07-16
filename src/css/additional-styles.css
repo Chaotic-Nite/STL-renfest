@@ -187,7 +187,6 @@
 .weekends .table {
   width: 100%;
   border-spacing: 0;
-  border: 2px solid #7f46ea;
 }
 
 .vend thead,.vend tbody, .vend tr, .vend th, .vend td { display: block; }
@@ -380,7 +379,6 @@
 
 #wedMenu .list-group, #weddingFinePrint .list-group{
   padding-bottom: 5%;
-  border-bottom: 2.5px solid #1502be;
 }
 
 .finePrint{
