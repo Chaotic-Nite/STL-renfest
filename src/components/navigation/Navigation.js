@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import BurgerNav from "./BurgerNav";
 import abstractNav from '../../images/blue-abstract-nav.png'
-import {vendTabs, weekends} from '../../lists/themed-schedules'
+import {vendTabs, listWeekends} from '../../lists/themed-schedules'
 
 // Open state and autoclose Dropdown ndeufemia
 function Navigation() {
@@ -139,60 +139,19 @@ function TicketDropdown() {
 function WeekendDropdown() {
   return (
     <ul className="nav__submenu" style={{backgroundImage: `url(${abstractNav})`}}>
-      <li>
-        <HashLink
-          className="nav__submenu-item"
-          smooth='true'
-          to={"/weekends#" + weekends.weekendOne.id}
-        >
-          {weekends.weekendOne.name}
-        </HashLink>
-      </li>
-      <li>
-        <HashLink
-          className="nav__submenu-item"
-          smooth='true'
-          to={"/weekends#" + weekends.weekendTwo.id}
-        >
-          {weekends.weekendTwo.name}
-        </HashLink>
-      </li>
-      <li>
-        <HashLink
-          className="nav__submenu-item"
-          smooth='true'
-          to={"/weekends#" + weekends.weekendThree.id}
-        >
-          {weekends.weekendThree.name}
-        </HashLink>
-      </li>
-      <li>
-        <HashLink
-          className="nav__submenu-item"
-          smooth='true'
-          to={"/weekends#" + weekends.weekendFour.id}
-        >
-          {weekends.weekendFour.name}
-        </HashLink>
-      </li>
-      <li>
-        <HashLink
-          className="nav__submenu-item"
-          smooth='true'
-          to={"/weekends#" + weekends.weekendFive.id}
-        >
-          {weekends.weekendFive.name}
-        </HashLink>
-      </li>
-      <li>
-        <HashLink
-          className="nav__submenu-item"
-          smooth='true'
-          to={"/weekends#" + weekends.shoppingDay.id}
-        >
-          {weekends.shoppingDay.name}
-        </HashLink>
-      </li>
+      {listWeekends.map((wknd) => {
+        return (
+          <li>
+            <HashLink
+              className="nav__submenu-item"
+              smooth='true'
+              to={"/weekends#" + wknd.id}
+            >
+              {wknd.name}
+            </HashLink>
+          </li>
+        )
+      })}
     </ul>
   );
 }

@@ -17,7 +17,7 @@ var endDate = new Date()
 
 // Setting the days in which it starts and ends
 d.setFullYear(year, 8, 18)
-endDate.setFullYear(year, 9, 17)
+endDate.setFullYear(year, 9, 24)
 
 // The start and end days
 const startDay = `${d.toLocaleDateString('default', { month: 'long'})} ${d.getDate()}${nth(d.getDate())}`;
@@ -32,7 +32,7 @@ let shopDay = `Monday, October 12th`
 // Weekends
 let wknd = []
 let wkndList = []
-for (let i = 0; i < 10; i+=2){
+for (let i = 0; i < 12; i+=2){
   if (wknd.length === 0) {
     wknd[i] = new Date()
     wknd[i].setFullYear(year, d.getMonth(), d.getDate())
@@ -53,7 +53,6 @@ for (let i = 0; i < 10; i+=2){
 wknd[wknd.length] = new Date()
 wknd[wknd.length-1].setFullYear(year, 9, 11)
 
-
 // Kegs 'N' Eggs
 const eggDay = new Date()
 eggDay.setFullYear(year, 2, 10)
@@ -69,6 +68,7 @@ export const dateObject = {
   yearOfFaire: yearOfFaire,
   wkndRaw: wknd,
   wkndList: wkndList,
+  numOfWknds: wknd.length,
   shopDay: shopDay,
   earlyBird: earlyBird,
   kneSaleDay: kneDay,
