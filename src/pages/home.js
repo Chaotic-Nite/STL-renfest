@@ -45,7 +45,7 @@ function Home() {
       <IntroPage />
       <div className="dates margin-width">
         <h2>
-          Open Weekends for {dateObject.startDay} - {dateObject.endDay},
+          Open Weekends for {dateObject.startDay} - {dateObject.endDay},{' '}
           {dateObject.year}
         </h2>
         <h3>10am - 6pm Rain or Shine</h3>

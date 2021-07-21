@@ -19,7 +19,7 @@ import {
 } from 'mdb-react-ui-kit';
 import { useLocation } from 'react-router-dom'
 import { dateObject } from "../lists/UPTODATE";
-import { STAGESCHEDULE, weekends } from '../lists/themed-schedules'
+import { STAGESCHEDULE, weekends, listWeekends } from '../lists/themed-schedules'
 import dogForm from '../pdf-files/Dog-Registration-Form.pdf'
 import SocialMedia from "../components/social-media/SocialMedia.js";
 import SmallWarningSign from "../components/homepage-content/warning/SmallWarning.js";
@@ -83,8 +83,10 @@ function Weekends() {
     {id: weekends.weekendThree.id, title: weekends.weekendThree.short},
     {id: weekends.weekendFour.id, title: weekends.weekendFour.short},
     {id: weekends.weekendFive.id, title: weekends.weekendFive.short},
+    {id: weekends.weekendSix.id, title: weekends.weekendSix.short},
     {id: weekends.shoppingDay.id, title: weekends.shoppingDay.short},
   ]
+
   useEffect(() => {
     if (wknd !== location.hash.substring(1) && location.hash.includes('#')){
       const value = location.hash.substring(1)
@@ -127,14 +129,12 @@ function Weekends() {
 
   let isMobile = width <= 1024 ? true : false;
 
-
   return (
     <>
       <Navigation />
       <h1 className="page-header">Themed Weekends</h1>
       <div className="margin-width two-col weekends-col2">
         <div className='col1'>
-
           <MDBTabsContent>
             <MDBTabsPane show={wknd ===  weekends.weekendOne.id}>
               <FrstWknd 
@@ -156,6 +156,15 @@ function Weekends() {
               <FfthWknd 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
                 /></MDBTabsPane>
+            {/* <MDBTabsPane show={wknd === weekends.weekendSix.id}>
+              <SxthWknd 
+              schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
+            /></MDBTabsPane> */}
+            <MDBTabsPane show={wknd === weekends.weekendSix.id}>
+              <SxthWknd 
+                schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
+              />
+            </MDBTabsPane>
             <MDBTabsPane show={wknd === weekends.shoppingDay.id}>
               <ShopDay 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
@@ -167,9 +176,9 @@ function Weekends() {
               <>
           <div id='weekend'>
               <MDBDropdown>
-                <MDBDropdownToggle>{tabObject.map(filterName)}</MDBDropdownToggle>
+                <MDBDropdownToggle>{listWeekends.map(filterName)}</MDBDropdownToggle>
                 <MDBDropdownMenu>
-                  {tabObject.map((item) => {
+                  {listWeekends.map((item) => {
                     if (item.id === wknd){
                       return null
                     }
@@ -178,7 +187,7 @@ function Weekends() {
                       return (
                         <MDBDropdownItem key={item.id}>
                         <MDBDropdownLink onClick={() => handleTabClick(item.id)} active={wknd === item.id}>
-                          {item.title}
+                          {item.short}
                         </MDBDropdownLink>
                       </MDBDropdownItem>
                   )}})}
@@ -194,11 +203,11 @@ function Weekends() {
           <h3 className="col2-header"><b>Themed Weekends</b></h3>
           <div id='weekend'>
               <MDBTabs pills justify className='mb-3'>
-                {tabObject.map((item) => {
+                {listWeekends.map((item) => {
                   return (
                     <MDBTabsItem key={item.id}>
                       <MDBTabsLink onClick={() => handleTabClick(item.id)} active={wknd === item.id}>
-                        {item.title}
+                        {item.short}
                       </MDBTabsLink>
                     </MDBTabsItem>
               )})}
@@ -238,10 +247,12 @@ function FrstWknd(props) {
     {name: 'Tug of War Competition', time: '3:15'},
   ]
 
+  useEffect(() => {
+    if (normandyContests[0].name === '' && joustContests[0].name === '') {
+      setState(false)
+    }
+  });
 
-  if (normandyContests[0].name === '' && joustContests[0].name === '') {
-    setState(false)
-  }
 
   return (
     <>
@@ -333,12 +344,15 @@ function ScndWknd(props) {
   ]
 
   const joustContests = [
-    {name:'', time: ''}
+    {name:'', time: ''},
   ]
 
-  if (normandyContests[0].name === '' && joustContests[0].name === '') {
-    setState(false)
-  }
+  useEffect(() => {
+    if (normandyContests[0].name === '' && joustContests[0].name === '') {
+      setState(false)
+    }
+  });
+
 
  return (
     <>
@@ -446,9 +460,12 @@ function ThrdWknd(props) {
 
 
 
-  if (normandyContests[0].name === '' && joustContests[0].name === '') {
-    setState(false)
-  }
+  useEffect(() => {
+    if (normandyContests[0].name === '' && joustContests[0].name === '') {
+      setState(false)
+    }
+  });
+
 
   return (
     <>
@@ -558,9 +575,12 @@ function FrthWknd(props) {
     {name: 'Wife Carry', time: '3:30'},
   ]
 
-  if (normandyContests[0].name === '' && joustContests[0].name === '') {
-    setState(false)
-  }
+  useEffect(() => {
+    if (normandyContests[0].name === '' && joustContests[0].name === '') {
+      setState(false)
+    }
+  });
+
   return (
     <>
       <div className="weekends" >
@@ -635,6 +655,8 @@ function FrthWknd(props) {
     </>
   )
 }
+
+// Fifth Weekend
 function FfthWknd(props) {
   const stageSchedules = props.schedules
   const [state, setState] = useState(true)
@@ -732,6 +754,99 @@ function FfthWknd(props) {
     </>
   )
 }
+
+// Sixth Weekend
+function SxthWknd(props) {
+  const stageSchedules = props.schedules
+  const [state, setState] = useState(true)
+  const normandyContests = [
+    {name: '', time: ''},
+
+  ]
+  
+  const joustContests = [
+    {name: '', time: ''},
+  ]
+
+  useEffect(() => {
+    if (normandyContests[0].name === '' && joustContests[0].name === '') {
+      setState(false)
+    }
+  });
+
+  return (
+    <>
+      <div className="weekends" >
+      <div className='wknds'>
+        <h1><b>{weekends.weekendSix.name}</b></h1>
+        <h3>{dateObject.wkndList[5]}</h3>
+      <p>Text about Halloween soon!
+      </p>
+      {state  ?
+      <>
+      <br />
+      <h3>Contests</h3>
+      <div className='contests'>
+      {normandyContests[0].name !== ''?
+      <MDBTable striped hover className='contest'>
+        <MDBTableHead>
+          <tr>
+            <th colSpan={2}><b>Normandy Stage</b></th>
+          </tr>
+        </MDBTableHead>
+        <MDBTableBody>
+        {normandyContests.map((item) => {
+          return (
+              <>
+                <tr key={item.name}>
+                  <th scope='row'>{item.time}</th>
+                  <td>{item.name}</td>
+                </tr>
+              </>
+              )
+            })}
+        </MDBTableBody>
+      </MDBTable>:null}
+      {joustContests[0].time !== '' ?
+      <MDBTable striped hover className='contest'>
+        <MDBTableHead>
+          <tr>
+            <th colSpan={2}><b>Joust Field</b></th>
+          </tr>
+        </MDBTableHead>
+        <MDBTableBody>
+        {joustContests.map((item) => {
+          return (
+              <>
+                <tr key={item.name}>
+                  <th scope='row'>{item.time}</th>
+                  <td>{item.name}</td>
+                </tr>
+              </>
+              )
+            })}
+        </MDBTableBody>
+      </MDBTable> : null}
+      </div>
+      </>
+      :null}
+      </div>
+      <br />
+        <h3 className="col2-header">Stage Schedules</h3>
+        <div className='stages'> 
+        <JoustSchedule />
+        {stageSchedules.map((item) => {
+          return (
+          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
+        )})}
+      </div>
+      </div>
+    </>
+  )
+}
+
+
+//Shopping Day
 function ShopDay(props) {
   const stageSchedules = props.schedules
   const [state, setState] = useState(true)
@@ -749,9 +864,12 @@ function ShopDay(props) {
     {name: '', time: ''},
   ]
 
-  if (normandyContests[0].name === '' && joustContests[0].name === '') {
-    setState(false)
-  }
+  useEffect(() => {
+    if (normandyContests[0].name === '' && joustContests[0].name === '') {
+      setState(false)
+    }
+  });
+
 
   return (
     <>

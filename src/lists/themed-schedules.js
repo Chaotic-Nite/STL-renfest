@@ -4,8 +4,19 @@ export const weekends = {
     'weekendThree': {id: 'shamrocks-shenanigans', name:'Shamrocks and Shenanigans ', short: 'Shamrocks & Shenanigans'},
     'weekendFour': {id: 'heroes-vs-villains', name:'Heroes Vs Villains', short: 'Heroes Vs Villains'},
     'weekendFive': {id: 'oktoberfest', name:'Oktoberfest', short: 'Oktoberfest'},
+    'weekendSix': {id: 'halloween', name:'Halloween', short: 'Halloween'},
     'shoppingDay': {id: 'festive-shopping-day', name: 'School and Festive Shopping Day', short: 'School & Shopping'}
 }
+
+var weeks = []
+
+for (const wknd in weekends) {
+    weeks.push({id: weekends[wknd].id, name: weekends[wknd].name, short: weekends[wknd].short})
+}
+
+console.log(weeks)
+
+export const listWeekends = weeks
 
 export const vendTabs = [
     {id:'artisans-marketplace', name:'Artisan Marketplace'}, 
@@ -26,7 +37,7 @@ var storytellingSch = {}
 var knightsSch = {}
 var piratesSch = {}
  
-// Pavilion Stage
+    // Pavilion Stage
 pavilionSch[weekends.weekendOne.id] = [
         {name: 'Coming Soon', time: '' },
     ]
@@ -42,10 +53,14 @@ pavilionSch[weekends.weekendFour.id] = [
 pavilionSch[weekends.weekendFive.id] = [
         {name: 'Coming Soon', time: '' },
     ]
+pavilionSch[weekends.weekendSix.id] = [
+        {name: 'Coming Soon', time: '' },
+    ]
 pavilionSch[weekends.shoppingDay.id] = [
         {name: 'Coming Soon', time: '' },
     ]
-// St Louis Stage
+
+    // St Louis Stage
 stlouisSch[weekends.weekendOne.id] =  [
         {name: 'Coming Soon', time: '' },
     ]
@@ -61,10 +76,14 @@ stlouisSch[weekends.weekendFour.id] =  [
 stlouisSch[weekends.weekendFive.id] =  [
         {name: 'Coming Soon', time: '' },
     ]
+stlouisSch[weekends.weekendSix.id] =  [
+        {name: 'Coming Soon', time: '' },
+    ]
 stlouisSch[weekends.shoppingDay.id] =  [
         {name: 'Coming Soon', time: '' },
     ]
-// Owain Stage
+
+    // Owain Stage
 owainSch[weekends.weekendOne.id] = [
         {name: 'Coming Soon', time: '' },
     ]
@@ -80,10 +99,14 @@ owainSch[weekends.weekendFour.id] = [
 owainSch[weekends.weekendFive.id] = [
         {name: 'Coming Soon', time: '' },
     ]
+owainSch[weekends.weekendSix.id] = [
+        {name: 'Coming Soon', time: '' },
+    ]
 owainSch[weekends.shoppingDay.id] = [
         {name: 'Coming Soon', time: '' },
     ]
-// Friendship Stage
+
+    // Friendship Stage
 friendshipSch[weekends.weekendOne.id] =[
         {name: 'Coming Soon', time: '' },
     ]
@@ -99,10 +122,14 @@ friendshipSch[weekends.weekendFour.id] =[
 friendshipSch[weekends.weekendFive.id] =[
         {name: 'Coming Soon', time: '' },
     ]
+friendshipSch[weekends.weekendSix.id] =[
+        {name: 'Coming Soon', time: '' },
+    ]
 friendshipSch[weekends.shoppingDay.id] =[
         {name: 'Coming Soon', time: '' },
     ]
-// Joan of Arc Stage   
+
+    // Joan of Arc Stage   
 joanOfArcSch[weekends.weekendOne.id]=[
         {name: 'Coming Soon', time: '' },
     ]
@@ -115,13 +142,14 @@ joanOfArcSch[weekends.weekendThree.id]=[
 joanOfArcSch[weekends.weekendFour.id]=[
         {name: 'Coming Soon', time: '' },
     ]
-joanOfArcSch[weekends.weekendFive.id]=[
+joanOfArcSch[weekends.weekendSix.id]=[
         {name: 'Coming Soon', time: '' },
     ]
 joanOfArcSch[weekends.shoppingDay.id]=[
         {name: 'Coming Soon', time: '' },
     ]
-// Marco Polo Stage
+
+    // Marco Polo Stage
 marcoPoloSch[weekends.weekendOne.id]=[
     {name: 'Coming Soon', time: '' },
 ]
@@ -134,13 +162,14 @@ marcoPoloSch[weekends.weekendThree.id]=[
 marcoPoloSch[weekends.weekendFour.id]=[
     {name: 'Coming Soon', time: '' },
 ]
-marcoPoloSch[weekends.weekendFive.id]=[
+marcoPoloSch[weekends.weekendSix.id]=[
     {name: 'Coming Soon', time: '' },
 ]
 marcoPoloSch[weekends.shoppingDay.id]=[
     {name: 'Coming Soon', time: '' },
 ]
-// StoryTelling Stage
+
+    // StoryTelling Stage
 storytellingSch[weekends.weekendOne.id]=[
     {name: 'Coming Soon', time: '' },
 ]
@@ -156,10 +185,14 @@ storytellingSch[weekends.weekendFour.id]=[
 storytellingSch[weekends.weekendFive.id]=[
     {name: 'Coming Soon', time: '' },
 ]
+storytellingSch[weekends.weekendSix.id]=[
+    {name: 'Coming Soon', time: '' },
+]
 storytellingSch[weekends.shoppingDay.id]=[
     {name: 'Coming Soon', time: '' },
 ]
-// Knights Stage
+
+    // Knights Stage
 knightsSch[weekends.weekendOne.id]=[
     {name: 'Coming Soon', time: '' },
 ]
@@ -175,10 +208,14 @@ knightsSch[weekends.weekendFour.id]=[
 knightsSch[weekends.weekendFive.id]=[
     {name: 'Coming Soon', time: '' },
 ]
+knightsSch[weekends.weekendSix.id]=[
+    {name: 'Coming Soon', time: '' },
+]
 knightsSch[weekends.shoppingDay.id]=[
     {name: 'Coming Soon', time: '' },
 ]
-// Pirates Stage
+
+    // Pirates Stage
 piratesSch[weekends.weekendOne.id]=[
     {name: 'Coming Soon', time: '' },
 ]
@@ -192,6 +229,9 @@ piratesSch[weekends.weekendFour.id]=[
     {name: 'Coming Soon', time: '' },
 ]
 piratesSch[weekends.weekendFive.id]=[
+    {name: 'Coming Soon', time: '' },
+]
+piratesSch[weekends.weekendSix.id]=[
     {name: 'Coming Soon', time: '' },
 ]
 piratesSch[weekends.shoppingDay.id]=[
