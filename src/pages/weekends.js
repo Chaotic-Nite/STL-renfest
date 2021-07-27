@@ -251,7 +251,8 @@ function FrstWknd(props) {
     if (normandyContests[0].name === '' && joustContests[0].name === '') {
       setState(false)
     }
-  });
+    // eslint-disable-next-line
+  }, []);
 
 
   return (
@@ -351,7 +352,8 @@ function ScndWknd(props) {
     if (normandyContests[0].name === '' && joustContests[0].name === '') {
       setState(false)
     }
-  });
+    // eslint-disable-next-line
+  }, []);
 
 
  return (
@@ -464,7 +466,8 @@ function ThrdWknd(props) {
     if (normandyContests[0].name === '' && joustContests[0].name === '') {
       setState(false)
     }
-  });
+    // eslint-disable-next-line
+  }, []);
 
 
   return (
@@ -579,7 +582,8 @@ function FrthWknd(props) {
     if (normandyContests[0].name === '' && joustContests[0].name === '') {
       setState(false)
     }
-  });
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
@@ -676,10 +680,13 @@ function FfthWknd(props) {
     {name: 'Tug of War', time: '1:00'},
   ]
 
-  if (normandyContests[0].name === '' && joustContests[0].name === '') {
-    setState(false)
-  }
-  
+  useEffect(() => {
+    if (normandyContests[0].name === '' && joustContests[0].name === '') {
+      setState(false)
+    }
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <>
       <div className="weekends" >
@@ -772,7 +779,8 @@ function SxthWknd(props) {
     if (normandyContests[0].name === '' && joustContests[0].name === '') {
       setState(false)
     }
-  });
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
@@ -868,7 +876,8 @@ function ShopDay(props) {
     if (normandyContests[0].name === '' && joustContests[0].name === '') {
       setState(false)
     }
-  });
+    // eslint-disable-next-line
+  }, []);
 
 
   return (

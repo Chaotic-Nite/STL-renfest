@@ -87,6 +87,7 @@ nav > ul {
   position: absolute;
   width: auto !important;
   margin-top: calc(2em * 1.7) !important;
+  margin-left: 0 !important;
   padding-left: 0 !important;
   background: url("../images/blue-abstract-nav.png");
   background-size: auto;
