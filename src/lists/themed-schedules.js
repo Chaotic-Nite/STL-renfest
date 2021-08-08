@@ -4,7 +4,7 @@ export const weekends = {
     'weekendThree': {id: 'shamrocks-shenanigans', name:'Shamrocks and Shenanigans ', short: 'Shamrocks & Shenanigans'},
     'weekendFour': {id: 'heroes-vs-villains', name:'Heroes Vs Villains', short: 'Heroes Vs Villains'},
     'weekendFive': {id: 'oktoberfest', name:'Oktoberfest', short: 'Oktoberfest'},
-    'weekendSix': {id: 'halloween', name:'Halloween', short: 'Halloween'},
+    'weekendSix': {id: 'vampires-vikings', name:'Vampires and Vikings', short: 'Vampires & Vikings'},
     'shoppingDay': {id: 'festive-shopping-day', name: 'School and Festive Shopping Day', short: 'School & Shopping'}
 }
 
