@@ -227,24 +227,24 @@ function FrstWknd(props) {
   const [state, setState] = useState(true)
 
   const normandyContests = [
-    {name: 'Kids Kilt Competition', time: '12:00'},
-    {name: 'Adult Kilt Competition', time: '12:15'},
-    {name: 'Tater Tot Toss Competition', time: '12:45'},
-    {name: 'Scotch Egg Eating Competition', time: '1:45'},
-    {name: 'Bonnie Knees Contest', time: '2:15'},
-    {name: 'Dance Competition', time: '2:45'},
-    {name: 'Beard Competition', time: '3:15'},
-    {name: 'Hula Hoop Competition', time: '3:45'},
-    {name: 'Cornhole Tournament', time: '4:00'},
+    {name: `Kids Kilt Contest`, time: '12:00'},
+    {name: `Adult Kilt Contest`, time: '12:15'},
+    {name: `Tater Tot Toss`, time: '12:45'},
+    {name: `Scotch Egg Eating`, time: '1:45'},
+    {name: `Bonnie Knees`, time: '2:15'},
+    {name: `Dance Contest`, time: '2:45'},
+    {name: `Beard Contest`, time: '3:15'},
+    {name: `Hula Hoop Contest`, time: '3:45'},
+    {name: `Cornhole Tournament`, time: '4:00'},
   ]
   
   const joustContests = [
-    {name: 'Kids Highland Games', time: '11:00'},
-    {name: 'Keg Toss', time: '12:15'},
-    {name: 'Highland Games Part I', time: '12:45'},
-    {name: 'Wife Carry', time: '1:15'},
-    {name: 'Highland Games Part II', time: '2:45'},
-    {name: 'Tug of War Competition', time: '3:15'},
+    {name: `Kids' Highland Games`, time: '11:00'},
+    {name: `Keg Toss`, time: '12:15'},
+    {name: `Highland Games Part I`, time: '12:45'},
+    {name: `Wife Carry`, time: '1:15'},
+    {name: `Highland Games Part II`, time: '2:45'},
+    {name: `Tug-o-War Competition`, time: '3:15'},
   ]
 
   useEffect(() => {
@@ -331,21 +331,25 @@ function ScndWknd(props) {
   const [state, setState] = useState(true)
 
   const normandyContests = [
-    {name: 'Hold the Plank', time: '10:35'},
-    {name: 'Kids Pirate Costume Contest', time: '12:20'},
-    {name: 'Smallest Dogs Competition', time: '12:35'},
-    {name: 'Adult Pirate Costume Contest', time: '12:50'},
-    {name: 'Dog Costume Contest', time: '1:10'},
-    {name: 'Sit Means Sit Contest', time: '1:20'},
-    {name: 'Peanut Butter Licking Contest', time: '1:50'},
-    {name: 'Tattoo Competition', time: '2:20'},
-    {name: 'Dog & Owner Look Alike Contest', time: '2:50'},
-    {name: 'Muscle Flex Competition', time: '3:20'},
-    {name: 'Hot Dog Eating Contest', time: '3:40'},
+    {name: `Hold the Plank`, time: '10:35'},
+    {name: `Prettiest Pup Smile Contest`, time: '12:20'},
+    {name: `Smallest Dogs Competition`, time: '12:35'},
+    {name: `Adult/Kid Pirate Costume Contest`, time: '12:50'},
+    {name: `Dog Costume Contest`, time: '1:10'},
+    {name: `Sit Means Sit Contest`, time: '1:20'},
+    {name: `Peanut Butter Licking Contest`, time: '1:50'},
+    {name: `Tattoo Competition`, time: '2:20'},
+    {name: `Dog & Owner Look-Alike Contest`, time: '2:50'},
+    {name: `Muscle Flex Competition`, time: '3:20'},
+    {name: `Hot Dog Eating Contest`, time: '3:40'},
   ]
 
   const joustContests = [
-    {name:'', time: ''},
+    {name: `Weiner Race`, time: '12:15'},
+    {name: `Corgi Race`, time: '12:45'},
+    {name: `Obstacle Course`, time: '1:15'},
+    {name: `Flash Fetch`, time: '2:45'},
+    {name: `Hooman Obstacle Course`, time: '3:15'},
   ]
 
   useEffect(() => {
@@ -363,7 +367,7 @@ function ScndWknd(props) {
       <h1><b>{weekends.weekendTwo.name}</b></h1>
       <h3>{dateObject.wkndList[1]}</h3>
       <p>
-        Bring your dog and pirate pals for our Pets, Pirates &#38; Ale weekend! This weekend will showcase 
+        Bring your dog and pirate pals for our {weekends.weekendTwo.name} weekend! This weekend will showcase 
         contests for your pets to compete in, like Wiener Dog Races, Corgi Races, Peanut Butter Licking contest, and more! 
         Not only are there activites for your pets, but also for you! 
         Toast your mates and enjoy the finest mead and beer in the realm. 
@@ -442,22 +446,23 @@ function ThrdWknd(props) {
   const [state, setState] = useState(true)
   
   const normandyContests = [
-    {name: 'Longest Kiss Competition', time: '11:30'},
-    {name: ' Chocolate Pie Eating Contest', time: '12:00'},
-    {name: 'Newlywed Game', time: '1:15'},
-    {name: 'Irish Dance', time: '2:45'},
-    {name: 'Shamrock Scramble', time: '3:00'},
-    {name: 'Leprechaun Costume', time: '3:15'},
-    {name: 'Beard Competition', time: '3:30'},
+    {name: `Kids Kilt Contest`, time: '12:00'},
+    {name: `Adult Kilt Contest`, time: '12:15'},
+    {name: `Irish Dance`, time: '12:45'},
+    {name: `Shamrock Scramble`, time: '1:45'},
+    {name: `Leprechaun Contest`, time: '2:15'},
+    {name: `Beard Competition`, time: '3:15'},
+    {name: `Tater Toss`, time: '3:30'},
+    {name: `Sack Race`, time: '4:00'},
   ]
   
   const joustContests = [
-    {name: 'Wildlife Command Bird of Prey Show', time: '10:30'},
-    {name: '3 Leg Race', time: '12:15'},
-    {name: 'Sack Race', time: '12:30'},
-    {name: 'Tug of War', time: '12:45'},
-    {name: 'Wife Carry', time: '1:00'},
-    {name: 'Keg Toss', time: '1:15'},
+    {name: `Kids' Keltic Games`, time: '11:00'},
+    {name: `Keg Toss`, time: '12:15'},
+    {name: `Keltic Games Part I`, time: '12:45'},
+    {name: `Wife Carry`, time: '1:15'},
+    {name: `Keltic Games Part II`, time: '2:45'},
+    {name: `Tug-o-War Competition`, time: '3:15'},
   ]
 
 
@@ -477,26 +482,7 @@ function ThrdWknd(props) {
       <h1><b>{weekends.weekendThree.name}</b></h1>
       <h3>{dateObject.wkndList[0]}</h3> 
 
-      <p>Transport to Ireland by visiting us this weekend! You will find local Irish vendors and fun for all ages. 
-        Kick up your heels with traditional Irish music and dance and experience our Irish themed eating contests! 
-        Enjoy some chocolate themed contests and some free chocolate!</p>
-      <p>Take place in our Marriage En Masse and Vow Renewal.</p>
-      <p><i>Will update on page once link for form is live for pre-registration</i></p>
-
-      <span>Be sure to check out our <Link to='events-contests-promotions'>Daily Royal Events</Link> too!</span>
-      <br />
-      <h3><b>Marriage En Masse</b></h3>
-      <p>Want to get married this weekend? We have a mass wedding ceremony that you and your significant other can join!
-         Tickets are $50, which includes festival admission for two and a small reception after with beverages and cake!
-         Marriage En Masse will take place both {dateObject.wkndList[2]} {dateObject.year} at 2:30 to 3:00pm at the white Chapel. Reception to follow on at the Queen's Garden by the Royal Court. 
-         </p>
-         <p><i>Will update on page once link for form is live for pre-registration</i></p>
-      <br />
-      <h3><b>Vow Renewals</b></h3>
-      <p>Renew your vows for $50 at the festival! Vow Renewals will take place at the festival, following Marriage en Masse.
-         Tickets include admission to the festival for two and a small reception after with beverages and cake!
-         Vow Renewal will take place both {dateObject.wkndList[2]} {dateObject.year} at 3:00 to 3:30pm at the white Chapel. Reception to follow on at the Queen's Garden by the Royal Court.</p>
-      <p><i>Will update on page once link for form is live for pre-registration</i></p>
+      <p>Transport to Ireland by visiting us this weekend! You will find local Irish vendors and fun for all ages. Kick up your heels with traditional Irish music and dance and experience our Irish themed eating contests!</p>
       
       {state ?
       <>
@@ -565,17 +551,22 @@ function FrthWknd(props) {
   const [state, setState] = useState(true)
 
   const normandyContests = [
-    {name: 'Belly Dancing Competition', time: '1:00'},
-    {name: 'Fantasy Mask Competition', time: '2:00'},
-    {name: 'Star Wars Costume Contest', time: '2:10'},
-    {name: 'Game of Throne Costume Contest', time: '2:20'},
-    {name: 'Steampunk Costume Contest', time: '2:30'},
-    {name: 'Sci-Fi Costume Contest', time: '2:40'},
+    {name: `Games of Thrones Costume Contest`, time: '12:00'},
+    {name: `Hulk Smash`, time: '12:15'},
+    {name: `Star Wars Costume Contest`, time: '12:45'},
+    {name: `Lightsaber Duel`, time: '1:45'},
+    {name: `Hero Costume Contest`, time: '2:15'},
+    {name: `Villain Costume Contest`, time: '2:45'},
+    {name: `Fantasy Mask Competition`, time: '3:15'},
+    {name: `Newlywed Game`, time: '3:30'},
+    {name: `Pie Eating Contest`, time: '4:00'},
   ]
-  
   const joustContests = [
-    {name: 'Light Saber Duel', time: '3:00'},
-    {name: 'Wife Carry', time: '3:30'},
+    {name: `Kids Flash Race`, time: '12:15'},
+    {name: `Keg Toss`, time: '12:45'},
+    {name: `Wife Carry`, time: '1:15'},
+    {name: `Heros V. Villains Tug-O-War Competition`, time: '2:45'},
+    {name: `Adult Flash Race`, time: '3:15'},
   ]
 
   useEffect(() => {
@@ -591,7 +582,7 @@ function FrthWknd(props) {
       <div className='wknds'>
       <h1><b>{weekends.weekendFour.name}</b></h1>
       <h3>{dateObject.wkndList[3]}</h3>
-      <p>Dress up as your favorite Wizard, Witch, Game of Thrones Character, Doctor Who Character, Video Game Character, or any other costume you'd like!
+      <p>Dress up as your favorite Wizard, Witch, Game of Thrones Character, Doctor Who Character, Video Game Character, or any other costume you'd like! <br /> Choose a side: <b>Hero or Villain</b>?<br /> 
         Participate in our Costume Contests, happening throughout the day and try your hand in our duel of fates Light Saber Contest!
       </p>
       <span>Be sure to check out our <Link to='events-contests-promotions'>Daily Royal Events</Link> too!</span>
@@ -666,18 +657,20 @@ function FfthWknd(props) {
   const [state, setState] = useState(true)
 
   const normandyContests = [
-    {name: 'Beard Contest', time: '10:30'},
-    {name: 'Stein Holding ', time: '10:45'},
-    {name: 'Cornhole Tournament', time: '11:00'},
-    {name: 'Costume Contest', time: '2:45'},
-    {name: 'Belly Dance Contest *Prizes by Aalim & Chuvani Belly Dance', time: '3:00'},
-    {name: 'German Dance Contest', time: '3:15'},
-    {name: 'Giant Beer Pong', time: '3:30'},
+    {name: `Beard Contest`, time: '10:30'},
+    {name: `Stein Holding`, time: '10:45'},
+    {name: `Cornhole Tournament`, time: '11:00'},
+    {name: `Costume Contest`, time: '2:45'},
+    {name: `Belly Dance Contest`, time: '3:00'},
+    {name: `German Dance Contest`, time: '3:15'},
+    {name: `Giant Beer Pong`, time: '3:30'},
   ]
   
   const joustContests = [
-    {name: 'Keg Toss', time: '12:45'},
-    {name: 'Tug of War', time: '1:00'},
+    {name: `Wife Carry`, time: '12:15'},
+    {name: `Tug-O-War Competition`, time: '12:45'},
+    {name: `Keg Toss`, time: '1:15'},
+    {name: `Pumpkin Bowling`, time: '3:15'},
   ]
 
   useEffect(() => {
@@ -767,12 +760,12 @@ function SxthWknd(props) {
   const stageSchedules = props.schedules
   const [state, setState] = useState(true)
   const normandyContests = [
-    {name: '', time: ''},
+    {name: ``, time: ''},
 
   ]
   
   const joustContests = [
-    {name: '', time: ''},
+    {name: ``, time: ''},
   ]
 
   useEffect(() => {
@@ -859,17 +852,22 @@ function ShopDay(props) {
   const stageSchedules = props.schedules
   const [state, setState] = useState(true)
   const normandyContests = [
-    {name: 'Kids Costume Contest', time: '12:00'},
-    {name: 'Adult Costume Contest', time: '12:15'},
-    {name: 'Guess the Food', time: '1:30'},
-    {name: 'Country Trivia', time: '1:45'},
-    {name: 'Cornhole Tournament', time: '2:45'},
-    {name: 'Beard Competition', time: '3:15'},
-    {name: 'Dog Costume Contest', time: '3:30'},
+    {name: `Beard Contest`, time: '12:00'},
+    {name: `Stein Holding`, time: '12:15'},
+    {name: `German Dance`, time: '12:45'},
+    {name: `Costume Contest`, time: '1:45'},
+    {name: `Belly Dance Contest`, time: '2:14'},
+    {name: `Sauerkraut Eating Competition`, time: '2:45'},
+    {name: `Giant Beer Pong`, time: '3:15'},
+    {name: `Pretzel Necklace Contest`, time: '3:45'},
+    {name: `Cornhole`, time: '4:00'},
   ]
   
   const joustContests = [
-    {name: '', time: ''},
+    {name: `Wife Carry`, time: '12:15'},
+    {name: `Tug-O-War Competition`, time: '12:45'},
+    {name: `Keg Toss`, time: '1:15'},
+    {name: `Pumpkin Bowling`, time: '3:15'},
   ]
 
   useEffect(() => {
