@@ -25,8 +25,6 @@ import grace_mays from '../images/cast/grace-mays.jpg'
 import jacqueline_brown from '../images/cast/jacqueline-brown.jpg'
 import james_boswell from '../images/cast/james-boswell.jpg'
 import jason_smallen from '../images/cast/jason-smallen.jpg'
-import joseph_fieger_sr from '../images/cast/joseph-fieger-sr.jpg'
-import kathleen_mitchell from '../images/cast/kathleen-mitchell.jpg'
 import kathleen_whalen from '../images/cast/kathleen-whalen.jpg'
 import kathryn_smallen from '../images/cast/kathryn-smallen.jpg'
 import krista_strahm from '../images/cast/krista-strahm.jpg'
@@ -35,19 +33,12 @@ import lanya_da_silva from '../images/cast/lanya-da-silva.jpg'
 import noel_kling from '../images/cast/noel-kling.jpg'
 import susanna_ennenbach from '../images/cast/susanna-ennenbach.jpg'
 import ted_jander from '../images/cast/ted-jander.jpg'
-import trenton_brookesher from '../images/cast/trenton-brookesher.jpg'
 import zak_gilliland from '../images/cast/zak-gilliland.jpg'
 
 
 const castList = {
   Court: [
     "The royalty and noblity at the faire grounds. They perform they're noble duties whilst running amok in the crowds.",
-    {
-      realName: "Joseph Fieger Sr",
-      role: "Thomas Wolsey",
-      position: "Cardinal of England",
-      image: joseph_fieger_sr,
-    },
     {
       realName: "David Edwards",
       role: "King Henry VIII",
@@ -62,24 +53,18 @@ const castList = {
       image: ted_jander,
     },
     {
-      realName: "Kathleen Mitchell",
-      role: "Queen Katherine of Aragon",
-      position: "Queen Consort of England, Princess of Spain",
-      image: kathleen_mitchell,
+      realName: "Kristen Haynes",
+      role: "Anne Boleyn",
+      position: "Queen Consort of England",
+      image: kristen_haynes,
     },
     {
       realName: "Lanya da Silva",
       role: "Queen Claude",
       position:
-        "Queen de France, Duchess of Britanny,  Holy Roman Empress, Empress of the Universe, Queen of England, Spain and EVERYTHING, Duchess of Milan",
+        "Queen de France, Duchess of Britanny",
       image: lanya_da_silva,
     }, //Con. positions: Holy Roman Empress, Empress of the Universe, Queen of England, Spain and EVERYTHING, Duchess of Milan
-    {
-      realName: "Trenton Brookesher",
-      role: "Prince Henri",
-      position: "Dauphin of France, Dauphin of Viennois",
-      image: trenton_brookesher,
-    },
     {
       realName: "Jacqueline Brown",
       role: "Princess Mary",
@@ -108,12 +93,6 @@ const castList = {
       position: "",
       image: jason_smallen,
       fighter: true,
-    },
-    {
-      realName: "Kristen Haynes",
-      role: "Anne Boleyn",
-      position: "Lady in Waiting",
-      image: kristen_haynes,
     },
     {
       realName: "Amber Fern",

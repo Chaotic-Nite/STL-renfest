@@ -4,7 +4,6 @@
     margin: 0;
   }
 
-
   .App {
     font-size: 16px;
   }
@@ -82,6 +81,10 @@
 }
 
 @media screen and (min-width: 767px) {
+  .react-slideshow-wrapper {
+    margin-bottom: 1.5%;
+  }
+
   #logo img {
     width: 25vw;
   }
