@@ -14,8 +14,6 @@ for (const wknd in weekends) {
     weeks.push({id: weekends[wknd].id, name: weekends[wknd].name, short: weekends[wknd].short})
 }
 
-console.log(weeks)
-
 export const listWeekends = weeks
 
 export const vendTabs = [
