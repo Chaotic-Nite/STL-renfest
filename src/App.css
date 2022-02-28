@@ -4,7 +4,6 @@
     margin: 0;
   }
 
-
   .App {
     font-size: 16px;
   }
@@ -32,42 +31,54 @@
     font-size: 2rem;
     padding: 9px;
   }
-  
 
-  #wedFood, #wedFood[open], #wedDrinks, #wedDrinks[open], #weddingFinePrint, #weddingFinePrint[open]{
+  #wedFood,
+  #wedFood[open],
+  #wedDrinks,
+  #wedDrinks[open],
+  #weddingFinePrint,
+  #weddingFinePrint[open] {
     width: 100%;
-    margin:0;
+    margin: 0;
   }
 
   #wedMenu {
     display: flex;
     flex-direction: column;
-    
   }
 
   #wedMenu summary {
     font-size: 25%;
   }
 
-  #wedFood, #wedDrinks,#weddingFinePrint {
+  #wedFood,
+  #wedDrinks,
+  #weddingFinePrint {
     padding: 15px 0;
   }
 
   #wedFood {
     margin-bottom: 5px;
   }
-  
-  #wedLocation h2, #wedReception h2, #wedSpecial h2, #wedSpecial h3 {
+
+  #wedLocation h2,
+  #wedReception h2,
+  #wedSpecial h2,
+  #wedSpecial h3 {
     padding-left: 2vw;
   }
 
-  #wedLocation, #wedReception, #wedSpecial {
+  #wedLocation,
+  #wedReception,
+  #wedSpecial {
     width: 95%;
     margin-right: auto;
     margin-left: auto;
   }
 
-  #wedFood h2, #wedDrinks h2, #weddingFinePrint> summary>h2 {
+  #wedFood h2,
+  #wedDrinks h2,
+  #weddingFinePrint > summary > h2 {
     font-size: 35px;
   }
 
@@ -82,6 +93,10 @@
 }
 
 @media screen and (min-width: 767px) {
+  .react-slideshow-wrapper {
+    margin-bottom: 1.5%;
+  }
+
   #logo img {
     width: 25vw;
   }
@@ -114,35 +129,40 @@
     text-align: center;
   }
 
-  #wedMenu h3{
+  #wedMenu h3 {
     margin-top: 5%;
     font-weight: bold;
   }
 
-  #wedMenu details, #weddingFinePrint{
+  #wedMenu details,
+  #weddingFinePrint {
     padding: 15px 30px;
   }
 
-  #wedFood, #wedFood[open], #wedDrinks, #wedDrinks[open]{
+  #wedFood,
+  #wedFood[open],
+  #wedDrinks,
+  #wedDrinks[open] {
     width: 30vw;
   }
-  
-  #weddingFinePrint, #weddingFinePrint[open]  {
-    width: 50vw;
-  }  
 
-    
+  #weddingFinePrint,
+  #weddingFinePrint[open] {
+    width: 50vw;
+  }
+
   #wedMenu {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
   }
 
-
-  #wedLocation h2, #wedReception h2, #wedSpecial h2, #wedSpecial h3 {
+  #wedLocation h2,
+  #wedReception h2,
+  #wedSpecial h2,
+  #wedSpecial h3 {
     padding-left: 7vw;
   }
-
 
   #wedFood {
     margin-right: 5px;
@@ -170,7 +190,6 @@
     margin-top: 2%;
     margin-left: 2%;
   }
-  
 }
 
 .App {
@@ -183,13 +202,14 @@
   :root {
     --borderDesign: 5px solid rgb(186, 69, 240);
     --borderDivide: 2.5px solid rgb(111, 42, 221);
-  }  
-
-  body, .form-label {
-    color: #DfDfDf;
   }
-  
-  .other-events h2{
+
+  body,
+  .form-label {
+    color: #dfdfdf;
+  }
+
+  .other-events h2 {
     color: whitesmoke;
   }
 
@@ -198,28 +218,44 @@
   }
 
   .App {
-    background-image: url('./images/darkgray-print.jpg');
+    background-image: url("./images/darkgray-print.jpg");
+    background-position: center 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .nav-pills .nav-link {
     background-color: rgb(206, 206, 206);
     color: rgb(63, 63, 63);
   }
-  
-  .list-group-item, .card {
+
+  .list-group-item,
+  .card {
     background-color: rgb(236, 236, 236);
   }
 
-  .col2-link, a, #kids {
+  .col2-link,
+  a,
+  #kids {
     color: rgb(186, 69, 240);
   }
 
-  .card-title, .card-text, .card-footer, .card-header, .ticket-boxes, #warning-modal .modal-dialog {
-    color: #313131
+  .card-title,
+  .card-text,
+  .card-footer,
+  .card-header,
+  .ticket-boxes,
+  #warning-modal .modal-dialog {
+    color: #313131;
   }
 
   .weekends table {
     background-color: rgba(221, 221, 221, 0.801);
+  }
+
+  #warriors {
+    color: rgb(63, 63, 63);
   }
 }
 
@@ -227,17 +263,21 @@
   :root {
     --borderDesign: 5px solid #5000e6b6;
     --borderDivide: 2px solid #7f46ea;
-  }  
+  }
 
   .App {
-    background-image: url('./images/steelgray-print.jpg');
+    background-image: url("./images/steelgray-print.jpg");
+    background-position: center 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
-  
+
   body {
     color: #4f4f4f;
   }
 
-  .other-events h2{
+  .other-events h2 {
     color: black;
   }
 
@@ -245,31 +285,34 @@
     color: #67007c;
   }
 
-
-  a, #kids {
+  a,
+  #kids {
     color: #5900ff;
   }
-  
+
   .weekends table {
     background-color: whitesmoke;
   }
-
 }
 
-#wedMenu .list-group, #weddingFinePrint .list-group, .weekends .table {
+#wedMenu .list-group,
+#weddingFinePrint .list-group,
+.weekends .table {
   border-bottom: var(--borderDivide);
 }
 
-.nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {
+.nav-fill .nav-item .nav-link,
+.nav-justified .nav-item .nav-link {
   width: 98%;
 }
 
-.nav-fill .nav-item, .nav-justified .nav-item {
+.nav-fill .nav-item,
+.nav-justified .nav-item {
   padding: 1% 0;
 }
 
-.card-text{
-  padding: .5%;
+.card-text {
+  padding: 0.5%;
 }
 
 #kids {
@@ -277,10 +320,11 @@
 }
 
 details summary::-webkit-details-marker {
-  display:none;
+  display: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
   margin: 0 15px;
   padding-left: 0;
@@ -289,18 +333,17 @@ ul, ol {
 #logo {
   margin: 3% 0 3% 5vw;
 }
-  
-  
+
 .main-body {
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 a {
   text-decoration: none;
 }
 
-
-.page-header, .second-header {
+.page-header,
+.second-header {
   font-family: "Sansita Swashed", cursive;
 }
 

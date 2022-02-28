@@ -27,7 +27,7 @@ const endDay = `${endDate.toLocaleDateString('default', { month: 'long'})} ${end
 const yearOfFaire = year - 1998 + "rd";
 
 // Shopping Day
-let shopDay = `Monday, October 12th`
+let shopDay = `Monday, October 10th`
 
 // Weekends
 let wknd = []
@@ -62,7 +62,7 @@ const kneDay = 'April 10th'
 
 
 export const dateObject = {
-  year: 2021,
+  year: year,
   startDay: startDay,
   endDay: endDay,
   yearOfFaire: yearOfFaire,

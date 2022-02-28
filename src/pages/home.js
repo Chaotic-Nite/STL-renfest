@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import IntroPage from "../components/homepage-content/intro/Intro";
 import WarningSign from "../components/homepage-content/warning/Warning";
 import PhotoBanner from "../components/photobanner/PhotoBanner";
@@ -57,6 +58,14 @@ function Home() {
           <h2>Kegs N Eggs</h2>
         </span>
         {dateObject.eggDay < today ? <KegAfter /> : <KegBefore />}
+      </div>
+
+      <div className="other-events margin-width">
+        <span>
+          <h2>Interesting in your <i>own</i> special event?</h2>
+        </span>
+        <Link to="/contact-us">Contact us</Link> to see about pricing and scheduling for events like: <br />
+        Reunions - Graduations - Baby Showers - Birthdays for all ages - Guild Meetings - RPG Group Outings - Quinceanera
       </div>
 
       {// <!-- MAF Tags -->

@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Navigation from "../components/navigation/Navigation";
-import ScheduleTable from "../components/scheduletable/ScheduleTable";
-import { Link } from "react-router-dom";
 import {
   MDBTabs,
   MDBTabsItem,
   MDBTabsLink,
   MDBTabsContent,
   MDBTabsPane,
-  MDBTable,
-  MDBTableHead,
-  MDBTableBody,
   MDBDropdown,
   MDBDropdownMenu,
   MDBDropdownToggle, 
@@ -20,9 +15,16 @@ import {
 import { useLocation } from 'react-router-dom'
 import { dateObject } from "../lists/UPTODATE";
 import { STAGESCHEDULE, weekends, listWeekends } from '../lists/themed-schedules'
-import dogForm from '../pdf-files/Dog-Registration-Form.pdf'
 import SocialMedia from "../components/social-media/SocialMedia.js";
 import SmallWarningSign from "../components/homepage-content/warning/SmallWarning.js";
+
+import FrstWknd from "../components/weekendstab/FirstWeekend";
+import ScndWknd from "../components/weekendstab/SecondWeekend";
+import ThrdWknd from "../components/weekendstab/ThirdWeekend";
+import FrthWknd from "../components/weekendstab/FourthWeekend";
+import FfthWknd from "../components/weekendstab/FifthWeekend";
+import SxthWknd from "../components/weekendstab/SixthWeekend";
+import ShopDay from "../components/weekendstab/ShoppingDay";
 
 const pavSch = STAGESCHEDULE.pavilion 
 const stlSch = STAGESCHEDULE.pavilion
@@ -37,11 +39,14 @@ const pirSch = STAGESCHEDULE.pavilion
 
 function Weekends() {
   const [width, setWidth] = useState(window.innerWidth);
+  // Set to track the location of the weekends to appropriately load
   const location = useLocation();
   let initialState =  weekends.weekendOne.id;
   if (location.hash.length > 0) {
     initialState = location.hash.substring(1);
   }
+
+  // List of Stages on Site
   const [pavilion, setPav] = useState({class_name: 'rp-stage', title: 'Royal Pavilion', schedule: pavSch[initialState]})
   const [stLouis, setLouis] = useState({class_name: 'stl-stage', title: 'St Louis Stage', schedule: stlSch[initialState]})
   const [owain, setOwain] = useState({class_name: 'o-stage', title: 'Owain Stage', schedule: owaSch[initialState]})
@@ -54,8 +59,11 @@ function Weekends() {
   
   const [wknd, setWknd] = useState(initialState)
 
-
   const handleTabClick = (value) => {
+    /**
+     * Reloads stage states on the tabs, will allow the transition to update
+     * without reloading the page
+     */
     if (value === wknd) {
       return;
     }
@@ -72,22 +80,19 @@ function Weekends() {
   };
 
   const filterName = (value) => {
+    /**
+     * Checks the weekend name to allow the ability to load instead of erroring
+     */
     if (wknd === value.id) {
       return value.title
     }
   }
 
-  const tabObject = [
-    {id: weekends.weekendOne.id, title: weekends.weekendOne.short},
-    {id: weekends.weekendTwo.id, title: weekends.weekendTwo.short},
-    {id: weekends.weekendThree.id, title: weekends.weekendThree.short},
-    {id: weekends.weekendFour.id, title: weekends.weekendFour.short},
-    {id: weekends.weekendFive.id, title: weekends.weekendFive.short},
-    {id: weekends.weekendSix.id, title: weekends.weekendSix.short},
-    {id: weekends.shoppingDay.id, title: weekends.shoppingDay.short},
-  ]
-
   useEffect(() => {
+    /**
+     * Upon loading the weekend page, it checks if the value has a valid weekend Id
+     * If it does then it'll jump to that weekend, if not it will load the first weekend
+     */
     if (wknd !== location.hash.substring(1) && location.hash.includes('#')){
       const value = location.hash.substring(1)
       setWknd(value)
@@ -121,6 +126,9 @@ function Weekends() {
     setWidth(window.innerWidth);
   }
   useEffect(() => {
+    /**
+     * Checks the size of the browser and will adjust accordingly for best experience.
+     */
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
@@ -139,35 +147,46 @@ function Weekends() {
             <MDBTabsPane show={wknd ===  weekends.weekendOne.id}>
               <FrstWknd 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
+                weekend={weekends.weekendOne}
+                wkDate={dateObject.wkndList[0]}
               /></MDBTabsPane>
             <MDBTabsPane show={wknd === weekends.weekendTwo.id}>
               <ScndWknd 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
+                weekend={weekends.weekendTwo}
+                wkDate={dateObject.wkndList[1]}
                 /></MDBTabsPane>
             <MDBTabsPane show={wknd === weekends.weekendThree.id}>
               <ThrdWknd 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
+                weekend={weekends.weekendThree}
+                wkDate={dateObject.wkndList[2]}
                 /></MDBTabsPane>
             <MDBTabsPane show={wknd === weekends.weekendFour.id}>
               <FrthWknd 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
+                weekend={weekends.weekendFour}
+                wkDate={dateObject.wkndList[3]}
                 /></MDBTabsPane>
             <MDBTabsPane show={wknd === weekends.weekendFive.id}>
               <FfthWknd 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
+                weekend={weekends.weekendFive}
+                wkDate={dateObject.wkndList[4]}
                 /></MDBTabsPane>
-            {/* <MDBTabsPane show={wknd === weekends.weekendSix.id}>
-              <SxthWknd 
-              schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
-            /></MDBTabsPane> */}
+
             <MDBTabsPane show={wknd === weekends.weekendSix.id}>
               <SxthWknd 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
+                weekend={weekends.weekendSix}
+                wkDate={dateObject.wkndList[5]}
               />
             </MDBTabsPane>
             <MDBTabsPane show={wknd === weekends.shoppingDay.id}>
               <ShopDay 
                 schedules={[pavilion, stLouis, owain, friendship, joanOfArc, marcoPolo, storytelling, knights, pirates]}
+                weekend={weekends.shoppingDay}
+                wkDate={dateObject.shopDay}
                 /></MDBTabsPane>
           </MDBTabsContent>
         </div>
@@ -221,768 +240,5 @@ function Weekends() {
     </>
   );
 }
-
-function FrstWknd(props) {
-  const stageSchedules = props.schedules
-  const [state, setState] = useState(true)
-
-  const normandyContests = [
-    {name: `Kids Kilt Contest`, time: '12:00'},
-    {name: `Adult Kilt Contest`, time: '12:15'},
-    {name: `Tater Tot Toss`, time: '12:45'},
-    {name: `Scotch Egg Eating`, time: '1:45'},
-    {name: `Bonnie Knees`, time: '2:15'},
-    {name: `Dance Contest`, time: '2:45'},
-    {name: `Beard Contest`, time: '3:15'},
-    {name: `Hula Hoop Contest`, time: '3:45'},
-    {name: `Cornhole Tournament`, time: '4:00'},
-  ]
-  
-  const joustContests = [
-    {name: `Kids' Highland Games`, time: '11:00'},
-    {name: `Keg Toss`, time: '12:15'},
-    {name: `Highland Games Part I`, time: '12:45'},
-    {name: `Wife Carry`, time: '1:15'},
-    {name: `Highland Games Part II`, time: '2:45'},
-    {name: `Tug-o-War Competition`, time: '3:15'},
-  ]
-
-  useEffect(() => {
-    if (normandyContests[0].name === '' && joustContests[0].name === '') {
-      setState(false)
-    }
-    // eslint-disable-next-line
-  }, []);
-
-
-  return (
-    <>
-      <div className="weekends" >
-      <div className='wknds'>
-      <h1><b>{weekends.weekendOne.name}</b></h1>
-      <h3>{dateObject.wkndList[0]}</h3>
-        <span>The Highland Fling weekend will have you cheering for your favorite athlete in our Celtic Games. 
-          Come join on the fun as you experience our Scottish weekend, full of contests, vendors, and the annual Highland Games. Be sure to check out our <Link to='events-contests-promotions'>Daily Royal Events</Link>, there's something fun for everyone.</span>
-      
-      {state ?
-      <>
-      <br />
-      <h3>Contests</h3>
-      <div className='contests'>
-      {normandyContests[0].name !== ''?
-      <MDBTable striped hover className='contest'>
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Normandy Stage</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {normandyContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable>:null}
-      {joustContests[0].time !== '' ?
-      <MDBTable striped hover className='contest'>
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Joust Field</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {joustContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable> : null}
-      </div>
-      </>
-      :null}
-      </div>
-      <br />
-        <h3 className="col2-header">Stage Schedules</h3>
-        <div className='stages'> 
-        <JoustSchedule />
-        {stageSchedules.map((item) => {
-          return (
-          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
-        )})}
-      </div>
-      </div>
-    </>
-  )
-}
-function ScndWknd(props) {
-  const stageSchedules = props.schedules
-  const [state, setState] = useState(true)
-
-  const normandyContests = [
-    {name: `Hold the Plank`, time: '10:35'},
-    {name: `Prettiest Pup Smile Contest`, time: '12:20'},
-    {name: `Smallest Dogs Competition`, time: '12:35'},
-    {name: `Adult/Kid Pirate Costume Contest`, time: '12:50'},
-    {name: `Dog Costume Contest`, time: '1:10'},
-    {name: `Sit Means Sit Contest`, time: '1:20'},
-    {name: `Peanut Butter Licking Contest`, time: '1:50'},
-    {name: `Tattoo Competition`, time: '2:20'},
-    {name: `Dog & Owner Look-Alike Contest`, time: '2:50'},
-    {name: `Muscle Flex Competition`, time: '3:20'},
-    {name: `Hot Dog Eating Contest`, time: '3:40'},
-  ]
-
-  const joustContests = [
-    {name: `Weiner Race`, time: '12:15'},
-    {name: `Corgi Race`, time: '12:45'},
-    {name: `Obstacle Course`, time: '1:15'},
-    {name: `Flash Fetch`, time: '2:45'},
-    {name: `Hooman Obstacle Course`, time: '3:15'},
-  ]
-
-  useEffect(() => {
-    if (normandyContests[0].name === '' && joustContests[0].name === '') {
-      setState(false)
-    }
-    // eslint-disable-next-line
-  }, []);
-
-
- return (
-    <>
-      <div className="weekends" >
-      <div className='wknds'>
-      <h1><b>{weekends.weekendTwo.name}</b></h1>
-      <h3>{dateObject.wkndList[1]}</h3>
-      <p>
-        Bring your dog and pirate pals for our {weekends.weekendTwo.name} weekend! This weekend will showcase 
-        contests for your pets to compete in, like Wiener Dog Races, Corgi Races, Peanut Butter Licking contest, and more! 
-        Not only are there activites for your pets, but also for you! 
-        Toast your mates and enjoy the finest mead and beer in the realm. 
-        <br />Please note, <u>only dogs are allowed</u>. <br />
-        You must complete the <a href={dogForm} target='_blank' rel='noreferrer'>Dog Registration Form</a> &#38; check in at the pet gate.
-      </p>
-      <span>You can find out more information on bring your four legged friend <Link to='bring-your-dog'>here</Link>.</span>
-
-      <p style={{fontVariant: 'small-caps', color: 'red'}}><b>Dogs Only!</b></p>
-
-      {state ?
-      <>
-      <br />
-      <h3>Contests</h3>
-      <div className='contests'>
-      {normandyContests[0].name !== ''?
-      <MDBTable striped hover className='contest' >
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Normandy Stage</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {normandyContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable>:null}
-      {joustContests[0].time !== '' ?
-      <MDBTable striped hover className='contest'>
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Joust Field</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {joustContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable> : null}
-      </div>
-      </>
-      :null}
-      </div>
-      <br />
-            <h3 className="col2-header">Stage Schedules</h3>
-        <div className='stages'> 
-        <JoustSchedule />
-        {stageSchedules.map((item) => {
-          return (
-          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
-        )})}
-      </div>
-
-      </div>
-    </>
-  )
-}
-function ThrdWknd(props) {
-  const stageSchedules = props.schedules
-  const [state, setState] = useState(true)
-  
-  const normandyContests = [
-    {name: `Kids Kilt Contest`, time: '12:00'},
-    {name: `Adult Kilt Contest`, time: '12:15'},
-    {name: `Irish Dance`, time: '12:45'},
-    {name: `Shamrock Scramble`, time: '1:45'},
-    {name: `Leprechaun Contest`, time: '2:15'},
-    {name: `Beard Competition`, time: '3:15'},
-    {name: `Tater Toss`, time: '3:30'},
-    {name: `Sack Race`, time: '4:00'},
-  ]
-  
-  const joustContests = [
-    {name: `Kids' Keltic Games`, time: '11:00'},
-    {name: `Keg Toss`, time: '12:15'},
-    {name: `Keltic Games Part I`, time: '12:45'},
-    {name: `Wife Carry`, time: '1:15'},
-    {name: `Keltic Games Part II`, time: '2:45'},
-    {name: `Tug-o-War Competition`, time: '3:15'},
-  ]
-
-
-
-  useEffect(() => {
-    if (normandyContests[0].name === '' && joustContests[0].name === '') {
-      setState(false)
-    }
-    // eslint-disable-next-line
-  }, []);
-
-
-  return (
-    <>
-    <div className="weekends" >
-      <div className='wknds'>
-      <h1><b>{weekends.weekendThree.name}</b></h1>
-      <h3>{dateObject.wkndList[0]}</h3> 
-
-      <p>Transport to Ireland by visiting us this weekend! You will find local Irish vendors and fun for all ages. Kick up your heels with traditional Irish music and dance and experience our Irish themed eating contests!</p>
-      
-      {state ?
-      <>
-      <br />
-      <h3>Contests</h3>
-      <div className='contests'>
-      {normandyContests[0].name !== ''?
-      <MDBTable striped hover className='contest'>
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Normandy Stage</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {normandyContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable>:null}
-      {joustContests[0].time !== '' ?
-      <MDBTable striped hover className='contest'>
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Joust Field</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {joustContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable> : null}
-      </div>
-      </>
-      :null}
-      </div>
-      <br />
-            <h3 className="col2-header">Stage Schedules</h3>
-        <div className='stages'> 
-        <JoustSchedule />
-        {stageSchedules.map((item) => {
-          return (
-          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
-        )})}
-        </div>
-      </div>
-    </>
-  )
-}
-function FrthWknd(props) {
-  const stageSchedules = props.schedules
-  const [state, setState] = useState(true)
-
-  const normandyContests = [
-    {name: `Games of Thrones Costume Contest`, time: '12:00'},
-    {name: `Hulk Smash`, time: '12:15'},
-    {name: `Star Wars Costume Contest`, time: '12:45'},
-    {name: `Lightsaber Duel`, time: '1:45'},
-    {name: `Hero Costume Contest`, time: '2:15'},
-    {name: `Villain Costume Contest`, time: '2:45'},
-    {name: `Fantasy Mask Competition`, time: '3:15'},
-    {name: `Newlywed Game`, time: '3:30'},
-    {name: `Pie Eating Contest`, time: '4:00'},
-  ]
-  const joustContests = [
-    {name: `Kids Flash Race`, time: '12:15'},
-    {name: `Keg Toss`, time: '12:45'},
-    {name: `Wife Carry`, time: '1:15'},
-    {name: `Heros V. Villains Tug-O-War Competition`, time: '2:45'},
-    {name: `Adult Flash Race`, time: '3:15'},
-  ]
-
-  useEffect(() => {
-    if (normandyContests[0].name === '' && joustContests[0].name === '') {
-      setState(false)
-    }
-    // eslint-disable-next-line
-  }, []);
-
-  return (
-    <>
-      <div className="weekends" >
-      <div className='wknds'>
-      <h1><b>{weekends.weekendFour.name}</b></h1>
-      <h3>{dateObject.wkndList[3]}</h3>
-      <p>Dress up as your favorite Wizard, Witch, Game of Thrones Character, Doctor Who Character, Video Game Character, or any other costume you'd like! <br /> Choose a side: <b>Hero or Villain</b>?<br /> 
-        Participate in our Costume Contests, happening throughout the day and try your hand in our duel of fates Light Saber Contest!
-      </p>
-      <span>Be sure to check out our <Link to='events-contests-promotions'>Daily Royal Events</Link> too!</span>
-
-
-      {state ?
-      <>
-      <br />
-      <h3>Contests</h3>
-      <div className='contests'>
-      {normandyContests[0].name !== ''?
-      <MDBTable striped hover className='contest'>
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Normandy Stage</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {normandyContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable>:null}
-      {joustContests[0].time !== '' ?
-      <MDBTable striped hover className='contest'>
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Joust Field</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {joustContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable> : null}
-      </div>
-      </>
-      :null}
-      </div>
-      <br />
-            <h3 className="col2-header">Stage Schedules</h3>
-        <div className='stages'> 
-        <JoustSchedule />
-        {stageSchedules.map((item) => {
-          return (
-          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
-        )})}
-        </div>
-      </div>
-    </>
-  )
-}
-
-// Fifth Weekend
-function FfthWknd(props) {
-  const stageSchedules = props.schedules
-  const [state, setState] = useState(true)
-
-  const normandyContests = [
-    {name: `Beard Contest`, time: '10:30'},
-    {name: `Stein Holding`, time: '10:45'},
-    {name: `Cornhole Tournament`, time: '11:00'},
-    {name: `Costume Contest`, time: '2:45'},
-    {name: `Belly Dance Contest`, time: '3:00'},
-    {name: `German Dance Contest`, time: '3:15'},
-    {name: `Giant Beer Pong`, time: '3:30'},
-  ]
-  
-  const joustContests = [
-    {name: `Wife Carry`, time: '12:15'},
-    {name: `Tug-O-War Competition`, time: '12:45'},
-    {name: `Keg Toss`, time: '1:15'},
-    {name: `Pumpkin Bowling`, time: '3:15'},
-  ]
-
-  useEffect(() => {
-    if (normandyContests[0].name === '' && joustContests[0].name === '') {
-      setState(false)
-    }
-    // eslint-disable-next-line
-  }, []);
-
-  return (
-    <>
-      <div className="weekends" >
-      <div className='wknds'>
-      <h1><b>{weekends.weekendFive.name}</b></h1>
-      <h3>{dateObject.wkndList[4]}</h3>
-      <p>Join us for one of our most popular themed weekends: <b>Oktoberfest</b>!
-      Participate in our Belching contest, Beer Pong contest, Cornhole tournament, Rootbeer Chugging contest, 
-      Keg Toss and more! </p>
-      <span>Be sure to check out our <Link to='events-contests-promotions'>Daily Royal Events</Link> too!</span>
-
-
-      {state ?
-      <>
-      <br />
-      <h3>Contests</h3>
-      <div className='contests'>
-      {normandyContests[0].name !== ''?
-      <MDBTable striped hover className='contest'>
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Normandy Stage</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {normandyContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable>:null}
-      {joustContests[0].time !== '' ?
-      <MDBTable striped hover className='contest'>
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Joust Field</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {joustContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable> : null}
-      </div>
-      </>
-      :null}
-      </div>
-      <br />
-            <h3 className="col2-header">Stage Schedules</h3>
-        <div className='stages'> 
-        <JoustSchedule />
-        {stageSchedules.map((item) => {
-          return (
-          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
-        )})}
-      </div>
-      </div>
-    </>
-  )
-}
-
-// Sixth Weekend
-function SxthWknd(props) {
-  const stageSchedules = props.schedules
-  const [state, setState] = useState(true)
-  const normandyContests = [
-    {name: ``, time: ''},
-
-  ]
-  
-  const joustContests = [
-    {name: ``, time: ''},
-  ]
-
-  useEffect(() => {
-    if (normandyContests[0].name === '' && joustContests[0].name === '') {
-      setState(false)
-    }
-    // eslint-disable-next-line
-  }, []);
-
-  return (
-    <>
-      <div className="weekends" >
-      <div className='wknds'>
-        <h1><b>{weekends.weekendSix.name}</b></h1>
-        <h3>{dateObject.wkndList[5]}</h3>
-      <p>Text about Halloween soon!
-      </p>
-      {state  ?
-      <>
-      <br />
-      <h3>Contests</h3>
-      <div className='contests'>
-      {normandyContests[0].name !== ''?
-      <MDBTable striped hover className='contest'>
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Normandy Stage</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {normandyContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable>:null}
-      {joustContests[0].time !== '' ?
-      <MDBTable striped hover className='contest'>
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Joust Field</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {joustContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable> : null}
-      </div>
-      </>
-      :null}
-      </div>
-      <br />
-        <h3 className="col2-header">Stage Schedules</h3>
-        <div className='stages'> 
-        <JoustSchedule />
-        {stageSchedules.map((item) => {
-          return (
-          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
-        )})}
-      </div>
-      </div>
-    </>
-  )
-}
-
-
-//Shopping Day
-function ShopDay(props) {
-  const stageSchedules = props.schedules
-  const [state, setState] = useState(true)
-  const normandyContests = [
-    {name: `Beard Contest`, time: '12:00'},
-    {name: `Stein Holding`, time: '12:15'},
-    {name: `German Dance`, time: '12:45'},
-    {name: `Costume Contest`, time: '1:45'},
-    {name: `Belly Dance Contest`, time: '2:14'},
-    {name: `Sauerkraut Eating Competition`, time: '2:45'},
-    {name: `Giant Beer Pong`, time: '3:15'},
-    {name: `Pretzel Necklace Contest`, time: '3:45'},
-    {name: `Cornhole`, time: '4:00'},
-  ]
-  
-  const joustContests = [
-    {name: `Wife Carry`, time: '12:15'},
-    {name: `Tug-O-War Competition`, time: '12:45'},
-    {name: `Keg Toss`, time: '1:15'},
-    {name: `Pumpkin Bowling`, time: '3:15'},
-  ]
-
-  useEffect(() => {
-    if (normandyContests[0].name === '' && joustContests[0].name === '') {
-      setState(false)
-    }
-    // eslint-disable-next-line
-  }, []);
-
-
-  return (
-    <>
-      <div className="weekends" >
-      <div className='wknds'>
-        <h1><b>{weekends.shoppingDay.name}</b></h1>
-        <h3>{dateObject.shopDay}</h3>
-      <p>Festive shopping day at a discounted price of $15, your ticket will grant you admission to the festival,
-         a drink &#38; a swag bag full of great discounts from Festival Artisans!
-         Purchase your ticket before {dateObject.shopDay} and receive a gift bag full of additional goodies when you arrive!
-      </p>
-      <p><i>(Over $50 Value!)</i></p>
-
-      <p><b>Festive Shopping Day Ticket with Festival Admission is $15</b></p>
-      <p><i>Will update on page once link for ticket is live</i></p>
-
-      {state  ?
-      <>
-      <br />
-      <h3>Contests</h3>
-      <div className='contests'>
-      {normandyContests[0].name !== ''?
-      <MDBTable striped hover className='contest'>
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Normandy Stage</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {normandyContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable>:null}
-      {joustContests[0].time !== '' ?
-      <MDBTable striped hover className='contest'>
-        <MDBTableHead>
-          <tr>
-            <th colSpan={2}><b>Joust Field</b></th>
-          </tr>
-        </MDBTableHead>
-        <MDBTableBody>
-        {joustContests.map((item) => {
-          return (
-              <>
-                <tr key={item.name}>
-                  <th scope='row'>{item.time}</th>
-                  <td>{item.name}</td>
-                </tr>
-              </>
-              )
-            })}
-        </MDBTableBody>
-      </MDBTable> : null}
-      </div>
-      </>
-      :null}
-      </div>
-      <br />
-        <h3 className="col2-header">Stage Schedules</h3>
-        <div className='stages'> 
-        <JoustSchedule />
-        {stageSchedules.map((item) => {
-          return (
-          <ScheduleTable key={item.name} schedule={item.schedule} class_name={item.class_name} title={item.title} />
-        )})}
-      </div>
-      </div>
-    </>
-  )
-}
-
-function JoustSchedule() {
-  return (
-    <>
-      <MDBTable striped hover className='joust'>
-      <MDBTableHead>
-        <tr>
-          <th colSpan={2}><b>Joust Field</b></th>
-        </tr>
-      </MDBTableHead>
-      <MDBTableBody>
-        <tr>
-          <th scope='row'>11:30</th>
-          <td>Nobilis Equus Joust</td>
-        </tr>
-        <tr>
-          <th scope='row'>2:00</th>
-          <td>Nobilis Equus Joust</td>
-        </tr>
-        <tr>
-          <th scope='row'>4:00</th>
-          <td >Nobilis Equus Joust</td>
-        </tr>
-      </MDBTableBody>
-    </MDBTable>
-    </>
-  )
-}
-
 
 export default Weekends;

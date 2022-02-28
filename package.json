@@ -5,6 +5,7 @@
   "homepage": "https://noelkling.github.io/STL-renfest/",
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.26",
+    "@emailjs/browser": "^3.4.0",
     "@react-navigation/native": "^5.8.10",
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/user-event": "^12.6.0",
@@ -27,16 +28,17 @@
     "react-scripts": "^4.0.3",
     "react-slideshow-image": "^3.4.3",
     "react-social-icons": "^5.0.0",
+    "sweetalert2": "^11.3.6",
     "uuid": "^8.3.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
