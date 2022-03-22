@@ -1,4 +1,5 @@
 import { Slide } from "react-slideshow-image";
+import Carousel from 'react-bootstrap/Carousel'
 import photoOne from '../../images/banner-images/one.jpg'
 import photoTwo from '../../images/banner-images/two.jpg'
 import photoThree from '../../images/banner-images/three.jpg'
@@ -9,21 +10,23 @@ function PhotoBanner() {
   const slideImages = [photoOne, photoTwo, photoThree, photoFour];
 
   return (
-    <div className="slide-container">
-      <Slide>
+    <Carousel className="slide-container">
         {slideImages.map((each, index) => (
-          <div key={index} className="each-slide">
-            <div
+          <Carousel.Item key={index} className="each-slide">
+            <img
               className="photo"
-              id={`photo${index}`}
-              style={{ backgroundImage: `url(${each})` }}
+              src={each}
+              alt={each + ' ' + index}
             >
-              <h1 className="photo-text">Photo by Joe Henley</h1>
-            </div>
-          </div>
+            </img>
+            <Carousel.Caption className="photo-text">
+              <h1>
+                Photo by Joe Henley
+              </h1>
+            </Carousel.Caption>
+          </Carousel.Item>
         ))}
-      </Slide>
-    </div>
+    </Carousel>
   );
 }
 

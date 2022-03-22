@@ -1,11 +1,23 @@
-@import "react-slideshow-image/dist/styles.css";
 @media screen and (max-width: 600px) {
   .slide-container {
     display: none;
   }
 }
+
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 0;
+  outline: none;
+}
+
+.carousel-control-next span,
+.carousel-control-prev span {
+  display: none;
+}
+
 .photo {
-  height: 30rem;
+  height: 35rem;
+  width: 100%;
   background-position: center;
   background-size: cover;
 }
@@ -15,10 +27,19 @@
   font-size: 25px;
   font-weight: 900;
   padding: 8px 25px;
+  padding-left: 0px;
+  margin-left: calc(1vw * -13);
+  top: calc(1rem * -34);
   position: relative;
   width: 100%;
   text-align: left;
+  z-index: inherit;
 }
+
+.carousel-indicators {
+  display: none;
+}
+
 .react-slideshow-container .default-nav {
   z-index: 2;
 }
