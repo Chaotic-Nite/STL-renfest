@@ -1,4 +1,3 @@
-import { Slide } from "react-slideshow-image";
 import Carousel from 'react-bootstrap/Carousel'
 import photoOne from '../../images/banner-images/one.jpg'
 import photoTwo from '../../images/banner-images/two.jpg'
